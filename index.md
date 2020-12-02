@@ -1,37 +1,66 @@
-## Welcome to GitHub Pages
+# Welcome to Introduction to Web Development
 
-You can use the [editor on GitHub](https://github.com/south-bend-code-school/intro-to-web-dev/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Course Description
+Students participating in this program will gain experience using tools and methods that are used in professional settings. They will also develop a portfolio of work that will adequately demonstrate the relevancy of their knowledge and skills to potential employers. This program will also be beneficial to students who are considering the further pursuit of knowledge in computer science and related fields of technology.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Course Structure
+### Modules
+This course is broken down into three modules:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Module 1 - Fundamentals of Web Development
+- Module 2 - Building a Database 
+- Module 3 - Back End Development
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### Schedule
+Each week has the same flow:
+- Pre-class material released
+- Practice problems due
+- 2 x Instructor Lead Coding Sessions (via zoom)
+- 1 xSmall Group Lab Work (via zoom)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Below is the course calendar that we will follow:
+```
+# TODO DEVELOP CALENDAR IMAGE
+![Image](_images\course_cal.png)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Pre-Class Material
+Pre-Class Material prepares you to fully participate in the live sessions, you need to:
+1. Review the pre-class material for each topic
+2. Complete and submit the practice problems.
+3. Download the live session code templates.
 
-### Jekyll Themes
+### Practice Problems
+Each concept that is presented offers several practice problems that are their to help you evaluate your grasp on the material prior to the Live Sessions.  Solutions are available for all practice problems so that you can check your work and compare your solution to the instructors.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/south-bend-code-school/intro-to-web-dev/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Live Sessions
+In the live sessions, you will apply and discuss the various concepts covered in each module.  Each live session is a mix of instructor lead development and individual/small group coding/debugging challenges.  Durning these sessions we will compare and contrast our solutions work together to become strong web developers, active participation is not simply **highly** encouraged, it's a necessary part of learning to program effectively.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```
+To get the most out of the live sessions, it is critical that you review the pre-class material and complete the practice problems prior to the live session.
+```
+### Lab Work
+
+At the end of the each module, there is a live-session lab which brings together all of the concepts that we have learned to date in a fun and applied way.
+
+Labs take place in small groups.  Lap partners are assigned in the first week of class and stay consistent throughout the course.
+
+#### Supporting Files
+All of this courses supporting files can be downloaded from this github [repository](https://github.com/south-bend-code-school/intro-to-web-dev):
+
+Throughout this course you will work through several code examples and practice problems.  
+
+
+it is *strongly* recommended that you follow our prescribed project organization.
+
+Run the following command in your command prompt (windows) or terminal (mac) to download the live session code templates
+
+```
+git clone http://south-bend-code-school/intro-to-web-dev.git
+```
+
+#### Feedback (No grades!)
+Throughout the week instructors will provided you with feedback on your progress, *FILL IN*....
