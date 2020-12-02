@@ -1,0 +1,66 @@
+I"�<h1 id="welcome-to-introduction-to-web-development">Welcome to Introduction to Web Development</h1>
+
+<h2 id="course-description">Course Description</h2>
+<p>Students participating in this program will gain experience using tools and methods that are used in professional settings. They will also develop a portfolio of work that will adequately demonstrate the relevancy of their knowledge and skills to potential employers. This program will also be beneficial to students who are considering the further pursuit of knowledge in computer science and related fields of technology.</p>
+
+<h2 id="course-structure">Course Structure</h2>
+<h3 id="modules">Modules</h3>
+<p>This course is broken down into three modules:</p>
+
+<ul>
+  <li>Module 1 - Fundamentals of Web Development</li>
+  <li>Module 2 - Building a Database</li>
+  <li>Module 3 - Back End Development</li>
+</ul>
+
+<h3 id="schedule">Schedule</h3>
+<p>Each week has the same flow:</p>
+<ul>
+  <li>Pre-class material released</li>
+  <li>Practice problems due</li>
+  <li>2 x Instructor Lead Coding Sessions (via zoom)</li>
+  <li>1 xSmall Group Lab Work (via zoom)</li>
+</ul>
+
+<p>Below is the course calendar that we will follow:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># TODO DEVELOP CALENDAR IMAGE
+![Image](_images\course_cal.png)
+</code></pre></div></div>
+
+<h3 id="pre-class-material">Pre-Class Material</h3>
+<p>Pre-Class Material prepares you to fully participate in the live sessions, you need to:</p>
+<ol>
+  <li>Review the pre-class material for each topic</li>
+  <li>Complete and submit the practice problems.</li>
+  <li>Download the live session code templates.</li>
+</ol>
+
+<h3 id="practice-problems">Practice Problems</h3>
+<p>Each concept that is presented offers several practice problems that are their to help you evaluate your grasp on the material prior to the Live Sessions.  Solutions are available for all practice problems so that you can check your work and compare your solution to the instructors.</p>
+
+<h3 id="live-sessions">Live Sessions</h3>
+<p>In the live sessions, you will apply and discuss the various concepts covered in each module.  Each live session is a mix of instructor lead development and individual/small group coding/debugging challenges.  Durning these sessions we will compare and contrast our solutions work together to become strong web developers, active participation is not simply <strong>highly</strong> encouraged, it’s a necessary part of learning to program effectively.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>To get the most out of the live sessions, it is critical that you review the pre-class material and complete the practice problems prior to the live session.
+</code></pre></div></div>
+<h3 id="lab-work">Lab Work</h3>
+
+<p>At the end of the each module, there is a live-session lab which brings together all of the concepts that we have learned to date in a fun and applied way.</p>
+
+<p>Labs take place in small groups.  Lap partners are assigned in the first week of class and stay consistent throughout the course.</p>
+
+<h4 id="supporting-files">Supporting Files</h4>
+<p>All of this courses supporting files can be downloaded from this github <a href="https://github.com/south-bend-code-school/intro-to-web-dev">repository</a>:</p>
+
+<p>Throughout this course you will work through several code examples and practice problems.</p>
+
+<p>it is <em>strongly</em> recommended that you follow our prescribed project organization.</p>
+
+<p>Run the following command in your command prompt (windows) or terminal (mac) to download the live session code templates</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone http://south-bend-code-school/intro-to-web-dev.git
+</code></pre></div></div>
+
+<h4 id="feedback-no-grades">Feedback (No grades!)</h4>
+<p>Throughout the week instructors will provided you with feedback on your progress, <em>FILL IN</em>….</p>
+:ET

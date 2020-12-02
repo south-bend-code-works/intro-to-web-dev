@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Intro to Web Development (Module 1)
 
 ## Overview
@@ -7,18 +10,18 @@ At the end of this module, you will be able to create a responsive website using
 ## Topics
 
 ### Introduction to HTML & CSS
-1. [How the web works](how_the_web_works.md)
-2. [Intro to HTML](intro_to_html.md)
-3. [Intro to CSS](intro_to_css.md)
-4. [Responsive Design and wire-framing](intro_to_responsive_desgisn.md)
-5. [Intro to the fundamentals of JavaScript](intro_to_javascript.md)
+1. [How the web works](how_the_web_works.html)
+2. [Intro to HTML](intro_to_html.html)
+3. [Intro to CSS](intro_to_css.html)
+4. [Responsive Design and wire-framing](intro_to_responsive_design.html)
+5. [Intro to the fundamentals of JavaScript](intro_to_javascript.html)
 
 ### Software Development Tools
 
-1. [Visual Studio Code: Your first IDE (Integrated Development Enviornment)](intro_to_vscode.md)
-2. [Debugging with Chrome Developer Tools](intro_to_chrome.md)
-3. [The command prompt and file paths](intro_to_cmd.md)
-4. [Introduction to Git](intro_to_git.md)
+1. [Visual Studio Code: Your first IDE (Integrated Development Enviornment)](intro_to_vscode.html)
+2. [Debugging with Chrome Developer Tools](intro_to_chrome.html)
+3. [The command prompt and file paths](intro_to_cmd.html)
+4. [Introduction to Git](intro_to_git.html)
 
 ## Live Sessions
 
@@ -63,10 +66,6 @@ Syntax highlighted code block
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/south-bend-code-school/intro-to-web-dev/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
