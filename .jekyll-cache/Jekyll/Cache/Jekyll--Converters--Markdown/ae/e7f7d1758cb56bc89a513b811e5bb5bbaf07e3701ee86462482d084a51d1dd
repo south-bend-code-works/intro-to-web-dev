@@ -1,0 +1,57 @@
+I"�<h1 id="intro-to-html">Intro to HTML</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>At the end of this lesson, you will be know what HTML is, how it fits into
+websites, and how to use it.</p>
+
+<h2 id="topics">Topics</h2>
+
+<ol>
+  <li>What is HTML</li>
+  <li>HTML’s place in a website</li>
+  <li>How to use HTML</li>
+</ol>
+
+<h3 id="1-what-is-html">1. What is HTML</h3>
+
+<p>HTML stands for HyperText Markup Language (don’t worry about memorizing this). It is a necessary part of any website (and technically the only part is absolutely necessary). An example of a very simple HTML file could have code that looks like this:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    This is a simple website.
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Which would result in a webpage that looks like:</p>
+
+<p><img src="/assets/img/module1/example_site.png" alt="Image" /></p>
+
+<p>Wow. What a beautiful website.</p>
+
+<p>When looking at that, it may not seem simple or make any sense at all. And it shouldn’t!
+We’re going to break down everything we are seeing bit by bit.</p>
+
+<h3 id="2-htmls-place-in-a-website">2. HTML’s place in a website</h3>
+
+<p>Imagine instead of a website, we were building a house from scratch (don’t worry, I also have not personally built a house). Would our first move be to paint the walls? Would we first install plumbing and electricals? No, that would be ridiculous! How could we paint if there weren’t even any walls? How could we install plumbing when there is no structure?</p>
+
+<p>If a website was a house, HTML would be the structure. Everything else is built on top of it. Just like a house that is just a structure without decoration or internal workings, it’s ugly and likely not that useful. However, it is necessary and the place where every website should start.</p>
+
+<h3 id="3-how-to-use-html">3. How to use HTML</h3>
+
+<p>Let’s take another look at the code from earlier:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    This is a simple website.
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>It may seem strange that there are symbols and weird words all over the place when the only thing we see on the screen is the sentence “This is a simple website.” However, all of it has meaning.</p>
+
+<p>Let’s start from sentence that we do recognize: This is a simple website. Right above and below that sentence, we see <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;/body&gt;</code>. Both <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;/body&gt;</code> are types of tags. There are 2 kinds of tags, openging tags and closing tags.</p>
+:ET
