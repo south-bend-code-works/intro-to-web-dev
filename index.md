@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Welcome to Introduction to Web Development
 
 ## Course Description

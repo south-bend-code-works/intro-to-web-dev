@@ -1,0 +1,55 @@
+---
+---
+
+@import "jekyll-theme-minimal";
+
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: #111;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+header {
+  float: none;
+  width: 270px;
+  background-color: #111;
+  height: 100vh;
+  padding: 2rem;
+  color: #DDD;
+  h3 {
+    color: #DDD;
+    margin-bottom: .5rem;
+  }
+  ul {
+    padding-left: 1rem;
+  }
+  a {
+    color: lighten(#267CB9, 5);
+    &:hover {
+      font-weight: unset;
+    }
+  }
+}
+
+section {
+  width: calc(100% - 270px);
+  float: none;
+  margin-left: 270px;
+  padding: 4rem;
+  background-color: white;
+  box-shadow: 0 0 5px 0 grey inset;
+  min-height: 100vh;
+  > * {
+    max-width: 800px;
+  }
+}
