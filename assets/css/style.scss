@@ -10,6 +10,8 @@ html {
   background-color: #111;
 }
 
+$side-width: 320px;
+
 body {
   margin: 0;
   padding: 0;
@@ -21,17 +23,22 @@ body {
 
 header {
   float: none;
-  width: 270px;
+  width: $side-width;
   background-color: #111;
   height: 100vh;
-  padding: 2rem;
+  padding: 3rem;
   color: #DDD;
   h3 {
     color: #DDD;
     margin-bottom: .5rem;
   }
   ul {
+    max-height: calc(100vh - 300px);
+    overflow-y: scroll;
     padding-left: 1rem;
+    li {
+      margin-bottom: .5rem;
+    }
   }
   a {
     color: lighten(#267CB9, 5);
@@ -42,9 +49,9 @@ header {
 }
 
 section {
-  width: calc(100% - 270px);
+  width: calc(100% - #{$side-width});
   float: none;
-  margin-left: 270px;
+  margin-left: $side-width;
   padding: 4rem;
   background-color: white;
   box-shadow: 0 0 5px 0 grey inset;
@@ -54,6 +61,16 @@ section {
   }
 }
 
+img {
+  box-shadow: 0 0 5px 0 grey
+}
+
 footer {
-  padding: 0 2rem
+  padding: 0 2rem;
+  bottom: 1rem;
+}
+
+code {
+  background-color: #f8f8f8;
+  padding: .1rem .3rem;
 }
