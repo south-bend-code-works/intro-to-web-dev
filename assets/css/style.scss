@@ -56,6 +56,10 @@ header {
   }
 }
 
+ul {
+  //margin-bottom: 0rem
+}
+
 section {
   width: calc(100% - #{$side-width});
   float: none;
@@ -81,4 +85,12 @@ footer {
 code {
   background-color: #f8f8f8;
   padding: .1rem .3rem;
+}
+
+.red {
+  color: red;
+}
+
+strong {
+  color: inherit;
 }
