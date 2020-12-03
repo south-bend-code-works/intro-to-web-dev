@@ -1,4 +1,4 @@
-I"â <h1 id="intro-to-html">Intro to HTML</h1>
+I"ç <h1 id="intro-to-html">Intro to HTML</h1>
 
 <h2 id="overview">Overview</h2>
 
@@ -27,7 +27,7 @@ websites, and how to use it.</p>
 
 <p>Which would result in a webpage that looks like:</p>
 
-<p><img src="/assets/img/module1/example_site_1.png" alt="Image" /></p>
+<p><img src="../../assets/img/module1/example_site_1.png" alt="Image" /></p>
 
 <p>Wow. What a beautiful webpage.</p>
 

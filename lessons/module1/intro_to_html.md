@@ -29,7 +29,7 @@ HTML stands for HyperText Markup Language (don't worry about memorizing this). I
 
 Which would result in a webpage that looks like:
 
-![Image](/assets/img/module1/example_site_1.png)
+![Image](../../assets/img/module1/example_site_1.png)
 
 Wow. What a beautiful webpage.
 
