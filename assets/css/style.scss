@@ -32,12 +32,20 @@ header {
     color: #DDD;
     margin-bottom: .5rem;
   }
+  .module {
+    margin-bottom: 2rem
+  }
   ul {
     max-height: calc(100vh - 300px);
     overflow-y: scroll;
     padding-left: 1rem;
+    margin-bottom: 0rem;
     li {
       margin-bottom: .5rem;
+      display: block;
+      &:last-child {
+        margin-bottom: 0rem;
+      }
     }
   }
   a {
