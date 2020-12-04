@@ -13,6 +13,8 @@ Visual Studio Code is a light weight and free text editor built for software dev
   - Syntax Highlighting to make code easier to read
   - Autocompletion and Typeahead support
   - Provides you the ability to preview your work
+  
+An example of the same webpage in a plain text editor and Visual Studio Code.
 
 Plain Text Editor             |  Visual Studio Code
 :-------------------------:|:-------------------------:
