@@ -4,7 +4,8 @@ layout: default
 
 # Introduction to Visual Studio Code
 
-Visual Studio Code is a light weight and free text editor built for software developers.
+## Overview
+Visual Studio Code (vscode) is a light weight and free text editor built for software developers.
 
 ## Why you should care
 - Visual Studio Code is very flexible and it can be used to write programs in any langauge.  In this course we will focus on:
@@ -29,14 +30,17 @@ To download and install Visual Studio Code, follow the directions here:
 
 ## Usage
 
-In this course, we will develop all of our code using Visual Studio Code.  We will also organize our code into **projects**, which helps us keep our code organized and tidy.  In our case, a project is simply a folder with all of the necessary files for our website.
+In this course, we will develop our code using Visual Studio Code.  In addition, we will organize our code in **project** folders, which will helps us keep our code organized and tidy.  A project folder will contain all of the necessary files for the project's website.
 
 Visual studio makes it easy to create and work on **projects**:
-1. Make a new project folder on your computer using Windows Explorer or the Finder for MacOS.
+1. Make a new folder on your computer using Windows Explorer or the Finder for MacOS and give it a your project title.
 2. From Visual Studio Code, select File->Open
 3. Browse to your project folder, and then click "open".
 ![](/assets/img/module1/vscode_project1.png)
-4. You will see all of the files you've created for your project in the left hand side-bar.
+4. You will see all of the files you've created for your project on the left hand side-bar.
 ![](/assets/img/module1/vscode_project2.png)
+5. You can view the code for any file on the right hand side.
+
+## Happy Editing!
 
 
