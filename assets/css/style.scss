@@ -65,6 +65,7 @@ section {
   float: none;
   margin-left: $side-width;
   padding: 4rem;
+  padding-bottom: 10rem;
   background-color: white;
   box-shadow: 0 0 5px 0 grey inset;
   min-height: 100vh;
@@ -93,4 +94,26 @@ code {
 
 strong {
   color: inherit;
+}
+
+.hint {
+  width: fit-content;
+  cursor: default;
+  padding-bottom: 2rem;
+  + .hint-content {
+    display: none;
+  }
+  &:hover {
+    + .hint-content {
+      display: block;
+    }
+  }
+}
+
+.hint-content {
+  transition: .25s;
+}
+
+.hint-content:hover {
+  display: block;
 }
