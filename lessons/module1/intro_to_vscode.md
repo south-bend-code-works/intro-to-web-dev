@@ -14,9 +14,9 @@ Visual Studio Code is a light weight and free text editor built for software dev
   - Autocompletion and Typeahead support
   - Provides you the ability to preview your work
 
-Standard Text Editor             |  Visual Studio Code
+Plain Text Editor             |  Visual Studio Code
 :-------------------------:|:-------------------------:
-![](./pic/simple_editor.png =250x)  |  ![](./pic/vscode.png =250x)
+![](../../assets/img/module1/vscode_plain_text.png)  |  ![](../../assets/img/module1/vscode_vscode.png)
 
 ## Download & Installation
 To Download and install Visual Studio Code, follow the directions here:
@@ -30,8 +30,8 @@ Visual studio makes it easy to create and work on **projects**:
 1. Make a new project folder on your computer using Windows Explorer or the Finder for MacOS.
 2. From Visual Studio Code, select File->Open
 3. Browse to your project folder, and then click "open".
-![](./pic/openproject.png =250x)
+![](../../assets/img/module1/vscode_project1.png)
 4. You will see all of the files you've created for your project in the left hand side-bar.
-![](./pic/openproject.png =250x)
+![](../../assets/img/module1/vscode_project2.png)
 
 
