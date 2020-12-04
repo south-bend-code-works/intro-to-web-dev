@@ -14,11 +14,9 @@ Visual Studio Code is a light weight and free text editor built for software dev
   - Autocompletion and Typeahead support
   - Provides you the ability to preview your work
 
-### Sample HTML Code in a Standard Text Editor
-![](./pic/simple_editor.png =250x)
-
-### Sample HTML Code in Visual Studio Code
-![](./pic/vscode.png =250x)
+Standard Text Editor             |  Visual Studio Code
+:-------------------------:|:-------------------------:
+![](./pic/simple_editor.png =250x)  |  ![](./pic/vscode.png =250x)
 
 ## Download & Installation
 To Download and install Visual Studio Code, follow the directions here:
