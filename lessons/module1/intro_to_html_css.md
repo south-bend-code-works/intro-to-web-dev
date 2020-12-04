@@ -56,4 +56,6 @@ _NOTE: After completing an exercise, the site will automatically forward you ont
 
 ### Conclusion 
 Now you understand some of the basic concepts behind HTML and CSS! Hopefully this meme makes a little more sense to you now than it did before you started. 
+
+
 ![HTML&CSS MEME](https://qph.fs.quoracdn.net/main-qimg-097424108c6dc99849e7365be6848c8b)
