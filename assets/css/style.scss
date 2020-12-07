@@ -24,10 +24,10 @@ body {
 header {
   float: none;
   width: $side-width;
-  background-color: #111;
   height: 100vh;
   padding: 3rem;
   color: #DDD;
+  background-color: #111;
   h3 {
     color: #DDD;
     margin-bottom: .5rem;
@@ -38,7 +38,8 @@ header {
   ul {
     max-height: calc(100vh - 300px);
     overflow-y: scroll;
-    padding-left: 1rem;
+    background-color: #222;
+    padding: 1rem;
     margin-bottom: 0rem;
     li {
       margin-bottom: .5rem;
@@ -118,4 +119,35 @@ strong {
 
 .hint-content:hover {
   display: block;
+}
+
+@media (max-width:960px) {
+  header {
+    position: relative;
+    height: 50vh;
+    overflow: scroll;
+    width: 100%;
+    padding: 2rem;
+    ul {
+      position: relative;
+      right: 0; 
+      top: 0;
+    }
+    > ul {
+      overflow: scroll;
+      max-height: 30vh;
+    }
+
+  }
+  section {
+    width: 100%;
+    margin-left: 0;
+    padding: 2rem;
+  }
+  footer {
+    p {
+      margin: 0;
+      padding-bottom: 1rem;
+    }
+  }
 }
