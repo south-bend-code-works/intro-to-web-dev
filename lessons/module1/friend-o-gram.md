@@ -97,9 +97,90 @@ This activity will allow you to combine all the skills you have learned, HTML, C
 <html>
   <head>
     <style>
-      
+
+      /* This is how you make a comment in CSS. */
+      /* Anything inside the slash and asterisk will be ignored and is helpful for notes. */
+
     </style>
   </head>
   ...
 </html>
 ```
+
+* Make the body have 3 columns by using `grid`
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: grid; /* This make the body a grid */
+        grid-template-columns: auto auto auto; /* This tells the body element to split into 3 equal columns */
+      }
+    </style>
+  </head>
+  ...
+</html>
+```
+
+* If you refresh and look at your site, you should still see nothing. However, the `body` has been divided into 3 equal columns. Since there are 6 `div` tags inside of `body`, this makes `body` a 3 by 2 grid of `div`s.
+
+### 5. Add photos
+
+* Currently, there are 6 `div`s in our `body` that have no height and no background images.
+* The first step is to add height to our `div`s so that they aren't flat.
+* In the CSS, grab all the `div`s using the selector `.photo` since all of the `div`s have that class.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+
+      }
+    </style>
+  </head>
+  ...
+</html>
+```
+
+* Then, make all the `div`s have a height of `250px`.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+        height: 250px;
+      }
+    </style>
+  </head>
+  ...
+</html>
+```
+
+* Now that the `div`s have height, add the photos as background images.
+
+
+
+

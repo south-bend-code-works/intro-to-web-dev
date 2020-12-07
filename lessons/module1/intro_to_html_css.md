@@ -44,6 +44,8 @@ _NOTE: After completing an exercise, the site will automatically forward you ont
   * [Hint](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_element){:target="_blank"}
 * [Ex. 3: Complete the link](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_attributes3){:target="_blank"}
   * [Hint](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Attributes){:target="_blank"}
+* [Ex. 4: HTML comment](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_comments1){:target="_blank"}
+  * [Hint](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments){:target="_blank"}
 
 **The next 2 exercises are espeically vital**
 * [Ex. 4: Link to image](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_images5){:target="_blank"}
