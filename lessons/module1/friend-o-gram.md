@@ -8,7 +8,7 @@ layout: default
 
 At the end of this activity, you will have built something similar to this:
 
-![best example](/assets/img/module1/fog_best_example.png)
+![best example]({{ site.baseurl }}/assets/img/module1/fog_best_example.png)
 
 ## Overview
 
@@ -285,11 +285,11 @@ This activity will allow you to combine all the skills you have learned, HTML, C
 
 * Some of the photos might not look their best being centered vertically and horizontally with a height of 200px.
 
-![bad example](/assets/img/module1/fog_bad_example.png)
+![bad example]({{ site.baseurl }}/assets/img/module1/fog_bad_example.png)
 
 * A lot of the photos don't seeem tall enough to fit the parts of the picture that I want so I will increase the height to 400px.
 
-![better example](/assets/img/module1/fog_better_example.png)
+![better example]({{ site.baseurl }}/assets/img/module1/fog_better_example.png)
 
 * Better. However, I want photo 1 to be shifted lower. 
 * So, instead of `background-position` being `50% 50%` for that photo, I'll use the same selector I used to set the background-image (`.photo-1`) to change just that photo's `background-position`.
@@ -324,7 +324,7 @@ This activity will allow you to combine all the skills you have learned, HTML, C
 
 * This results in:
 
-![best example](/assets/img/module1/fog_best_example.png)
+![best example]({{ site.baseurl }}/assets/img/module1/fog_best_example.png)
 
 * Cool! All the photos are where I want them to be.
 * For your project, you will have to adjust individual photos to make things look good.
