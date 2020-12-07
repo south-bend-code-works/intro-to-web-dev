@@ -100,10 +100,12 @@ strong {
   width: fit-content;
   cursor: default;
   padding-bottom: 2rem;
+  color: darkblue;
   + .hint-content {
     display: none;
   }
   &:hover {
+    font-weight: bolder;
     + .hint-content {
       display: block;
     }

@@ -48,11 +48,11 @@ _NOTE: After completing an exercise, the site will automatically forward you ont
   * [Hint](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments){:target="_blank"}
 
 **The next 2 exercises are espeically vital**
-* [Ex. 4: Link to image](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_images5){:target="_blank"}
+* [Ex. 5: Link to image](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_images5){:target="_blank"}
   * [Hint](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage){:target="_blank"}
 
 For this next challenge, there are two text boxes where you can edit the code. Just edit the second box.
-* [Ex. 5: Link to image 2](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images#HTML_images_1){:target="_blank"}
+* [Ex. 6: Link to image 2](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images#HTML_images_1){:target="_blank"}
   * [Hint](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage){:target="_blank"}
 
 ### CSS
@@ -64,10 +64,12 @@ For this next challenge, there are two text boxes where you can edit the code. J
   * [Hint](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started#Styling_HTML_elements){:target="_blank"}
 * [Ex. 4: Padding](https://www.w3schools.com/css/exercise.asp?filename=exercise_padding2){:target="_blank"}
   * [Hint](https://www.w3schools.com/css/css_padding.asp#midcontentadcontainer){:target="_blank"}
+* [Ex. 5: Background image](https://www.w3schools.com/css/exercise.asp?filename=exercise_css3_backgrounds1){:target="_blank"}
+  * [Hint](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image){:target="_blank"}
 
 One of the resources above introduces [CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout){:target="_blank"}. This is an important concept for a later exercise. The next exercises will focus on CSS Grid.
 
-* [Ex. 5-7: Complete levels 1-3](https://www.w3schools.com/css/exercise.asp?filename=exercise_padding2){:target="_blank"}
+* [Ex. 6-8: Complete levels 1-3](https://www.w3schools.com/css/exercise.asp?filename=exercise_padding2){:target="_blank"}
   * [Hint](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#The_Grid_container){:target="_blank"}
 
 ### Conclusion 

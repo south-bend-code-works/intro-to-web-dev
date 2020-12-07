@@ -8,7 +8,7 @@ layout: default
 
 At the end of this activity, you will have built something similar to this:
 
-![Friend-o-gram]()
+![best example](/assets/img/module1/fog_best_example.png)
 
 ## Overview
 
@@ -107,7 +107,7 @@ This activity will allow you to combine all the skills you have learned, HTML, C
 </html>
 ```
 
-* Make the body have 3 columns by using `grid`
+* Make the body have 3 columns by using `grid`.
 
 <div class="hint">Hover for hint</div>
 
@@ -180,7 +180,202 @@ This activity will allow you to combine all the skills you have learned, HTML, C
 ```
 
 * Now that the `div`s have height, add the photos as background images.
+* Using the CSS property `background-image`, link to the photos you saved earlier.
 
 
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+        height: 250px;
+      }
+      .photo-1 {
+        background-image: url('photo-1.jpg');
+      }
+      .photo-2 {
+        background-image: url('photo-2.jpg');
+      }
+      .photo-3 {
+        background-image: url('photo-3.jpg');
+      }
+      .photo-4 {
+        background-image: url('photo-4.jpg');
+      }
+      .photo-5 {
+        background-image: url('photo-5.jpg');
+      }
+      .photo-6 {
+        background-image: url('photo-6.jpg');
+      }
+    </style>
+  </head>
+  ...
+</html>
+```
+
+### 6. Resize photos
+
+* If you refresh the page you have been working on, you should see 6 different images. However, they may not look like you expected. They may seem really 'zoomed in'.
+* To fix this, we go back into the `.photo` selector in the CSS in order to change how the background looks.
+* Add the `background-size` property to the `.photo` selector with the value `cover`
 
 
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+        height: 250px;
+        background-size: cover;
+      }
+      ...
+    </style>
+  </head>
+  ...
+</html>
+```
+
+* That likely makes it look some better but the photos are still likely not centered.
+* Center the images by adding the property `background-position` with value `50% 50%`
+  * This tells the background images to be centered both vertically and horizontally.
+
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+        height: 250px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+      ...
+    </style>
+  </head>
+  ...
+</html>
+```
+
+### 7. Cleaning up
+
+* Some of the photos might not look their best being centered vertically and horizontally with a height of 200px.
+
+![bad example](/assets/img/module1/fog_bad_example.png)
+
+* A lot of the photos don't seeem tall enough to fit the parts of the picture that I want so I will increase the height to 400px.
+
+![better example](/assets/img/module1/fog_better_example.png)
+
+* Better. However, I want photo 1 to be shifted lower. 
+* So, instead of `background-position` being `50% 50%` for that photo, I'll use the same selector I used to set the background-image (`.photo-1`) to change just that photo's `background-position`.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: grid; /* This make the body a grid */
+        grid-template-columns: auto auto auto; /* This tells the body element to split into 3 equal columns */
+      }
+      .photo {
+        height: 400px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+      .photo-1 {
+        background-image: url('photo-1.jpg');
+        background-position: 50% 0%;
+      }
+      ...
+    </style>
+  </head>
+  ...
+</html>
+```
+
+* This results in:
+
+![best example](/assets/img/module1/fog_best_example.png)
+
+* Cool! All the photos are where I want them to be.
+* For your project, you will have to adjust individual photos to make things look good.
+* Play around with different CSS properties (`background-size`, `background-position`, etc.) to gain an understanding of what they mean and how to use them.
+
+## Conclusion
+
+If you were able to see all photos and they look like you want them to, your knowledge of HTML and CSS is ready for our in-class session! Here is all the code from the example above:
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+        height: 400px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+      .photo-1 {
+        background-image: url('photo-1.jpg');
+        background-position: 50% 0%;
+      }
+      .photo-2 {
+        background-image: url('photo-2.jpg');
+      }
+      .photo-3 {
+        background-image: url('photo-3.jpg');
+      }
+      .photo-4 {
+        background-image: url('photo-4.jpg');
+      }
+      .photo-5 {
+        background-image: url('photo-5.jpg');
+      }
+      .photo-6 {
+        background-image: url('photo-6.jpg');
+      }
+    </style>
+  </head>
+  <body>
+    <div class="photo photo-1"></div>
+    <div class="photo photo-2"></div>
+    <div class="photo photo-3"></div>
+    <div class="photo photo-4"></div>
+    <div class="photo photo-5"></div>
+    <div class="photo photo-6"></div>
+  </body>
+</html>
+```
