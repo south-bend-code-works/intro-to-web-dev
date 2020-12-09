@@ -42,7 +42,7 @@ Use these resources to introduce yourself to the topics and to complete the exer
 ### GIT Crash Course
 
 The following video will walk you through the basics of GIT and Github.  This video closely mirrors your pre-work exercise below.
-[![Git & GitHub Crash Course For Beginners](http://i3.ytimg.com/vi/SWYqp7iY_Tc/maxresdefault.jpg)](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
+[![Git & GitHub Crash Course For Beginners](http://i3.ytimg.com/vi/SWYqp7iY_Tc/hqdefault.jpg)](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
 
 GIT is very robust and as such the number of commands and features may seem a little overwhelming at first, but do not worry. It is totally okay if some things are still unclear to you, just keep pressing through and these concepts will make sense as we apply them throughout the course.
 
