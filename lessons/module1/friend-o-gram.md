@@ -6,13 +6,15 @@ layout: default
 
 ## Goal
 
+Our goal for this project is to build a sweet, web-based version of our favorite social media platform for sharing photos with our friends "on the line"! See if you can guess which one we are talking about based on the title of this project. 
+
 At the end of this activity, you will have built something similar to this:
 
 ![best example]({{ site.baseurl }}/assets/img/module1/fog_best_example.png)
 
 ## Overview
 
-This activity will allow you to combine all the skills you have learned, HTML, CSS, and Visual Studio Code (aka VS Code).
+This activity will allow you to combine all the skills you have learned, HTML, CSS, and Visual Studio Code (VS Code).
 
 ## Instruction
 
@@ -36,8 +38,8 @@ This activity will allow you to combine all the skills you have learned, HTML, C
 
 ### 2. Choose 6 photos
 
-* Find and download 6 photos of you and/or friends and put all the files in the folder `friend-o-gram`.
-  * Use Facebook or other online source to find the photos.
+* Find and download 6 photos of you and/or friends, and/or sweet memes, and/or pictures of things you like and put all the files in the folder `friend-o-gram`.
+  * Use Facebook, Google, or other online source to find the photos.
 * Once the photos are in your folder, rename all the photos as `photo-1.jpg`, `photo-2.jpg`, etc.
 
 ### 3. Build HTML structure
@@ -379,3 +381,12 @@ If you were able to see all photos and they look like you want them to, your kno
   </body>
 </html>
 ```
+
+## Bonus Mission 
+If you'd like to spice up your friend-o-gram a bit, consider adding some of the following: 
+* Background color to the webpage
+* A fun logo at the top of the page 
+
+Keep in mind that while there are no grades for this program, your projects will speak to the work you can do should you choose to use them as a part of your resume. 
+
+
