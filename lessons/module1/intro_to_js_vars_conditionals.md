@@ -13,7 +13,7 @@ Earlier, we used an analogy of a house to describe the purposes of HTML and CSS.
 ## Topics
 
 ### Variables
-One of the fundamental concepts in JS (and many other coding languages) is **variables**. Think of a **variable** as a box that we can put a value in and get or change later. 
+One of the fundamental concepts in JS (and many other coding languages) is **variables**. Think of a **variable** as a box that we can put a value in so we can use that value or change it later. 
 
 #### Concept
 A variable requires 2 things, a name and a value. Look at the code below:
@@ -46,7 +46,7 @@ The following link will take you to a site called CodePen. It will allow you to 
 
 ### Booleans and Conditionals
 
-While the terms **boolean** and **conditional** may seem unfamiliar and complex, **booleans** are fairly simple and **conditionals** we use everyday! 
+While the terms **boolean** and **conditional** may seem unfamiliar and complex, **booleans** are fairly simple and we use **conditionals** everyday! 
 
 #### Concept
 
@@ -54,7 +54,7 @@ While the terms **boolean** and **conditional** may seem unfamiliar and complex,
 A **boolean** can be one of two things, `true` or `false`. That's it. In code, we can assign **boolean** values to variables like this:
 `var example = true`
 
-Now, if we use the variable `example` later in the code, we now that it will be equal to `true`. This doesn't gain us anything right now until we look at **conditionals**.
+Now, if we use the variable `example` later in the code, we now that it will be equal to `true`. This doesn't have use by itself, but when we add in **conditionals** booleans become a lot more powerful as a concept.
 
 ##### Conditionals
 An example of a **conditional** we may see outside of coding is the following sentence: *If it snows tonight, then I will shovel my steps.* A conditional is simply *if* something is *true*, *then* something happens. Let's look at an example:
