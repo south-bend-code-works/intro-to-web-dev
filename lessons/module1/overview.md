@@ -5,7 +5,7 @@ layout: default
 
 ## Overview
 
-At the end of this module, you will be able to create a responsive website using HTML, CSS, and JavaScript, commit your code to GitHub, and deploy your site to the internet.  In addition, you will also understand how to use several developer tools including git, visual studio code, the command line, and navigate Google Chrome’s built-in developer tools.
+At the end of this module, you will be able to create a responsive website using HTML, CSS, and JavaScript, commit your code to GitHub, and deploy your site to the internet.  In addition, you will also understand how to use several developer tools including git, visual studio code, the command prompt, and navigate Google Chrome’s built-in developer tools.
 
 ## Topics
 
