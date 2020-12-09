@@ -386,6 +386,7 @@ If you were able to see all photos and they look like you want them to, your kno
 If you'd like to spice up your friend-o-gram a bit, consider adding some of the following: 
 * Background color to the webpage
 * A fun logo at the top of the page 
+
 Keep in mind that while there are no grades for this program, your projects will speak to the work you can do should you choose to use them as a part of your resume. 
 
 
