@@ -17,7 +17,7 @@ Use these resources to introduce yourself to the topics and to complete the exer
 
 ### HTML
 
-The following guide will introduce you to HTML. It may seem a little daunting at first since you may not understand the terminology, but do not worry. It is totally okay if some things are still unclear to you, just keep pressing through and these concepts will make sense in time.
+The following guide will introduce you to HTML. It may seem a little daunting at first since you may not understand the terminology, but do not worry. It is totally okay if some things are still unclear to you, just keep pressing through and these concepts will make sense in time. If you still have questions at the end of this prework and our first class session, feel free to ask them during the class or after in Slack.  
 
 * [Intro to HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started){:target="_blank"}
 
@@ -47,7 +47,7 @@ _NOTE: After completing an exercise, the site will automatically forward you ont
 * [Ex. 4: HTML comment](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_comments1){:target="_blank"}
   * [Hint](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments){:target="_blank"}
 
-**The next 2 exercises are espeically vital**
+**The next 2 exercises are espeically important because...**
 * [Ex. 5: Link to image](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_images5){:target="_blank"}
   * [Hint](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage){:target="_blank"}
 
@@ -67,13 +67,13 @@ For this next challenge, there are two text boxes where you can edit the code. J
 * [Ex. 5: Background image](https://www.w3schools.com/css/exercise.asp?filename=exercise_css3_backgrounds1){:target="_blank"}
   * [Hint](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image){:target="_blank"}
 
-One of the resources above introduces [CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout){:target="_blank"}. This is an important concept for a later exercise. The next exercises will focus on CSS Grid.
+One of the resources above introduces [CSS grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout){:target="_blank"}. This is an important concept for a later exercise that has to do with "Responsive Design". The next exercises will focus on CSS Grid as well. 
 
 * [Ex. 6-8: Complete levels 1-3](https://www.w3schools.com/css/exercise.asp?filename=exercise_padding2){:target="_blank"}
   * [Hint](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#The_Grid_container){:target="_blank"}
 
 ### Conclusion 
-Now you understand some of the basic concepts behind HTML and CSS! Hopefully this meme makes a little more sense to you now than it did before you started. 
+Now you understand some of the basic concepts behind HTML and CSS! Hopefully this meme makes a little more sense to you than it did before you started. 
 
 
 ![HTML&CSS MEME](https://qph.fs.quoracdn.net/main-qimg-097424108c6dc99849e7365be6848c8b)
