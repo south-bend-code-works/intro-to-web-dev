@@ -11,8 +11,8 @@ layout: default
 
 At the end of this prework, you will be able to:
 - Describe why GIT and GitHub.com are two of the most important tools for helping developers track changes to and colloborate on code.
-- Use the basic and most important commands such as `git add`, `git commit`, `git status`, `git push` and more
-- Save your code to your remote repostiory on github.com
+- Use the basic and most important commands such as `git add`, `git commit`, `git status`, `git push` and more!
+- Save your code to your remote repostiory on github.com.
 
 Throught this course we will us git and github in the following ways:
 - Use git to track changes to all of your code for our class assignments.
