@@ -11,3 +11,7 @@ Each week, students will submit their code to their instructor demonstrating ski
 At the end of this course, each student will have a portfolio of work that can be used on resumes or during the job application process. 
 
 ![HTML&CSS MEME](https://memegenerator.net/img/instances/51720836.jpg)
+
+Ugh, you guys...I had a really difficult time choosing between two memes because one is Gandalf, which I mean c'mon, he's Gandalf, but the other is about the Matrix and we're freaking coding! Life can be so hard sometimes. 
+
+![HTML&CSS MEME](https://memegenerator.net/img/instances/71617549.jpg)
