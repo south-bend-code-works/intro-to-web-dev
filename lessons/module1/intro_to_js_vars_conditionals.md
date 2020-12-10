@@ -12,6 +12,9 @@ Earlier, we used an analogy of a house to describe the purposes of HTML and CSS.
 
 ## Topics
 
+### Syntax
+TODO
+
 ### Variables
 One of the fundamental concepts in JS (and many other coding languages) is **variables**. Think of a **variable** as a box that we can put a value in so we can use that value or change it later. 
 
