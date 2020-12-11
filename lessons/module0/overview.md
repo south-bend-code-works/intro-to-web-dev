@@ -23,4 +23,4 @@ The instructors teaching you are from South Bend Code School. Our mission is to 
 
 
 
-![Welcome MEME](https://cdn.vox-cdn.com/thumbor/Co2D5EYyEBBk0akL7Q6YT31Uptw=/0x0:1409x785/1400x1050/filters:focal(622x252:846x476):format(png)/cdn.vox-cdn.com/uploads/chorus_image/image/55701645/Screen_Shot_2017_07_13_at_1.09.20_PM.0.png)
+![Welcome MEME](https://imgflip.com/i/4pyijz)
