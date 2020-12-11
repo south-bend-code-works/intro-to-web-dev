@@ -22,9 +22,11 @@ Coding
 ## David Mattia
 
 ### Education 
-University of Notre Dame: ______
+University of Notre Dame: BS, Computer Science
 
 ### Career Experience
+Staff Engineer at Transcend.io
+Software Enginer at Google
 
 ### Interests 
 Making Tortilla Burritos (a tortilla wrapped around another tortilla covered in cheese) 
