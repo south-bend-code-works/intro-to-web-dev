@@ -10,12 +10,12 @@ layout: default
 Indiana University: BS, Computer Science 
 
 ### Career Experience
-Software Developer at Code Works 
-Software Developer at GiveGrove
+* Software Developer at Code Works 
+* Software Developer at GiveGrove
 
 ### Interests 
-Vollyball 
-Coding 
+* Vollyball 
+* Coding 
 
 
 
@@ -25,9 +25,9 @@ Coding
 University of Notre Dame: BS, Computer Science
 
 ### Career Experience
-Staff Engineer at Transcend.io
-Software Enginer at Google
+* Staff Engineer at Transcend.io
+* Software Enginer at Google
 
 ### Interests 
-Making Tortilla Burritos (a tortilla wrapped around another tortilla covered in cheese) 
-Cats
+* Making Tortilla Burritos (a tortilla wrapped around another tortilla covered in cheese) 
+* Cats
