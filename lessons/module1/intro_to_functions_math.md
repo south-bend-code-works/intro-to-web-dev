@@ -207,7 +207,7 @@ var greeting2 = makeAppleGreeting(3, "Karen", true)
 Go to this [CodePen](https://codepen.io/jorymullet/pen/ZEpBORq){: target='_blank'} and follow the instructions.
 
 ### Conclusion 
-You can now make functions! This is a powerful tool for making your webpages much more functional and interesting.
+If you completed the challenge, you can now make functions! This is a powerful tool for making your webpages much more functional and interesting.
 
 
 ![HTML&CSS MEME](https://media.giphy.com/media/l49JHLpRSLhecYEmI/giphy.gif)
