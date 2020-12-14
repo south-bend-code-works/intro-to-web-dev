@@ -2,49 +2,65 @@
 layout: default
 ---
 
-# Friend-o-gram
+# Practice Problem: Quidditch Cup Instructions
 
 ## Goal
 
-Our goal for this project is to build a sweet, web-based version of our favorite social media platform for sharing photos with our friends "on the line"! See if you can guess which one we are talking about based on the title of this project. 
+Our goal for this project is to build an interactive, web-based version of Quidditch, a fictional sport invented by author J.K. Rowling for her fantasy book series Harry Potter. 
 
 At the end of this activity, you will have built something similar to this:
 
-![best example]({{ site.baseurl }}/assets/img/module1/fog_best_example.png)
+![quidditch example]({{ site.baseurl }}/assets/img/module1/quidditch-animated.gif)
 
 ## Overview
 
-This activity will allow you to combine all the skills you have learned, HTML, CSS, and Visual Studio Code (VS Code).
+This activity will allow you to combine all the skills you have learned so far:
+* Visual Studio Code (VS Code).
+* HTML, CSS, and JavaScript
 
 ## Instruction
 
-### 1. Create a file
+### 1. Create a new project
 
-* First, on your desktop, right-click and select New Folder. Name it `friend-o-gram`.
-* Open VS Code. In the toolbar at the top, under File, click New File. Save the file as `index.html` in your folder `friend-o-gram`.
+* First, on your desktop, right-click and select New Folder. Name it `quidditch-cup`.
+* Open VS Code. In the toolbar at the top, under File, click New File. Save the file as `index.html` in your folder `quidditch-cup`.
 * Copy and paste the following into your file in VS Code:
 
 ```
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <title>Quidditch-Cup
+    
+    <!--All of our CSS will go here-->
+    <sytle>
+    </style>
+
+  </head>
+
+  <!--All of our HTML will go here-->
   <body>
-    Hello world!
+    <H1>Quidditch Cup</H1>
   </body>
+
+  <!--All of our JavaScript will go here-->
+  <script>
+  </script>
 </html>
 ```
-* Save the file and go to your desktop where you can see the folder `friend-o-gram`. Click into it and right-click on the `index.html` and open with Chrome (or whatever browser you have).
-* You should see `Hello world!` on an otherwise blank screen.
+* Save the file and go to your desktop where you can see the folder `quidditch-cup`. Click into it and right-click on the `index.html` and open with Chrome (or whatever browser you have).
+* You should see `Quidditch Cup` on an otherwise blank screen.
 
-### 2. Choose 6 photos
+### 2. Download and add the supporting files we will need to your project folder
+Let's create some sub-folders to organize our project.  Keeping your code and assets organized ensures that 
+* Download the following photos and place them in a new sub-folder, `imgs`, in your `quidditch-cup` project directory.
+  * Image Asset Links Here
+* Download the following audio file and place it in the new sub-folder, `sounds`, in your `quidditch-cup` project directory. 
+  * Audio Links Here
 
-* Find and download 6 photos of you and/or friends, and/or sweet memes, and/or pictures of things you like and put all the files in the folder `friend-o-gram`.
-  * Use Facebook, Google, or other online source to find the photos.
-* Once the photos are in your folder, rename all the photos as `photo-1.jpg`, `photo-2.jpg`, etc.
+### 2. Build HTML structure
 
-### 3. Build HTML structure
-
-* Our site is going to have 6 sections for the 6 photos. We are going to have 6 `div` elements that will have the photos as backgrounds.
+* Our game is going to have 6 sections for the 6 photos. We are going to have 6 `div` elements that will have the photos as backgrounds.
 * Put 6 `div` elements into your code.
 
 <div class="hint">Hover for hint</div>
