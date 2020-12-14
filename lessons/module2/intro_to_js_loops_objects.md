@@ -55,7 +55,7 @@ arr.push(5)
 
 ```
 
-In order to add an element to an **array**, we first type the name of the **array** (in this case, `arr`) and then add `.push` after it. Then, whatever elements we want to add to the **array**, we put in paranthesis behind `arry.push`. This is telling the **array** to add whatever element we are passing into `.push` to the end of the **array**. 
+In order to add an element to an **array**, we first type the name of the **array** (in this case, `arr`) and then add `.push` after it. Then, whatever elements we want to add to the **array**, we put in paranthesis behind `arr.push`. This is telling the **array** to add whatever element we are passing into `.push` to the end of the **array**. 
 
 Another example:
 
