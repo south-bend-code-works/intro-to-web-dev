@@ -14,7 +14,7 @@ Indiana University: BS, Computer Science
 * Software Developer at GiveGrove
 
 ### Interests 
-* Vollyball 
+* Volleyball 
 * Coding 
 
 
@@ -26,8 +26,9 @@ University of Notre Dame: BS, Computer Science
 
 ### Career Experience
 * Staff Engineer at Transcend.io
-* Software Enginer at Google
+* Software Engineer at Google
 
 ### Interests 
-* Making Tortilla Burritos (a tortilla wrapped around another tortilla covered in cheese) 
-* Cats
+* Privacy Law
+* Coaching Soccer
+* RVing around National Parks
