@@ -8,4 +8,4 @@ We just want to know how it's going for you. Let us know how you are feeling abo
 
 [Take the Survey Now!](https://docs.google.com/forms/d/1oqvdprO-u6H2NRhcoFBjCUFdf2I5ZPXfLkxopLYEzB4/edit)
 
-![gift]({{ site.baseurl }}/assets/img/module1/giftmeme.jpg_large){: style="max-width:600px"}
+![gift]({{ site.baseurl }}/assets/img/module1/giftmeme.jpg){: style="max-width:600px"}
