@@ -15,7 +15,7 @@ Visual Studio Code (vscode) is a light weight and free text editor built for sof
 - It is highly extensible and open source, making it *extremely* popular with professional software developers.
 - It provides many advantages over basic text editors, for example:
   - Syntax Highlighting to make code easier to read
-  - Autocompletion and Typeahead support
+  - Autocompletion and Type-ahead support
   - Provides you the ability to preview your work
   
 An example of an HTML website in a plain text editor and Visual Studio Code.
