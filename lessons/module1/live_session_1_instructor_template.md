@@ -1,26 +1,32 @@
 <!--
 
+ _____  ___    ___    _  _     _____  ___   _____     ___    ___    _   _  ___    ___    _____  _____  _____  ___   
+(  _  )(  _`\ (  _`\ (_)(_)   (  _  )|  _`\(_   _)   (  _`\ (  _`\ ( ) ( )(  _`\ |  _`\ (  _  )(_   _)(  _  )|  _`\ 
+| (_) || (_(_)| ( (_)| || |   | (_) || (_) ) | |     | ( (_)| (_(_)| `\| || (_(_)| (_) )| (_) |  | |  | ( ) || (_) )
+|  _  |`\__ \ | |  _ | || |   |  _  || ,  /  | |     | |___ |  _)_ | , ` ||  _)_ | ,  / |  _  |  | |  | | | || ,  / 
+| | | |( )_) || (_( )| || |   | | | || |\ \  | |     | (_, )| (_( )| |`\ || (_( )| |\ \ | | | |  | |  | (_) || |\ \ 
+(_) (_)`\____)(____/'(_)(_)   (_) (_)(_) (_) (_)     (____/'(____/'(_) (_)(____/'(_) (_)(_) (_)  (_)  (_____)(_) (_)
+                                                                                                                    
+                                                                                                                    
+http://patorjk.com/software/taag/#p=display&f=Puffy&t='Fin
 
 Agenda:
 -1. Introduce yourself 
 
 0. House Keeping: Review how the class is structured.
 
-0.5. How to use Vim
-
 1. Review how the web works
     - Class Discussion
     - Show how chrome works
     - Backend / Front End (We are only on Front End for now)
-2. HTML
+2. HTML / CSS
     - What is HTML
     - Structure of an HTML Document
     - Friend-o-Gram
-3. CSS
-4. How to use command line (terminal / git bash - (ls, cd, mkdir - file paths) + git)
-5. How to use git
-6. Launching your repo on github Pages
- 
+3. GIT / TERMINAL
+4. Hosting your website on github
+5. Review Final Project Part 1 (last 5 minutes)
+
 -->
 
 <!-- House Keeping (25 minutes)
@@ -92,27 +98,33 @@ Agenda:
 -->
 
 <!-- Recap on HTML
- _   _ ________  ___ _    
-| | | |_   _|  \/  || |    
-| |_| | | | | .  . || |    
-|  _  | | | | |\/| || |    
-| | | | | | | |  | || |____
-\_| |_/ \_/ \_|  |_/\_____/
 
+ _   _  _____         _            _        ___    ___    ___   
+( ) ( )(_   _)/'\_/`\( )          ( )      (  _`\ (  _`\ (  _`\ 
+| |_| |  | |  |     || |        __| |__    | ( (_)| (_(_)| (_(_)
+|  _  |  | |  | (_) || |  _    (__   __)   | |  _ `\__ \ `\__ \ 
+| | | |  | |  | | | || |_( )      | |      | (_( )( )_) |( )_) |
+(_) (_)  (_)  (_) (_)(____/'      (_)      (____/'`\____)`\____)
+                                                                
+                                                                
 1. Now we are going to code together.  
 2. Open Visual Studio Code.
 3. Brief review of VsCode
 4. Build Friend-o-gram together from scratch
 -->
 
-<!-- Build the skeleton
+<!-- Build the skeleton HTML structure
 1. Discuss each part of this structure with the class, ask lots of questions
     - Example: Why is <head> important? <-- this is great!>
     - Why do we open and close our tags?
-    - Run this in your browser
+    - Run this in your browser - why don't we see anything?
     - Compare this to the craigslist example
 
     - Discuss some vscode features (type ahead, syntax color, etc)
+
+    Use basic HTML tags:
+        <h1>
+        <p>
 -->
 ```html
 <!DOCTYPE html>
@@ -122,19 +134,60 @@ Agenda:
     </style>
   </head>
   <body>
+    <!-- Have the students add a title to the page using the header tags-->
+    <h1>Friend-o-gram</h1>
+
+    <!-- Have the students add a description to the page using the p tags-->
+    <p>These are my friends<p>
   </body>
 </html>
 ```
 
+<!-- Host our page on github 
+ ___       _    _   _         _     
+(  _`\  _ ( )_ ( ) ( )       ( )    
+| ( (_)(_)| ,_)| |_| | _   _ | |_   
+| |___ | || |  |  _  |( ) ( )| '_`\ 
+| (_, )| || |_ | | | || (_) || |_) )
+(____/'(_)`\__)(_) (_)`\___/'(_,__/
 
-<!--
-2. Fill out the body with our content.
+0. Quickly Describe what github is in your own words
+    - mention it's free
+    - the nature of open source and software
+1. Open the command line 
+    - Mac People: Use Terminal
+    - Windows People: Use Git Bash
+2. Use "cd" to navigate to your directory
+3. git init
+4. git add index.html
+5. git commit -m "Initial Commit"
+6. You have created your local git repo, let's host it in Github
+7. Go to Github.com, create a new project called friend-o-gram
+8. Follow the instructions for "or push an existing repository from the command line"
+    1. git remote add origin https://github.com/<your username>/<your repo name>.git
+    2. git branch -M main
+    3. git push -u origin main
+9. congrats/WOW/Cool/Nice - Refresh the repo to see that your files are there!   
+10.  Host it on github pages (talk about servers again) 
+    1. Settings->GitHub Pages, select main branch (use root)
+    2. Your site is published! 
+    3. https://<username>.github.io/<reponame>/
+11.  Note the custom domain field, if you want to buy yourname.com you can connect it up!
+-->
 
-Review basic HTML tags:
-<h1>
-<p>
-<ul><ol> <li>
-<div>
+
+<!-- Fully build out friend-o-gram
+
+ ___                              _                                                   
+(  _`\       _                   ( )                                                  
+| (_(_)_ __ (_)   __    ___     _| | ______   _   ______   __   _ __   _ _   ___ ___  
+|  _) ( '__)| | /'__`\/' _ `\ /'_` |(______)/'_`\(______)/'_ `\( '__)/'_` )/' _ ` _ `\
+| |   | |   | |(  ___/| ( ) |( (_| |       ( (_) )      ( (_) || |  ( (_| || ( ) ( ) |
+(_)   (_)   (_)`\____)(_) (_)`\__,_)       `\___/'      `\__  |(_)  `\__,_)(_) (_) (_)
+                                                        ( )_) |                       
+                                                         \___/'                       
+
+2. Teach DIVs, class, id, img tag
 
 Use inspect element to review the structure and talk about.
 -->
@@ -146,18 +199,76 @@ Use inspect element to review the structure and talk about.
     </style>
   </head>
   <body>
-    <h1>Friend-o-gram</h1>
+    <!-- Have the students add a title to the page using the header tags-->
+    <h1>Friend-o-gram</h1> 
+
+    <!-- Have the students add a description to the page using the p tags-->
     <p>These are my friends<p>
-    <div>Photo 1 here</div>
-    <div>Photo 2 here</div>
-    <div>Photo 3 here</div>
-    <div>Photo 4 here</div>
-    <div>Photo 5 here</div>
-    <div>Photo 6 here</div>
+    
+    <!-- There are several ways to build our grid of photos.-->
+
+    <!--Way 1: With classes-->
+    <h2>Div with classes</h2>
+    <div class="photo-wrapper"> <!--Talk about the nested divs and how this works-->
+      <div class="photo" id="photo-1">Photo 1 here</div>
+      <div class="photo" id="photo-2">Photo 2 here</div>
+      <div class="photo" id="photo-3">Photo 3 here</div>
+      <div class="photo" id="photo-4">Photo 4 here</div>
+      <div class="photo" id="photo-5">Photo 5 here</div>
+      <div class="photo" id="photo-6">Photo 6 here</div>
+    </div>
+
+    <!-- Way 2: Without using classes -->
+    <h2>Without classes on the individual photos</h2>
+    <div class="photo-wrapper">
+      <div id="photo-1">Photo 1 here</div>
+      <div id="photo-2">Photo 2 here</div>
+      <div id="photo-3">Photo 3 here</div>
+      <div id="photo-4">Photo 4 here</div>
+      <div id="photo-5">Photo 5 here</div>
+      <div id="photo-6">Photo 6 here</div>
+    </div>
+
+    <!-- Way 3: Using img tags -->
+    <h2>Using img tags</h2>
+    <div class="photo-wrapper">
+      <img src="photo-1.jpg">
+      <img src="photo-2.jpg">
+      <img src="photo-3.jpg">
+      <img src="photo-4.jpg">
+      <img src="photo-5.jpg">
+      <img src="photo-6.jpg">
+    </div>
   </body>
 </html>
 ```
 
+
+<!-- Update your project on github - You can do this throughout the class at key milestones.  
+ _   _  ___    ___    _____  _____  ___       ___    _  _____  _   _  _   _  ___   
+( ) ( )(  _`\ (  _`\ (  _  )(_   _)(  _`\    (  _`\ (_)(_   _)( ) ( )( ) ( )(  _`\ 
+| | | || |_) )| | ) || (_) |  | |  | (_(_)   | ( (_)| |  | |  | |_| || | | || (_) )
+| | | || ,__/'| | | )|  _  |  | |  |  _)_    | |___ | |  | |  |  _  || | | ||  _ <'
+| (_) || |    | |_) || | | |  | |  | (_( )   | (_, )| |  | |  | | | || (_) || (_) )
+(_____)(_)    (____/'(_) (_)  (_)  (____/'   (____/'(_)  (_)  (_) (_)(_____)(____/'
+                                                                                   
+                                                                                                                                                     
+1. git add -A
+2. git commit -m "message"
+3. git push
+4. Go to github.com / your github site and refresh.
+
+
+<!-- 
+ ___    _  _   _  _____  _         ___    _    _  _____         ___    _      ___   
+(  _`\ (_)( ) ( )(  _  )( )       (  _`\ ( )  ( )(  _  )/'\_/`\(  _`\ ( )    (  _`\ 
+| (_(_)| || `\| || (_) || |       | (_(_)`\`\/'/'| (_) ||     || |_) )| |    | (_(_)
+|  _)  | || , ` ||  _  || |  _    |  _)_   >  <  |  _  || (_) || ,__/'| |  _ |  _)_ 
+| |    | || |`\ || | | || |_( )   | (_( ) /'/\`\ | | | || | | || |    | |_( )| (_( )
+(_)    (_)(_) (_)(_) (_)(____/'   (____/'(_)  (_)(_) (_)(_) (_)(_)    (____/'(____/'
+                                                                                    
+                                                                                    
+EXAMPLE of fully build out friend-o-gram -->
 ```html
 <!DOCTYPE html>
 <html>
@@ -176,6 +287,7 @@ Use inspect element to review the structure and talk about.
         background-position: 50% 50%;
       }
       #photo-1 {
+        /* Every photo should have a background-image, but different size/shape photos may need other attributes */
         background-image: url('photo-1.jpg');
         background-position: 50% 0%;
       }
