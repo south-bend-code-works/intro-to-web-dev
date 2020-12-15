@@ -6,6 +6,9 @@ layout: default
 
 ## Joshua Mullet
 
+![Joshua]({{ site.baseurl }}/assets/img/module1/joshua.jpg){: style="max-width:400px"}
+
+
 ### Education 
 Indiana University: BS, Computer Science 
 
@@ -20,6 +23,9 @@ Indiana University: BS, Computer Science
 
 
 ## David Mattia
+
+![David]({{ site.baseurl }}/assets/img/module1/david.jpg){: style="max-width:400px"}
+
 
 ### Education 
 University of Notre Dame: BS, Computer Science
