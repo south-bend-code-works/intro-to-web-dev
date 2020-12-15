@@ -14,37 +14,46 @@ At the end of this prework, you will be able to:
 - Use the basic and most important commands such as `git add`, `git commit`, `git status`, `git push` and more!
 - Save your code to your remote repository on github.com.
 
-Throughout this course we will us git and GitHub in the following ways:
+Throughout this course we will use git and GitHub in the following ways:
 - Use git to track changes to all of your code for our class assignments.
 - Use git & github.com to collaborate on group projects with your classmates.
 - Share a portfolio of completed projects on your public github.com profile.
 
+## What Problem does git solve?
+
+Say you and a friend are working on an essay together, and you decide to email updated copies of the essay back and forth as you make changes.
+
+You write a first draft, and send it over.
+Your friend makes some edits, and sends it back.
+
+All is good, right?
+
+Well what if then, you both make changes at the same time, and send each other your separately updated copies at the same time? How do you resolve the cases where you updated certain paragraphs differently? How can you see exactly what changes each of you made?
+
+That's the core problem Git solves: Keeping a clear history of changes to a coding project in a way that allows multiple people to touch the code simultaneously.
+
 ## Overview
 
-**git** is a distributed version control system that is used by the overwhelming majority of professional developers.  Git tracks changes to your code so that it's easy to identify what code has changed from one version to another.
-
-Have you ever worked on a large term paper and needed to save multiple versions? If you've ever lost important work because you accidentally deleted or overwrote hours of work you understand why tracking changes to your work is so important! 
+**git** is version control system that is used by the majority of professional developers.  Git tracks changes to your code so that it's easy to identify what code has changed from one version to another.
 
 Below is a screenshot comparing two versions of the same webpage. With git can easily see what code was changed between your previous and working version of the code!
 ![comparing two versions of the same page](/imgs/module1/git_compare.png)
 
 **GitHub.com** is a website that can host your git project repositories on the web, making it easy to collaborate with other developers.  
 
-Imagine if we were forced to collaborate on that term paper with dozens of other students! We would need a way to safely merge everyone's contributions to our paper together while maintaining the integrity of the term paper. GitHub.com helps to solve this problem by enabling teams of developers track changes and collaborate using centralized project repositories.
-
 Recall that git is a *distributed* version control system. It's distributed because every developer working on a project has a complete copy of the project and all changes on their local computer (known as the project repository). All of these developers periodically sync their work and changes to this centralized, remote repository, hosted on github.com.  
 
 ![Distributed Version Control](/imgs/module1/git_distributed.png)
 
 ## Resources
-Use these resources to introduce yourself to the topics and to complete the exercises.
 
-### GIT Crash Course
+Use these resources to introduce yourself to the topics and to complete the exercises:
 
-The following video will walk you through the basics of git and Github. his video closely mirrors your pre-work exercise below. This video is a little long and fairly dense, so you might want to get a cup of coffee while you watch it!
+## Git Crash Course
 
-[![Git & GitHub Crash Course For Beginners](http://i3.ytimg.com/vi/SWYqp7iY_Tc/hqdefault.jpg)](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
-<!-- Maybe switch to the shorter https://www.youtube.com/watch?v=USjZcfj8yxE -->
+The following video will walk you through the basics of git and GitHub. his video closely mirrors your pre-work exercise below.
+
+[![Git Crash course For Beginners](http://i3.ytimg.com/vi/USjZcfj8yxE/hqdefault.jpg)](ttps://www.youtube.com/watch?v=USjZcfj8yxE)
 
 Git is very robust and as such the number of commands and features may seem a little overwhelming at first, but do not worry. It is totally okay if some things are still unclear to you, just keep pressing through and these concepts will make sense as we apply them throughout the course.
 
@@ -111,43 +120,47 @@ cd my-repo
 Open the project directory with visual studio code and create a new file called *index.html*
 
 ```bash
-code .
+touch index.html
+code index.html 
 ```
 
-### git isn't aware of the file, stage it
+### Tell Git to upload your index.html file in the next change
 
 ```bash
 git add index.html
 ```
 
-### Take a snapshot of the staging area
+### Give a description of what changed
 
 ```bash
 git commit -m "add index.html to initial commit"
 ```
 
-### Create a remote repository for the project on github.com
+### Upload your changes
 
-Got to github.com and login to your account.  Click the 
+Go to github.com and login to your account.  Click the plus sign in the upper right corner, and then click "New Repository"
+Add a name, leave the rest of the options as defaults, and click "Create Repository".
 
-### Provide the path for the repository you created on github
+#### Add code to your repository
 
-### Share your first git project repository on github.com
-1. ...
-2. ...
-
-```bash
-git remote add origin https://github.com/<YOUR-USERNAME>/my-repo.git
-```
-
-### Push changes to github
+After creating your repository, GitHub will display directions for uploading some code, but you are also welcome to follow the directions here:
 
 ```bash
-git push --set-upstream origin main
+git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
 ```
+
+This connects your local files to the files on github.com.
+
+Next, run:
+
+```bash
+git push origin main
+```
+
+which will upload your files to Github.
 
 ### Conclusion 
-Now you understand some of the basic concepts behind GIT! Hopefully this meme makes a little more sense to you now than it did before you started. 
 
+Congratulations, you now have a GitHub account with a live project! Not only is this a great way to keep track of your changes as you go, but it is also a wonderful tool to put on your resume to show-off what you've made.
 
-![GIT MEME](TODO)
+![the sad truth](https://imgs.xkcd.com/comics/git.png)
