@@ -21,4 +21,4 @@ Although web development has a lot of hype, the barriers to entry can feel somew
 ## Some additional background…
 The instructors teaching you are from South Bend Code School. Our mission is to make computer science education equitable and accessible for all students.
 
-![Welcome]({{ site.baseurl }}/assets/img/module1/howdoyouodo.jpg){: style="max-width:400px"}
+![How do you do]({{ site.baseurl }}/assets/img/module1/howdoyoudo.jpg){: style="max-width:400px"}
