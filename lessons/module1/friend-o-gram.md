@@ -33,7 +33,7 @@ This activity will allow you to combine all the skills you have learned, HTML, C
   </body>
 </html>
 ```
-* Save the file and go to your desktop where you can see the folder `friend-o-gram`. Click into it and right-click on the `index.html` and open with Chrome (or whatever browser you have).
+* Save the file and go to your desktop where you can see the folder `friend-o-gram`. Click into it and right-click on the `index.html` and open with Google Chrome.
 * You should see `Hello world!` on an otherwise blank screen.
 
 ### 2. Choose 6 photos
