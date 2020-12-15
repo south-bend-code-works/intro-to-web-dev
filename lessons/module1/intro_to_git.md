@@ -74,8 +74,12 @@ MAC | WINDOWS
 |---|---|
 [Download MAC Installer](https://sourceforge.net/projects/git-osx-installer/files/) | [Download Windows Installer](https://gitforwindows.org/)
 
-### Creating your Github.com Account
+## Creating your Github.com Account
 [Create your github.com account](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+
+### Important!!! Once you have created your GitHub account, please submit your username via this form: 
+
+https://docs.google.com/forms/d/16n1_cxuQvdwyV07Zmb5Rar-0la5wZA3pAAXL5nqOadE/edit
 
 ## Exercises
 
@@ -89,20 +93,20 @@ Complete the following exercise to practice your new found git skills. Use the h
 4. Stage your index.html
 5. Commit your index.html
 
-# Open the terminal or command prompt and create a new directory, my-repo, and initialize it with git-specific functions
+### Open the terminal or command prompt and create a new directory, my-repo, and initialize it with git-specific functions
 
 ```bash
 mkdir my-repo
 git init my-repo
 ```
 
-# Change into the `my-repo` directory
+### Change into the `my-repo` directory
 
 ```bash
 cd my-repo
 ```
 
-# Create the first file in the project
+### Create the first file in the project
 
 Open the project directory with visual studio code and create a new file called *index.html*
 
@@ -110,23 +114,23 @@ Open the project directory with visual studio code and create a new file called 
 code .
 ```
 
-# git isn't aware of the file, stage it
+### git isn't aware of the file, stage it
 
 ```bash
 git add index.html
 ```
 
-# Take a snapshot of the staging area
+### Take a snapshot of the staging area
 
 ```bash
 git commit -m "add index.html to initial commit"
 ```
 
-# Create a remote repository for the project on github.com
+### Create a remote repository for the project on github.com
 
 Got to github.com and login to your account.  Click the 
 
-# Provide the path for the repository you created on github
+### Provide the path for the repository you created on github
 
 ### Share your first git project repository on github.com
 1. ...
@@ -136,7 +140,7 @@ Got to github.com and login to your account.  Click the
 git remote add origin https://github.com/<YOUR-USERNAME>/my-repo.git
 ```
 
-# Push changes to github
+### Push changes to github
 
 ```bash
 git push --set-upstream origin main
