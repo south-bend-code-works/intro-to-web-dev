@@ -22,8 +22,8 @@ An example of an HTML website in a plain text editor and Visual Studio Code.
 
 Plain Text Editor             |  Visual Studio Code
 :-------------------------:|:-------------------------:
-![](/assets/img/module1/vscode_plain_text.png)  |  ![](/assets/img/module1/vscode_vscode.png)
-
+![]({{ site.baseurl }}/assets/img/module1/vscode_plain_text.png)  |  ![]({{ site.baseurl }}/assets/img/module1/vscode_vscode.png)
+/assets/img/module1/
 ## Download & Installation
 To download and install Visual Studio Code, follow the directions here:
 - https://code.visualstudio.com/download
