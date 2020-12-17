@@ -13,3 +13,5 @@ layout: default
     - Talk about the upcoming lab and it's format
 
 ## Zoom Link
+
+TBD
