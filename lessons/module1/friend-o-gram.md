@@ -65,9 +65,9 @@ This activity will allow you to combine all the skills you have learned, HTML, C
 </html>
 ```
 
-* Label each div with 2 classes. 
-  * The first class should be `photo` so that we can add the same CSS to all photos if we want.
-  * The second class should be the same as the image name. So, photo-1 should have the class `photo-1` as so on. This allows us to add CSS to individual `div`s without affecting the other `div`s.
+* Label each div with a class and an ID. 
+  * The class should be `photo` so that we can add the same CSS to all photos if we want. A class can be used on multiple elements, just like there are multiple students in this class.
+  * The id should be unique to each photo, like your student ID is to you. So, the first photo should have the class `photo-1` as so on. This allows us to add CSS to individual `div`s without affecting the other `div`s.
 
 <div class="hint">Hover for hint</div>
 
@@ -77,12 +77,12 @@ This activity will allow you to combine all the skills you have learned, HTML, C
 <html>
   <head></head>
   <body>
-    <div class="photo photo-1"></div>
-    <div class="photo photo-2"></div>
-    <div class="photo photo-3"></div>
-    <div class="photo photo-4"></div>
-    <div class="photo photo-5"></div>
-    <div class="photo photo-6"></div>
+    <div class="photo" id="photo-1"></div>
+    <div class="photo" id="photo-2"></div>
+    <div class="photo" id="photo-3"></div>
+    <div class="photo" id="photo-4"></div>
+    <div class="photo" id="photo-5"></div>
+    <div class="photo" id="photo-6"></div>
   </body>
 </html>
 ```
@@ -135,7 +135,7 @@ This activity will allow you to combine all the skills you have learned, HTML, C
 
 * Currently, there are 6 `div`s in our `body` that have no height and no background images.
 * The first step is to add height to our `div`s so that they aren't flat.
-* In the CSS, grab all the `div`s using the selector `.photo` since all of the `div`s have that class.
+* In the CSS, grab all the `div`s using the selector `.photo` since all of the `div`s have that class. The period `.` before the word `photo` signals to CSS that it is the name of a class.
 
 <div class="hint">Hover for hint</div>
 
@@ -200,22 +200,22 @@ This activity will allow you to combine all the skills you have learned, HTML, C
       .photo {
         height: 250px;
       }
-      .photo-1 {
+      #photo-1 {
         background-image: url('photo-1.jpg');
       }
-      .photo-2 {
+      #photo-2 {
         background-image: url('photo-2.jpg');
       }
-      .photo-3 {
+      #photo-3 {
         background-image: url('photo-3.jpg');
       }
-      .photo-4 {
+      #photo-4 {
         background-image: url('photo-4.jpg');
       }
-      .photo-5 {
+      #photo-5 {
         background-image: url('photo-5.jpg');
       }
-      .photo-6 {
+      #photo-6 {
         background-image: url('photo-6.jpg');
       }
     </style>
@@ -294,7 +294,7 @@ This activity will allow you to combine all the skills you have learned, HTML, C
 ![better example]({{ site.baseurl }}/assets/img/module1/fog_better_example.png)
 
 * Better. However, I want photo 1 to be shifted lower. 
-* So, instead of `background-position` being `50% 50%` for that photo, I'll use the same selector I used to set the background-image (`.photo-1`) to change just that photo's `background-position`.
+* So, instead of `background-position` being `50% 50%` for that photo, I'll use the same selector I used to set the background-image (`#photo-1`) to change just that photo's `background-position`.
 
 <div class="hint">Hover for hint</div>
 
@@ -313,7 +313,7 @@ This activity will allow you to combine all the skills you have learned, HTML, C
         background-size: cover;
         background-position: 50% 50%;
       }
-      .photo-1 {
+      #photo-1 {
         background-image: url('photo-1.jpg');
         background-position: 50% 0%;
       }
@@ -350,34 +350,34 @@ If you were able to see all photos and they look like you want them to, your kno
         background-size: cover;
         background-position: 50% 50%;
       }
-      .photo-1 {
+      #photo-1 {
         background-image: url('photo-1.jpg');
         background-position: 50% 0%;
       }
-      .photo-2 {
+      #photo-2 {
         background-image: url('photo-2.jpg');
       }
-      .photo-3 {
+      #photo-3 {
         background-image: url('photo-3.jpg');
       }
-      .photo-4 {
+      #photo-4 {
         background-image: url('photo-4.jpg');
       }
-      .photo-5 {
+      #photo-5 {
         background-image: url('photo-5.jpg');
       }
-      .photo-6 {
+      #photo-6 {
         background-image: url('photo-6.jpg');
       }
     </style>
   </head>
   <body>
-    <div class="photo photo-1"></div>
-    <div class="photo photo-2"></div>
-    <div class="photo photo-3"></div>
-    <div class="photo photo-4"></div>
-    <div class="photo photo-5"></div>
-    <div class="photo photo-6"></div>
+    <div class="photo" id="photo-1"></div>
+    <div class="photo" id="photo-2"></div>
+    <div class="photo" id="photo-3"></div>
+    <div class="photo" id="photo-4"></div>
+    <div class="photo" id="photo-5"></div>
+    <div class="photo" id="photo-6"></div>
   </body>
 </html>
 ```
