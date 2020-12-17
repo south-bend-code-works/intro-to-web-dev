@@ -2,9 +2,6 @@
 layout: default
 ---
 
----
-layout: default
----
 # Intro to git and GitHub
 
 ## Goal
