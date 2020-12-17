@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Practice Problem: Quidditch Cup Instructions
+# Practice Problem: Quidditch Cup 1.0 Instructions
 
 ## Goal
 
@@ -348,61 +348,127 @@ Let's create some sub-folders to organize our project.  Keeping your code and as
 * For your project, you will have to adjust individual photos to make things look good.
 * Play around with different CSS properties (`background-size`, `background-position`, etc.) to gain an understanding of what they mean and how to use them.
 
-## Conclusion
+## Solution
 
-If you were able to see all photos and they look like you want them to, your knowledge of HTML and CSS is ready for our in-class session! Here is all the code from the example above:
+Congrats!  At this point you've built a fully functional game using Javascript to manipulate the DOM (aka our html and css).  In our in-class live session we will review and extend our game with new features.  If you want to get started early, feel free to attempt the bonus missions below.
+
+Here is all the code for version 1.0 of our Quidditch Cup game:
 
 ```
 <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <title>Quidditch Cup</title>
     <style>
-      body {
-        display: grid;
-        grid-template-columns: auto auto auto;
+      .brown {
+        background-color: brown;
+        color: white;
+        padding: 3px;
+        border-radius: 5px;
       }
-      .photo {
-        height: 400px;
-        background-size: cover;
-        background-position: 50% 50%;
+
+      li {
+        padding: 6px;
       }
-      .photo-1 {
-        background-image: url('photo-1.jpg');
-        background-position: 50% 0%;
+
+      button {
+        margin: 5px;
       }
-      .photo-2 {
-        background-image: url('photo-2.jpg');
+
+      #gameboard {
+        background-color: lightskyblue;
+        height: 500px;
+        width: 500px;
       }
-      .photo-3 {
-        background-image: url('photo-3.jpg');
-      }
-      .photo-4 {
-        background-image: url('photo-4.jpg');
-      }
-      .photo-5 {
-        background-image: url('photo-5.jpg');
-      }
-      .photo-6 {
-        background-image: url('photo-6.jpg');
+
+      #quaffle {
+        position: absolute;
+        background-image: url("imgs/quaffle64x64.png");
+        width: 64px;
+        height: 64px;
+        visibility: hidden;
+        transition: 0.5s transform;
       }
     </style>
   </head>
   <body>
-    <div class="photo photo-1"></div>
-    <div class="photo photo-2"></div>
-    <div class="photo photo-3"></div>
-    <div class="photo photo-4"></div>
-    <div class="photo photo-5"></div>
-    <div class="photo photo-6"></div>
+    <h1>Quidditch Cup</h1>
+    <h2>Version 1.0</h2>
+    <p>The object of the game of Quidditch is to score more the most points!</p>
+    <h2>Rules</h2>
+    <ol>
+      <li>Clicking on the <span class="brown">Quaffle</span> earns <b>10 points</b>.</li>
+      <li>Refresh your browser to restart the game</li>
+    </ol>
+    <h3>Score: <span id="scoreboard">0</span></h3>
+
+    <button onclick="startGame()">New Game</button>
+
+    <div id="gameboard">
+      <div id="quaffle" onclick="scoreQuaffle()"></div>
+    </div>
+
+    <script>
+      // Variables accessible anywhere inside this <script> tag.
+      var score = 0;
+      var quaffle = document.getElementById("quaffle");
+      var scoreboard = document.getElementById("scoreboard");
+
+      var quaffleTimeoutID = null;
+
+      // Constants. Change these values to make the gameplay different 
+      var quaffleSpeed = 1500; // speed in Milliseconds.
+
+      // Function that starts a new game of Quidditch!
+      function startGame() {
+        // Reset the score board
+        score = 0;
+        scoreboard.innerHTML = score;
+
+        // Our quaffle is, by default, invisible.  We need to unhide it as we start our game.
+        quaffle.style.visibility = "visible";
+        
+        // Move the ball
+        moveQuaffle();
+      }
+
+      // Logic to move the Quaffle
+      function moveQuaffle() {
+        // Generate a random x,y position for our Quaffle
+        let randY = Math.floor(Math.random() * 436 + 1); // 500 (the width of the game board) - 64 (the width of the quaffle) = 436 px
+        let randX = Math.floor(Math.random() * 436 + 1);
+
+        // Use CSS to animate the transition from our current position to the new position.
+        quaffle.style.transform = `translate(${randX}px, ${randY}px)`; // Use a 'template literal' (backtick) to generate the string we need for our css animation.
+
+        // Plan to move the Quaffle again in a second or so if the player fails to clicks on it.
+        quaffleTimeoutID = setTimeout(moveQuaffle, quaffleSpeed);
+      }
+
+      // Logic to score when the quaffle is clicked.
+      function scoreQuaffle() {
+        // 10 points for scoring the quaffle!
+        score = score + 10;
+
+        // Update the scoreboard
+        scoreboard.innerHTML = score;
+
+        // Move the Quaffle Immediately!
+        clearTimeout(quaffleTimeoutID); // Cancel the previously planned movement of the Quaffle.
+        moveQuaffle(); // Move the Quaffle Immediatly
+      }
+    </script
   </body>
 </html>
 ```
 
 ## Bonus Mission 
-If you'd like to spice up your friend-o-gram a bit, consider adding some of the following: 
-* Background color to the webpage
-* A fun logo at the top of the page 
+Feel free to try and enhance our game in the following ways:
+* Add the a timer so that the game ends after 15 seconds
+* Add a Golden Snitch, that when captured gives you 150 points and ends the game
+* Add the ability to track your highest score
 
-Keep in mind that while there are no grades for this program, your projects will speak to the work you can do should you choose to use them as a part of your resume. 
+Keep in mind that while there are no grades for this program, your projects will speak to the work you can do should you choose to use them as a part of your resume.
 
 
