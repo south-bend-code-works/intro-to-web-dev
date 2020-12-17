@@ -71,7 +71,7 @@ Git is very robust and as such the number of commands and features may seem a li
 #### Lessons
 * [What is GitHub?]()
 * [Getting started with GitHub]()
-* [Collaborating with other developers using Github]()
+* [Collaborating with other developers using GitHub]()
 
 
 ## Installation
@@ -83,7 +83,7 @@ MAC | WINDOWS
 |---|---|
 [Download MAC Installer](https://sourceforge.net/projects/git-osx-installer/files/) | [Download Windows Installer](https://gitforwindows.org/)
 
-## Creating your Github.com Account
+## Creating your github.com Account
 [Create your github.com account](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
 
 ### Important!!! Once you have created your GitHub account, please submit your username via this form: 
@@ -136,28 +136,19 @@ git add index.html
 git commit -m "add index.html to initial commit"
 ```
 
-### Upload your changes
+### Upload your changes to GitHub
 
-Go to github.com and login to your account.  Click the plus sign in the upper right corner, and then click "New Repository"
+Go to [github.com](https://github.com) and login to your account.  Click the plus sign in the upper right corner, and then click "New Repository"
 Add a name, leave the rest of the options as defaults, and click "Create Repository".
-
-#### Add code to your repository
 
 After creating your repository, GitHub will display directions for uploading some code, but you are also welcome to follow the directions here:
 
 ```bash
 git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
-```
-
-This connects your local files to the files on github.com.
-
-Next, run:
-
-```bash
 git push origin main
 ```
 
-which will upload your files to Github.
+This connects your local files to the files on github.com. If you refresh the repository page on GitHub, you should see your files
 
 ### Conclusion 
 
