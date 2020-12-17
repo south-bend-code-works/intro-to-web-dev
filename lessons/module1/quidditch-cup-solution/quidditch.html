@@ -1,209 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Quidditch</title>
     <style>
-        .gold {
-            background-color: gold;
-            color: darkslategrey;
-            padding: 3px;
-            border-radius: 5px;
-        }
-        .brown {
-            background-color: brown;
-            color: white;
-            padding: 3px;
-            border-radius: 5px;
-        }
+      .gold {
+        background-color: gold;
+        color: darkslategrey;
+        padding: 3px;
+        border-radius: 5px;
+      }
 
-        li {
-            padding: 6px;
-        }
+      .brown {
+        background-color: brown;
+        color: white;
+        padding: 3px;
+        border-radius: 5px;
+      }
 
-        button {
-            margin: 5px;
-        }
+      li {
+        padding: 6px;
+      }
 
-        #gameboard {
-            background-color: lightskyblue;
-            height: 500px;
-            width: 500px;
-        }
+      h1 {
+        display: inline-block;
+      }
 
-        #quaffle {
-            position: absolute;
-            background-image: url('imgs/quaffle64x64.png');
-            width: 64px;
-            height: 64px;
-        }
+      button {
+        margin: 5px;
+      }
 
-        #snitch {
-            position: absolute;
-            background-image: url('imgs/snitch64x64.png');
-            background-size: 100% 100%;
-            width: 32px;
-            height: 32px;
-        }
+      #gameboard {
+        background-color: lightskyblue;
+        height: 500px;
+        width: 500px;
+      }
+
+      #quaffle {
+        position: absolute;
+        background-image: url("imgs/quaffle64x64.png");
+        width: 64px;
+        height: 64px;
+        visibility: hidden;
+        transition: 0.5s transform;
+      }
+
+      #snitch {
+        position: absolute;
+        background-image: url("imgs/snitch64x64.png");
+        background-size: 100% 100%;
+        width: 32px;
+        height: 32px;
+        visibility: hidden;
+        transition: 0.5s transform;
+      }
     </style>
-
-</head>
-
-<body>
-    </div>
-    <h1 style="display:inline-block">Quidditch Cup</h1>
-    <div></div><audio src="sound/prologue.wav" controls autoplay>
-        <p>If you are reading this, it is because your browser does not support this awesome audio track.</p>
-    </audio></div>
+  </head>
+  <body>
+    <h1>Quidditch Cup</h1>
+    <div></div>
+    <audio src="sound/prologue.wav" controls autoplay>
+      <p>If you are reading this, it is because your browser does not support this awesome audio track.</p>
+    </audio>
     <p>The object of the game of Quidditch is to score more the most points!</p>
     <h2>Rules</h2>
     <ol>
-        <li>Clicking on the <span class="brown">Quaffle</span> earns <b>10 points</b>.</li>
-        <li>Clicking on the <span class="gold">Golden Snitch</span> earns <b>30 points</b> and <b>ends the game</b>.</li>
-        <li>The game will automatically end after <b>15 seconds</b> if the Golden Snitch is not captured.</li>
+      <li>Clicking on the <span class="brown">Quaffle</span> earns <b>10 points</b>.</li>
+      <li>Clicking on the <span class="gold">Golden Snitch</span> earns <b>150 points</b> and <b>ends the game</b>.</li>
+      <li>The game will automatically end after <b>15 seconds</b> if the Golden Snitch is not captured.</li>
     </ol>
-    <div>
-        Score: <span id="scoreboard">0</span></h3>
-    </div>
-    <div>
-        Time Remaining: <span id="timer">15</span></h3>
-    </div>
-    
+    <h3>Score: <span id="scoreboard">0</span></h3>
+    <h3>Time Remaining: <span id="timer">15</span></h3>
 
     <button onclick="startGame()">New Game</button>
 
     <div id="gameboard">
-        <div id="quaffle" onclick="scoreQuaffle()" style="visibility: hidden; transition: 0.5s transform"></div>
-        <div id="snitch" onclick="scoreSnitch()" style="visibility: hidden; transition: 0.5s transform"></div>
+      <div id="quaffle" onclick="scoreQuaffle()"></div>
+      <div id="snitch" onclick="scoreSnitch()"></div>
     </div>
 
-</body>
+    <script>
+      // Variables accessible anywhere inside this <script> tag.
+      var score = 0;
+      var gameboard = document.getElementById("gameboard");
+      var quaffle = document.getElementById("quaffle");
+      var snitch = document.getElementById("snitch");
+      var scoreboard = document.getElementById("scoreboard");
+      var timer = document.getElementById("timer");
 
-<script>
+      var secondsRemaining = 0;
 
-    // Variables with global scope.
-    let score = 0;
-    let gameboard = document.getElementById("gameboard");
-    let quaffle = document.getElementById("quaffle");
-    let snitch = document.getElementById("snitch");
-    let scoreboard = document.getElementById("scoreboard")
-    let timer = document.getElementById("timer")
-    
-    let secondsRemaining = 0
+      var quaffleTimeoutID = null;
+      var snitchTimeoutID = null;
+      var secondsRemainingTimeoutID = null;
+      var gameTimeoutID = null;
 
-    let quaffleTimeoutID = null;
-    let snitchTimeoutID = null;
-    let secondsRemainingTimeoutID = null;
-    let gameTimeoutID = null;
-    
+      // Constants. Change these values to make the gameplay different 
+      var quaffleSpeed = 1500; // speed in Milliseconds.
+      var snitchSpeed = 1000; // speed in Milliseconds.
+      var gameLength = 15000; // gameLength in milliseconds.
 
-    // Constants with global scope. These variables cannot be reassigned.
-    const quaffleSpeed = 1500; // speed in Milliseconds.  1000 ms == 1 second.
-    const snitchSpeed = 1000; // speed in Milliseconds.  1000 ms == 1 second.
-    const gameLength = 15000; // gameLength in milliseconds.  1000 ms = 1 second.
-
-
-    // Function that starts a new game of Quidditch!
-    function startGame() {
+      // Function that starts a new game of Quidditch!
+      function startGame() {
         // Reset the score board
-        score = 0
-        scoreboard.innerHTML = score        
-        
+        score = 0;
+        scoreboard.innerHTML = score;
+
         // End our game after 15 seconds
-        gameTimeoutID = setTimeout(function() {endGame()}, gameLength) // The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds.
+        gameTimeoutID = setTimeout(endGame, gameLength); // The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds.
 
         // Print the time remaining on the page
-        secondsRemaining = gameLength / 1000 // Divide by 1000 to convert milliseconds to seconds.
-        updateSecondsRemaining()
-        
-        // Unhide our quaffle and snitch objects
+        secondsRemaining = gameLength / 1000; // Divide by 1000 to convert milliseconds to seconds.
+        updateSecondsRemaining();
+
+        // Make our quaffle and snitch objects appear. Notice that we initially set them to be invisible in our CSS.
         quaffle.style.visibility = "visible";
         snitch.style.visibility = "visible";
 
-        // Move the Quaffle
-        moveQuaffle()
+        // Move the balls
+        moveQuaffle();
+        moveSnitch();
+      }
 
-        // Move the Snitch
-        moveSnitch()
-    }
-
-    // Logic to move the Quaffle
-    function moveQuaffle() {
+      // Logic to move the Quaffle
+      function moveQuaffle() {
         // Generate a random x,y position for our Quaffle
-        let randY = Math.floor((Math.random() * 436) + 1); // 500 - 64 = 436 px
-        let randX = Math.floor((Math.random() * 436) + 1);
+        let randY = Math.floor(Math.random() * 436 + 1); // 500 (the width of the game board) - 64 (the width of the quaffle) = 436 px
+        let randX = Math.floor(Math.random() * 436 + 1);
 
         // Use CSS to animate the transition from our current position to the new position.
         quaffle.style.transform = `translate(${randX}px, ${randY}px)`; // Use a 'template literal' (backtick) to generate the string we need for our css animation.
 
         // Plan to move the Quaffle again in a second or so if the player fails to clicks on it.
-        quaffleTimeoutID = setTimeout(function() {moveQuaffle()}, quaffleSpeed)
-    }
+        quaffleTimeoutID = setTimeout(moveQuaffle, quaffleSpeed);
+      }
 
-    // Logic to move the Snitch
-    function moveSnitch() {
-        
-        let randY = Math.floor((Math.random() * 468) + 1); // 500 - 32 = 468 px
-        let randX = Math.floor((Math.random() * 468) + 1);
-        
+      // Logic to move the Snitch
+      function moveSnitch() {
+        let randY = Math.floor(Math.random() * 468 + 1); // 500 (the width of the game board) - 32 (the width of the snitch)= 468 px
+        let randX = Math.floor(Math.random() * 468 + 1);
+
         snitch.style.transform = `translate(${randX}px, ${randY}px)`;
-        snitchTimeoutID = setTimeout(function() {moveSnitch()}, snitchSpeed)
-    }
+        snitchTimeoutID = setTimeout(moveSnitch, snitchSpeed);
+      }
 
-    // Logic to score when the quaffle is clicked.
-    function scoreQuaffle() {
+      // Logic to score when the quaffle is clicked.
+      function scoreQuaffle() {
         // 10 points for scoring the quaffle!
-        score = score + 10
+        score = score + 10;
 
         // Update the scoreboard
-        scoreboard.innerHTML = score
+        scoreboard.innerHTML = score;
 
         // Move the Quaffle Immediately!
-        clearTimeout(quaffleTimeoutID) // Cancel the previously planned movement of the Quaffle.
-        moveQuaffle() // Move the Quaffle Immediatly
+        clearTimeout(quaffleTimeoutID); // Cancel the previously planned movement of the Quaffle.
+        moveQuaffle(); // Move the Quaffle Immediatly
+      }
 
-    }
+      // Logic to score AND end the game when the snitch is clicked.
+      function scoreSnitch() {
+        score = score + 150;
+        scoreboard.innerHTML = score;
 
-    // Logic to score AND end the game when the snitch is clicked.
-    function scoreSnitch() {
-        // 30 points for scoring the snitch!
-        score = score + 30
+        // End the game if the snitch is clicked.
+        endGame();
+      }
 
-        // Update the scoreboard
-        scoreboard.innerHTML = score
+      // Function to update the timer
+      function updateSecondsRemaining() {
+        timer.innerHTML = secondsRemaining;
 
-        // End the game early if the snitch is clicked.
-        endGame()
-    }
-
-    // Function to update the timer
-    function updateSecondsRemaining() {
-        timer.innerHTML = secondsRemaining
-
-        if(secondsRemaining > 0) {
-            secondsRemaining = secondsRemaining - 1
-            secondsRemainingTimeoutID = setTimeout(function() {updateSecondsRemaining()}, 1000)
+        if (secondsRemaining > 0) {
+          secondsRemaining = secondsRemaining - 1;
+          secondsRemainingTimeoutID = setTimeout(updateSecondsRemaining, 1000);
         }
-    }
+      }
 
-    // Function that ends the game
-    function endGame() {
-
+      // Function that ends the game
+      function endGame() {
         // Cancel any outstanding timers.
-        clearInterval(quaffleTimeoutID)
-        clearInterval(snitchTimeoutID)
-        clearInterval(secondsRemainingTimeoutID)
-        clearInterval(gameTimeoutID)
+        clearInterval(quaffleTimeoutID);
+        clearInterval(snitchTimeoutID);
+        clearInterval(secondsRemainingTimeoutID);
+        clearInterval(gameTimeoutID);
 
         // Set the seconds remaining to zero
         secondsRemaining = 0;
-        timer.innerHTML = secondsRemaining
+        timer.innerHTML = secondsRemaining;
 
-        // Hide the quaffle and snitch 
+        // Hide the quaffle and snitch
         quaffle.style.visibility = "hidden";
         snitch.style.visibility = "hidden";
-    }
-
-</script>
-
+      }
+    </script
+  </body>
 </html>
