@@ -33,11 +33,9 @@ That's the core problem Git solves: Keeping a clear history of changes to a codi
 
 **git** is version control system that is used by the majority of professional developers.  Git tracks changes to your code so that it's easy to identify what code has changed from one version to another.
 
-Below is a screenshot comparing two versions of the same webpage. With git can easily see what code was changed between your previous and working version of the code!
+Below is a screenshot of Visual Studio Code comparing two versions of the same webpage using git:
 ![comparing two versions of the same page]({{ site.baseurl }}/assets/img/module1/git_compare.png)
-<!-- TODO: Add image here ^ -->
 
-**GitHub.com** is a website that can host your git project repositories on the web, making it easy to collaborate with other developers.  
 
 Recall that git is a *distributed* version control system. It's distributed because every developer working on a project has a complete copy of the project and all changes on their local computer (known as the project repository). All of these developers periodically sync their work and changes to this centralized, remote repository, hosted on github.com.  
 
@@ -61,7 +59,7 @@ Git is very robust and as such the number of commands and features may seem a li
 * `git remote`: For connecting your local folder to a GitHub repository. Just used when setting up a repo.
 * `git add`: For telling git about local files that you want to upload
 * `git commit`: For writing descriptions of what you changed before you upload code
-* `git push`: For uploading code
+* `git push`: For uploading code to your remote repository (typically github.com)
 * `git status`: Git will tell you what its status is, which is useful for debugging
 * `git clone`: To download someone else's repo to your computer
 
@@ -82,6 +80,9 @@ MAC | WINDOWS
 [Download MAC Installer](https://sourceforge.net/projects/git-osx-installer/files/) | [Download Windows Installer](https://gitforwindows.org/)
 
 ## Creating your github.com Account
+
+**GitHub.com** is a website that can host your git project repositories on the web, making it easy to collaborate with other developers. 
+
 [Create your github.com account](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
 
 ### Important!!! Once you have created your GitHub account, please submit your username via this form: 
