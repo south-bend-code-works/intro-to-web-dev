@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quidditch Cup</title>
+    <style>
+      .brown {
+        background-color: brown;
+        color: white;
+        padding: 3px;
+        border-radius: 5px;
+      }
+
+      li {
+        padding: 6px;
+      }
+
+      button {
+        margin: 5px;
+      }
+
+      #gameboard {
+        background-color: lightskyblue;
+        height: 500px;
+        width: 500px;
+      }
+
+      #quaffle {
+        position: absolute;
+        background-image: url("imgs/quaffle64x64.png");
+        width: 64px;
+        height: 64px;
+        visibility: hidden;
+        transition: 0.5s transform;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quidditch Cup</h1>
+    <h2>Version 1.0</h2>
+    <p>The object of the game of Quidditch is to score more the most points!</p>
+    <h2>Rules</h2>
+    <ol>
+      <li>Clicking on the <span class="brown">Quaffle</span> earns <b>10 points</b>.</li>
+      <li>Refresh your browser to restart the game</li>
+    </ol>
+    <h3>Score: <span id="scoreboard">0</span></h3>
+
+    <button onclick="startGame()">New Game</button>
+
+    <div id="gameboard">
+      <div id="quaffle" onclick="scoreQuaffle()"></div>
+    </div>
+
+    <script>
+      // Variables accessible anywhere inside this <script> tag.
+      var score = 0;
+      var quaffle = document.getElementById("quaffle");
+      var scoreboard = document.getElementById("scoreboard");
+
+      var quaffleTimeoutID = null;
+
+      // Constants. Change these values to make the gameplay different 
+      var quaffleSpeed = 1500; // speed in Milliseconds.
+
+      // Function that starts a new game of Quidditch!
+      function startGame() {
+        // Reset the score board
+        score = 0;
+        scoreboard.innerHTML = score;
+
+        // Our quaffle is, by default, invisible.  We need to unhide it as we start our game.
+        quaffle.style.visibility = "visible";
+        
+        // Move the ball
+        moveQuaffle();
+      }
+
+      // Logic to move the Quaffle
+      function moveQuaffle() {
+        // Generate a random x,y position for our Quaffle
+        let randY = Math.floor(Math.random() * 436 + 1); // 500 (the width of the game board) - 64 (the width of the quaffle) = 436 px
+        let randX = Math.floor(Math.random() * 436 + 1);
+
+        // Use CSS to animate the transition from our current position to the new position.
+        quaffle.style.transform = `translate(${randX}px, ${randY}px)`; // Use a 'template literal' (backtick) to generate the string we need for our css animation.
+
+        // Plan to move the Quaffle again in a second or so if the player fails to clicks on it.
+        quaffleTimeoutID = setTimeout(moveQuaffle, quaffleSpeed);
+      }
+
+      // Logic to score when the quaffle is clicked.
+      function scoreQuaffle() {
+        // 10 points for scoring the quaffle!
+        score = score + 10;
+
+        // Update the scoreboard
+        scoreboard.innerHTML = score;
+
+        // Move the Quaffle Immediately!
+        clearTimeout(quaffleTimeoutID); // Cancel the previously planned movement of the Quaffle.
+        moveQuaffle(); // Move the Quaffle Immediatly
+      }
+    </script
+  </body>
+</html>
