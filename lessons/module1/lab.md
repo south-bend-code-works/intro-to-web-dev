@@ -2,6 +2,12 @@
 layout: default
 ---
 
-# Lab
+# Overview
+During this week's lab, we will work on the week 1 project in small groups. 
 
-## YEET
+## Zoom
+TBD
+
+
+
+
