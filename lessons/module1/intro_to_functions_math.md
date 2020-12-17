@@ -210,4 +210,4 @@ Go to this [CodePen](https://codepen.io/jorymullet/pen/ZEpBORq){: target='_blank
 If you completed the challenge, you can now make functions! This is a powerful tool for making your webpages much more functional and interesting.
 
 
-![HTML&CSS MEME](https://media.giphy.com/media/l49JHLpRSLhecYEmI/giphy.gif)
+![HTML&CSS MEME]({{ site.baseurl }}/assets/img/module1/proud_of_you.gif)
