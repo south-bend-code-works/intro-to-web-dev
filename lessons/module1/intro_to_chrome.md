@@ -13,6 +13,12 @@ If you were to double-click a `.doc` or `.docx` file on your computer, it would 
 
 Similarly, Google Chrome (and all web browsers) are programs that know how to display the contents of `HTML`, `CSS`, and `JavaScript` files to you. All websites that you visit - www.nd.edu, gmail.google.com, amazon.com - are created using these same tools.
 
+## Installing Chrome
+
+If you don't already have Chrome, you can [download it here](https://www.google.com/chrome/).
+
+You are still free to use any browser you would like outside this course, but we do recommend using Chrome for projects inside this course so that you can follow along using the exact set of tools that the instructors will be demonstrating with.
+
 ## Developer Tools
 
 Have you ever had a website not work for you? Maybe filled out your payment information into a form, clicked "Submit", and nothing happened? This is an example of a very poor user experience, and will often cause a user to lose trust in the company that developed the form.
@@ -23,4 +29,4 @@ To open these tools, right click anywhere on any website, and click "Inspect" in
 
 ![Dev Tools]({{ site.baseurl }}/assets/img/module1/chrome_developer_tools.png){: style="width:100%"}
 
-We will discuss how to use these tools in our first lesson, and will continue to use the throughout the course.
+We will discuss how to use these tools in our first lesson, and will continue to use them throughout the course.
