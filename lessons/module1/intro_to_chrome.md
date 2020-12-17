@@ -30,3 +30,5 @@ To open these tools, right click anywhere on any website, and click "Inspect" in
 ![Dev Tools]({{ site.baseurl }}/assets/img/module1/chrome_developer_tools.png){: style="width:100%"}
 
 We will discuss how to use these tools in our first lesson, and will continue to use them throughout the course.
+
+![Purpose of Microsoft Edge]({{ site.baseurl }}/assets/img/module1/edge_purpose.jpeg){: style="max-width:400px"}
