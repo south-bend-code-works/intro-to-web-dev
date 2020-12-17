@@ -53,7 +53,7 @@ Use these resources to introduce yourself to the topics and to complete the exer
 
 The following video will walk you through the basics of git and GitHub. his video closely mirrors your pre-work exercise below.
 
-[![Git Crash course For Beginners](http://i3.ytimg.com/vi/USjZcfj8yxE/hqdefault.jpg)](ttps://www.youtube.com/watch?v=USjZcfj8yxE)
+[![Git Crash course For Beginners]({{ site.baseurl }}/assets/img/module1/git_thumbnail.jpg)](ttps://www.youtube.com/watch?v=USjZcfj8yxE)
 
 Git is very robust and as such the number of commands and features may seem a little overwhelming at first, but do not worry. It is totally okay if some things are still unclear to you, just keep pressing through and these concepts will make sense as we apply them throughout the course.
 
@@ -154,4 +154,4 @@ This connects your local files to the files on github.com. If you refresh the re
 
 Congratulations, you now have a GitHub account with a live project! Not only is this a great way to keep track of your changes as you go, but it is also a wonderful tool to put on your resume to show-off what you've made.
 
-![the sad truth](https://imgs.xkcd.com/comics/git.png)
+![the sad truth]({{ site.baseurl }}/assets/img/module1/git_xkcd.png)
