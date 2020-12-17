@@ -14,45 +14,89 @@ At the end of this activity, you will have built something similar to this:
 
 ## Overview
 
-This activity will allow you to combine all the skills you have learned so far:
-* Visual Studio Code (VS Code).
-* HTML, CSS, and JavaScript
+In prior lessons, all of the HTML and CSS on our page was static, meaning that it stayed the same.  In this activity we will use JavaScript to manipulate our HTML and CSS to add interactivity to our game.  Developers call the process of dynamically updating a webpage, "manipulating the DOM (Document Object Model)."  For example, when a player clicks on the Quaffle we need to increase the score of the game by 10 points by changing the HTML that displays the score using JavaScript.
 
-## Instruction
+You will use the following skills in this lesson:
+* Visual Studio Code (VS Code)
+* HTML, CSS
+* JavaScript
+
+## Instructions
 
 ### 1. Create a new project
 
-* First, on your desktop, right-click and select New Folder. Name it `quidditch-cup`.
-* Open VS Code. In the toolbar at the top, under File, click New File. Save the file as `index.html` in your folder `quidditch-cup`.
+* First, on your desktop, right-click and create a New Folder. Name it `quidditch-cup`.
+* Open VS Code. In the toolbar at the top, under File, click New File. Save the file as `index.html`.
 * Copy and paste the following into your file in VS Code:
+  * The HTML and CSS has been provided for you so we can focus on JavaScript.
+
 
 ```
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Quidditch-Cup
-    
-    <!--All of our CSS will go here-->
-    <sytle>
+    <title>Quidditch Cup</title>
+    <style>
+      .brown {
+        background-color: brown;
+        color: white;
+        padding: 3px;
+        border-radius: 5px;
+      }
+
+      li {
+        padding: 6px;
+      }
+
+      button {
+        margin: 5px;
+      }
+
+      #gameboard {
+        background-color: lightskyblue;
+        height: 500px;
+        width: 500px;
+      }
+
+      #quaffle {
+        position: absolute;
+        background-image: url("imgs/quaffle64x64.png");
+        width: 64px;
+        height: 64px;
+        visibility: hidden;
+        transition: 0.5s transform;
+      }
     </style>
-
   </head>
-
-  <!--All of our HTML will go here-->
   <body>
-    <H1>Quidditch Cup</H1>
-  </body>
+    <h1>Quidditch Cup</h1>
+    <h2>Version 1.0</h2>
+    <p>The object of the game of Quidditch is to score more the most points!</p>
+    <h2>Rules</h2>
+    <ol>
+      <li>Clicking on the <span class="brown">Quaffle</span> earns <b>10 points</b>.</li>
+      <li>Refresh your browser to restart the game</li>
+    </ol>
+    <h3>Score: <span id="scoreboard">0</span></h3>
 
-  <!--All of our JavaScript will go here-->
-  <script>
-  </script>
+    <button>New Game</button>
+
+    <div id="gameboard">
+      <div id="quaffle" onclick="scoreQuaffle()"></div>
+    </div>
+
+    <script>
+      // All of our JavaScript will be written inside this script tag.
+
+    </script
+  </body>
 </html>
 ```
 * Save the file and go to your desktop where you can see the folder `quidditch-cup`. Click into it and right-click on the `index.html` and open with Chrome (or whatever browser you have).
-* You should see `Quidditch Cup` on an otherwise blank screen.
+* You should see our `Quidditch Cup` application, however clicking on _new game_ shouldn't do anything yet.
 
 ### 2. Download and add the supporting files we will need to your project folder
-Let's create some sub-folders to organize our project.  Keeping your code and assets organized ensures that 
+Let's create some sub-folders to store organize the images and any sound effects we may add to our game.
 * Download the following photos and place them in a new sub-folder, `imgs`, in your `quidditch-cup` project directory.
   * Image Asset Links Here
 * Download the following audio file and place it in the new sub-folder, `sounds`, in your `quidditch-cup` project directory. 
@@ -355,7 +399,6 @@ Congrats!  At this point you've built a fully functional game using Javascript t
 Here is all the code for version 1.0 of our Quidditch Cup game:
 
 ```
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
   <head>
