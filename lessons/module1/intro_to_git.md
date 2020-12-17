@@ -87,7 +87,7 @@ MAC | WINDOWS
 
 ### Important!!! Once you have created your GitHub account, please submit your username via this form: 
 
-https://docs.google.com/forms/d/16n1_cxuQvdwyV07Zmb5Rar-0la5wZA3pAAXL5nqOadE/edit
+[The form](https://docs.google.com/forms/d/16n1_cxuQvdwyV07Zmb5Rar-0la5wZA3pAAXL5nqOadE/edit)
 
 ## Exercises
 
