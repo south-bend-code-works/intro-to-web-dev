@@ -57,14 +57,13 @@ The following video will walk you through the basics of git and GitHub. his vide
 Git is very robust and as such the number of commands and features may seem a little overwhelming at first, but do not worry. It is totally okay if some things are still unclear to you, just keep pressing through and these concepts will make sense as we apply them throughout the course.
 
 #### Key Terms
-* `git init`
-* `git add`
-* `git commit`
-* `git push`
-* `git status`
-* `git remote`
-* `git branch`
-* `git clone`
+* `git init`: For setting up your repository for the first time. Just used when setting up a repo.
+* `git remote`: For connecting your local folder to a GitHub repository. Just used when setting up a repo.
+* `git add`: For telling git about local files that you want to upload
+* `git commit`: For writing descriptions of what you changed before you upload code
+* `git push`: For uploading code
+* `git status`: Git will tell you what its status is, which is useful for debugging
+* `git clone`: To download someone else's repo to your computer
 
 
 #### Lessons
