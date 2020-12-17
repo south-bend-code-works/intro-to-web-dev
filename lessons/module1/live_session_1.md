@@ -4,7 +4,7 @@ layout: default
 
 # Overview 
 
-## What you will learn
+## Agenda
 1. Review how the web works
     - Class Discussion
     - Show how chrome works
