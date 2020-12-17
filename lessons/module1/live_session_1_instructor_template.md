@@ -161,8 +161,8 @@ Agenda:
 3. git init
 4. git add index.html
 5. git commit -m "Initial Commit"
-6. You have created your local git repo, let's host it in Github
-7. Go to Github.com, create a new project called friend-o-gram
+6. You have created your local git repo, let's host it in GitHub
+7. Go to GitHub.com, create a new project called friend-o-gram
 8. Follow the instructions for "or push an existing repository from the command line"
     1. git remote add origin https://github.com/<your username>/<your repo name>.git
     2. git branch -M main
