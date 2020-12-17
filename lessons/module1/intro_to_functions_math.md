@@ -42,6 +42,7 @@ Here is a table to symbols and there function:
     <tr><td>/</td><td>Divide</td></tr>
     <tr><td>**</td><td>Exponential</td></tr>
     <tr><td>===</td><td>Equal to</td></tr>
+    <tr><td>!==</td><td>Not equal to</td></tr>
     <tr><td>></td><td>Greater than</td></tr>
     <tr><td>>=</td><td>Greater than or equal to</td></tr>
     <tr><td><</td><td>Less than</td></tr>
@@ -49,12 +50,17 @@ Here is a table to symbols and there function:
   </tbody>
 </table>
 
-In a previous lesson, you learned about **booleans** (`true` and `false`) and how they work with **conditionals** (`if` statements). When using any comparison symbols (`>`, `<`, `>=`, `<=`), the value returned will be a **boolean**!
-
+In a previous lesson, you learned about **booleans** (`true` and `false`) and how they work with **conditionals** (`if` statements). When using any comparison symbols (`>`, `<`, `>=`, `<=`, `===`, `!==`), the value returned will be a **boolean**!
 Let's look:
 
 ```
 var result = 5 < 5.5
+// value of result is `true`
+
+result = 5 !== 5
+// value of result is `false`
+
+result = 5 >= 5
 // value of result is `true`
 ```
 

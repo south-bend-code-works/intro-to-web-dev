@@ -86,6 +86,34 @@ A conditional can be broken down into 3 parts; `if`, `( itHasSnowed )` `{ activi
 
 Whew. Maybe that makes sense on your first time through or maybe you need to read it a few more times. Either way, **conditionals** are an extremely important concept for making our code and websites do anything interesting. If you want to play with the code above, [here is a link where you can change the value of the variable **itHasSnowed** and see the outcome.](https://codepen.io/jorymullet/pen/NWRrmoK){: target='_blank'}
 
+##### `!`
+
+Whenever we see `!` in the code, we should always think *the opposite*. When `!` is placed in front of a **boolean**, it becomes the other value.
+
+For example:
+
+```
+var isTrue = true
+var isFalse = !isTrue
+
+// value of isFalse is `false`
+```
+
+Another example using a **conditional**:
+
+```
+var activity = "I will do nothing"
+var theTvIsOn = false
+
+if ( !theTvIsOn ) {
+  activity = "I will be productive."
+}
+
+// value of activity is "I will be productive."
+```
+
+Since `theTvIsOn` is `false`, that means `!theTvIsOn` is `true`.
+
 ##### `else if` and `&&`
 
 Let's look at a more complex example:
