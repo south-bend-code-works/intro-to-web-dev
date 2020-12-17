@@ -76,4 +76,4 @@ One of the resources above introduces [CSS grid](https://developer.mozilla.org/e
 Now you understand some of the basic concepts behind HTML and CSS! Hopefully this meme makes a little more sense to you than it did before you started. 
 
 
-![HTML&CSS MEME](https://qph.fs.quoracdn.net/main-qimg-097424108c6dc99849e7365be6848c8b)
+![HTML&CSS MEME]({{ site.baseurl }}/assets/img/module1/html_vs_css.jpeg)

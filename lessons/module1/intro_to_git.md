@@ -26,7 +26,8 @@ Throughout this course we will us git and GitHub in the following ways:
 Have you ever worked on a large term paper and needed to save multiple versions? If you've ever lost important work because you accidentally deleted or overwrote hours of work you understand why tracking changes to your work is so important! 
 
 Below is a screenshot comparing two versions of the same webpage. With git can easily see what code was changed between your previous and working version of the code!
-![comparing two versions of the same page](/imgs/module1/git_compare.png)
+![comparing two versions of the same page]({{ site.baseurl }}/assets/img/module1/git_compare.png)
+<!-- TODO: Add image here ^ -->
 
 **GitHub.com** is a website that can host your git project repositories on the web, making it easy to collaborate with other developers.  
 
@@ -34,7 +35,8 @@ Imagine if we were forced to collaborate on that term paper with dozens of other
 
 Recall that git is a *distributed* version control system. It's distributed because every developer working on a project has a complete copy of the project and all changes on their local computer (known as the project repository). All of these developers periodically sync their work and changes to this centralized, remote repository, hosted on github.com.  
 
-![Distributed Version Control](/imgs/module1/git_distributed.png)
+<!-- TODO: Add image here -->
+![Distributed Version Control]({{ site.baseurl }}/assets/img/module1/git_distributed.png)
 
 ## Resources
 Use these resources to introduce yourself to the topics and to complete the exercises.

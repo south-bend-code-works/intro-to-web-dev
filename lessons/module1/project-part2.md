@@ -1379,7 +1379,7 @@ Here is the entirety of my code:
 
 You made your own Virtual Pet! While this example might seem goofy, the skills and concepts you learned here will certainly be used on any site you may end up building. Not only that, you've made yourself a buddy in the process.
 
-![](https://media1.tenor.com/images/a8ec886e2e1bfd28aeabb1825d33622f/tenor.gif?itemid=9512793)
+![Your Buddy]({{ site.baseurl }}/assets/img/module1/dogs_hugging.gif)
 
 ## Challenges
 

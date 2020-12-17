@@ -189,7 +189,7 @@ Just try to get familiar with how to make **conditionals** work and how to lever
 
 Wow. That's a lot to get through but so incredibly critical to making code work for you. Please spend as much time as you need familiarizing yourself with how these things work. If somethings still feel hazy or you don't totally understand what is going on, that is perfectly understandable. Just try to gain a general sense of what you are looking at and why things happen in the code.
 
-![](https://media.tenor.com/images/6beac3b4d75a09f9df7ad46458a9c5bb/tenor.gif)
+![Keep Powering Through]({{ site.baseurl }}/assets/img/module1/power_through.gif){: style="width: 100%; max-width: 400px"}
 
 
 
