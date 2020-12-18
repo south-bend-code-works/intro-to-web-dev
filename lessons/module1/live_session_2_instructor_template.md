@@ -6,7 +6,8 @@ Agenda:
     
 1. Using functions and basic logic in JavaScript
 2. Learn the Document Object Model (DOM) and combine HTML, CSS, and JavaScript to build interactive websites. 
-3. Hosting your website on GitHub
+3. Quidditch Cup 2.0 in Small Groups
+3. Hosting you Quidditch Cup 2.0 on GitHub and Github Sites.
 4. (last 5 minutes)
     - Review Final Project Part 2 
     - Talk about the upcoming lab and it's format
@@ -97,6 +98,7 @@ Goals:
                                                                          
 Walk through the code and explain how JavaScript is used to for DOM events and directly editing the DOM in version quidditch 1.0
 
+
 -->
 <!--
  _____  _   _  _  ___    ___    _  _____  ___    _   _       __        __   
@@ -105,6 +107,8 @@ Walk through the code and explain how JavaScript is used to for DOM events and d
 | | | || | | || || | | )| | | )| |  | |  | |  _ |  _  |      /' /    | | | |
 | (('\|| (_) || || |_) || |_) || |  | |  | (_( )| | | |    /' /( ) _ | (_) |
 (___\_)(_____)(_)(____/'(____/'(_)  (_)  (____/'(_) (_)   (_____/'(_)`\___/'
+
+* Note: They should all have the completed solution for Quidditch 1.0 as the starting point for 2.0
 
 * Explain the objective of Quidditch 2.o
 * Breakout into small groups of 3-4.  Groups should help each other implement Quidditch 2.0.

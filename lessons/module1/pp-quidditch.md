@@ -18,7 +18,7 @@ In prior the lessons, all of the HTML and CSS on our page was static, meaning th
 
 For example, when a player clicks on the Quaffle we need to increase the score of the game by 10 points.  We can accomplish this by changing the HTML that displays the score using JavaScript.
 
-We will practice following concepts in this lesson:
+We will practice the following concepts in this lesson:
 * Visual Studio Code (VS Code)
 * HTML, CSS
 * JavaScript
@@ -192,7 +192,7 @@ For each step below, write your code between the `<script></script>` tags in our
 
 #### Try it out
 
-Once you've made your changes, refresh your browser and click on _new game_.  This should set the score to 0 and unhide our quaffle image on the page, though nothing will move yet. 
+Once you've made your changes, refresh your browser and click on _new game_.  This should set the score to 0 and our quaffle image should display on the page, though nothing will move yet. 
 
 Hints:
   * You can see what code your browser is running by using the Developer Tools in Chrome to inspect the code.
