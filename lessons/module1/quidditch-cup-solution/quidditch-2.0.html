@@ -56,7 +56,7 @@
     </style>
   </head>
   <body>
-    <h1>Quidditch Cup</h1>
+    <h1>Quidditch Cup 2.0</h1>
     <div></div>
     <audio src="sound/prologue.wav" controls autoplay>
       <p>If you are reading this, it is because your browser does not support this awesome audio track.</p>
@@ -130,6 +130,9 @@
         // Use CSS to animate the transition from our current position to the new position.
         quaffle.style.transform = `translate(${randX}px, ${randY}px)`; // Use a 'template literal' (backtick) to generate the string we need for our css animation.
 
+        // Cancel any previously planned movement of the Quaffle.
+        clearTimeout(quaffleTimeoutID); 
+
         // Plan to move the Quaffle again in a second or so if the player fails to clicks on it.
         quaffleTimeoutID = setTimeout(moveQuaffle, quaffleSpeed);
       }
@@ -140,6 +143,10 @@
         let randX = Math.floor(Math.random() * 468 + 1);
 
         snitch.style.transform = `translate(${randX}px, ${randY}px)`;
+
+         // Cancel any previously planned movement of the snitch.
+         clearTimeout(snitchTimeoutID); 
+
         snitchTimeoutID = setTimeout(moveSnitch, snitchSpeed);
       }
 
@@ -152,7 +159,6 @@
         scoreboard.innerHTML = score;
 
         // Move the Quaffle Immediately!
-        clearTimeout(quaffleTimeoutID); // Cancel the previously planned movement of the Quaffle.
         moveQuaffle(); // Move the Quaffle Immediatly
       }
 
