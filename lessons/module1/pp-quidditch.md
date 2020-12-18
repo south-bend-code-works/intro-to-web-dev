@@ -10,13 +10,13 @@ Our goal for this project is to build an interactive, web-based version of Quidd
 
 At the end of this activity, you will have built something similar to this:
 
-![quidditch example]({{ site.baseurl }}/assets/img/module1/quidditch1.0-animated.gif | width=100)
+![quidditch example]({{ site.baseurl }}/assets/img/module1/quidditch1.0-animated.gif)
 
 ## Overview
 
 In prior the lessons, all of the HTML and CSS on our page was static, meaning that it stayed the same.  In this activity we will use JavaScript to manipulate our HTML and CSS to dynamically update our webpage and game.  Developers call this process of dynamically updating the HTML and CSS **manipulating the DOM** (Document Object Model).  
 
-For example, when a player clicks on the Quaffle we need to increase the score of the game by 10 points.  We accomplish this by changing the HTML that displays the score using JavaScript.
+For example, when a player clicks on the Quaffle we need to increase the score of the game by 10 points.  We can accomplish this by changing the HTML that displays the score using JavaScript.
 
 We will practice following concepts in this lesson:
 * Visual Studio Code (VS Code)
@@ -92,6 +92,8 @@ We will practice following concepts in this lesson:
   </body>
 </html>
 ```
+
+#### Try it out
 * Save the file and go to your desktop where you can see the folder `quidditch-cup`. Click into it and right-click on the `index.html` and open with Chrome (or whatever browser you have).
 * You should see our `Quidditch Cup` application, however clicking on _new game_ shouldn't do anything yet.
 
@@ -99,9 +101,11 @@ We will practice following concepts in this lesson:
 Download the images we will use in our game:
 * Right-Click and download the following images 
 * Save them in a new sub-folder, `imgs`, in your `quidditch-cup` project directory.
-Quaffle | Golden Snitch (used in version 2.0)
+
+Quaffle            |  Golden Snitch
 :-------------------------:|:-------------------------:
-![quaffle]({{ site.baseurl }}/assets/img/module1/quidditch-assets/quaffle64x64.png) | ![golden snitch]({{ site.baseurl }}/assets/img/module1/quidditch-assets/ snitch64x64.png)
+![]({{ site.baseurl }}/assets/img/module1/quidditch-assets/quaffle64x64.png)  |  ![]({{ site.baseurl }}/assets/img/module1/quidditch-assets/snitch64x64.png)
+
 
 ### 3. Make the `New Game` Button Work
 
@@ -111,6 +115,7 @@ In between our `<script></script>` tags we need to write the following code:
 * Define a variable, called _score_, and initialize it to 0.
   * We will use this to track the score for our player.
 
+<div class="hint">Hover for hint</div>
 {: .hint-content}
 ```
 <script>
@@ -123,6 +128,7 @@ In between our `<script></script>` tags we need to write the following code:
   * We will use this to update the the following html: `<span id="scoreboard">No Score Yet</span>`.
   * For example, if we wanted the score to be 1000 you could run the following JavaScript: `scoreboard.innerHTML = "1000"`
 
+<div class="hint">Hover for hint</div>
 {: .hint-content}
 ```
 <script>
@@ -135,6 +141,7 @@ In between our `<script></script>` tags we need to write the following code:
   * This variable is references the HTML element with the ID of "quaffle"
   * We will use this variable to modify the position of our quaffle div on the screen.
 
+<div class="hint">Hover for hint</div>
 {: .hint-content}
 ```
 <script>
@@ -153,6 +160,7 @@ In between our `<script></script>` tags we need to write the following code:
       * quaffle.style.visibility = "visible";
       * notice that this was originally set to "hidden".
 
+<div class="hint">Hover for hint</div>
 {: .hint-content}
 ```
 <script>
@@ -172,38 +180,20 @@ In between our `<script></script>` tags we need to write the following code:
 </script>
 ```
 
-In our HTML, we need to update our button so that it knows what to do when it's clicked.  This is done using the onclick handler, to which we provide some javascript that we want to run.  In this case, we will modify our button's HTML to call our _startGame()_ function:
-```<button onclick="startGame()">New Game</button>```
+* In our HTML, we need to update our button so that it knows what to do when it's clicked.  
+    * This is done using the onclick handler, to which we provide some javascript that we want to run.  
+    * In this case, we will modify our button's HTML to call our _startGame()_ function:
+      * ```<button onclick="startGame()">New Game</button>```
 
-Once you've made your changes, try it out:
-* Refresh the `index.html` in Chrome to get the new HTML Code.
+#### Try it out
+Once you've made your changes, clicking on _new game_ should set the score to 0 and unhid our quaffle image on the page, though nothing will move yet. 
+
+* Refresh the `index.html` in Chrome to load your updated code.
   * You can verify what code your browser is running by using the Developer Tools in Chrome to inspect the code.
   * You can also debug any errors you might be seeing.  For example, you might not see the quaffle.png if you haven't downloaded that image and placed it in the appropriate location.
-* Clicking on _new game_ should set the score to 0 and show our quaffle image on the page, though nothing will move yet.  Let's do that next.
-
-<div class="hint">Hover for hint</div>
-
-{: .hint-content}
-```
-<script>
-  var score = 0;
-  var quaffle = document.getElementById("quaffle");
-  var scoreboard = document.getElementById("scoreboard");
-
-  // Function that starts a new game of Quidditch!
-  function startGame() {
-    // Set the score to zero
-    score = 0;
-    scoreboard.innerHTML = score;
-
-    // Make our quaffle objects visibile. Note that we initially set them to be invisible in our CSS above.
-    quaffle.style.visibility = "visible";
-  }
-</script>
-```
 
 After clicking "New Game" your screen should look like this:
-![new game]({{ site.baseurl }}/assets/img/module1/quidditch1.0-newgame.png | width=100)
+![new game]({{ site.baseurl }}/assets/img/module1/quidditch1.0-newgame.png)
 
 ### 4. Make the Quaffle Move
 
@@ -236,6 +226,7 @@ In between our `<script></script>` tags add the following code:
 * Paste the moveQuaffle() function from above below our startGame() function.
 * Update our startGame() function to call moveQuaffle().
 
+#### Try it out
 Try it out in your browser.  You should see our quaffle flying about the screen.  
 
 Answer the following questions:
@@ -282,7 +273,8 @@ HTML Code to modify
 </div>
 ```
 
-Try it out in your browser.  You should now be able to see the score increase!
+#### Try it out
+Try it out in your browser.  You should now be able to see the score increase and have a mostly complete game!  You can refresh your browser to reset the game and play again.
 
 ## Complete Solution
 
