@@ -39,7 +39,7 @@ In the second half of this live session you will break into small groups and ind
 4. Add a background soundtrack to the game
     * Use the HTML5 Audio Tag
     * Download the background audio track here (or use your own!):
-        * <a href="{{ site.baseurl }}assets/img/module1/quidditch-assets/prologue.wav=">prologue.wav</a>
+        * <a href="{{ site.baseurl }}assets/img/module1/quidditch-assets/prologue.wav">prologue.wav</a>
         * place the prologue.wav file in a new sub-folder inside your main quidditch project folder called *sound*.
 
 Your final game should look like this:
