@@ -96,7 +96,8 @@ We will practice following concepts in this lesson:
 
 #### Try it out
 * Save the file and go to your desktop where you can see the folder `quidditch-cup`. Click into it and right-click on the `index.html` and open with Chrome (or whatever browser you have).
-* You should see our `Quidditch Cup` application, however clicking on _new game_ shouldn't do anything yet.
+* You should see our `Quidditch Cup` application.
+* Clicking on the _new game_ button shouldn't do anything yet.
 
 ### 2. Download and add the supporting files we will need to your project folder
 Download the images we will use in our game:
@@ -141,7 +142,7 @@ For each step below, write your code between the `<script></script>` tags in our
 ```
 
 * Define a variable, _quaffle_, and set it equal to the result of: `document.getElementById("quaffle");`
-  * This variable is references the HTML element with the ID of "quaffle"
+  * This variable references the HTML element with the ID of "quaffle": `<div id="quaffle"></div>`
   * We will use this variable to modify the position of our quaffle div on the screen.
 
 <div class="hint">Hover for hint</div>
@@ -185,9 +186,8 @@ For each step below, write your code between the `<script></script>` tags in our
 </script>
 ```
 
-* In our HTML, we need to update our button so that it knows what to do when it's clicked.  
-    * This is done using the onclick handler, to which we provide some javascript that we want to run.  
-    * Modify your button's HTML to call our _startGame()_ function like such:
+* In our HTML, update our button so that it knows what to do when it's clicked.  
+    * This is done by adding a onclick attribute to our button's html which calls our startGame() JavaScript function:
       * ```<button onclick="startGame()">New Game</button>```
 
 #### Try it out
@@ -227,9 +227,9 @@ function moveQuaffle() {
 }
 ```
 
-Next, we need to add some variables that this function uses to animate the quaffle.  Add the following variables at the top of our script:
+Next, we need to add some variables that this function uses to the top of our script:
 * A new variable, `quaffleSpeed`, that is set to 1500 milliseconds (1.5 seconds)
-* A new variable, `quaffleTimeoutID`, with the following code: `var quaffleTimeoutID = null`.  We will use this in the next step.
+* A new variable, `quaffleTimeoutID`, with the following code: `var quaffleTimeoutID = null`.
 
 <div class="hint">Hover for hint</div>
 
@@ -286,19 +286,21 @@ Next, we need to add some variables that this function uses to animate the quaff
     // Make our quaffle objects visibile. Note that we initially set them to be invisible in our CSS above.
     quaffle.style.visibility = "visible";
 
-    // move the quaffle
-    moveQuaffle(); //ADD THIS LINE OF CODE TO START MOVING THE QUAFFLE.
+    //ADD THIS LINE OF CODE TO START MOVING THE QUAFFLE.
+    moveQuaffle(); 
   }
 ```
 
 #### Try it out
 Try it out in your browser.  You should see your quaffle flying about the screen.  
 
+### 5. Pause and Review
 At this point, you should pause and review the code carefully.  Try and answer the following questions:
 * Why does the quaffle keep moving about the screen as opposed to moving once and stoping?  See if you can identify the line of code that makes this animation repeat itself indefinitely.
 * How would you increase or decrease the speed of the quaffle?
+* Why does the animation stop once we refresh the browser?
 
-### 5. Update our Score each time we click on the Quaffle
+### 6. Update our Score each time we click on the Quaffle
 
 It wouldn't be a game if we didn't keep track of the score.  Previously, we added an `onclick` attribute to our `new game` button which is logical as you can click a button.  However, HTML actually allows us to add an `onclick` attribute to any HTML object.  In this case, we want to add an `onclick` attribute to our quaffle, which is a div.
 
@@ -346,9 +348,9 @@ Try it out in your browser.  You should now be able to see the score increase an
 
 ## Complete Solution
 
-Congrats!  At this point you've built a fully functional game using Javascript to manipulate the DOM (aka our html and css).  In our in-class live session we take a deeper dive into this solution and extend the game with new features.  
+Congrats!  At this point you've built a fully functional game using Javascript to manipulate the DOM (aka our html and css).  In our in-class live session we will take a deeper dive into this solution and extend the game with new features.  
 
-Here is all the completed code, all together, for version 1.0 of our Quidditch Cup game:
+Here is the complete solution, all together, for version 1.0 of our Quidditch Cup game:
 
 <div class="hint">Complete Solution</div>
 
