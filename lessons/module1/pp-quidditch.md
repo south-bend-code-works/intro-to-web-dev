@@ -270,6 +270,7 @@ JavaScript to add between the `<script></script>` tag:
     moveQuaffle(); // Move the Quaffle Immediatly
   }
 <script>
+```
 
 HTML Code to modify
 * add the onclick handler to the quaffle div.  It should call the scoreQuaffle() function.
