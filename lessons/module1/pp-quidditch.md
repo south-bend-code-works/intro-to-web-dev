@@ -294,24 +294,30 @@ Next, we need to add some variables that this function uses to animate the quaff
 #### Try it out
 Try it out in your browser.  You should see your quaffle flying about the screen.  
 
-Pause and try and answer the following questions:
+At this point, you should pause and review the code carefully.  Try and answer the following questions:
 * Why does the quaffle keep moving about the screen as opposed to moving once and stoping?  See if you can identify the line of code that makes this animation repeat itself indefinitely.
 * How would you increase or decrease the speed of the quaffle?
 
 ### 5. Update our Score each time we click on the Quaffle
 
-It wouldn't be a game if we didn't keep track of the score.  Previously, we added an onclick handler to our new game button which make sense as people click buttons.  However, HTML actually allows us to add onclick handlers to any objects, including DIV objects.  In this case, we want to add an onclick handler for our quaffle, which is a div defined as: `<div id='quaffle>`.  Using onclick in this way we can take any action whenever the user successfully clicks on the quaffle.
+It wouldn't be a game if we didn't keep track of the score.  Previously, we added an `onclick` attribute to our `new game` button which is logical as you can click a button.  However, HTML actually allows us to add an `onclick` attribute to any HTML object.  In this case, we want to add an `onclick` attribute to our quaffle, which is a div.
 
-When the quaffle is clicked you will:
-* Increment our score by 10 points
-* Immediately move the quaffle to a new location 
+Modify our HTML Code:
+* Add an onclick handler to the quaffle div.  It should call a new function, scoreQuaffle(), that we will create below.
 
-Modify our JavaScript in the following ways:
+<div class="hint">Hover for hint</div>
 
-* Create a new function, _scoreQuaffle()_, that does the following:
-  * Increments our _score_ variable by 10 points
-  * Updates the _scoreboard_ on our webpage
-  * Calls moveQuaffle() to immediately update the location of our quaffle.
+{: .hint-content}
+```
+<div id="gameboard">
+  <div id="quaffle" onclick="scoreQuaffle()"></div>
+</div>
+```
+
+Create a new function, scoreQuaffle().  It should:
+  * Increment our _score_ variable by 10 points
+  * Update the html of our _scoreboard_ to display the new _score_ on the website
+  * Call moveQuaffle() to immediately update the location of our quaffle
 
 <div class="hint">Hover for hint</div>
 
@@ -333,17 +339,7 @@ Modify our JavaScript in the following ways:
 <script>
 ```
 
-Modify our HTML Code:
-* Add an onclick handler to the quaffle div.  It should call the scoreQuaffle() function.
 
-<div class="hint">Hover for hint</div>
-
-{: .hint-content}
-```
-<div id="gameboard">
-  <div id="quaffle" onclick="scoreQuaffle()"></div>
-</div>
-```
 
 #### Try it out
 Try it out in your browser.  You should now be able to see the score increase and have a mostly complete game!  You can refresh your browser to reset the game and play again.
