@@ -28,7 +28,8 @@ We will practice following concepts in this lesson:
 ### 1. Create a new project
 
 * First, on your desktop, right-click and create a New Folder. Name it `quidditch-cup`.
-* Open VS Code. In the toolbar at the top, under File, click New File. Save the file as `index.html`.
+* Open your new folder in VS Code. 
+* In the toolbar at the top, under File, click New File. Save the file as `index.html`.
 * Copy and paste the following starter code into your index.html file in VS Code:
   
 ```
@@ -111,11 +112,12 @@ Quaffle            |  Golden Snitch
 
 Now we will add some JavaScript to start our game when the user clicks the `new game` button.
 
-In between our `<script></script>` tags we need to write the following code:
+For each step below, write your code between the `<script></script>` tags in our index.html file.
 * Define a variable, called _score_, and initialize it to 0.
   * We will use this to track the score for our player.
 
 <div class="hint">Hover for hint</div>
+
 {: .hint-content}
 ```
 <script>
@@ -129,6 +131,7 @@ In between our `<script></script>` tags we need to write the following code:
   * For example, if we wanted the score to be 1000 you could run the following JavaScript: `scoreboard.innerHTML = "1000"`
 
 <div class="hint">Hover for hint</div>
+
 {: .hint-content}
 ```
 <script>
@@ -142,6 +145,7 @@ In between our `<script></script>` tags we need to write the following code:
   * We will use this variable to modify the position of our quaffle div on the screen.
 
 <div class="hint">Hover for hint</div>
+
 {: .hint-content}
 ```
 <script>
@@ -161,6 +165,7 @@ In between our `<script></script>` tags we need to write the following code:
       * notice that this was originally set to "hidden".
 
 <div class="hint">Hover for hint</div>
+
 {: .hint-content}
 ```
 <script>
@@ -247,6 +252,8 @@ JavaScript to add between the `<script></script>` tag:
   * Updates the _scoreboard_ on our webpage
   * Calls moveQuaffle() to immediately update the location of our quaffle.
 
+<div class="hint">Hover for hint</div>
+
 {: .hint-content}
 ```
 <script>
@@ -266,6 +273,9 @@ JavaScript to add between the `<script></script>` tag:
 
 HTML Code to modify
 * add the onclick handler to the quaffle div.  It should call the scoreQuaffle() function.
+
+<div class="hint">Hover for hint</div>
+
 {: .hint-content}
 ```
 <div id="gameboard">
@@ -282,6 +292,9 @@ Congrats!  At this point you've built a fully functional game using Javascript t
 
 Here is all the completed code, all together, for version 1.0 of our Quidditch Cup game:
 
+<div class="hint">Complete Solution</div>
+
+{: .hint-content}
 ```
 <!DOCTYPE html>
 <html lang="en">
