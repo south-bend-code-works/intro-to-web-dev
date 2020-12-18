@@ -37,6 +37,7 @@ In the second half of this live session you will break into small groups and ind
     * Use the HTML5 Audio Tag
     * Download the background audio track here (or use your own!):
         * <a href="{{ site.baseurl }}assets/img/module1/quidditch-assets/prologue.wav=">
+        * place the prologue.wav file in a new sub-folder inside your main quidditch project folder called *sound*.
 
 Your final game should look like this:
 ![quidditch example]({{ site.baseurl }}/assets/img/module1/quidditch2.0-animated.gif)
