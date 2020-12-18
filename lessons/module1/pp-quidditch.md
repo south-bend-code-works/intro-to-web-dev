@@ -14,9 +14,11 @@ At the end of this activity, you will have built something similar to this:
 
 ## Overview
 
-In prior lessons, all of the HTML and CSS on our page was static, meaning that it stayed the same.  In this activity we will use JavaScript to manipulate our HTML and CSS to add interactivity to our game.  Developers call the process of dynamically updating a webpage, "manipulating the DOM (Document Object Model)."  For example, when a player clicks on the Quaffle we need to increase the score of the game by 10 points by changing the HTML that displays the score using JavaScript.
+In prior the lessons, all of the HTML and CSS on our page was static, meaning that it stayed the same.  In this activity we will use JavaScript to manipulate our HTML and CSS to dynamically update our webpage and game.  Developers call this process of dynamically updating the HTML and CSS **manipulating the DOM** (Document Object Model).  
 
-You will use the following skills in this lesson:
+For example, when a player clicks on the Quaffle we need to increase the score of the game by 10 points.  We accomplish this by changing the HTML that displays the score using JavaScript.
+
+We will practice following concepts in this lesson:
 * Visual Studio Code (VS Code)
 * HTML, CSS
 * JavaScript
