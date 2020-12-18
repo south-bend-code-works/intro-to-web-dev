@@ -150,8 +150,8 @@ For each step below, write your code between the `<script></script>` tags in our
 ```
 <script>
   var score = 0;
-  var quaffle = document.getElementById("quaffle");
   var scoreboard = document.getElementById("scoreboard");
+  var quaffle = document.getElementById("quaffle");
 </script>
 ```
 
@@ -170,8 +170,8 @@ For each step below, write your code between the `<script></script>` tags in our
 ```
 <script>
   var score = 0;
-  var quaffle = document.getElementById("quaffle");
   var scoreboard = document.getElementById("scoreboard");
+  var quaffle = document.getElementById("quaffle");
 
   // Function that starts a new game of Quidditch!
   function startGame() {
@@ -187,15 +187,15 @@ For each step below, write your code between the `<script></script>` tags in our
 
 * In our HTML, we need to update our button so that it knows what to do when it's clicked.  
     * This is done using the onclick handler, to which we provide some javascript that we want to run.  
-    * In this case, we will modify our button's HTML to call our _startGame()_ function:
+    * Modify your button's HTML to call our _startGame()_ function like such:
       * ```<button onclick="startGame()">New Game</button>```
 
 #### Try it out
-Once you've made your changes, clicking on _new game_ should set the score to 0 and unhid our quaffle image on the page, though nothing will move yet. 
+Once you've made your changes, refresh your browser and click on _new game_.  This should set the score to 0 and unhide our quaffle image on the page, though nothing will move yet. 
 
-* Refresh the `index.html` in Chrome to load your updated code.
-  * You can verify what code your browser is running by using the Developer Tools in Chrome to inspect the code.
-  * You can also debug any errors you might be seeing.  For example, you might not see the quaffle.png if you haven't downloaded that image and placed it in the appropriate location.
+Hints:
+  * You can see what code your browser is running by using the Developer Tools in Chrome to inspect the code.
+  * You can also debug any errors you might be seeing.  For example, chrome might warn you if it cannot find the quaffle.png, which means you may have not downloaded it or placed it in the appropriate location.
 
 After clicking "New Game" your screen should look like this:
 ![new game]({{ site.baseurl }}/assets/img/module1/quidditch1.0-newgame.png)
@@ -204,9 +204,9 @@ After clicking "New Game" your screen should look like this:
 
 Now comes the fun part, let's update our JavaScript code to make our quaffle fly about on the screen.
 
-To accomplish this we will introduce a handy JavaScript function: `setTimeout()`.  This is a function that takes two arguments.  The first is another function we want to call, the second is the amount of time in milliseconds we should wait before calling that function.  Note that 1000 milliseconds equals 1 second.
+To accomplish this we will introduce a handy JavaScript function: `setTimeout()`.  This is a function that takes two arguments.  The first argument is the name of another function we want to call.  The second argument is the amount of time in milliseconds we should wait before calling that function.  Note that 1000 milliseconds equals 1 second.
 
-Create will create a new function called `moveQuaffle()` using the code below:
+Now that we have learned about setTimeout, let's use it.  To do this we need to add the function called `moveQuaffle()` to our script.  The code for this function is included below for your convenience.
 
 ```
 function moveQuaffle() {
@@ -225,28 +225,87 @@ function moveQuaffle() {
 }
 ```
 
-In between our `<script></script>` tags add the following code:
+Next, we need to add some variables that this function uses to animate the quaffle.  Add the following variables at the top of our script:
 * A new variable, `quaffleSpeed`, that is set to 1500 milliseconds (1.5 seconds)
 * A new variable, `quaffleTimeoutID`, with the following code: `var quaffleTimeoutID = null`.  We will use this in the next step.
-* Paste the moveQuaffle() function from above below our startGame() function.
-* Update our startGame() function to call moveQuaffle().
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<script>
+  var score = 0;
+  var scoreboard = document.getElementById("scoreboard");
+  var quaffle = document.getElementById("quaffle");
+
+  // Variables to help animate our quaffle.
+  var quaffleSpeed = 1500; // speed in Milliseconds.
+  var quaffleTimeoutID = null;
+
+  // Function that starts a new game of Quidditch!
+  function startGame() {
+    // Set the score to zero
+    score = 0;
+    scoreboard.innerHTML = score;
+
+    // Make our quaffle objects visibile. Note that we initially set them to be invisible in our CSS above.
+    quaffle.style.visibility = "visible";
+  }
+
+  function moveQuaffle() {
+    // Generate a random x,y position for our Quaffle
+    let randY = Math.floor(Math.random() * 436 + 1); // 500 (the width of the game board) - 64 (the width of the quaffle) = 436 px
+    let randX = Math.floor(Math.random() * 436 + 1);
+
+    // Use CSS to animate the transition from our current position to the new position.
+    quaffle.style.transform = `translate(${randX}px, ${randY}px)`; // Use a 'template literal' (backtick) to generate the string we need for our css animation.
+
+    // If we had a move that hasn't completed, let's clear it so we can make a new one.
+    clearTimeout(quaffleTimeoutID)
+    
+    // Move the Quaffle after so many seconds.
+    quaffleTimeoutID = setTimeout(moveQuaffle, quaffleSpeed); // Note: we keep track of this timer by storing it in the quaffleTimeoutID variable in case we need to cancel the movement later.
+  }
+</script>
+```
+
+* Finally, we need to add one line of code in our startGame() function to call moveQuaffle().
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+  // Function that starts a new game of Quidditch!
+  function startGame() {
+    // Set the score to zero
+    score = 0;
+    scoreboard.innerHTML = score;
+
+    // Make our quaffle objects visibile. Note that we initially set them to be invisible in our CSS above.
+    quaffle.style.visibility = "visible";
+
+    // move the quaffle
+    moveQuaffle(); //ADD THIS LINE OF CODE TO START MOVING THE QUAFFLE.
+  }
+```
 
 #### Try it out
-Try it out in your browser.  You should see our quaffle flying about the screen.  
+Try it out in your browser.  You should see your quaffle flying about the screen.  
 
-Answer the following questions:
+Pause and try and answer the following questions:
 * Why does the quaffle keep moving about the screen as opposed to moving once and stoping?  See if you can identify the line of code that makes this animation repeat itself indefinitely.
-* How would you you increase/decrease the speed of the quaffle?
+* How would you increase or decrease the speed of the quaffle?
 
 ### 5. Update our Score each time we click on the Quaffle
 
-It wouldn't be a game if we didn't keep track of the score.  Previously, we added an onclick handler to our new game button, however, HTML allows us to add onclick handlers to any objects.  In this case, we want to add an onclick handler for our quaffle, `<div id='quaffle>`.  This way, we can take an action whenever the user manages to click on the quaffle.
+It wouldn't be a game if we didn't keep track of the score.  Previously, we added an onclick handler to our new game button which make sense as people click buttons.  However, HTML actually allows us to add onclick handlers to any objects, including DIV objects.  In this case, we want to add an onclick handler for our quaffle, which is a div defined as: `<div id='quaffle>`.  Using onclick in this way we can take any action whenever the user successfully clicks on the quaffle.
 
 When the quaffle is clicked you will:
 * Increment our score by 10 points
 * Immediately move the quaffle to a new location 
 
-JavaScript to add between the `<script></script>` tag:
+Modify our JavaScript in the following ways:
+
 * Create a new function, _scoreQuaffle()_, that does the following:
   * Increments our _score_ variable by 10 points
   * Updates the _scoreboard_ on our webpage
@@ -272,8 +331,8 @@ JavaScript to add between the `<script></script>` tag:
 <script>
 ```
 
-HTML Code to modify
-* add the onclick handler to the quaffle div.  It should call the scoreQuaffle() function.
+Modify our HTML Code:
+* Add an onclick handler to the quaffle div.  It should call the scoreQuaffle() function.
 
 <div class="hint">Hover for hint</div>
 
@@ -353,13 +412,12 @@ Here is all the completed code, all together, for version 1.0 of our Quidditch C
     <script>
       // Variables accessible anywhere inside this <script> tag.
       var score = 0;
-      var quaffle = document.getElementById("quaffle");
       var scoreboard = document.getElementById("scoreboard");
+      var quaffle = document.getElementById("quaffle");
 
-      var quaffleTimeoutID = null;
-
-      // Constants. Change these values to make the gameplay different 
+      // Variables to help animate our quaffle.
       var quaffleSpeed = 1500; // speed in Milliseconds.
+      var quaffleTimeoutID = null;
 
       // Function that starts a new game of Quidditch!
       function startGame() {
