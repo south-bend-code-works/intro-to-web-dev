@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Practice Problem: Quidditch Cup 1.0 Instructions
+# Practice Problem: Quidditch Cup 1.0
 
 ## Goal
 
@@ -10,7 +10,7 @@ Our goal for this project is to build an interactive, web-based version of Quidd
 
 At the end of this activity, you will have built something similar to this:
 
-![quidditch example]({{ site.baseurl }}/assets/img/module1/quidditch1.0-animated.gif)
+![quidditch example]({{ site.baseurl }}/assets/img/module1/quidditch1.0-animated.gif | width=100)
 
 ## Overview
 
@@ -97,23 +97,53 @@ We will practice following concepts in this lesson:
 
 ### 2. Download and add the supporting files we will need to your project folder
 Download the images we will use in our game:
-* Right-Click and download the following images and save them in a new sub-folder, `imgs`, in your `quidditch-cup` project directory.
-![quaffle]({{ site.baseurl }}/assets/img/module1/quidditch-assets/quaffle64x64.png)
-![golden snitch]({{ site.baseurl }}/assets/img/module1/quidditch-assets/snitch64x64.png)
+* Right-Click and download the following images 
+* Save them in a new sub-folder, `imgs`, in your `quidditch-cup` project directory.
+| Quaffle | Golden Snitch (used in version 2.0) |
+-------------------------------------------------
+| ![quaffle]({{ site.baseurl }}/assets/img/module1/quidditch-assets/quaffle64x64.png) | ![golden snitch]({{ site.baseurl }}/assets/img/module1/quidditch-assets/ |snitch64x64.png)
 
-### 3. New Game Button
+### 3. Make the `New Game` Button Work
 
-We need to add some JavaScript to start our game when the user clicks the _new game_ button.
+Now we will add some JavaScript to start our game when the user clicks the `new game` button.
 
-In between our `<script></script>` tags we need to add the folowing code:
+In between our `<script></script>` tags we need to write the following code:
 * Define a variable, called _score_, and initialize it to 0.
   * We will use this to track the score for our player.
+
+{: .hint-content}
+```
+<script>
+  var score = 0;
+</script>
+```
+
 * Define a variable, _scoreboard_, and set it equal to the result of: `document.getElementById("scoreboard");`
   * This represents the HTML element with the ID of "scoreboard".
-  * We will use this to display the value of our _score_ variable on the page.
+  * We will use this to update the the following html: `<span id="scoreboard">No Score Yet</span>`.
+  * For example, if we wanted the score to be 1000 you could run the following JavaScript: `scoreboard.innerHTML = "1000"`
+
+{: .hint-content}
+```
+<script>
+  var score = 0;
+  var quaffle = document.getElementById("quaffle");
+</script>
+```
+
 * Define a variable, _quaffle_, and set it equal to the result of: `document.getElementById("quaffle");`
   * This variable is references the HTML element with the ID of "quaffle"
-  * We use this variable to modify the position of our quaffle div on the screen.
+  * We will use this variable to modify the position of our quaffle div on the screen.
+
+{: .hint-content}
+```
+<script>
+  var score = 0;
+  var quaffle = document.getElementById("quaffle");
+  var scoreboard = document.getElementById("scoreboard");
+</script>
+```
+
 * Declare a new function, _startGame()_, it should:
   * Ensure the score is set to zero by:
     * setting our _score_ variable to 0
@@ -122,6 +152,25 @@ In between our `<script></script>` tags we need to add the folowing code:
     * set the css visibility attribute of our _quaffle_ div to visible in the DOM by:
       * quaffle.style.visibility = "visible";
       * notice that this was originally set to "hidden".
+
+{: .hint-content}
+```
+<script>
+  var score = 0;
+  var quaffle = document.getElementById("quaffle");
+  var scoreboard = document.getElementById("scoreboard");
+
+  // Function that starts a new game of Quidditch!
+  function startGame() {
+    // Set the score to zero
+    score = 0;
+    scoreboard.innerHTML = score;
+
+    // Make our quaffle objects visibile. Note that we initially set them to be invisible in our CSS above.
+    quaffle.style.visibility = "visible";
+  }
+</script>
+```
 
 In our HTML, we need to update our button so that it knows what to do when it's clicked.  This is done using the onclick handler, to which we provide some javascript that we want to run.  In this case, we will modify our button's HTML to call our _startGame()_ function:
 ```<button onclick="startGame()">New Game</button>```
@@ -154,7 +203,7 @@ Once you've made your changes, try it out:
 ```
 
 After clicking "New Game" your screen should look like this:
-![new game]({{ site.baseurl }}/assets/img/module1/quidditch1.0-newgame.png)
+![new game]({{ site.baseurl }}/assets/img/module1/quidditch1.0-newgame.png | width=100)
 
 ### 3. Make the Quaffle Move
 
