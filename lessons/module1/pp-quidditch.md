@@ -191,13 +191,15 @@ For each step below, write your code between the `<script></script>` tags in our
       * ```<button onclick="startGame()">New Game</button>```
 
 #### Try it out
+
+:-------------------------:|:-------------------------:
 Once you've made your changes, refresh your browser and click on _new game_.  This should set the score to 0 and unhide our quaffle image on the page, though nothing will move yet. 
 
 Hints:
   * You can see what code your browser is running by using the Developer Tools in Chrome to inspect the code.
   * You can also debug any errors you might be seeing.  For example, chrome might warn you if it cannot find the quaffle.png, which means you may have not downloaded it or placed it in the appropriate location.
 
-After clicking "New Game" your screen should look like this:
+| After clicking "New Game" your screen should look like this:
 ![new game]({{ site.baseurl }}/assets/img/module1/quidditch1.0-newgame.png)
 
 ### 4. Make the Quaffle Move
