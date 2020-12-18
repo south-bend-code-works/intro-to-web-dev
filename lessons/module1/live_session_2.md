@@ -36,7 +36,7 @@ In the second half of this live session you will break into small groups and ind
 3. Add a background soundtrack to the game
     * Use the HTML5 Audio Tag
     * Download the background audio track here (or use your own!):
-        * link to this file.
+        * <a href="{{ site.baseurl }}assets/img/module1/quidditch-assets/prologue.wav=">
 
 Your final game should look like this:
-![](image here)
+![quidditch example]({{ site.baseurl }}/assets/img/module1/quidditch2.0-animated.gif)
