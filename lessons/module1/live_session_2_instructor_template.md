@@ -100,6 +100,7 @@ Walk through the code and explain how JavaScript is used to for DOM events and d
 
 
 -->
+
 <!--
  _____  _   _  _  ___    ___    _  _____  ___    _   _       __        __   
 (  _  )( ) ( )(_)(  _`\ (  _`\ (_)(_   _)(  _`\ ( ) ( )    /'__`\    /' _`\ 
@@ -110,8 +111,9 @@ Walk through the code and explain how JavaScript is used to for DOM events and d
 
 * Note: They should all have the completed solution for Quidditch 1.0 as the starting point for 2.0
 
-* Explain the objective of Quidditch 2.o
-* Breakout into small groups of 3-4.  Groups should help each other implement Quidditch 2.0.
+* Explain the objective of Quidditch 2.0
+* Breakout into small groups of 3-4. 
+* Individual Groups should help each other implement Quidditch 2.0.
 
 * WITH 15 MINUTES OF CLASS LEFT
 * Close the breakout rooms
@@ -132,9 +134,10 @@ Extend our Quidditch Game:
 3. Add a background soundtrack to the game
     * Use the HTML5 Audio Tag
 
+
+Quiddtich 2.0 Solution Below
 -->
 
-Solution
 <!DOCTYPE html>
 <html lang="en">
   <head>
