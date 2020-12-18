@@ -99,9 +99,9 @@ We will practice following concepts in this lesson:
 Download the images we will use in our game:
 * Right-Click and download the following images 
 * Save them in a new sub-folder, `imgs`, in your `quidditch-cup` project directory.
-| Quaffle | Golden Snitch (used in version 2.0) |
--------------------------------------------------
-| ![quaffle]({{ site.baseurl }}/assets/img/module1/quidditch-assets/quaffle64x64.png) | ![golden snitch]({{ site.baseurl }}/assets/img/module1/quidditch-assets/ |snitch64x64.png)
+Quaffle | Golden Snitch (used in version 2.0)
+:-------------------------:|:-------------------------:
+![quaffle]({{ site.baseurl }}/assets/img/module1/quidditch-assets/quaffle64x64.png) | ![golden snitch]({{ site.baseurl }}/assets/img/module1/quidditch-assets/ snitch64x64.png)
 
 ### 3. Make the `New Game` Button Work
 
@@ -205,7 +205,7 @@ Once you've made your changes, try it out:
 After clicking "New Game" your screen should look like this:
 ![new game]({{ site.baseurl }}/assets/img/module1/quidditch1.0-newgame.png | width=100)
 
-### 3. Make the Quaffle Move
+### 4. Make the Quaffle Move
 
 Now comes the fun part, let's update our JavaScript code to make our quaffle fly about on the screen.
 
@@ -242,7 +242,7 @@ Answer the following questions:
 * Why does the quaffle keep moving about the screen as opposed to moving once and stoping?  See if you can identify the line of code that makes this animation repeat itself indefinitely.
 * How would you you increase/decrease the speed of the quaffle?
 
-### 4. Update our Score each time we click on the Quaffle
+### 5. Update our Score each time we click on the Quaffle
 
 It wouldn't be a game if we didn't keep track of the score.  Previously, we added an onclick handler to our new game button, however, HTML allows us to add onclick handlers to any objects.  In this case, we want to add an onclick handler for our quaffle, `<div id='quaffle>`.  This way, we can take an action whenever the user manages to click on the quaffle.
 
