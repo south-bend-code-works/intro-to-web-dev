@@ -647,4 +647,593 @@ Cool! Feel free to use `console.log` underneath our new code to check the values
 
 This is great. We have dealt 2 random cards to both our dealer and player. But we haven't created any HTML to show these cards at all. Let's make that happen.
 
-In order to show these cards on the screen, we first need a 
+In order to show these cards on the screen, we first need write some HTML so that we can reference it and then change the `.innerHTML`.
+
+First, I'm going to create a `div` with the class `game-area`. This just signifies where in the HTML we can expect the entirety of the game to take place.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    ...
+  </head>
+  <body>
+    
+    <div class="game-area">
+
+    </div>
+
+  </body>
+  <script>
+    ...
+  </script>
+</html>
+```
+
+Now that we have a `game-area`, let's think about what areas the game will have. We have 2 characters, the dealer and the player. So, let's add 2 `div`s to `game-area` called with the class `character`. Within both of those `character` `div`s, we will need 2 things, the area for the `title` of our `character` and the `card-area` where we will display the value of our cards. Within the `div` tags with the class `title`, put the word `Dealer` in the first one and `Player` in the second. Lastly, within both `card-area`s, we will need to `card` `div`s. We need to give all 4 of these `card` `div`s `id`s so that we can use `.innerHTML` to display the values individual cards. For `id`s for these `card` `div`s, let's use the name of the character and then the index of the card. So, the 4 `id`s will be `dealer-0`, `dealer-1`, `player-0`, and `player-1`.
+
+Let's add all of these `div`s with appropriate classes and `id`s.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    ...
+  </head>
+  <body>
+    
+    <div class="game-area">
+
+      <div class="character">
+        <div class="title">Dealer</div>
+        <div class="card-area">
+          <div id="dealer-0" class="card"></div>
+          <div id="dealer-1" class="card"></div>
+        </div>
+      </div>
+
+      <div class="character">
+        <div class="title">Player</div>
+        <div class="card-area">
+          <div id="player-0" class="card"></div>
+          <div id="player-1" class="card"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+  <script>
+    ...
+  </script>
+</html>
+```
+
+Now, if we reload our page, it will look something like this:
+
+![]({{ site.baseurl }}/assets/img/module2/bj-1.png)
+
+Now that is just gorgeous.
+
+Before we actually put values in our `card`s, let's make our `card`s look a little more like cards. In the CSS, I'm going to use the selector `.card` and add a black, solid, thin border along with a `border-radius` of `16px`. 
+
+After refreshing, I realize that the `card`s look like very long lines the width of the screen. So, I'll add a `height` of `150px` and `width` of `90px` to my `card` selector to see if that helps.
+
+That definitely helps but the cards are all smooshed together. I'll add `16px` of margin to the bottom of the `card`s and call it good.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      .card {
+        border: thin solid black;
+        border-radius: 16px;
+        height: 150px;
+        width: 90px;
+        margin-bottom: 16px;
+      }
+
+    </style>
+  </head>
+  <body>
+    ....
+  </body>
+  <script>
+    ...
+  </script>
+</html>
+```
+
+While it is still a wildly unattractive webpage, it's good enough to keep moving.
+
+So, we now we have somewhere to display the card values. The last thing to do is to actually put in the values!
+
+In our JavaScript, we are at the point where both characters already have their cards in an array. Let's create a function that takes those arrays and uses `.innerHTML` to put the values of those cards into the HTML.
+
+First, let's start a function named `displayCards`. In `displayCards`, we are going to need to reference individual `card`s using there `id`s (remember `document.getElementById`). After referencing the `card`, we will need to use `.innerHTML` to input of the the cooresponding cards. Each card object in the arrays have a `value` and a `suit`. The string we should put into each `card` is `card.value + " of " + card.suit`.
+
+Then, `displayCards` should be called in the function `startGame` right after both `dealerCards` and `playerCards` are assigned values.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  ...
+  <script>
+
+    ...
+
+    var displayCards = () => {
+
+      var dealerCard0 = dealerCards[0]
+      document.getElementById("dealer-0").innerHTML = dealerCard0.value + " of " + dealerCard0.suit
+
+      var dealerCard1 = dealerCards[1]
+      document.getElementById("dealer-1").innerHTML = dealerCard1.value + " of " + dealerCard1.suit
+
+      var playerCard0 = playerCards[0]
+      document.getElementById("player-0").innerHTML = playerCard0.value + " of " + playerCard0.suit
+
+      var playerCard1 = playerCards[1]
+      document.getElementById("player-1").innerHTML = playerCard1.value + " of " + playerCard1.suit
+
+    }
+    
+    var startGame = () => {
+      var newDeck = buildDeck()
+      var shuffledNewDeck = shuffle(newDeck)
+      deck = shuffledNewDeck
+
+      dealerCards = get2Cards()
+      playerCards = get2Cards()
+      displayCards()
+    }
+
+    ...
+
+  </script>
+</html>
+```
+
+If you refresh your webpage, it will hopefully look something like this:
+
+![]({{ site.baseurl }}/assets/img/module2/bj-2.png)
+
+I mean, holy smokes, it's gorgeous! But just to make it slightly less awful, let's center the words within the `card`. Let's use the `card` CSS selector to make all `card`s grids with their items vertically and horizontally aligned.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      .card {
+        border: thin solid black;
+        border-radius: 16px;
+        height: 150px;
+        width: 90px;
+        margin-bottom: 16px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    ....
+  </body>
+  <script>
+    ...
+  </script>
+</html>
+```
+
+Well, it's still hideous but we're rolling with it.
+
+### Declare winner and restart
+
+Wow! We can now endlessly refresh the page and get new cards for both of our characters every time. Pretty neat stuff! Now to make it an actual game.
+
+In actual blackjack, scoring has some complexity to it. All face cards are worth then, aces can be either 1 or 11, etc. In our very simple version of the game, to find a winner, we are simply going to add together the value of both characters' cards. The winner will be the character with the higher sum. If it is a tie, the dealer will be declared the winner.
+
+So, let's create a function called `declareWinner`. The first thing we need to do in this function is to find the totals for both our dealer and player. I'm going to use `.forEach` to accomplish this but there are several acceptable ways of doing this. Store the sum for each character in variables named `dealerTotal` and `playerTotal`.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  ...
+  <script>
+
+    ...
+
+    var declareWinner = () => {
+      var dealerTotal = 0
+      var playerTotal = 0
+
+      dealerCards.forEach((card) => {
+        dealerTotal = dealerTotal + card.value
+      })
+
+      playerCards.forEach((card) => {
+        playerTotal = playerTotal + card.value
+      })
+    }
+
+    ...
+
+  </script>
+</html>
+```
+
+Now that we have the totals, let's use another nice built-in JavaScript method called `alert`. At the bottom of `declareWinner`, write `alert(dealerTotal + " " + playerTotal)`. Then, after a refresh, you should have a pop-up with 2 numbers, one for each of the totals of your characters' card values. Pretty cool, right?
+
+Since we can declare things using an `alert` message, let's craft 2 messages: 1 for when the player wins and 1 for when the dealer wins. We are going to need a variable `message` and 2 conditional statements that we can use to assign crafted strings to `message`. If the player wins, my message is going to be `"Cool! Player beats dealer, " + playerTotal + " to " + dealerTotal + "."`. Otherwise my message is going to be `"Bummer. Dealer won, " + dealerTotal + " to " + playerTotal + "."`. Then, I'm going to use `alert` to display my message.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  ...
+  <script>
+
+    ...
+
+    var declareWinner = () => {
+      var dealerTotal = 0
+      var playerTotal = 0
+
+      dealerCards.forEach((card) => {
+        dealerTotal = dealerTotal + card.value
+      })
+
+      playerCards.forEach((card) => {
+        playerTotal = playerTotal + card.value
+      })
+
+      var message
+      if (playerTotal > dealerTotal) {
+        message = "Cool! Player beats dealer, " + playerTotal + " to " + dealerTotal + "."
+      } else {
+        message = "Bummer. Dealer won " + dealerTotal + " to " + playerTotal + "."
+      }
+
+      alert(message)
+    }
+
+    ...
+
+  </script>
+</html>
+```
+
+Now that we have our `declareWinner` function made, let's call it at the bottom of our `startGame` function since at this point all characters have their cards and the cards have been displayed.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  ...
+  <script>
+
+    ...
+
+    var startGame = () => {
+      var newDeck = buildDeck()
+      var shuffledNewDeck = shuffle(newDeck)
+      deck = shuffledNewDeck
+
+      dealerCards = get2Cards()
+      playerCards = get2Cards()
+      displayCards()
+      declareWinner()
+    }
+
+    ...
+
+  </script>
+</html>
+```
+
+Hm. Something weird is happening. My cards aren't evening being displayed before the `alert` is shown. I'm going to delay the `declareWinner` call so that I can see the cards before the winner is declared. The way we delay the call of a function is to use `setTimeout`. It is similar to `setInterval` which we have used before in our Virtual Pet. They both take 2 things, a reference to a function and an amount of time in milliseconds. The difference is this: `setInterval` runs a function over and over again, using the time as the amount of time in between function runs while `setTimeout` only runs the given function once with the time given to it as the delay before the function is run.
+
+Example:
+
+```
+var sayHi = () => {
+  console.log("Hi!")
+}
+
+setInterval(sayHi, 2000) // will run sayHi every 2 seconds
+setTimeout(sayHi, 500) // waits a half second before running sayHi only one time and then being done
+```
+
+Okay, now that we know what `setTimeout` is, let's use it in our function `startGame`. In place of the line that calls `declareWinner`, let's instead use `setTimeout`, passing to it the reference to the function `declareWinner` and the time `2000`.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  ...
+  <script>
+
+    ...
+
+    var startGame = () => {
+      var newDeck = buildDeck()
+      var shuffledNewDeck = shuffle(newDeck)
+      deck = shuffledNewDeck
+
+      dealerCards = get2Cards()
+      playerCards = get2Cards()
+      displayCards()
+      setTimeout(declareWinner, 2000)
+    }
+
+    ...
+
+  </script>
+</html>
+```
+
+Cool! Now there is a delay where I can see the cards for 2 seconds before an alert comes up to declare the winner.
+
+The last thing we want to do is to offer a restart to the game. Similar to `alert`, another method exists in JavaScript that allows us to prompt the user and make decisions based on the user's response. The method is `confirm` and it takes one argument, a string, where we can prompt the user to which they will have 2 buttons to respond, `Cancel` and `OK` (which are defaults that we can't change). If the user selects `OK`, `confirm` will return `true`, otherwise, `false`.
+
+Let's see an example in action:
+
+```
+var answer = confirm("Press OK to be greeted.")
+
+if (answer) {
+  console.log("Well, howdy!")
+} else {
+  console.log("Fine, no hello for you.")
+}
+
+// if user selects `OK`, "Well, howdy!" will be printed to the console
+// if user selects `Cancel`, "Fine, no hello for you." will be printed to the console
+```
+
+Now that we know what `confirm` is, we can use to potentially restart the game. What we can do is use `confirm` at the bottom of `declareWinner` to prompt the user with `"Would you like to play again? Press OK to restart the game."`. If so, we run `startGame` and the whole thing begins again.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<!DOCTYPE html>
+<html>
+  ...
+  <script>
+
+    ...
+
+    var declareWinner = () => {
+      var dealerTotal = 0
+      var playerTotal = 0
+
+      dealerCards.forEach((card) => {
+        dealerTotal = dealerTotal + card.value
+      })
+
+      playerCards.forEach((card) => {
+        playerTotal = playerTotal + card.value
+      })
+
+      var message
+      if (playerTotal > dealerTotal) {
+        message = "Cool! Player beats dealer, " + playerTotal + " to " + dealerTotal + "."
+      } else {
+        message = "Bummer. Dealer won, " + dealerTotal + " to " + playerTotal + "."
+      }
+
+      alert(message)
+
+      var answer = confirm("Would you like to play again? Press OK to restart the game.")
+      if (answer) {
+        startGame()
+      }
+    }
+
+    ...
+
+  </script>
+</html>
+```
+
+Nice! Now we can play endlessly if we so desire.
+
+### Complete Solution
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      .card {
+        border: thin solid black;
+        border-radius: 16px;
+        height: 150px;
+        width: 90px;
+        margin-bottom: 16px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+    
+    <div class="game-area">
+
+      <div class="character">
+        <div class="title">Dealer</div>
+        <div class="card-area">
+          <div id="dealer-0" class="card"></div>
+          <div id="dealer-1" class="card"></div>
+        </div>
+      </div>
+
+      <div class="character">
+        <div class="title">Player</div>
+        <div class="card-area">
+          <div id="player-0" class="card"></div>
+          <div id="player-1" class="card"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+  <script>
+
+    var deck
+    var dealerCards
+    var playerCards
+
+    var buildDeck = () => {
+      var newDeck = []
+      var suits = ['heart', 'spade', 'diamond', 'club']
+      var values = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+      suits.forEach((suit) => {
+        values.forEach((value) => {
+
+          var card = {
+            suit: suit,
+            value: value,
+          }
+
+          newDeck.push(card)
+
+        })
+      })
+
+      return newDeck
+    }
+    
+    var shuffle = (deck) => {
+      // we declare 2 parameters here even though we won't use them since we are using Math.random() to deteremine 1 or -1 instead of these values
+      var sortFunc = (card1, card2) => { 
+        var result
+
+        if ( Math.random() > .5 ) {
+          result = 1
+        } else {
+          result = -1
+        }
+
+        return result
+      }
+
+      deck.sort(sortFunc)
+
+      return deck
+    }
+
+    var get2Cards = () => {
+      var card1 = deck.shift()
+      var card2 = deck.shift()
+
+      var cards = [card1, card2]
+
+      return cards
+    }
+
+    var displayCards = () => {
+
+      var dealerCard0 = dealerCards[0]
+      document.getElementById("dealer-0").innerHTML = dealerCard0.value + " of " + dealerCard0.suit
+
+      var dealerCard1 = dealerCards[1]
+      document.getElementById("dealer-1").innerHTML = dealerCard1.value + " of " + dealerCard1.suit
+
+      var playerCard0 = playerCards[0]
+      document.getElementById("player-0").innerHTML = playerCard0.value + " of " + playerCard0.suit
+
+      var playerCard1 = playerCards[1]
+      document.getElementById("player-1").innerHTML = playerCard1.value + " of " + playerCard1.suit
+
+    }
+
+    var declareWinner = () => {
+      var dealerTotal = 0
+      var playerTotal = 0
+
+      dealerCards.forEach((card) => {
+        dealerTotal = dealerTotal + card.value
+      })
+
+      playerCards.forEach((card) => {
+        playerTotal = playerTotal + card.value
+      })
+
+      var message
+      if (playerTotal > dealerTotal) {
+        message = "Cool! Player beats dealer, " + playerTotal + " to " + dealerTotal + "."
+      } else {
+        message = "Bummer. Dealer won, " + dealerTotal + " to " + playerTotal + "."
+      }
+
+      alert(message)
+
+      var answer = confirm("Would you like to play again? Press OK to restart the game.")
+      if (answer) {
+        startGame()
+      }
+    }
+    
+    var startGame = () => {
+      var newDeck = buildDeck()
+      var shuffledNewDeck = shuffle(newDeck)
+      deck = shuffledNewDeck
+
+      dealerCards = get2Cards()
+      playerCards = get2Cards()
+      displayCards()
+      setTimeout(declareWinner, 2000)
+    }
+
+    startGame()
+
+  </script>
+</html>
+```
+
+## Conclusion
+
+Wow! We were able to apply our new knowledge of **arrays** and **objects** (along with a whole bunch of other new stuff) to make a card game. Sure, the game we made is wildly ugly and follows very few of the rules of blackjack but this should only deepen our appreciation for the complexity that comes with creating even seemingly simple games.
+
+![](https://i.gifer.com/7O9a.gif)
+
+## Bonus Missions
+
+1. This thing is ugly. Add some styling to make the cards and table look like a poker table.
+2. Add some more blackjack rules! Include hitting and betting.
