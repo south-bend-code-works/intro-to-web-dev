@@ -1,0 +1,124 @@
+I"“<h1 id="intro-to-html-and-css">Intro to HTML and CSS</h1>
+
+<h2 id="goal">Goal</h2>
+
+<p>At the end of this prework, the goal is to have an understanding of HTML, CSS, and how to combine the two to create and style a webpage.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>HTML and CSS are two coding languages that are essential to building webpages. Imagine that instead of a webpage, we were building a house. A house needs a <strong>structure</strong> (walls, roof, foundation), <strong>design</strong> (layout, decoration), and <strong>functionality</strong> (plumbing, electricity). For a website, HTML is used to build the <strong>structure</strong> and CSS is used to <strong>design</strong>. The <strong>functionality</strong> is a different language which will be covered later.</p>
+
+<h2 id="resources">Resources</h2>
+
+<p>Use these resources to introduce yourself to the topics and to complete the exercises.</p>
+
+<h3 id="html">HTML</h3>
+
+<p>The following guide will introduce you to HTML. It may seem a little daunting at first since you may not understand the terminology, but do not worry. It is totally okay if some things are still unclear to you, just keep pressing through and these concepts will make sense in time.</p>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started" target="_blank">Intro to HTML</a></li>
+</ul>
+
+<h3 id="css">CSS</h3>
+
+<p>These guides will build on top of what you learned about HTML to teach you CSS which is used to layout and decorate your HTML. Again, if not everything is clear, do not worry! Just try to have enough understanding to complete the exercises.</p>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS">What is CSS?</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a></li>
+</ul>
+
+<h2 id="exercises">Exercises</h2>
+
+<p>Complete the following exercises to ensure readiness for class. Use the hints to reference the cooresponding resources.</p>
+
+<p class="red"><em>NOTE: After completing an exercise, the site will automatically forward you onto the next exercise. You are <strong>not</strong> being asked to do more than one exercise per link but feel free to do so if you wish.</em></p>
+
+<h3 id="html-1">HTML</h3>
+<ul>
+  <li><a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_paragraphs2" target="_blank">Ex. 1: Tag Completion</a>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_element" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_paragraphs1" target="_blank">Ex. 2: Paragraph</a>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_element" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_attributes3" target="_blank">Ex. 3: Complete the link</a>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Attributes" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_comments1" target="_blank">Ex. 4: HTML comment</a>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>The next 2 exercises are espeically vital</strong></p>
+<ul>
+  <li><a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_images5" target="_blank">Ex. 4: Link to image</a>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>For this next challenge, there are two text boxes where you can edit the code. Just edit the second box.</p>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images#HTML_images_1" target="_blank">Ex. 5: Link to image 2</a>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="css-1">CSS</h3>
+<ul>
+  <li><a href="https://www.w3schools.com/css/exercise.asp" target="_blank">Ex. 1: Color red</a>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started#Styling_HTML_elements" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_selectors3" target="_blank">Ex. 2: Color red (but more specific)</a>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started#Adding_a_class" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_selectors4" target="_blank">Ex. 3: Multiple selectors</a>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started#Styling_HTML_elements" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding2" target="_blank">Ex. 4: Padding</a>
+    <ul>
+      <li><a href="https://www.w3schools.com/css/css_padding.asp#midcontentadcontainer" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding2" target="_blank">Ex. 5: Background image</a>
+    <ul>
+      <li><a href="https://www.w3schools.com/css/css_padding.asp#midcontentadcontainer" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>One of the resources above introduces <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target="_blank">CSS grid</a>. This is an important concept for a later exercise. The next exercises will focus on CSS Grid.</p>
+
+<ul>
+  <li><a href="https://www.w3schools.com/css/exercise.asp?filename=exercise_padding2" target="_blank">Ex. 5-7: Complete levels 1-3</a>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#The_Grid_container" target="_blank">Hint</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>Now you understand some of the basic concepts behind HTML and CSS! Hopefully this meme makes a little more sense to you now than it did before you started.</p>
+
+<p><img src="https://qph.fs.quoracdn.net/main-qimg-097424108c6dc99849e7365be6848c8b" alt="HTML&amp;CSS MEME" /></p>
+:ET

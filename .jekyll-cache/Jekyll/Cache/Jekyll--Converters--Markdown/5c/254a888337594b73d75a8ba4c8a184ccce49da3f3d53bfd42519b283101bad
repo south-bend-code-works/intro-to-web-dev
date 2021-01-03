@@ -1,0 +1,44 @@
+I"�<h1 id="introduction-to-javascript-js">Introduction to JavaScript (JS)</h1>
+
+<h2 id="goal">Goal</h2>
+<p>By the end of this lesson, you should have an understanding of how to use JavaScript alongside HTML and CSS to create webpages.</p>
+
+<h2 id="overview">Overview</h2>
+<p>Earlier, we used an analogy of a house to describe the purposes of HTML and CSS. HTML is structure (walls, roof, foundation) and CSS is design (layout, decoration). But, if we are building a house, how do we get the functionality (electricity, plumbing, etc.)? The answer is JavaScript (JS). JS allows us to store data in databases, get data from other sites, change what’s in the HTML and CSS, and much more. While just HTML and CSS may be fine for a website that simply exists to show information such as contact information or hours of business, anything more interesting than this will require JS.</p>
+
+<h2 id="topics">Topics</h2>
+
+<h3 id="variables">Variables</h3>
+<p>One of the fundamental concepts in JS (and many other coding languages) is <strong>variables</strong>. Think of a <strong>variable</strong> as a box that we can put a value in and get or change later.</p>
+
+<h4 id="read">Read</h4>
+<p>A variable requires 2 things, a name and a value. Look at the code below:</p>
+
+<p><code class="language-plaintext highlighter-rouge">var box = 5</code></p>
+
+<p>In the example above, we see 4 things; <code class="language-plaintext highlighter-rouge">var</code>, <code class="language-plaintext highlighter-rouge">box</code>, <code class="language-plaintext highlighter-rouge">=</code>, and <code class="language-plaintext highlighter-rouge">5</code>. Let’s break each of these down.</p>
+
+<ol>
+  <li>
+    <p>The line starts with <code class="language-plaintext highlighter-rouge">var</code> because we are <strong>declaring</strong> a variable. <strong>Declaring</strong> a variable simply means we are creating a new variable for future use. You must <strong>declare</strong> a variable before you use it. For example, <code class="language-plaintext highlighter-rouge">box = 5</code>, (while allowed) is an improper way of declaring a variable. You only need to <strong>declare</strong> a variable one time. So, later in code, if you change the value of the variable, you do not need to use <code class="language-plaintext highlighter-rouge">var</code>.</p>
+  </li>
+  <li>
+    <p>The next part of code is <code class="language-plaintext highlighter-rouge">box</code> which is what we are <strong>naming</strong> the variable. By <strong>naming</strong> the variable, we can reference it later by simply typing <code class="language-plaintext highlighter-rouge">box</code> in the code.</p>
+  </li>
+  <li>
+    <p>The equal symbol, <code class="language-plaintext highlighter-rouge">=</code>, is saying <em>the variable that is to the left of me (which is <code class="language-plaintext highlighter-rouge">box</code> in this case) is now equal to whatever is right of me (which is <code class="language-plaintext highlighter-rouge">5</code>)</em>. So, if we use <code class="language-plaintext highlighter-rouge">box</code> later in the code, it will be equal to <code class="language-plaintext highlighter-rouge">5</code>.</p>
+  </li>
+  <li>
+    <p>As we just covered, <code class="language-plaintext highlighter-rouge">5</code> is the value that is now what <code class="language-plaintext highlighter-rouge">box</code> is equal to.  This could have been many things. It could have been other numbers (<code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">900</code>, <code class="language-plaintext highlighter-rouge">3.14159</code>), letters and words (which we call <strong>strings</strong>), and a variety of other things.</p>
+    <ul>
+      <li>In JS, the way we assign <strong>strings</strong> to variables is by wrapping the words or letters inside of quotes (e.g. <code class="language-plaintext highlighter-rouge">''</code>)</li>
+      <li>An example of this would be <code class="language-plaintext highlighter-rouge">var box = 'I like to code!'</code>.</li>
+      <li>Now, if we use the variable <code class="language-plaintext highlighter-rouge">box</code> later in the code, it’s value will be <code class="language-plaintext highlighter-rouge">'I like to code!'</code>.</li>
+      <li>The following is incorrect <code class="language-plaintext highlighter-rouge">var box = I like to code!</code> because the <strong>string</strong> is not inside of quotes.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="practice">Practice</h4>
+
+:ET

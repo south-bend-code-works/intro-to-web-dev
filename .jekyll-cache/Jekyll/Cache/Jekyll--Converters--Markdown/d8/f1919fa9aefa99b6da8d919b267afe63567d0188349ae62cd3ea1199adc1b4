@@ -1,0 +1,46 @@
+I"1<h1 id="practice-problem-blackjack">Practice Problem: Blackjack</h1>
+
+<h2 id="goal">Goal</h2>
+<p>At the end of this practice problem, you should have created the card playing elements of the game of blackjack.</p>
+
+<h2 id="overview">Overview</h2>
+<p>The game of blackjack is a gambling card game where players compete against a dealer to try to get closest to 21 without going over. While blackjack includes gambling and the exchange of chips, we won’t focus on that today. We simply want to do the following:</p>
+
+<ul>
+  <li>Create a deck of 52 cards</li>
+  <li>Mimic shuffling</li>
+  <li>Deal 2 cards to both dealer and player</li>
+  <li>Show cards on screen</li>
+  <li>Declare winner and restart</li>
+</ul>
+
+<h2 id="steps">Steps</h2>
+
+<h3 id="setup">Setup</h3>
+
+<p>In order to start your page, you will need a new folder and a new file. Go to your desktop and create a new folder called <code class="language-plaintext highlighter-rouge">blackjack</code>. Then, open up VS Code and create a new file called <code class="language-plaintext highlighter-rouge">index.html</code> and save it inside of your <code class="language-plaintext highlighter-rouge">blackjack</code> folder.</p>
+
+<p>As always, you need to start will the bare bones of a website which is this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Hello world!
+  &lt;/body&gt;
+  &lt;script&gt;
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>After copying and pasting that into the file, go to the folder <code class="language-plaintext highlighter-rouge">blackjack</code> on you desktop, open it, right-click on <code class="language-plaintext highlighter-rouge">index.html</code>, and choose to open in your browser. Confirm that you can see <code class="language-plaintext highlighter-rouge">Hello world!</code>. If so, you are ready to get started.</p>
+
+<h3 id="creating-a-deck">Creating a deck</h3>
+
+<p>Before we see make</p>
+:ET

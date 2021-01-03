@@ -1,0 +1,138 @@
+I"<<hr />
+<p>layout: default
+—</p>
+<h1 id="intro-to-git-and-github">Intro to GIT and GITHUB</h1>
+
+<h2 id="goal">Goal</h2>
+
+<p>At the end of this prework, you will be able to:</p>
+<ul>
+  <li>Describe why GIT and GitHub.com are two of the most important tools for helping developers track changes to and colloborate on code.</li>
+  <li>Use the basic and most important commands such as git add, git commit, git status, git push and more</li>
+  <li>Save your code to your remote repostiory on github.com</li>
+</ul>
+
+<p>Throught this course we will us git and github in the following ways:</p>
+<ul>
+  <li>Use git to track changes to all of your code for our class assignments.</li>
+  <li>Use git &amp; github.com to colloborate on group projects with your classmates.</li>
+  <li>Share a portfolio of completed projects on your public github.com profile.</li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+
+<p><strong>GIT</strong> is a distributed version control system that is used by the overwheliming majority of professional developers.  GIT tracks changes to your code so that it’s easy to identify what code has changed from one version to another.</p>
+
+<p>Have you ever worked on a large term paper and needed to save multipe versions?  If you’ve ever lost important work because you accidently deleted or overwrote hours of work you understand why tracking changes to your work is so important!</p>
+
+<p>Below is a screenshot comparing two versions of the same webpage.  With git can easily see what code was changed between your previous and working version of the code!
+<img src="/imgs/module1/git_compare.png" alt="comparing two versions of the same page" /></p>
+
+<p><strong>GITHUB.COM</strong> is a website that can host your git project repositories on the web, making it easy to colloborate with other developers.</p>
+
+<p>Imagine if we were forced to colloborate on that term paper with dozens of other students, we would need a way to safely merge everyone’s contributions to our paper together.  Github.com helps to solve this problem by enabling teams of developers track changes and colloborate using a centralized project repositorys.</p>
+
+<p>Recall that git is a <em>distributed</em> version controll system.  It’s distributed because every developer working on a project has a complete copy of the project and all changes on their local computer (known as the project repository).  All of these developers periodically sync their work and changes to this centralized, remote repository, hosted on github.com.</p>
+
+<p><img src="/imgs/module1/git_distributed.png" alt="Distribiuted Version Control" /></p>
+
+<h2 id="resources">Resources</h2>
+<p>Use these resources to introduce yourself to the topics and to complete the exercises.</p>
+
+<h3 id="git-crash-course">GIT Crash Course</h3>
+
+<p>The following video will walk you through the basics of GIT and Github.  This video closely mirrors your pre-work exercise below.
+<a href="https://www.youtube.com/watch?v=SWYqp7iY_Tc"><img src="http://i3.ytimg.com/vi/SWYqp7iY_Tc/hqdefault.jpg" alt="Git &amp; GitHub Crash Course For Beginners" /></a></p>
+
+<p>GIT is very robust and as such the number of commands and features may seem a little overwhelming at first, but do not worry. It is totally okay if some things are still unclear to you, just keep pressing through and these concepts will make sense as we apply them throughout the course.</p>
+
+<h4 id="key-terms">Key Terms</h4>
+<p>git init
+git add
+git commit
+git push
+git status
+git remote
+git branch
+git clone</p>
+
+<h4 id="lessons">Lessons</h4>
+<ul>
+  <li><a href="">What is GITHUB?</a></li>
+  <li><a href="">Getting started with GITHUB</a></li>
+  <li><a href="">Colloborating with other developers using GITHUB</a></li>
+</ul>
+
+<h2 id="installion">Installion</h2>
+
+<h3 id="install-git">Install Git</h3>
+<p>Download and Install the correct version of git for your operating system.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>MAC</th>
+      <th>WINDOWS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://sourceforge.net/projects/git-osx-installer/files/">Download MAC Installer</a></td>
+      <td><a href="https://gitforwindows.org/">Download Windows Installer</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="creating-your-githubcom-account">Creating your Github.com Account</h3>
+<p><a href="">Create your github.com account</a></p>
+
+<h2 id="exercises">Exercises</h2>
+
+<p>Complete the following exercise to practice your new found git skills. Use the hints to reference the cooresponding resources.</p>
+
+<h3 id="create-your-first-git-project-reposiotry">Create your first git project reposiotry</h3>
+
+<ol>
+  <li>From the command line, create a new project repository</li>
+  <li>Add a file to your project repository called “index.html”</li>
+  <li>Add the following code to your “index.html” file</li>
+  <li>Stage your index.html</li>
+  <li>Commit your index.html</li>
+</ol>
+
+<h1 id="open-the-terminal-or-command-prompt-and-create-a-new-directory-my-repo-and-initialize-it-with-git-specific-functions">Open the terminal or command prompt and create a new directory, my-repo, and initialize it with git-specific functions</h1>
+<p>mkdir my-repo
+git init my-repo</p>
+
+<h1 id="change-into-the-my-repo-directory">change into the <code class="language-plaintext highlighter-rouge">my-repo</code> directory</h1>
+<p>cd my-repo</p>
+
+<h1 id="create-the-first-file-in-the-project">create the first file in the project</h1>
+<p>Open the project directory with visual studio code and create a new file called <em>index.html</em></p>
+
+<h1 id="git-isnt-aware-of-the-file-stage-it">git isn’t aware of the file, stage it</h1>
+<p>git add index.html</p>
+
+<h1 id="take-a-snapshot-of-the-staging-area">take a snapshot of the staging area</h1>
+<p>git commit -m “add index.html to initial commit”</p>
+
+<h1 id="create-a-remote-repository-for-the-project-on-githubcom">create a remote repository for the project on github.com</h1>
+<p>Got to github.com and login to your account.  Click the</p>
+<h1 id="provide-the-path-for-the-repository-you-created-on-github">provide the path for the repository you created on github</h1>
+
+<h3 id="share-your-first-git-project-reposiotry-on-githubcom">Share your first git project reposiotry on github.com</h3>
+<ol>
+  <li>…</li>
+  <li>…</li>
+</ol>
+
+<p>git remote add origin https://github.com/YOUR-USERNAME/my-repo.git</p>
+
+<h1 id="push-changes-to-github">push changes to github</h1>
+<p>git push –set-upstream origin main</p>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>Now you understand some of the basic concepts behind GIT! Hopefully this meme makes a little more sense to you now than it did before you started.</p>
+
+<p><img src="TODO" alt="GIT MEME" /></p>
+:ET

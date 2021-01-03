@@ -1,0 +1,94 @@
+I"�<h1 id="introduction-to-javascript-js-objects-and-loops">Introduction to JavaScript (JS): Objects and Loops</h1>
+
+<h2 id="goal">Goal</h2>
+<p>By the end of this lesson, you should have an understanding of JavaScript loops, object, arrays, and how them in code.</p>
+
+<h2 id="overview">Overview</h2>
+<p>This lesson will build on our current knowledge of JavaScript variables and conditionals in order to do repetitive tasks quickly and use JS objects to manage data.</p>
+
+<h2 id="topics">Topics</h2>
+
+<h3 id="arrays">Arrays</h3>
+
+<h4 id="concept-making-arrays">Concept: Making Arrays</h4>
+<p>Earlier, we saw that variables could be both numbers and strings like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var aNumber = 5
+var aString = 'Hi there!'
+</code></pre></div></div>
+
+<p>But there are more things in coding than just numbers and strings. One of those things is an <strong>array</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var anArray = [1,2,3]
+</code></pre></div></div>
+
+<p>What are we looking at here? Let’s start with what we know. We know that <code class="language-plaintext highlighter-rouge">var</code> means we are declaring a variable and <code class="language-plaintext highlighter-rouge">anArray</code> is going to be the name of that variable. Then, we know that the <code class="language-plaintext highlighter-rouge">=</code> means we are <strong>assigning</strong> whatever is to the right of the <code class="language-plaintext highlighter-rouge">=</code> to the variable <code class="language-plaintext highlighter-rouge">anArray</code>. But what is <code class="language-plaintext highlighter-rouge">[1,2,3]</code>?</p>
+
+<p><code class="language-plaintext highlighter-rouge">[1,2,3]</code> is an <strong>array</strong>. An <strong>array</strong> is a list of elements. The elements in this case are numbers but they can be strings, other arrays, or anything really. You know something is an <strong>array</strong> if it stars with <code class="language-plaintext highlighter-rouge">[</code>, <code class="language-plaintext highlighter-rouge">]</code>, and the elements on the inside are separated by commas. The following is an example of another array:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var anotherArray = ['cat', 5, [13, 'dude']]
+</code></pre></div></div>
+
+<p>We can see in the <strong>array</strong> above, we first have the string <code class="language-plaintext highlighter-rouge">'cat'</code>, the number <code class="language-plaintext highlighter-rouge">5</code>, and finally another <strong>array</strong> with 2 elements in it, <code class="language-plaintext highlighter-rouge">13</code> and <code class="language-plaintext highlighter-rouge">'dude'</code>.</p>
+
+<h4 id="challenge">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/qBaaBVE" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h4 id="concept-adding-to-arrays">Concept: Adding to arrays</h4>
+<p>So, we know what <strong>arrays</strong> look like and how to make them. But once an <strong>array</strong> is made, how do we add to it? And how do we get one of it elements?</p>
+
+<p>Let’s start with the first question, how to add to an array? Let’s look at an example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = []
+arr.push(5)
+
+// value of arr is [5]
+
+</code></pre></div></div>
+
+<p>In order to add an element to an <strong>array</strong>, we first type the name of the <strong>array</strong> (in this case, <code class="language-plaintext highlighter-rouge">arr</code>) and then add <code class="language-plaintext highlighter-rouge">.push</code> after it. Then, whatever elements we want to add to the <strong>array</strong>, we put in paranthesis behind <code class="language-plaintext highlighter-rouge">arry.push</code>. This is telling the <strong>array</strong> to add whatever element we are passing into <code class="language-plaintext highlighter-rouge">.push</code> to the end of the <strong>array</strong>.</p>
+
+<p>Another example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = []
+
+arr.push(5)
+arr.push(10)
+arr.push(20)
+
+// value of arr is [5, 10, 20]
+</code></pre></div></div>
+
+<p>The above example shows us first setting <code class="language-plaintext highlighter-rouge">arr</code> equal to an empty <strong>array</strong>. Then we <strong>push</strong> 3 elements into the <strong>array</strong>, first the <code class="language-plaintext highlighter-rouge">5</code>, then the <code class="language-plaintext highlighter-rouge">10</code>, and lastly the <code class="language-plaintext highlighter-rouge">20</code>. Each element is being added to the back of the <strong>array</strong>.</p>
+
+<h4 id="challenge-1">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/GRjjQMb" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h4 id="concept-getting-values-from-an-array">Concept: Getting values from an array</h4>
+
+<p>Okay, so we know how to make and add to an array, but how do we access individual elements inside an <strong>array</strong>? Chech out the code below:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [1,2,3,4]
+
+var aNumber = arr[2]
+var anotherNumber = arr[3]
+
+// value of aNumber is 3
+// value of anotherNumber is 4
+</code></pre></div></div>
+
+<p>Above, the first thing did was make an array, <code class="language-plaintext highlighter-rouge">[1,2,3,4]</code>. Then, in the next line, we are declaring a variable <code class="language-plaintext highlighter-rouge">aNumber</code> and assigning <code class="language-plaintext highlighter-rouge">arr[2]</code> to it. What does <code class="language-plaintext highlighter-rouge">arr[2]</code> mean?</p>
+
+<p><code class="language-plaintext highlighter-rouge">arr[2]</code> is saying this: <em>From of the array <code class="language-plaintext highlighter-rouge">arr</code>, get the element that is at the 2nd index.</em> BUT, looking at the comment in the code, it says that <code class="language-plaintext highlighter-rouge">aNumber</code> is equal to <code class="language-plaintext highlighter-rouge">3</code>. However, it looks like <code class="language-plaintext highlighter-rouge">3</code> is in the 3rd spot, not the 2nd. <strong class="red">In code, we do not consider the first element in an array to be at the 1st index, but at the 0th index.</strong> This can be very annoying when first learning to code but eventually makes a lot of sense.</p>
+
+<p>So, in the code above, if we wanted to get the first value in <code class="language-plaintext highlighter-rouge">arr</code>, we would have to use <code class="language-plaintext highlighter-rouge">arr[0]</code>. Again, this may not make sense now but is actually a really nice feature of coding.</p>
+
+<h4 id="challenge-2">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/GRjjQMb" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h3 id="objects">Objects</h3>
+
+:ET

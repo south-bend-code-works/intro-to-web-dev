@@ -1,0 +1,385 @@
+I" ]<h1 id="practice-problem-blackjack">Practice Problem: Blackjack</h1>
+
+<h2 id="goal">Goal</h2>
+<p>At the end of this practice problem, you should have created the card playing elements of the game of blackjack.</p>
+
+<h2 id="overview">Overview</h2>
+<p>The game of blackjack is a gambling card game where players compete against a dealer to try to get closest to 21 without going over. While blackjack includes gambling and the exchange of chips, we won’t focus on that today. We simply want to do the following:</p>
+
+<ul>
+  <li>Create a deck of 52 cards</li>
+  <li>Shuffle the deck</li>
+  <li>Deal 2 cards to both dealer and player</li>
+  <li>Show cards on screen</li>
+  <li>Declare winner and restart</li>
+</ul>
+
+<h2 id="steps">Steps</h2>
+
+<h3 id="setup">Setup</h3>
+
+<p>In order to start your page, you will need a new folder and a new file. Go to your desktop and create a new folder called <code class="language-plaintext highlighter-rouge">blackjack</code>. Then, open up VS Code and create a new file called <code class="language-plaintext highlighter-rouge">index.html</code> and save it inside of your <code class="language-plaintext highlighter-rouge">blackjack</code> folder.</p>
+
+<p>As always, you need to start will the bare bones of a website which is this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Hello world!
+  &lt;/body&gt;
+  &lt;script&gt;
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>After copying and pasting that into the file, go to the folder <code class="language-plaintext highlighter-rouge">blackjack</code> on you desktop, open it, right-click on <code class="language-plaintext highlighter-rouge">index.html</code>, and choose to open in your browser. Confirm that you can see <code class="language-plaintext highlighter-rouge">Hello world!</code>. If so, you are ready to get started.</p>
+
+<h3 id="creating-a-deck">Creating a deck</h3>
+
+<p>Let’s start by creating a deck of cards in JavaScript. A deck has 52 cards which are made up of 4 suits with 13 values within each suit. There are several ways we could represent this deck of cards in JS. For our purposes, I believe the easiest way for us to represent the deck is to use both an <strong>arrays</strong> and <strong>objects</strong>.</p>
+
+<p>Each individual card will be an <strong>object</strong> with 2 <strong>key</strong>/<strong>value</strong> pairs, the <strong>suit</strong> (<code class="language-plaintext highlighter-rouge">"hearts", "diamonds"</code>, etc.) and the <strong>value</strong> (<code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">2</code>,). We are going to create a <strong>object</strong> for each card and then put all 52 cards into an <strong>array</strong>. This will allow us to do things like shuffle and deal cards without much work.</p>
+
+<p>So, when it comes to making the individual card objects, we can do 1 of 2 things:</p>
+<ol>
+  <li>We manually type out each card. (Nope)</li>
+  <li>We use 2 <strong>for</strong> loops to create the 52 cards quickly and easily. (Yep)</li>
+</ol>
+
+<p>Alright, so let’s create a <strong>function</strong> that will build us a new deck. Let’s call it <code class="language-plaintext highlighter-rouge">buildDeck</code>. <code class="language-plaintext highlighter-rouge">buildDeck</code> will need to return an <strong>array</strong> of 52 card objects. Let’s include some of the parts of the <strong>function</strong> we know will be in there. Create a <strong>variable</strong> deck in <code class="language-plaintext highlighter-rouge">buildDeck</code> called <code class="language-plaintext highlighter-rouge">newDeck</code> that is an empty <strong>array</strong> and let’s have our <strong>function</strong> return <code class="language-plaintext highlighter-rouge">newDeck</code>.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  ...
+  &lt;script&gt;
+
+    var buildDeck = () =&gt; {
+      var newDeck = []
+
+      return newDeck
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Alright, so we have a function that returns an empty <strong>array</strong>. Let’s add some more code so that the <code class="language-plaintext highlighter-rouge">newDeck</code> isn’t empty at the end of <code class="language-plaintext highlighter-rouge">buildDeck</code>.</p>
+
+<p>In order to create 52 cards, we need to create a card for every suit and for every value (1-13). So, let’s first make arrays representing the suits and values and put them inside of <code class="language-plaintext highlighter-rouge">buildDeck</code>.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  ...
+  &lt;script&gt;
+
+    var buildDeck = () =&gt; {
+      var newDeck = []
+      var suits = ['heart', 'spade', 'diamond', 'club']
+      var values = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+      return newDeck
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Okay, so we have <strong>arrays</strong> for both our values and suits. Now, how do we use loops to create the cards and add them to <code class="language-plaintext highlighter-rouge">newDeck</code>? Let’s review how we wanted to make a card:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var card = {
+  suit: 'heart',
+  value: 4
+}
+</code></pre></div></div>
+
+<p>The variable <code class="language-plaintext highlighter-rouge">card</code> above represents the 4 of hearts.</p>
+
+<p>Now that we have confirmed what the card <strong>object</strong> will look like, let’s start building loops.</p>
+
+<p>Before we get started, let’s learn another way to think about using <code class="language-plaintext highlighter-rouge">.forEach</code>. In previous examples, we saw <code class="language-plaintext highlighter-rouge">.forEach</code> used like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var total = 0
+var nums = [1,2,3,4,5,6]
+
+var addToTotal = (num) =&gt; {
+  total = total + num
+}
+
+nums.forEach(addToTotal)
+
+// value of total is 21
+</code></pre></div></div>
+
+<p>In the example above, we declare the variables <code class="language-plaintext highlighter-rouge">total</code> and <code class="language-plaintext highlighter-rouge">nums</code>. Then we create a <strong>function</strong> name <code class="language-plaintext highlighter-rouge">addToTotal</code>. Later, in the <code class="language-plaintext highlighter-rouge">.forEach</code>, we reference <code class="language-plaintext highlighter-rouge">addToTotal</code>. However, we don’t ever have to give that <strong>function</strong> <code class="language-plaintext highlighter-rouge">addToTotal</code> a name. We don’t have to first create it and then reference the name of the <strong>function</strong> later. Instead, where we typically put the name of the <strong>function</strong> in <code class="language-plaintext highlighter-rouge">.forEach</code>, we can instead just drop the entire <strong>function</strong> there instead like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var total = 0
+var nums = [1,2,3,4,5,6]
+
+nums.forEach((num) =&gt; {
+  total = total + num
+})
+
+// value of total is 21
+</code></pre></div></div>
+
+<p>The results will be the exact same. The only difference is that, instead of creating a <strong>function</strong>, giving it a name (<code class="language-plaintext highlighter-rouge">addToTotal</code>), and then referencing it later when using <code class="language-plaintext highlighter-rouge">.forEach</code>, we can instead just drop the <strong>function</strong> into the <code class="language-plaintext highlighter-rouge">.forEach</code>. This might not seem that helpful right now, but this is really nice when we decide to use a <strong>for</strong> loop within another <strong>for</strong> loop.</p>
+
+<p>Okay, so we have our arrays (<code class="language-plaintext highlighter-rouge">suits</code> and <code class="language-plaintext highlighter-rouge">values</code>) that we have to loop over. Let’s first create a <strong>for</strong> loop that loops over the strings in <strong>suits</strong>:</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  ...
+  &lt;script&gt;
+
+    var buildDeck = () =&gt; {
+      var newDeck = []
+      var suits = ['heart', 'spade', 'diamond', 'club']
+      var values = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+      suits.forEach((suit) =&gt; {
+        console.log(suit)
+      })
+
+      return newDeck
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>The previous hint code will print all of the strings in <code class="language-plaintext highlighter-rouge">suits</code> in order. Notice, we are using <code class="language-plaintext highlighter-rouge">.forEach</code> without referencing the name of a <strong>function</strong> but instead by dropping the <strong>function</strong> directly into the <code class="language-plaintext highlighter-rouge">.forEach</code>.</p>
+
+<p>Okay, so we have code that loops over all of the elements in <code class="language-plaintext highlighter-rouge">suits</code> but still isn’t adding any cards to <code class="language-plaintext highlighter-rouge">newDeck</code>. We also have to loop over all the elements in <code class="language-plaintext highlighter-rouge">values</code>. Maybe we could do it like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  ...
+  &lt;script&gt;
+
+    var buildDeck = () =&gt; {
+      var newDeck = []
+      var suits = ['heart', 'spade', 'diamond', 'club']
+      var values = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+      suits.forEach((suit) =&gt; {
+        console.log(suit)
+      })
+
+      values.forEach((value) =&gt; {
+        console.log(value)
+      })
+
+      return newDeck
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>The issue with the code above is that we first loop over all of <code class="language-plaintext highlighter-rouge">suits</code> and then we loop over <code class="language-plaintext highlighter-rouge">values</code>. To make a card <strong>object</strong>, we need to have access to both <code class="language-plaintext highlighter-rouge">suit</code> and <code class="language-plaintext highlighter-rouge">value</code> at the same time.</p>
+
+<p>The way to have access to the <code class="language-plaintext highlighter-rouge">suit</code> and <code class="language-plaintext highlighter-rouge">value</code> at the same time is to have a loop <strong>within</strong> a loop. We can do this by putting the <code class="language-plaintext highlighter-rouge">values</code> loop inside of the <code class="language-plaintext highlighter-rouge">suits</code> loop.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  ...
+  &lt;script&gt;
+
+    var buildDeck = () =&gt; {
+      var newDeck = []
+      var suits = ['heart', 'spade', 'diamond', 'club']
+      var values = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+      suits.forEach((suit) =&gt; {
+        console.log(suit)
+        values.forEach((value) =&gt; {
+          console.log(value)
+        })
+      })
+
+      return newDeck
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>The previous hint code would result in the following: First, we have a <code class="language-plaintext highlighter-rouge">.forEach</code> on <code class="language-plaintext highlighter-rouge">suits</code>, so we will loop over each of the <code class="language-plaintext highlighter-rouge">suits</code>. The first in <code class="language-plaintext highlighter-rouge">suits</code> is <code class="language-plaintext highlighter-rouge">"heart"</code>. When we start the loop, we first print the value of <code class="language-plaintext highlighter-rouge">suit</code> (which is <code class="language-plaintext highlighter-rouge">"heart"</code>) to the console. Then, we have another <code class="language-plaintext highlighter-rouge">.forEach</code>, this time on <code class="language-plaintext highlighter-rouge">values</code>. So, we then print to the console every <code class="language-plaintext highlighter-rouge">value</code> in <code class="language-plaintext highlighter-rouge">values</code>. After all of these print, we go to the top of the <code class="language-plaintext highlighter-rouge">suits</code> loop and print the next element in <code class="language-plaintext highlighter-rouge">suits</code> which is <code class="language-plaintext highlighter-rouge">"spade"</code>. Then we print every <code class="language-plaintext highlighter-rouge">value</code> in <code class="language-plaintext highlighter-rouge">values</code> and so on and so forth.</p>
+
+<p>This could be a lot to take in so feel free to look at the code and read the explanation until it begins to click.</p>
+
+<p>Alright, now, in our <code class="language-plaintext highlighter-rouge">values</code> loop, we will have access to both <code class="language-plaintext highlighter-rouge">suit</code> and <code class="language-plaintext highlighter-rouge">value</code>. Let’s create a variable in this <code class="language-plaintext highlighter-rouge">values</code> loop called <code class="language-plaintext highlighter-rouge">card</code>. <code class="language-plaintext highlighter-rouge">card</code> should be an <strong>object</strong> with 2 <strong>key</strong>/<strong>value</strong> pairs. The 2 <strong>keys</strong> should be <code class="language-plaintext highlighter-rouge">suit</code> and <code class="language-plaintext highlighter-rouge">value</code> and the 2 <strong>values</strong> should be <code class="language-plaintext highlighter-rouge">suit</code> and <code class="language-plaintext highlighter-rouge">value</code>, respectively. Then, we should <code class="language-plaintext highlighter-rouge">push</code> <code class="language-plaintext highlighter-rouge">card</code> onto <code class="language-plaintext highlighter-rouge">newDeck</code>, like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  ...
+  &lt;script&gt;
+
+    var buildDeck = () =&gt; {
+      var newDeck = []
+      var suits = ['heart', 'spade', 'diamond', 'club']
+      var values = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+      suits.forEach((suit) =&gt; {
+        values.forEach((value) =&gt; {
+
+          var card = {
+            suit: suit,
+            value: value,
+          }
+
+          newDeck.push(card)
+
+        })
+      })
+
+      return newDeck
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>If you understand the <strong>loop</strong> within a <strong>loop</strong> that’s great. However the variable <strong>card</strong> might still be a little confusing. We are used to seeing <strong>objects</strong> being made in the following manner:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var card = {
+  suit: "heart",
+  value: 4
+}
+</code></pre></div></div>
+
+<p>Here the <strong>values</strong> are either a string or a number. However, in the code with the double loops, the card object instead looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var card = {
+  suit: suit,
+  value: value,
+}
+</code></pre></div></div>
+
+<p>It may looks strange since the words <code class="language-plaintext highlighter-rouge">suit</code> and <code class="language-plaintext highlighter-rouge">value</code> are being repeated but the same thing is going on in both of the previous examples. The only difference is that, in the second one, the second instances of <code class="language-plaintext highlighter-rouge">suit</code> and <code class="language-plaintext highlighter-rouge">value</code> are parameters that represent whatever element the loops are on. Take some time on this until it makes sense.</p>
+
+<p>Cool! Now that we have created a <strong>loop</strong> within a <strong>loop</strong>, used those loops to create card <strong>objects</strong>, and then <code class="language-plaintext highlighter-rouge">push</code>ed those card <strong>objects</strong> onto an <strong>array</strong>, we have a function that returns a full deck! This is a great start. Copy and paste the following code to see the deck printed in the console:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  ...
+  &lt;script&gt;
+
+    var buildDeck = () =&gt; {
+      var newDeck = []
+      var suits = ['heart', 'spade', 'diamond', 'club']
+      var values = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+      suits.forEach((suit) =&gt; {
+        values.forEach((value) =&gt; {
+
+          var card = {
+            suit: suit,
+            value: value,
+          }
+
+          newDeck.push(card)
+
+        })
+      })
+
+      return newDeck
+    }
+
+    var deck = buildDeck()
+    console.log(deck)
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h3 id="shuffle-the-deck">Shuffle the deck</h3>
+
+<p>We have created a function that returns a full deck of cards. The only bummer about the deck is that the cards are all in order. So, when we go to deal from the top of the deck, it will always be the <code class="language-plaintext highlighter-rouge">1</code> of <code class="language-plaintext highlighter-rouge">"heart"</code>. This isn’t fun.</p>
+
+<p>Similar to <code class="language-plaintext highlighter-rouge">.includes</code> or <code class="language-plaintext highlighter-rouge">.forEach</code>, JS has another function <strong>arrays</strong> can use which is <code class="language-plaintext highlighter-rouge">.sort</code>. Just like <code class="language-plaintext highlighter-rouge">.forEach</code>, <code class="language-plaintext highlighter-rouge">.sort</code> is expecting us to give it a <strong>function</strong>. Unlike <code class="language-plaintext highlighter-rouge">.forEach</code>, which need to be given a <strong>function</strong> that has one parameter, we need to give <code class="language-plaintext highlighter-rouge">.sort</code> a <strong>function</strong> that has 2 parameters. These parameters represent any 2 elements in the <strong>array</strong>. What we need to do with these 2 elements is to indicate how the <strong>array</strong> we are working with should be sorted. Let’s look at an example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [2,1,3,5]
+
+var sortFunc = (num1, num2) =&gt; {
+  var value
+  if (num1 &gt; num2) {
+    value = 1
+  } else {
+    value = -1
+  }
+  return value
+}
+
+arr.sort(sortFunc)
+
+// value of arr is [1, 2, 3, 5]
+</code></pre></div></div>
+
+<p>Hm. That all looks pretty strange. Let’s break it down bit by bit.</p>
+
+<p>Let’s start with the things we know. The variable <code class="language-plaintext highlighter-rouge">arr</code> isn’t too bad, just an <strong>array</strong> of numbers.</p>
+
+<p>Next, we have a <strong>function</strong> called <code class="language-plaintext highlighter-rouge">sortFunc</code>. It takes in 2 parameters, <code class="language-plaintext highlighter-rouge">num1</code> and <code class="language-plaintext highlighter-rouge">num2</code>. We know these parameters will be numbers because <code class="language-plaintext highlighter-rouge">arr</code> is an array of numbers. Then, we have a variable <code class="language-plaintext highlighter-rouge">value</code> that is <code class="language-plaintext highlighter-rouge">undefined</code> to start. Then, we have a <strong>conditional block</strong>. The first conditional asks <em>is <code class="language-plaintext highlighter-rouge">num1</code> greater than <code class="language-plaintext highlighter-rouge">num2</code>?</em> If this is <code class="language-plaintext highlighter-rouge">true</code>, then <code class="language-plaintext highlighter-rouge">value</code> is equal to <code class="language-plaintext highlighter-rouge">1</code>. Otherwise, <code class="language-plaintext highlighter-rouge">value</code> is equal to <code class="language-plaintext highlighter-rouge">-1</code>. At the end of this <strong>function</strong>, <code class="language-plaintext highlighter-rouge">value</code> is returned.</p>
+
+<p>Finally, we have <code class="language-plaintext highlighter-rouge">arr.sort</code> called with the <strong>function</strong> we just talked about. So, let’s look deeper into <code class="language-plaintext highlighter-rouge">sortFunc</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">sortFunc</code> is a <strong>compare function</strong>. <strong>Compare functions</strong> take in 2 elements (let’s call them <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code>) from the array (<code class="language-plaintext highlighter-rouge">arr</code> in this case), compares them, and then return either a positive or negative number. If the number returned from the <strong>compare function</strong> is negative, we want to sort <code class="language-plaintext highlighter-rouge">a</code> to a lower index than <code class="language-plaintext highlighter-rouge">b</code>. If the number returned from the <strong>compare function</strong> is positive, we want to sort <code class="language-plaintext highlighter-rouge">a</code> to a higher index than <code class="language-plaintext highlighter-rouge">b</code>.</p>
+
+<p>For example, all I did was change the <code class="language-plaintext highlighter-rouge">&gt;</code> to a <code class="language-plaintext highlighter-rouge">&lt;</code> in the following example and the result is the exact opposite:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [2,1,3,5]
+
+var sortFunc = (num1, num2) =&gt; {
+  var value
+  if (num1 &lt; num2) {
+    value = 1
+  } else {
+    value = -1
+  }
+  return value
+}
+
+arr.sort(sortFunc)
+
+// value of arr is [5, 3, 2, 1]
+</code></pre></div></div>
+
+<p>Let’s look at one more example to see if we can make a little more sense of this.</p>
+
+<p>var cards = [
+  {suit: “heart”, value: 5}, 
+  {suit: “spade”, value: 10},
+  {suit: “heart”, value: 3},
+]</p>
+
+<p>var sortFunc = (card1, card2) =&gt; {
+  var result</p>
+
+<p>if (card1.value &gt; card2.value) {
+    result = 1
+  } else {
+    result = -1
+  }</p>
+
+<p>return value
+}</p>
+
+<p>This might not make a ton of sense and that’s okay. We don’t have to go to deep into this. We just need a gist of what <code class="language-plaintext highlighter-rouge">.sort</code> does so that we can use it to shuffle our <code class="language-plaintext highlighter-rouge">deck</code>.</p>
+
+<p>What is interesting is that we just walked through how to use <code class="language-plaintext highlighter-rouge">.sort</code> to put an array in order</p>
+:ET

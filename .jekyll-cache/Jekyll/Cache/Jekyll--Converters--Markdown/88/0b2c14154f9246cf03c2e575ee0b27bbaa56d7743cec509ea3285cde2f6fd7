@@ -1,0 +1,198 @@
+I":U<h1 id="introduction-to-javascript-js">Introduction to JavaScript (JS)</h1>
+
+<h2 id="goal">Goal</h2>
+<p>By the end of this lesson, you should have an understanding of how to use JavaScript alongside HTML and CSS to create webpages.</p>
+
+<h2 id="overview">Overview</h2>
+<p>Earlier, we used an analogy of a house to describe the purposes of HTML and CSS. HTML is structure (walls, roof, foundation) and CSS is design (layout, decoration). But, if we are building a house, how do we get the functionality (electricity, plumbing, etc.)? The answer is JavaScript (JS). JS allows us to store data in databases, get data from other sites, change what’s in the HTML and CSS, and much more. While just HTML and CSS may be fine for a website that simply exists to show information such as contact information or hours of business, anything more interesting than this will require JS.</p>
+
+<h2 id="topics">Topics</h2>
+
+<h3 id="variables">Variables</h3>
+<p>One of the fundamental concepts in JS (and many other coding languages) is <strong>variables</strong>. Think of a <strong>variable</strong> as a box that we can put a value in and get or change later.</p>
+
+<h4 id="concept">Concept</h4>
+<p>A variable requires 2 things, a name and a value. Look at the code below:</p>
+
+<p><code class="language-plaintext highlighter-rouge">var box = 5</code></p>
+
+<p>In the example above, we see 4 things; <code class="language-plaintext highlighter-rouge">var</code>, <code class="language-plaintext highlighter-rouge">box</code>, <code class="language-plaintext highlighter-rouge">=</code>, and <code class="language-plaintext highlighter-rouge">5</code>. Let’s break each of these down.</p>
+
+<ol>
+  <li>
+    <p>The line starts with <code class="language-plaintext highlighter-rouge">var</code> because we are <strong>declaring</strong> a variable. <strong>Declaring</strong> a variable simply means we are creating a new variable for future use. You must <strong>declare</strong> a variable before you use it. For example, <code class="language-plaintext highlighter-rouge">box = 5</code>, (while allowed) is an improper way of declaring a variable. You only need to <strong>declare</strong> a variable one time. So, later in code, if you change the value of the variable, you do not need to use <code class="language-plaintext highlighter-rouge">var</code>.</p>
+  </li>
+  <li>
+    <p>The next part of code is <code class="language-plaintext highlighter-rouge">box</code> which is what we are <strong>naming</strong> the variable. By <strong>naming</strong> the variable, we can reference it later by simply typing <code class="language-plaintext highlighter-rouge">box</code> in the code.</p>
+  </li>
+  <li>
+    <p>The equal symbol, <code class="language-plaintext highlighter-rouge">=</code>, is saying <em>the variable that is to the left of me (which is <code class="language-plaintext highlighter-rouge">box</code> in this case) is now equal to whatever is right of me (which is <code class="language-plaintext highlighter-rouge">5</code>)</em>. So, if we use <code class="language-plaintext highlighter-rouge">box</code> later in the code, it will be equal to <code class="language-plaintext highlighter-rouge">5</code>.</p>
+  </li>
+  <li>
+    <p>As we just covered, <code class="language-plaintext highlighter-rouge">5</code> is the value that is now what <code class="language-plaintext highlighter-rouge">box</code> is equal to.  This could have been many things. It could have been other numbers (<code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">900</code>, <code class="language-plaintext highlighter-rouge">3.14159</code>), letters and words (which we call <strong>strings</strong>), and a variety of other things.</p>
+    <ul>
+      <li>In JS, the way we assign <strong>strings</strong> to variables is by wrapping the words or letters inside of quotes (e.g. <code class="language-plaintext highlighter-rouge">''</code>)</li>
+      <li>An example of this would be <code class="language-plaintext highlighter-rouge">var box = 'I like to code!'</code>.</li>
+      <li>Now, if we use the variable <code class="language-plaintext highlighter-rouge">box</code> later in the code, it’s value will be <code class="language-plaintext highlighter-rouge">'I like to code!'</code>.</li>
+      <li>The following is incorrect <code class="language-plaintext highlighter-rouge">var box = I like to code!</code> because the <strong>string</strong> is not inside of quotes.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="practice">Practice</h4>
+
+<p>The following link will take you to a site called CodePen. It will allow you to practice concepts you learn here. When you make changes to the code, it will automatically update in the preview after a second or two.</p>
+
+<ul>
+  <li>Challenge: Change the value of variable <code class="language-plaintext highlighter-rouge">number</code> to your favorite number.</li>
+  <li>Challenge: Change the value of variable <code class="language-plaintext highlighter-rouge">number</code> to <code class="language-plaintext highlighter-rouge">'nunya business.'</code></li>
+  <li>Hints:
+    <ul>
+      <li>Only change code in box labeled <strong>JS</strong></li>
+    </ul>
+  </li>
+  <li><a href="https://codepen.io/jorymullet/pen/mdrEwxM?editors=1010" target="_blank">Click here for challenge</a></li>
+</ul>
+
+<h3 id="booleans-and-conditionals">Booleans and Conditionals</h3>
+
+<p>While the terms <strong>boolean</strong> and <strong>conditional</strong> may seem unfamiliar and complex, <strong>booleans</strong> are fairly simple and <strong>conditionals</strong> we use everyday!</p>
+
+<h4 id="concept-1">Concept</h4>
+
+<h5 id="booleans">Booleans</h5>
+<p>A <strong>boolean</strong> can be one of two things, <code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">false</code>. That’s it. In code, we can assign <strong>boolean</strong> values to variables like this:
+<code class="language-plaintext highlighter-rouge">var example = true</code></p>
+
+<p>Now, if we use the variable <code class="language-plaintext highlighter-rouge">example</code> later in the code, we now that it will be equal to <code class="language-plaintext highlighter-rouge">true</code>. This doesn’t gain us anything right now until we look at <strong>conditionals</strong>.</p>
+
+<h5 id="conditionals">Conditionals</h5>
+<p>An example of a <strong>conditional</strong> we may see outside of coding is the following sentence: <em>If it snows tonight, then I will shovel my steps.</em> A conditional is simply <em>if</em> something is <em>true</em>, <em>then</em> something happens. Let’s look at an example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var activity = "I will do nothing."
+var itHasSnowed = true
+
+if ( itHasSnowed ) {
+  activity = "I will shovel my steps."
+}
+</code></pre></div></div>
+
+<p>In the code above, we see 2 variables, <strong>activity</strong> and <strong>isHasSnowed</strong>. We can see that, initially, the variable <strong>acitivty</strong> is set to <code class="language-plaintext highlighter-rouge">"I will do nothing."</code>. Later in the code, we can see that <em>activity</em> is being set again but this time to <code class="language-plaintext highlighter-rouge">"I will shovel my steps."</code>. However, setting <strong>activity</strong> the second time seems to surrounded by some code. Let’s break this code down.</p>
+
+<p>The following code (which is a snippet of the code above) is a <strong>conditional</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if ( itHasSnowed ) {
+  activity = "I will shovel my steps."
+}
+</code></pre></div></div>
+
+<p>A conditional can be broken down into 3 parts; <code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">( itHasSnowed )</code> <code class="language-plaintext highlighter-rouge">{ activity = "I will shovel my steps." }</code>. Let’s look at each part:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">if</code> is the way to <strong>declare</strong> a conditional. Just like with <strong>variables</strong> earlier, <strong>declaring</strong> a conditional is simply how you tell the code you are starting a <strong>conditional</strong>.</li>
+  <li>Always following the <code class="language-plaintext highlighter-rouge">if</code> in a <strong>conditional</strong> will be something surrounded by a <code class="language-plaintext highlighter-rouge">(</code> and a <code class="language-plaintext highlighter-rouge">)</code>. In this case, the thing surrounded by <code class="language-plaintext highlighter-rouge">()</code> is <code class="language-plaintext highlighter-rouge">itHasSnowed</code>. Whenever the thing that is surrounded by the paranthesis is <code class="language-plaintext highlighter-rouge">true</code>, the last part of the conditional will be ran. If whatever the thing that is surrounded by the paranthesis is <code class="language-plaintext highlighter-rouge">false</code> the last part of the conditional will be ignored.</li>
+  <li>The last part of the conditional, <code class="language-plaintext highlighter-rouge">{ activity = "I will shovel my steps." }</code>, is what will be ran if the previous part is <code class="language-plaintext highlighter-rouge">true</code>. Since the previous part, <code class="language-plaintext highlighter-rouge">itHasSnowed</code>, is <code class="language-plaintext highlighter-rouge">true</code>, <code class="language-plaintext highlighter-rouge">{ activity = "I will shovel my steps." }</code> will be ran and <strong>activity</strong> will be set to <code class="language-plaintext highlighter-rouge">"I will shovel my steps."</code> All the code that you want to be ran if something is true should be surrounded by a <code class="language-plaintext highlighter-rouge">{</code> and a <code class="language-plaintext highlighter-rouge">}</code> (aka curly brackets).</li>
+</ol>
+
+<p>Whew. Maybe that makes sense on your first time through or maybe you need to read it a few more times. Either way, <strong>conditionals</strong> are an extremely important concept for making our code and websites do anything interesting. If you want to play with the code above, <a href="https://codepen.io/jorymullet/pen/NWRrmoK" target="_blank">here is a link where you can change the value of the variable <strong>itHasSnowed</strong> and see the outcome.</a></p>
+
+<h5 id="else-if-and-"><code class="language-plaintext highlighter-rouge">else if</code> and <code class="language-plaintext highlighter-rouge">&amp;&amp;</code></h5>
+
+<p>Let’s look at a more complex example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var activity = "I will do nothing."
+var itHasSnowed = true
+var outOfMilk = false
+
+if ( itHasSnowed &amp;&amp; outOfMilk ) {
+  activity = "I will shovel my steps and go get milk."
+} 
+else if ( itHasSnowed ) {
+  activity = "I will shovel my steps."
+}
+else if ( outOfMilk ) {
+  activity = "I will go get milk."
+}
+
+// expected value of activity: "I will shovel my steps."
+</code></pre></div></div>
+
+<p>Looking at the code above, this time, there are 3 variables, <strong>activity</strong>, <strong>itHasSnowed</strong>, and <strong>outOfMilk</strong>. Then there is the <code class="language-plaintext highlighter-rouge">if</code> statement from before, except this time, it has 2 variables in it, both <strong>itHasSnowed</strong> and <strong>outOfMilk</strong> with a <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> between them. This <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> is the equivalent to the word <code class="language-plaintext highlighter-rouge">and</code>. So, if we were to read <code class="language-plaintext highlighter-rouge">if ( itHasSnowed &amp;&amp; outOfMilk )</code> in English, we would read it as <em>If it has snowed and I am out of milk, then…</em>. Basically, both <strong>itHasSnowed</strong> and <strong>outOfMilk</strong> have to be <code class="language-plaintext highlighter-rouge">true</code> for the whole statement to be <code class="language-plaintext highlighter-rouge">true</code> and for the code <code class="language-plaintext highlighter-rouge">{ activity = "I will shovel my steps and go get milk." }</code> to be ran.</p>
+
+<p>Then, underneath that statement, we see something new, <code class="language-plaintext highlighter-rouge">else if</code> statements. <code class="language-plaintext highlighter-rouge">else if</code> statements are part of the original <code class="language-plaintext highlighter-rouge">if</code> statement at the top of the <strong>conditional block</strong> (which is a series of <strong>conditionals</strong> that are grouped together and rely on each other) and are only evaluated if no other statement in the <strong>conditional block</strong> above them is <code class="language-plaintext highlighter-rouge">true</code>. So, in the example above, while <strong>itHasSnowed</strong> is <code class="language-plaintext highlighter-rouge">true</code>, <strong>outOfMilk</strong> is <code class="language-plaintext highlighter-rouge">false</code>, so the statement <code class="language-plaintext highlighter-rouge">itHasSnowed &amp;&amp; outOfMilk</code> evaluates to <code class="language-plaintext highlighter-rouge">false</code>. Since the first statement is <code class="language-plaintext highlighter-rouge">false</code>, we move to the second statement which is <code class="language-plaintext highlighter-rouge">else if ( itHasSnowed )</code>. As we just said, <strong>itHasSnowed</strong> is <code class="language-plaintext highlighter-rouge">true</code> so code that follows it, <code class="language-plaintext highlighter-rouge">{ activity = "I will shovel my steps." }</code>, will be ran.</p>
+
+<p>Since statement second coditional statement <code class="language-plaintext highlighter-rouge">else if ( itHasSnowed )</code> was <code class="language-plaintext highlighter-rouge">true</code>, the last statement, <code class="language-plaintext highlighter-rouge">else if ( outOfMilk )</code>, will be entirely ignored.</p>
+
+<p>The concept of using <code class="language-plaintext highlighter-rouge">if</code> and <code class="language-plaintext highlighter-rouge">else if</code> conditionals is called <strong>conditional chaining</strong>. The chain will go on as long as the next <strong>conditional</strong> starts with <code class="language-plaintext highlighter-rouge">else if</code>. However, anytime a conditional starts with just <code class="language-plaintext highlighter-rouge">if</code>, the previous <strong>conditional chain</strong> is stopped and a new one is started.</p>
+
+<p>Let’s check out the following example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var activity = "I will do nothing."
+var itHasSnowed = true
+var outOfMilk = true
+
+if ( itHasSnowed &amp;&amp; outOfMilk ) {
+  activity = "I will shovel my steps and go get milk."
+} 
+else if ( itHasSnowed ) {
+  activity = "I will shovel my steps."
+}
+
+if ( outOfMilk ) {
+  activity = "I will go get milk."
+}
+
+// expected value of activity: "I will go get milk."
+</code></pre></div></div>
+
+<p>You’ll see above that <strong>itHasSnowed</strong> and <strong>outOfMilk</strong> are now both <code class="language-plaintext highlighter-rouge">true</code> which means the statement <code class="language-plaintext highlighter-rouge">( itHasSnowed &amp;&amp; outOfMilk )</code> evaluates to <code class="language-plaintext highlighter-rouge">true</code>. Since this first statement is <code class="language-plaintext highlighter-rouge">true</code>, the code <code class="language-plaintext highlighter-rouge">{ activity = "I will shovel my steps and go get milk." }</code> will be ran. So, at this point, <strong>activity</strong> is equal to <code class="language-plaintext highlighter-rouge">"I will shovel my steps and go get milk."</code>.</p>
+
+<p>Beneath the first statement is an <code class="language-plaintext highlighter-rouge">else if</code> statement. Since it is part of the same <strong>conditional block</strong> as the previous <code class="language-plaintext highlighter-rouge">if</code> statement and that <code class="language-plaintext highlighter-rouge">if</code> statement evaluated to <code class="language-plaintext highlighter-rouge">true</code>, the <code class="language-plaintext highlighter-rouge">else if</code> statement will be entirely ignored.</p>
+
+<p>However, beneath the <code class="language-plaintext highlighter-rouge">else if</code> statement is another <code class="language-plaintext highlighter-rouge">if</code> statement. Since the statement is an <code class="language-plaintext highlighter-rouge">if</code> instead of an <code class="language-plaintext highlighter-rouge">else if</code>, it is not part of the <strong>conditinoal block</strong> above it. Therefore, this <code class="language-plaintext highlighter-rouge">if</code> statement will NOT be ignored. Since it is not ignored and <strong>outOfMilk</strong> is true, the code <code class="language-plaintext highlighter-rouge">activity = "I will go get milk."</code> will be ran. Therefore, at the end of this code running, <strong>activity</strong> will be equal to <code class="language-plaintext highlighter-rouge">"I will go get milk."</code>.</p>
+
+<h5 id="else-and-"><code class="language-plaintext highlighter-rouge">else</code> and <code class="language-plaintext highlighter-rouge">||</code></h5>
+
+<p>Let’s check out one last example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var activity = "I will do nothing."
+var itHasSnowed = false
+var outOfMilk = false
+
+if ( itHasSnowed || outOfMilk ) {
+  activity = "I will shovel my steps or go get milk."
+} 
+else if ( itHasSnowed ) {
+  activity = "I will shovel my steps."
+}
+else {
+  activity = "I will find something productive to do."
+}
+
+// expected value of activity: "I will find something productive to do."
+</code></pre></div></div>
+
+<p>This time, we can see that both <strong>itHasSnowed</strong> and <strong>outOfMilk</strong> are <code class="language-plaintext highlighter-rouge">false</code>. We can also see that instead of <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> being in between them, it is instead <code class="language-plaintext highlighter-rouge">||</code>. This <code class="language-plaintext highlighter-rouge">||</code> is the equivalent to the word <code class="language-plaintext highlighter-rouge">or</code>. This means that only one of <strong>itHasSnowed</strong> OR <strong>outOfMilk</strong> has to be <code class="language-plaintext highlighter-rouge">true</code> for <code class="language-plaintext highlighter-rouge">itHasSnowed || outOfMilk</code> to be considered <code class="language-plaintext highlighter-rouge">true</code>. However, since both are <code class="language-plaintext highlighter-rouge">false</code>, the whole statement evaluates to <code class="language-plaintext highlighter-rouge">false</code> and we move onto the next <strong>conditional</strong>. The next <strong>conditional</strong> is simply <code class="language-plaintext highlighter-rouge">else if ( itHasSnowed )</code> which we know is <code class="language-plaintext highlighter-rouge">false</code>.</p>
+
+<p>This brings us to our last conditional, which is <code class="language-plaintext highlighter-rouge">else</code>. <code class="language-plaintext highlighter-rouge">else</code> is used at the end of a <strong>conditional block</strong> and is evaluated if none of the previous <strong>conditionals</strong> in the same <strong>conditional block</strong> evaluated to <code class="language-plaintext highlighter-rouge">true</code>. So, in this example, both of the <strong>conditionals</strong> before this <code class="language-plaintext highlighter-rouge">else</code> statement were <code class="language-plaintext highlighter-rouge">false</code>. This means that the code following the <code class="language-plaintext highlighter-rouge">else</code> statement will be ran. Since that code will be ran, the variable <strong>activity</strong> will be equal to <code class="language-plaintext highlighter-rouge">"I will find something productive to do."</code>.</p>
+
+<h4 id="challenge">Challenge</h4>
+
+<p>Here is a <a href="https://codepen.io/jorymullet/pen/poEbBBy">CopePen</a> to play around with.</p>
+
+<p>Tasks:</p>
+<ul>
+  <li>change the values of <strong>itHasSnowed</strong> and <strong>outOfMilk</strong></li>
+  <li>change <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> to <code class="language-plaintext highlighter-rouge">||</code> and vice versa</li>
+  <li>change the order or conditionals</li>
+  <li>change where <strong>conditional blocks</strong> start and stop.</li>
+  <li>remove a conditional and add a conditional</li>
+</ul>
+
+<p>Just try to get familiar with how to make <strong>conditionals</strong> work and how to leverage them to create desired outcomes.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Wow. That’s a lot to get through but so incredibly critical to making code work for you. Please spend as much time as you need familiarizing yourself with how these things work. If somethings still feel hazy or you don’t totally understand what is going on, that is perfectly understandable. Just try to gain a general sense of what you are looking at and why things happen in the code.</p>
+
+:ET

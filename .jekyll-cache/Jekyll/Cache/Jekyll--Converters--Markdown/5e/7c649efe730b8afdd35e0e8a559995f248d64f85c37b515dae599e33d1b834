@@ -1,0 +1,66 @@
+I"M
+<h1 id="introduction-to-visual-studio-code">Introduction to Visual Studio Code</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Visual Studio Code (vscode) is a light weight and free text editor built for software developers.</p>
+
+<h2 id="why-you-should-care">Why you should care</h2>
+<ul>
+  <li>Visual Studio Code is very flexible and it can be used to write programs in any langauge.  In this course we will focus on:
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </li>
+  <li>It is highly extensible and open source, making it <em>extremely</em> popular with professional software developers.</li>
+  <li>It provides many advantages over basic text editors, for example:
+    <ul>
+      <li>Syntax Highlighting to make code easier to read</li>
+      <li>Autocompletion and Typeahead support</li>
+      <li>Provides you the ability to preview your work</li>
+    </ul>
+  </li>
+</ul>
+
+<p>An example of an HTML website in a plain text editor and Visual Studio Code.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Plain Text Editor</th>
+      <th style="text-align: center">Visual Studio Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="/assets/img/module1/vscode_plain_text.png" alt="" /></td>
+      <td style="text-align: center"><img src="/assets/img/module1/vscode_vscode.png" alt="" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="download--installation">Download &amp; Installation</h2>
+<p>To download and install Visual Studio Code, follow the directions here:</p>
+<ul>
+  <li>https://code.visualstudio.com/download</li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<p>In this course, we will develop our code using Visual Studio Code.  In addition, we will organize our code in <strong>project</strong> folders, which will helps us keep our code organized and tidy.  A project folder will contain all of the necessary files for the project’s website.</p>
+
+<p>Visual studio makes it easy to create and work on <strong>projects</strong>:</p>
+<ol>
+  <li>Make a new folder on your computer using Windows Explorer or the Finder for MacOS and give it a your project title.</li>
+  <li>From Visual Studio Code, select File-&gt;Open</li>
+  <li>Browse to your project folder, and then click “open”.
+<img src="/assets/img/module1/vscode_project1.png" alt="" /></li>
+  <li>You will see all of the files you’ve created for your project on the left hand side-bar.
+<img src="/assets/img/module1/vscode_project2.png" alt="" /></li>
+  <li>You can view the code for any file on the right hand side.</li>
+</ol>
+
+<h2 id="happy-editing">Happy Editing!</h2>
+
+:ET

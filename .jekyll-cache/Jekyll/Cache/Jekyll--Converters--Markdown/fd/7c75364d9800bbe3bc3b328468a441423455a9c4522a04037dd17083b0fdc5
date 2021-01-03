@@ -1,0 +1,214 @@
+I"�8<h1 id="intro-to-functions-and-js-math">Intro to functions and JS math</h1>
+
+<h2 id="goal">Goal</h2>
+
+<p>At the end of this prework, the goal is to have an understanding of what a <strong>function</strong> is and how to use them in JavaScript along with JavaScript built in mathematic capabilities.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Now that you understand variables and conditionals, we will move onto a very helpful concept in JS called <strong>functions</strong>. A <strong>function</strong> is a set of instructions that can be called from other parts of the code. Imagine (unless you don’t need to) you own an Amazon Echo (this is not an ad for Amazon Echo, I promise). An Echo can be used for searches, music, and more. One thing you can do with an Echo is program eletric outlets to be controlled with your voice. An example of this would be you can say “Alexa, Merry Christmas” and all of the outlets that are associated with Christmas lights are turned on. Or you can say, “Alexa, good night.” and all the lights in the room shut off. This is how functions work! You create the function one time (e.g. configuring all outlets to turn off) and then you can call that function (e.g. “Alexa, good night.”) every night before bed. Functions are critical to functional websites which we will be able to see below.</p>
+
+<h2 id="topics">Topics</h2>
+
+<h3 id="js-math">JS Math</h3>
+
+<p>Before we move onto functions, we first need to quickly cover math in JavaScript.</p>
+
+<h4 id="concept">Concept</h4>
+
+<p>For the most part, it is quite intuitive:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var total = 3 + 4
+// value of total is 7
+</code></pre></div></div>
+<p>Here is a table to symbols and there function:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>+</td><td>Addition</td></tr>
+    <tr><td>-</td><td>Subtraction</td></tr>
+    <tr><td>*</td><td>Multiply</td></tr>
+    <tr><td>/</td><td>Divide</td></tr>
+    <tr><td>**</td><td>Exponential</td></tr>
+    <tr><td>===</td><td>Equal to</td></tr>
+    <tr><td>!==</td><td>Not equal to</td></tr>
+    <tr><td>&gt;</td><td>Greater than</td></tr>
+    <tr><td>&gt;=</td><td>Greater than or equal to</td></tr>
+    <tr><td>&lt;</td><td>Less than</td></tr>
+    <tr><td>&lt;=</td><td>Less than or equal to</td></tr>
+  </tbody>
+</table>
+
+<p>In a previous lesson, you learned about <strong>booleans</strong> (<code class="language-plaintext highlighter-rouge">true</code> and <code class="language-plaintext highlighter-rouge">false</code>) and how they work with <strong>conditionals</strong> (<code class="language-plaintext highlighter-rouge">if</code> statements). When using any comparison symbols (<code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;</code>, <code class="language-plaintext highlighter-rouge">&gt;=</code>, <code class="language-plaintext highlighter-rouge">&lt;=</code>, <code class="language-plaintext highlighter-rouge">===</code>, <code class="language-plaintext highlighter-rouge">!==</code>), the value returned will be a <strong>boolean</strong>!
+Let’s look:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var result = 5 &lt; 5.5
+// value of result is `true`
+
+result = 5 !== 5
+// value of result is `false`
+
+result = 5 &gt;= 5
+// value of result is `true`
+</code></pre></div></div>
+
+<p>So, a combination of JS math, <strong>booleans</strong>, and <strong>conditionals</strong> could look like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var age = 10
+var sentence
+
+if (age &lt; 8) {
+  sentence = "You are a young human."
+} 
+else if (age &gt; 14) {
+  sentence = "You are probably in high school or much older."
+}
+else {
+  sentence = "You are not a baby but you are not very old."
+}
+
+// value of sentence is "You are not a baby but you are not very old."
+</code></pre></div></div>
+
+<h3 id="functions">Functions</h3>
+
+<h4 id="concept-1">Concept</h4>
+
+<p>Earlier, we said that many things can be the value of a variable. We saw that numbers (<code class="language-plaintext highlighter-rouge">var num = 5</code>) and strings (<code class="language-plaintext highlighter-rouge">var str = "wow"</code>) can be the value of variables. On top of those, <strong>functions</strong> can also be the value of variables. Let’s look at an example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var addTwoNumbers = (num1, num2) =&gt; {
+  var sum = num1 + num2
+  return sum
+}
+
+var total = addTwoNumbers(1, 2)
+
+// value of total is 3
+</code></pre></div></div>
+
+<p>So, that’s a lot to take it and figure out. If the code above were an English sentence, the first 4 lines would read like this: <em>First, I make a function called addTwoNumbers because it will add 2 numbers. I will call those numbers <code class="language-plaintext highlighter-rouge">num1</code> and <code class="language-plaintext highlighter-rouge">num2</code>. I will add those 2 numbers together and call it <code class="language-plaintext highlighter-rouge">sum</code>. Then, I will <code class="language-plaintext highlighter-rouge">return</code> the <code class="language-plaintext highlighter-rouge">sum</code> to wherever is calling this function.</em></p>
+
+<p>The 6th line of code above (<code class="language-plaintext highlighter-rouge">var total = addTwoNumbers(1, 2)</code>) would read like this: <em>I am going to call the function <code class="language-plaintext highlighter-rouge">addTwoNumbers</code>. Since <code class="language-plaintext highlighter-rouge">addTwoNumbers</code> requires that I pass it 2 numbers, I will pass it <code class="language-plaintext highlighter-rouge">1</code> and <code class="language-plaintext highlighter-rouge">2</code>. Whatever the function returns, I will put in a variable called <code class="language-plaintext highlighter-rouge">total</code>.</em></p>
+
+<p>Now that we know what is generally going on, let’s get into the anatomy of a function.</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">(num1, num2)</code>
+    <ul>
+      <li>The first part of any function is going to declaring your <strong>parameters</strong> which in this case are <code class="language-plaintext highlighter-rouge">num1</code> and <code class="language-plaintext highlighter-rouge">num2</code>. Parameters are be surrounded by parantheses and have commas in between individual parameters. You can see that we start the function with <code class="language-plaintext highlighter-rouge">(num1, num2)</code> and then use <code class="language-plaintext highlighter-rouge">num1</code> and <code class="language-plaintext highlighter-rouge">num2</code> in the next line by adding them together and setting that sum equal to <code class="language-plaintext highlighter-rouge">sum</code>, (e.g. <code class="language-plaintext highlighter-rouge">var sum = num1 + num2</code>). Parameters allow us to take in values into our function and use them even though we don’t know exactly what those values will be.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">=&gt; {}</code>
+    <ul>
+      <li>After the parameters, we use the arrow, <code class="language-plaintext highlighter-rouge">=&gt;</code>, to indicate we are starting the part of the function that will use the <strong>parameters</strong> to do something. All of this code that does stuff with the <strong>parameters</strong> should go between curly brackets, <code class="language-plaintext highlighter-rouge">{}</code>.</li>
+    </ul>
+  </li>
+  <li>Function body
+    <ul>
+      <li>In between those curly brackets are 2 lines of code, <code class="language-plaintext highlighter-rouge">var sum = num1 + num2</code> and <code class="language-plaintext highlighter-rouge">return sum</code>. The first line is pretty simple, it is simply declaring a variable <code class="language-plaintext highlighter-rouge">sum</code> and then setting it equal to the addtion of <code class="language-plaintext highlighter-rouge">num1</code> and <code class="language-plaintext highlighter-rouge">num2</code>. The next line however, isn’t so clear. <code class="language-plaintext highlighter-rouge">return</code> is a keyword in JavaScript (and several other languages) that allows functions to not only do things (e.g. add 2 numbers together) but to also return values to wherever the function is being called. Without the line <code class="language-plaintext highlighter-rouge">return sum</code>, the function would add 2 numbers together, put that value in the variable <code class="language-plaintext highlighter-rouge">sum</code>, and that would be it. We couldn’t use the value of <code class="language-plaintext highlighter-rouge">sum</code> outside of the function. <code class="language-plaintext highlighter-rouge">return</code> allows us to get values out of a function after the work of the function is done.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>In the 6th line of code, <code class="language-plaintext highlighter-rouge">var total = addTwoNumbers(1, 2)</code>, we are calling the function <strong>addTwoNumbers</strong>. Since <strong>addTwoNumbers</strong> has two parameters, <code class="language-plaintext highlighter-rouge">num1</code> and <code class="language-plaintext highlighter-rouge">num2</code>, we have to pass 2 values. We could have passed any 2 numbers but we went with <code class="language-plaintext highlighter-rouge">1</code> and <code class="language-plaintext highlighter-rouge">2</code>. Since we passed <code class="language-plaintext highlighter-rouge">1</code> and <code class="language-plaintext highlighter-rouge">2</code> in that order, in the function <strong>addTwoNumbers</strong>, <code class="language-plaintext highlighter-rouge">num1</code> is equal to <code class="language-plaintext highlighter-rouge">1</code> and <code class="language-plaintext highlighter-rouge">num2</code> is equal to <code class="language-plaintext highlighter-rouge">2</code>. If we had instead called <code class="language-plaintext highlighter-rouge">addTwoNumbers(2, 1)</code>, <code class="language-plaintext highlighter-rouge">num1</code> would have 
+equal to <code class="language-plaintext highlighter-rouge">2</code> and <code class="language-plaintext highlighter-rouge">num2</code> would have been equal to <code class="language-plaintext highlighter-rouge">1</code>. The order you put the values into your function call is the same as the order of the <strong>parameters</strong> in the function’s defintion. In this example, because we are adding, the order doesn’t matter.</p>
+
+<p>Let’s look at an example where order does matter:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var divide = (num1, num2) =&gt; {
+  var result = num1 / num2
+  return result
+}
+
+var total1 = divide(4, 2)
+var total2 = divide(2, 4)
+
+// value of total1 is 2
+// value of total2 is .5
+</code></pre></div></div>
+
+<p>By just switching the order of the values in the function calls, we get different answer.</p>
+
+<p>We can use functions to do way more than just basic math. Check this out:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var makeSimpleGreeting = (name) =&gt; {
+  var sentence = "Hi, I'm " + name
+  return sentence
+}
+
+var greeting = makeSimpleGreeting("Joshua")
+
+// value of greeting is ""Hi, I'm Joshua"
+</code></pre></div></div>
+
+<p>In the example above, we see the addition symbol <code class="language-plaintext highlighter-rouge">+</code> again, but this time, not for number but for strings. We can add strings together to create longer strings.</p>
+
+<p>Here is an interesting example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var makeGreeting = (name, age) =&gt; {
+  var sentence = "Hi, my name is " + name + " and I am " + age + "years old."
+  return sentence
+}
+
+var greeting = makeSimpleGreeting("Joshua", 27)
+
+// value of greeting is "Hi, my name is Joshua and I am 27 years old."
+</code></pre></div></div>
+
+<p>In this example, we are not only adding strings to other strings but also add a number to the strings as well! Whenver we add a number to a string, the number just becomes a string. For example, <code class="language-plaintext highlighter-rouge">"some words" + 77</code> is equal to <code class="language-plaintext highlighter-rouge">"some words77"</code>.</p>
+
+<p>Here’s an example that uses <strong>conditionals</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var respondToAge = (age) =&gt; {
+  var response
+
+  if (age &gt; 10) {
+    response = "You are a young person."
+  } else {
+    response = "You are a person who is older than 10."
+  }
+
+  return response
+}
+
+var response1 = respondToAge(7)
+var response2 = respondToAge(98)
+
+// value of response1 is "You are a young person."
+// value of response2 is "You are a person who is older than 10."
+</code></pre></div></div>
+
+<p>A more complex example that uses a number, a string, and a boolean:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var makeAppleGreeting = (numOfApples, nameOfAppleHolder, areApplesStolen) =&gt; {
+  var greeting = "Hello, " + nameOfAppleHolder + ". You are holding " + numOfApples + " apples."
+
+  if (areApplesStolen) {
+    greeting = greeting + " You should put those apples back."
+  }
+  
+  return greeting
+}
+
+var greeting1 = makeAppleGreeting(8, "Andre", false)
+var greeting2 = makeAppleGreeting(3, "Karen", true)
+
+// value of greeting1 is "Hello, Andre. You are holding 8 apples."
+// value of greeting2 is "Hello, Karen. You are holding 3 apples. You should put those apples back."
+</code></pre></div></div>
+
+<h4 id="challenge">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/ZEpBORq" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>If you completed the challenge, you can now make functions! This is a powerful tool for making your webpages much more functional and interesting.</p>
+
+<p><img src="/assets/img/module1/proud_of_you.gif" alt="HTML&amp;CSS MEME" /></p>
+:ET

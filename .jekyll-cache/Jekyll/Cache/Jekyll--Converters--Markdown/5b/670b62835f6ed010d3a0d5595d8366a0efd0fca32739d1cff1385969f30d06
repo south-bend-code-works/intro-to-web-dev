@@ -1,0 +1,33 @@
+I",
+<h1 id="intro-to-chrome">Intro to Chrome</h1>
+
+<h2 id="goal">Goal</h2>
+
+<p>At the end of this prework, the goal is to have an understanding of what Chrome’s role is as a web browser, and to be able to use the tools it offers to debug issues with your websites.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>If you were to double-click a <code class="language-plaintext highlighter-rouge">.doc</code> or <code class="language-plaintext highlighter-rouge">.docx</code> file on your computer, it would probably open up in Microsoft Word. Microsoft Word is a program that knows how to display <code class="language-plaintext highlighter-rouge">.doc</code> files to you, so when the program opens it shows you the contents of your document in a nice format.</p>
+
+<p>Similarly, Google Chrome (and all web browsers) are programs that know how to display the contents of <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code>, and <code class="language-plaintext highlighter-rouge">JavaScript</code> files to you. All websites that you visit - www.nd.edu, gmail.google.com, amazon.com - are created using these same tools.</p>
+
+<h2 id="installing-chrome">Installing Chrome</h2>
+
+<p>If you don’t already have Chrome, you can <a href="https://www.google.com/chrome/">download it here</a>.</p>
+
+<p>You are still free to use any browser you would like outside this course, but we do recommend using Chrome for projects inside this course so that you can follow along using the exact set of tools that the instructors will be demonstrating with.</p>
+
+<h2 id="developer-tools">Developer Tools</h2>
+
+<p>Have you ever had a website not work for you? Maybe filled out your payment information into a form, clicked “Submit”, and nothing happened? This is an example of a very poor user experience, and will often cause a user to lose trust in the company that developed the form.</p>
+
+<p>Well if you are the developer, it is your job to fix the form (or just make sure it works in the first place). Google Chrome comes with some developer tools built in to help you debug errors.</p>
+
+<p>To open these tools, right click anywhere on any website, and click “Inspect” in the dropdown, as shown below:</p>
+
+<p><img src="/assets/img/module1/chrome_developer_tools.png" alt="Dev Tools" style="width:100%" /></p>
+
+<p>We will discuss how to use these tools in our first lesson, and will continue to use them throughout the course.</p>
+
+<p><img src="/assets/img/module1/edge_purpose.jpeg" alt="Purpose of Microsoft Edge" style="max-width:400px" /></p>
+:ET

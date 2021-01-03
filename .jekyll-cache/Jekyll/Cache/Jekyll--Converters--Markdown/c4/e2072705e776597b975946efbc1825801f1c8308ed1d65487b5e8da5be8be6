@@ -1,0 +1,472 @@
+I"��<h1 id="introduction-to-javascript-js-objects-and-loops">Introduction to JavaScript (JS): Objects and Loops</h1>
+
+<h2 id="goal">Goal</h2>
+<p>By the end of this lesson, you should have an understanding of JavaScript loops, object, arrays, and how them in code.</p>
+
+<h2 id="overview">Overview</h2>
+<p>This lesson will build on our current knowledge of JavaScript variables and conditionals in order to do repetitive tasks quickly and use JS objects to manage data.</p>
+
+<h2 id="topics">Topics</h2>
+
+<h3 id="arrays">Arrays</h3>
+
+<h4 id="concept-making-arrays">Concept: Making arrays</h4>
+<p>Earlier, we saw that variables could be both numbers and strings like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var aNumber = 5
+var aString = 'Hi there!'
+</code></pre></div></div>
+
+<p>But there are more things in coding than just numbers and strings. One of those things is an <strong>array</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var anArray = [1,2,3]
+</code></pre></div></div>
+
+<p>What are we looking at here? Let’s start with what we know. We know that <code class="language-plaintext highlighter-rouge">var</code> means we are declaring a variable and <code class="language-plaintext highlighter-rouge">anArray</code> is going to be the name of that variable. Then, we know that the <code class="language-plaintext highlighter-rouge">=</code> means we are <strong>assigning</strong> whatever is to the right of the <code class="language-plaintext highlighter-rouge">=</code> to the variable <code class="language-plaintext highlighter-rouge">anArray</code>. But what is <code class="language-plaintext highlighter-rouge">[1,2,3]</code>?</p>
+
+<p><code class="language-plaintext highlighter-rouge">[1,2,3]</code> is an <strong>array</strong>. An <strong>array</strong> is a list of elements. The elements in this case are numbers but they can be strings, other arrays, or anything really. You know something is an <strong>array</strong> if it stars with <code class="language-plaintext highlighter-rouge">[</code>, <code class="language-plaintext highlighter-rouge">]</code>, and the elements on the inside are separated by commas. The following is an example of another array:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var anotherArray = ['cat', 5, [13, 'dude']]
+</code></pre></div></div>
+
+<p>We can see in the <strong>array</strong> above, we first have the string <code class="language-plaintext highlighter-rouge">'cat'</code>, the number <code class="language-plaintext highlighter-rouge">5</code>, and finally another <strong>array</strong> with 2 elements in it, <code class="language-plaintext highlighter-rouge">13</code> and <code class="language-plaintext highlighter-rouge">'dude'</code>.</p>
+
+<h4 id="challenge">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/qBaaBVE" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h4 id="concept-adding-to-arrays">Concept: Adding to arrays</h4>
+<p>So, we know what <strong>arrays</strong> look like and how to make them. But once an <strong>array</strong> is made, how do we add to it? And how do we get one of it elements?</p>
+
+<p>Let’s start with the first question, how to add to an array? Let’s look at an example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = []
+arr.push(5)
+
+// value of arr is [5]
+
+</code></pre></div></div>
+
+<p>In order to add an element to an <strong>array</strong>, we first type the name of the <strong>array</strong> (in this case, <code class="language-plaintext highlighter-rouge">arr</code>) and then add <code class="language-plaintext highlighter-rouge">.push</code> after it. Then, whatever elements we want to add to the <strong>array</strong>, we put in paranthesis behind <code class="language-plaintext highlighter-rouge">arr.push</code>. This is telling the <strong>array</strong> to add whatever element we are passing into <code class="language-plaintext highlighter-rouge">.push</code> to the end of the <strong>array</strong>.</p>
+
+<p>Another example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = []
+
+arr.push(5)
+arr.push(10)
+arr.push(20)
+
+// value of arr is [5, 10, 20]
+</code></pre></div></div>
+
+<p>The above example shows us first setting <code class="language-plaintext highlighter-rouge">arr</code> equal to an empty <strong>array</strong>. Then we <strong>push</strong> 3 elements into the <strong>array</strong>, first the <code class="language-plaintext highlighter-rouge">5</code>, then the <code class="language-plaintext highlighter-rouge">10</code>, and lastly the <code class="language-plaintext highlighter-rouge">20</code>. Each element is being added to the back of the <strong>array</strong>.</p>
+
+<h4 id="challenge-1">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/GRjjQMb" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h4 id="concept-getting-values-from-an-array">Concept: Getting values from an array</h4>
+
+<p>Okay, so we know how to make and add to an array, but how do we access individual elements inside an <strong>array</strong>? Chech out the code below:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [1,2,3,4]
+
+var aNumber = arr[2]
+var anotherNumber = arr[3]
+
+// value of aNumber is 3
+// value of anotherNumber is 4
+</code></pre></div></div>
+
+<p>Above, the first thing did was make an array, <code class="language-plaintext highlighter-rouge">[1,2,3,4]</code>. Then, in the next line, we are declaring a variable <code class="language-plaintext highlighter-rouge">aNumber</code> and assigning <code class="language-plaintext highlighter-rouge">arr[2]</code> to it. What does <code class="language-plaintext highlighter-rouge">arr[2]</code> mean?</p>
+
+<p><code class="language-plaintext highlighter-rouge">arr[2]</code> is saying this: <em>From of the array <code class="language-plaintext highlighter-rouge">arr</code>, get the element that is at the 2nd index.</em> BUT, looking at the comment in the code, it says that <code class="language-plaintext highlighter-rouge">aNumber</code> is equal to <code class="language-plaintext highlighter-rouge">3</code>. However, it looks like <code class="language-plaintext highlighter-rouge">3</code> is in the 3rd spot, not the 2nd. <strong class="red">In code, we do not consider the first element in an array to be at the 1st index, but at the 0th index.</strong> This can be very annoying when first learning to code but eventually makes a lot of sense.</p>
+
+<p>So, in the code above, if we wanted to get the first value in <code class="language-plaintext highlighter-rouge">arr</code>, we would have to use <code class="language-plaintext highlighter-rouge">arr[0]</code>. Again, this may not make sense now but is actually a really nice feature of coding.</p>
+
+<h4 id="challenge-2">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/YzGGevM" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h4 id="concept-additional-array-functionality">Concept: Additional array functionality</h4>
+
+<p>Now that you have the basics down, here are some other helpful things you can do with arrays</p>
+
+<h5 id="length">Length</h5>
+
+<p>Often, when working with arrays, knowing the length of an array will be helpful. Luckily, it’s easy:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [1,2,3]
+var len = arr.length
+
+// value of len is 3
+</code></pre></div></div>
+
+<h5 id="concatenation">Concatenation</h5>
+
+<p>Sometimes, we will want to combine 2 arrays into 1. The fancy, coding name for this process is called <strong>concatenation</strong>. JS makes this easy:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr1 = [1,2,3]
+var arr2 = [3,4,5]
+
+var longArr1 = arr1.concat(arr2)
+
+// value of longArr1 is [1,2,3,3,4,5]
+
+var longArr2 = arr2.concat(arr1)
+
+// value of longArr2 is [3,4,5,1,2,3]
+</code></pre></div></div>
+<h5 id="includes">Includes</h5>
+
+<p>Occasionally, we are going to wonder if an array has a certain element in it. By using <strong>includes</strong>, we can find out if an element exists in an array:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [1,3,5,7,9]
+
+var is5Included = arr.includes(5)
+var is8Included = arr.includes(8)
+
+// value of is5Included is `true`
+// value of is8Included is `false`
+</code></pre></div></div>
+
+<h5 id="indexof">indexOf</h5>
+
+<p>When we want to know the index of en element in an array, we we <code class="language-plaintext highlighter-rouge">indexOf</code> to find its index. If we ask for the index of an element that isn’t in an array, <code class="language-plaintext highlighter-rouge">indexOf</code> returns <code class="language-plaintext highlighter-rouge">-1</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [1,3,5,7,9]
+
+var indexOf5 = arr.indexOf(5)
+var indexOf8 = arr.indexOf(8)
+
+// value of is5Included is 2
+// value of is8Included is -1
+</code></pre></div></div>
+
+<h4 id="challenge-3">Challenge</h4>
+
+<p>Try out these concepts at this <a href="https://codepen.io/jorymullet/pen/XWjgrVW" target="_blank">CodePen</a>.</p>
+
+<h3 id="objects">Objects</h3>
+
+<h4 id="concept-making-objects">Concept: Making objects</h4>
+
+<p>Now that we know strings, numbers, and arrays, the next thing to learn are <strong>objects</strong>.</p>
+
+<p>Below is an example of an <strong>object</strong> being set to the variable <code class="language-plaintext highlighter-rouge">person</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var person = {
+  name: "Joshua",
+  age: 27,
+  occupation: "Web Developer",
+}
+</code></pre></div></div>
+
+<p>So, first we can see a variable named <code class="language-plaintext highlighter-rouge">person</code>. Then we see curly brackets with words, numbers, and strings inside. What is going on? Let’s break what we are seeing down bit by bit.</p>
+
+<p>To start, every object will start with a <code class="language-plaintext highlighter-rouge">{</code> and end with a <code class="language-plaintext highlighter-rouge">}</code> as you can see from the example above. So let’s strip away everything else except the stuff in the middle:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  name: "Joshua",
+  age: 27,
+  occupation: "Web Developer",
+</code></pre></div></div>
+
+<p>By just looking at these 3 lines, things become clearer. It seems that variable <code class="language-plaintext highlighter-rouge">person</code> is an <strong>object</strong> where its <code class="language-plaintext highlighter-rouge">name</code> is <code class="language-plaintext highlighter-rouge">"Joshua"</code>, the <code class="language-plaintext highlighter-rouge">age</code> is <code class="language-plaintext highlighter-rouge">27</code>, and the <code class="language-plaintext highlighter-rouge">occupation</code> is <code class="language-plaintext highlighter-rouge">"Web Developer"</code>. In the example above, <code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">age</code>, and <code class="language-plaintext highlighter-rouge">occupation</code> are all <strong>keys</strong> and <code class="language-plaintext highlighter-rouge">"Joshua"</code>, <code class="language-plaintext highlighter-rouge">27</code>, and <code class="language-plaintext highlighter-rouge">"Web Developer"</code> are all <strong>values</strong>. <strong>Objects</strong> are simply a list of <strong>key</strong>/<strong>value</strong> pairs separated by commas. <strong>Keys</strong> are always just a word that describes the <strong>value</strong> (which can be a number, string, an array, or even another <strong>object</strong>).</p>
+
+<p><strong>Objects</strong> are really neat because they allow us to describe and create concepts in code like how I described a <code class="language-plaintext highlighter-rouge">person</code> above. Let’s look at another example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var cat = {
+  fur: "long",
+  age: 3,
+  favoriteActivities: ["pouncing", "eating", "sleeping"],
+}
+</code></pre></div></div>
+
+<p>Using only code, I was able to create and describe a <code class="language-plaintext highlighter-rouge">cat</code>! This might seem silly now but <strong>object’s</strong> practical use is endless. Let’s look at one more example before moving on:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var playingCard = {
+  suit: "hearts",
+  value: 9,
+}
+</code></pre></div></div>
+
+<p>In the previous example, I created a <code class="language-plaintext highlighter-rouge">playingCard</code> with just a few lines of code. I didn’t even introduce the idea of a playing card nor did I have to. The <strong>object</strong> and variable name made it obvious. This is one reason why <strong>objects</strong> are so useful and powerful.</p>
+
+<h4 id="challenge-4">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/RwGgjMe" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h4 id="concept-get-values-from-object">Concept: Get values from object</h4>
+
+<p>Now that we know how to build <strong>objects</strong> in JS, it would also be useful to be able to get values we have put in our <strong>objects</strong>.</p>
+
+<p>Let’s look back at the first example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var person = {
+  name: "Joshua",
+  age: 27,
+  occupation: "Web Developer",
+}
+</code></pre></div></div>
+
+<p>Above, we have the variable <code class="language-plaintext highlighter-rouge">person</code>. Imagine later in my code, I wanted to get the <code class="language-plaintext highlighter-rouge">name</code> of <code class="language-plaintext highlighter-rouge">person</code>. It is as simple as this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var justTheName = person.name
+
+// value of justTheName is "Joshua"
+</code></pre></div></div>
+
+<p>Pretty cool, right? All we do is add a dot (<code class="language-plaintext highlighter-rouge">.</code>) and the <strong>key</strong> (<code class="language-plaintext highlighter-rouge">name</code>) and we will get the <strong>value</strong>.</p>
+
+<p>Using the same <strong>object</strong> <code class="language-plaintext highlighter-rouge">person</code>, I can create an introduction like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var intro = "Hi! I'm " + person.name + ". I am " + person.age + " years old and work as a " + person.occupation + "."
+
+// value of intro is "Hi! I'm Joshua. I am 27 years old and work as a Web Developer."
+</code></pre></div></div>
+
+<p>Wow! So handy.</p>
+
+<h4 id="challenge-5">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/LYRLOar" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h4 id="concept-edit-an-object">Concept: Edit an object</h4>
+
+<p>We now know how to build <strong>objects</strong> and get <strong>values</strong> from them. But what if we want to add a value to an existing object? What about deleting a <strong>key</strong>/<strong>value</strong> pair? Or overwriting an existing <strong>value</strong>? These things are all possible and simple with <strong>objects</strong>.</p>
+
+<p>Let’s again start with our <code class="language-plaintext highlighter-rouge">person</code> <strong>object</strong> as the example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var person = {
+  name: "Joshua",
+  age: 27,
+  occupation: "Web Developer",
+}
+</code></pre></div></div>
+
+<p>Let’s first look at adding a <strong>key</strong>/<strong>value</strong> pair:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>person.nameOfPet = "Fido"
+
+// value of person is {
+//  name: "Joshua",
+//  age: 27, 
+//  occupation: "Web Developer", 
+//  nameOfPet: "Fido",
+//}
+</code></pre></div></div>
+
+<p>As you can see from the example above, if we want to add to an <strong>object</strong>, we simply must reference the <strong>object</strong> (<code class="language-plaintext highlighter-rouge">person</code>), add a dot (<code class="language-plaintext highlighter-rouge">.</code>), name the <strong>key</strong> (<code class="language-plaintext highlighter-rouge">nameOfPet</code>), and set that all equal to the <strong>value</strong> we want (<code class="language-plaintext highlighter-rouge">"Fido"</code>). Easy peasy!</p>
+
+<p>Next, let’s look at an example of deleting a <strong>key</strong>/<strong>value</strong> pair from an <strong>object</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>delete person.occupation
+
+// value of person is {
+//  name: "Joshua",
+//  age: 27, 
+//  nameOfPet: "Fido",
+//}
+</code></pre></div></div>
+
+<p>It looks a little strange, but the way to delete from an <strong>object</strong> is to type the <code class="language-plaintext highlighter-rouge">delete</code> followed by the reference to the <strong>object</strong> (<code class="language-plaintext highlighter-rouge">person</code>), add a dot (<code class="language-plaintext highlighter-rouge">.</code>), followed by the name of the <strong>key</strong> that you are trying to delete.</p>
+
+<p>Finally, let’s look at overwriting a <strong>key</strong>/<strong>value</strong> pair that already exists.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>person.name = "Ryan"
+
+// value of person is {
+//  name: "Ryan",
+//  age: 27, 
+//  nameOfPet: "Fido",
+//}
+</code></pre></div></div>
+
+<p>We can overwrite <strong>key</strong>/<strong>value</strong> in the exact same way we add new <strong>key</strong>/<strong>value</strong> pairs. The only difference is that <strong>key</strong> already existed.</p>
+
+<h4 id="challenge-6">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/LYRLeBo" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h3 id="loops">Loops</h3>
+
+<p><strong>Loops</strong> are pretty heckin’ neat. They make certain repetitive tasks simple, easy, and fast and make working with <strong>arrays</strong> a dream come true. They demonstrate how impressively computers can manage to do simple tasks millions of times with incredible speed.</p>
+
+<p>We will look at 2 different ways to use loops: <code class="language-plaintext highlighter-rouge">for</code> loops and <code class="language-plaintext highlighter-rouge">while</code> loops.</p>
+
+<h4 id="concept-for-loops">Concept <strong>for</strong> loops</h4>
+
+<p>We use <strong>for</strong> loops most often when there is a predetermined number of steps or elements (mostly working with arrays). Let’s check out an example of when a <code class="language-plaintext highlighter-rouge">for</code> loop could be helpful.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [2,3,7,3,8,9]
+</code></pre></div></div>
+
+<p>Above we have an array <code class="language-plaintext highlighter-rouge">arr</code> that has 6 numbers in it. Let’s say we wanted to build code that would add up all 6 numbers in the array. Using what we currently know, we would have to write something like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [2,3,7,3,8,9]
+var total = arr[0] + arr[1] + arr[2] + arr[3] + arr[4] + arr[5]
+
+// value of total is 32
+</code></pre></div></div>
+
+<p>This is fine and will give us the answer. But now imagine if instead of 6 numbers, it was 100 or a 1000. The code would be wildly long and incredibly unhelpful.</p>
+
+<p>Luckily, loops are here to save the day. Let’s look at an example of a loop:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [2,3,7,3,8,9]
+var total = 0
+
+var addToTotal = (num) =&gt; {
+  total = total + num
+}
+
+arr.forEach(addToTotal)
+
+// value of total is 32
+</code></pre></div></div>
+
+<p>Hmm. We recognize some of what’s going on in the code above but certainly not all of it. Let’s break it down line by line.</p>
+
+<p>Line 1 and 2 area easy, we have from <code class="language-plaintext highlighter-rouge">arr</code> from before and are simply declaring a variable <code class="language-plaintext highlighter-rouge">total</code> and setting it equal to <code class="language-plaintext highlighter-rouge">0</code>.</p>
+
+<p>Next up, we have made a function named <code class="language-plaintext highlighter-rouge">addToTotal</code>. This function takes in one argument, <code class="language-plaintext highlighter-rouge">num</code>. It takes that <code class="language-plaintext highlighter-rouge">num</code> and adds it to <code class="language-plaintext highlighter-rouge">total</code>. That’s all <code class="language-plaintext highlighter-rouge">addToTotal</code> does.</p>
+
+<p>Here is where things get weird, <code class="language-plaintext highlighter-rouge">arr.forEach(addToTotal)</code>. First, we see our array <code class="language-plaintext highlighter-rouge">arr</code> at the beginning. Then there is a <code class="language-plaintext highlighter-rouge">.</code> followed by <code class="language-plaintext highlighter-rouge">forEach</code> which is taking in <code class="language-plaintext highlighter-rouge">addToTotal</code> as it’s argument. What is happening here?</p>
+
+<p>Remember when we were talking about <code class="language-plaintext highlighter-rouge">.includes</code> before? We would code something like <code class="language-plaintext highlighter-rouge">arr.includes(3)</code> which is basically asking <em>Does the array <code class="language-plaintext highlighter-rouge">arr</code> include the number 3?</em> and then we would get be <code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">false</code>. <code class="language-plaintext highlighter-rouge">.forEach</code> is similar to <code class="language-plaintext highlighter-rouge">.includes</code>, except instead of giving it the number <code class="language-plaintext highlighter-rouge">3</code> or some element to look for in the array <code class="language-plaintext highlighter-rouge">arr</code>, we are instead giving <code class="language-plaintext highlighter-rouge">.forEach</code> a function to do to every element in the array <code class="language-plaintext highlighter-rouge">arr</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">.forEach</code> needs to be passed a function that takes in 1 argument and does something with it. That’s exactly what our function <code class="language-plaintext highlighter-rouge">addToTotal</code> is doing! It takes in a number and adds it to total. <code class="language-plaintext highlighter-rouge">.forEach</code> takes our function <code class="language-plaintext highlighter-rouge">addToTotal</code> and runs it on every element in <code class="language-plaintext highlighter-rouge">arr</code>. Another way of writing what is happening in the code block above could be:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [2,3,7,3,8,9]
+var total = 0
+
+var addToTotal = (num) =&gt; {
+  total = total + num
+}
+
+addToTotal(arr[0])
+addToTotal(arr[1])
+addToTotal(arr[2])
+addToTotal(arr[3])
+addToTotal(arr[4])
+addToTotal(arr[5])
+
+// value of total is 32
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">.forEach</code> allows us to elimate all of that repetitive code. It just goes down the line of an array and runs whatever function we give to it on every element in the array. It’s beautiful.</p>
+
+<p>Let’s checkout another example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = [2,3,7,3,8,9]
+var newArr = []
+
+var addOneAndPush = (num) =&gt; {
+  var numPlusOne = num + 1
+  newArray.push(numPlusOne)
+}
+
+arr.forEach(addOneAndPush)
+
+// value of newArr is [3,4,8,4,9,10]
+</code></pre></div></div>
+
+<p>Let’s again break down what we are seeing. First, we have <code class="language-plaintext highlighter-rouge">arr</code> which we are very familiar with. Next, we have <code class="language-plaintext highlighter-rouge">newArr</code> which is just an empty array. Our function this time is called <code class="language-plaintext highlighter-rouge">addOneAndPush</code>. It takes in a number, adds 1 to it, and then pushes that value onto the end of <code class="language-plaintext highlighter-rouge">newArr</code>. (For a reminder on what <code class="language-plaintext highlighter-rouge">.push</code> is, go <a href="#concept-adding-to-arrays">here</a>)</p>
+
+<p>This time, the line with <code class="language-plaintext highlighter-rouge">.forEach</code> in it doesn’t look quite as scary. We know that we are to give <code class="language-plaintext highlighter-rouge">.forEach</code> a function. That function that takes in one argument and does something to it. We know that <code class="language-plaintext highlighter-rouge">.forEach</code> will do that function to every element in <code class="language-plaintext highlighter-rouge">arr</code>. Thus, <code class="language-plaintext highlighter-rouge">newArr</code> ends up being identical to <code class="language-plaintext highlighter-rouge">arr</code> except every value is one greater. Pretty cool stuff.</p>
+
+<p>Let’s look at one last example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arrOfPeople = [{age: 18, name: "Jack"}, {age: 29, name: "Jill"}, {age: 13, "Tim"}]
+
+var sumOfAges = 0
+
+var addAge = (person) =&gt; {
+  sumOfAges = sumOfAges + person.age
+}
+
+arrOfPeople.forEach(addAge)
+
+// value of sumOfAges is 60
+</code></pre></div></div>
+
+<p>This time, instead of an array of numbers, we have an array of <strong>objects</strong> called <code class="language-plaintext highlighter-rouge">arrOfPeople</code>. Also, we have a variable called <code class="language-plaintext highlighter-rouge">sumOfAges</code> that starts at 0.</p>
+
+<p>Next we have a function, <code class="language-plaintext highlighter-rouge">addAge</code>, that takes in one argument called <code class="language-plaintext highlighter-rouge">person</code>. It then adds the <code class="language-plaintext highlighter-rouge">age</code> of that <code class="language-plaintext highlighter-rouge">person</code> to <code class="language-plaintext highlighter-rouge">sumOfAges</code>.</p>
+
+<p>Lastly, we have <code class="language-plaintext highlighter-rouge">.forEach</code> appended onto <code class="language-plaintext highlighter-rouge">arrOfPeople</code> with the function <code class="language-plaintext highlighter-rouge">addAge</code>. This whole block of code written in English would read: <em>I have an array of people. I want to know the sum of their ages. For each person, find their age and add it to the sum of their ages.</em></p>
+
+<p>What a handy tool <code class="language-plaintext highlighter-rouge">.forEach</code> is ending up being!</p>
+
+<h4 id="challenge-7">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/KKgqQYY" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h4 id="concept-while-loops">Concept: <strong>while</strong> loops</h4>
+
+<p>While <strong>for</strong> loops are really good for doing something to every element in an array, sometimes we need to do a task repeatedly without working with arrays.</p>
+
+<p><strong>For</strong> loops do something to every element in an array and then they are done. <strong>While</strong> loops, on the other hand, continue to <em>loop</em> until a certain condition is no longer <code class="language-plaintext highlighter-rouge">true</code>. Here is an example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var total = 0
+var counter = 0
+var amountToAdd = 1
+
+while (counter &lt; 10) {
+  total = total + amountToAdd
+  amountToAdd = amountToAdd + 1
+
+  counter = counter + 1
+}
+
+// value of total is 55
+
+</code></pre></div></div>
+
+<p>Alright, let’s break down what we are looking at. First, we have 3 variable, <code class="language-plaintext highlighter-rouge">total</code>, <code class="language-plaintext highlighter-rouge">counter</code>, and <code class="language-plaintext highlighter-rouge">amountToAdd</code>. That part we are familiar with.</p>
+
+<p>Then comes the word <code class="language-plaintext highlighter-rouge">while</code>, followed by <code class="language-plaintext highlighter-rouge">(counter &lt; 10)</code>, ending with curly brackets (<code class="language-plaintext highlighter-rouge">{}</code>) with some code inside. The term <code class="language-plaintext highlighter-rouge">while</code> indicates we are about to enter a <strong>while</strong> loop. Everything inside the curly brackets will repeat UNTIL <code class="language-plaintext highlighter-rouge">counter &lt; 10</code> is no longer <code class="language-plaintext highlighter-rouge">true</code>. Said in an English sentence, this is what the code would say: <em>I have 3 variables, total, counter and amountToAdd. Until the variable counter is no longer less than 10, do the following: add amountToAdd to total and increase both amountToAdd and counter by 1.</em></p>
+
+<p>Looking at the code, it would go like this:</p>
+<ol>
+  <li>We get to the <strong>while</strong> loop. Since <code class="language-plaintext highlighter-rouge">counter</code> is <code class="language-plaintext highlighter-rouge">0</code> and therefore less than <code class="language-plaintext highlighter-rouge">10</code>, we enter the loop.</li>
+  <li><code class="language-plaintext highlighter-rouge">total</code> gets <code class="language-plaintext highlighter-rouge">amountToAdd</code> added to it so it is now worth <code class="language-plaintext highlighter-rouge">1</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">amountToAdd</code> gets <code class="language-plaintext highlighter-rouge">1</code> added to it and it is now worth <code class="language-plaintext highlighter-rouge">2</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">counter</code> gets <code class="language-plaintext highlighter-rouge">1</code> added to it and it is now worth <code class="language-plaintext highlighter-rouge">1</code>.</li>
+  <li>We go back to the top. Since <code class="language-plaintext highlighter-rouge">counter</code> is now worth <code class="language-plaintext highlighter-rouge">1</code> but still less than <code class="language-plaintext highlighter-rouge">10</code>, we go back into the loop.
+…</li>
+</ol>
+
+<p>Eventually, <code class="language-plaintext highlighter-rouge">counter</code> is worth <code class="language-plaintext highlighter-rouge">10</code> and therefore no longer less than <code class="language-plaintext highlighter-rouge">10</code>. We are then done with the <strong>while</strong> loop.</p>
+
+<p>Pretty cool, right? We just have to create some condition that if it <code class="language-plaintext highlighter-rouge">true</code>, we repeat a task. Not so hard, right?</p>
+
+<p>Let’s look at another example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = []
+var number = 1
+
+while (arr.length &lt;= 5) {
+  arr.push(number)
+  number = number * 3
+}
+
+// value of arr is [1, 3, 9, 27, 81, 243]
+</code></pre></div></div>
+
+<p>Let’s also break this one down. We start with <code class="language-plaintext highlighter-rouge">arr</code> which is an empty array and <code class="language-plaintext highlighter-rouge">number</code> which is set to <code class="language-plaintext highlighter-rouge">1</code>. Then, we have a <strong>while</strong> loop. This loop will keep <em>looping</em> until the <code class="language-plaintext highlighter-rouge">length</code> of the array <code class="language-plaintext highlighter-rouge">arr</code> is less than or equal to <code class="language-plaintext highlighter-rouge">5</code>. Since <code class="language-plaintext highlighter-rouge">arr</code> is an empty array, its initial <code class="language-plaintext highlighter-rouge">length</code> is <code class="language-plaintext highlighter-rouge">0</code>. So we enter the loop. We <code class="language-plaintext highlighter-rouge">push</code> the value of <code class="language-plaintext highlighter-rouge">number</code> onto the array. Then, we multiply <code class="language-plaintext highlighter-rouge">number</code> by <code class="language-plaintext highlighter-rouge">3</code> before starting the loop again.</p>
+
+<p>Eventually, the <code class="language-plaintext highlighter-rouge">length</code> of the array <code class="language-plaintext highlighter-rouge">arr</code> is <code class="language-plaintext highlighter-rouge">5</code> and the <strong>while</strong> loop stops.</p>
+
+<p>That’s it! Tell the <strong>while</strong> loop when you want it to stop and give it some logic to perfom until then. Pretty neat!</p>
+<h4 id="challenge-8">Challenge</h4>
+
+<p>Go to this <a href="https://codepen.io/jorymullet/pen/NWRgYXQ" target="_blank">CodePen</a> and follow the instructions.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Wow! You just learned a ton! Excellent work. Now that you know <strong>arrays</strong>, <strong>objects</strong>, and <strong>loops</strong>, your ability to create interesting webpages is dramatically greater! My only question now is <em>what <strong>can</strong> stop you?</em> Answer:</p>
+
+<p><img src="https://media4.giphy.com/media/X7PCkbUm1LYO5VqbKf/giphy.gif" alt="" /></p>
+:ET

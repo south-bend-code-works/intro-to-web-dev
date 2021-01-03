@@ -1,0 +1,431 @@
+I"b?<h1 id="practice-problem-quidditch-cup-instructions">Practice Problem: Quidditch Cup Instructions</h1>
+
+<h2 id="goal">Goal</h2>
+
+<p>Our goal for this project is to build an interactive, web-based version of Quidditch, a fictional sport invented by author J.K. Rowling for her fantasy book series Harry Potter.</p>
+
+<p>At the end of this activity, you will have built something similar to this:</p>
+
+<p><img src="/assets/img/module1/quidditch-animated.gif" alt="quidditch example" /></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>This activity will allow you to combine all the skills you have learned so far:</p>
+<ul>
+  <li>Visual Studio Code (VS Code).</li>
+  <li>HTML, CSS, and JavaScript</li>
+</ul>
+
+<h2 id="instruction">Instruction</h2>
+
+<h3 id="1-create-a-new-project">1. Create a new project</h3>
+
+<ul>
+  <li>First, on your desktop, right-click and select New Folder. Name it <code class="language-plaintext highlighter-rouge">quidditch-cup</code>.</li>
+  <li>Open VS Code. In the toolbar at the top, under File, click New File. Save the file as <code class="language-plaintext highlighter-rouge">index.html</code> in your folder <code class="language-plaintext highlighter-rouge">quidditch-cup</code>.</li>
+  <li>Copy and paste the following into your file in VS Code:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Quidditch-Cup
+    
+    &lt;!--All of our CSS will go here--&gt;
+    &lt;sytle&gt;
+    &lt;/style&gt;
+
+  &lt;/head&gt;
+
+  &lt;!--All of our HTML will go here--&gt;
+  &lt;body&gt;
+    &lt;H1&gt;Quidditch Cup&lt;/H1&gt;
+  &lt;/body&gt;
+
+  &lt;!--All of our JavaScript will go here--&gt;
+  &lt;script&gt;
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+<ul>
+  <li>Save the file and go to your desktop where you can see the folder <code class="language-plaintext highlighter-rouge">quidditch-cup</code>. Click into it and right-click on the <code class="language-plaintext highlighter-rouge">index.html</code> and open with Chrome (or whatever browser you have).</li>
+  <li>You should see <code class="language-plaintext highlighter-rouge">Quidditch Cup</code> on an otherwise blank screen.</li>
+</ul>
+
+<h3 id="2-download-and-add-the-supporting-files-we-will-need-to-your-project-folder">2. Download and add the supporting files we will need to your project folder</h3>
+<p>Let’s create some sub-folders to organize our project.  Keeping your code and assets organized ensures that</p>
+<ul>
+  <li>Download the following photos and place them in a new sub-folder, <code class="language-plaintext highlighter-rouge">imgs</code>, in your <code class="language-plaintext highlighter-rouge">quidditch-cup</code> project directory.
+    <ul>
+      <li>Image Asset Links Here</li>
+    </ul>
+  </li>
+  <li>Download the following audio file and place it in the new sub-folder, <code class="language-plaintext highlighter-rouge">sounds</code>, in your <code class="language-plaintext highlighter-rouge">quidditch-cup</code> project directory.
+    <ul>
+      <li>Audio Links Here</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-build-html-structure">2. Build HTML structure</h3>
+
+<ul>
+  <li>Our game is going to have 6 sections for the 6 photos. We are going to have 6 <code class="language-plaintext highlighter-rouge">div</code> elements that will have the photos as backgrounds.</li>
+  <li>Put 6 <code class="language-plaintext highlighter-rouge">div</code> elements into your code.</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Label each div with 2 classes.
+    <ul>
+      <li>The first class should be <code class="language-plaintext highlighter-rouge">photo</code> so that we can add the same CSS to all photos if we want.</li>
+      <li>The second class should be the same as the image name. So, photo-1 should have the class <code class="language-plaintext highlighter-rouge">photo-1</code> as so on. This allows us to add CSS to individual <code class="language-plaintext highlighter-rouge">div</code>s without affecting the other <code class="language-plaintext highlighter-rouge">div</code>s.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="photo photo-1"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-2"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-3"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-4"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-5"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-6"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h3 id="4-add-css">4. Add CSS</h3>
+
+<ul>
+  <li>In the <code class="language-plaintext highlighter-rouge">head</code> section of your file, include <code class="language-plaintext highlighter-rouge">style</code> tags</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+
+      /* This is how you make a comment in CSS. */
+      /* Anything inside the slash and asterisk will be ignored and is helpful for notes. */
+
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Make the body have 3 columns by using <code class="language-plaintext highlighter-rouge">grid</code>.</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid; /* This make the body a grid */
+        grid-template-columns: auto auto auto; /* This tells the body element to split into 3 equal columns */
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>If you refresh and look at your site, you should still see nothing. However, the <code class="language-plaintext highlighter-rouge">body</code> has been divided into 3 equal columns. Since there are 6 <code class="language-plaintext highlighter-rouge">div</code> tags inside of <code class="language-plaintext highlighter-rouge">body</code>, this makes <code class="language-plaintext highlighter-rouge">body</code> a 3 by 2 grid of <code class="language-plaintext highlighter-rouge">div</code>s.</li>
+</ul>
+
+<h3 id="5-add-photos">5. Add photos</h3>
+
+<ul>
+  <li>Currently, there are 6 <code class="language-plaintext highlighter-rouge">div</code>s in our <code class="language-plaintext highlighter-rouge">body</code> that have no height and no background images.</li>
+  <li>The first step is to add height to our <code class="language-plaintext highlighter-rouge">div</code>s so that they aren’t flat.</li>
+  <li>In the CSS, grab all the <code class="language-plaintext highlighter-rouge">div</code>s using the selector <code class="language-plaintext highlighter-rouge">.photo</code> since all of the <code class="language-plaintext highlighter-rouge">div</code>s have that class.</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Then, make all the <code class="language-plaintext highlighter-rouge">div</code>s have a height of <code class="language-plaintext highlighter-rouge">250px</code>.</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+        height: 250px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Now that the <code class="language-plaintext highlighter-rouge">div</code>s have height, add the photos as background images.</li>
+  <li>Using the CSS property <code class="language-plaintext highlighter-rouge">background-image</code>, link to the photos you saved earlier.</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+        height: 250px;
+      }
+      .photo-1 {
+        background-image: url('photo-1.jpg');
+      }
+      .photo-2 {
+        background-image: url('photo-2.jpg');
+      }
+      .photo-3 {
+        background-image: url('photo-3.jpg');
+      }
+      .photo-4 {
+        background-image: url('photo-4.jpg');
+      }
+      .photo-5 {
+        background-image: url('photo-5.jpg');
+      }
+      .photo-6 {
+        background-image: url('photo-6.jpg');
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h3 id="6-resize-photos">6. Resize photos</h3>
+
+<ul>
+  <li>If you refresh the page you have been working on, you should see 6 different images. However, they may not look like you expected. They may seem really ‘zoomed in’.</li>
+  <li>To fix this, we go back into the <code class="language-plaintext highlighter-rouge">.photo</code> selector in the CSS in order to change how the background looks.</li>
+  <li>Add the <code class="language-plaintext highlighter-rouge">background-size</code> property to the <code class="language-plaintext highlighter-rouge">.photo</code> selector with the value <code class="language-plaintext highlighter-rouge">cover</code></li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+        height: 250px;
+        background-size: cover;
+      }
+      ...
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>That likely makes it look some better but the photos are still likely not centered.</li>
+  <li>Center the images by adding the property <code class="language-plaintext highlighter-rouge">background-position</code> with value <code class="language-plaintext highlighter-rouge">50% 50%</code>
+    <ul>
+      <li>This tells the background images to be centered both vertically and horizontally.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+        height: 250px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+      ...
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h3 id="7-cleaning-up">7. Cleaning up</h3>
+
+<ul>
+  <li>Some of the photos might not look their best being centered vertically and horizontally with a height of 200px.</li>
+</ul>
+
+<p><img src="/assets/img/module1/fog_bad_example.png" alt="bad example" /></p>
+
+<ul>
+  <li>A lot of the photos don’t seeem tall enough to fit the parts of the picture that I want so I will increase the height to 400px.</li>
+</ul>
+
+<p><img src="/assets/img/module1/fog_better_example.png" alt="better example" /></p>
+
+<ul>
+  <li>Better. However, I want photo 1 to be shifted lower.</li>
+  <li>So, instead of <code class="language-plaintext highlighter-rouge">background-position</code> being <code class="language-plaintext highlighter-rouge">50% 50%</code> for that photo, I’ll use the same selector I used to set the background-image (<code class="language-plaintext highlighter-rouge">.photo-1</code>) to change just that photo’s <code class="language-plaintext highlighter-rouge">background-position</code>.</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid; /* This make the body a grid */
+        grid-template-columns: auto auto auto; /* This tells the body element to split into 3 equal columns */
+      }
+      .photo {
+        height: 400px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+      .photo-1 {
+        background-image: url('photo-1.jpg');
+        background-position: 50% 0%;
+      }
+      ...
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>This results in:</li>
+</ul>
+
+<p><img src="/assets/img/module1/fog_best_example.png" alt="best example" /></p>
+
+<ul>
+  <li>Cool! All the photos are where I want them to be.</li>
+  <li>For your project, you will have to adjust individual photos to make things look good.</li>
+  <li>Play around with different CSS properties (<code class="language-plaintext highlighter-rouge">background-size</code>, <code class="language-plaintext highlighter-rouge">background-position</code>, etc.) to gain an understanding of what they mean and how to use them.</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>If you were able to see all photos and they look like you want them to, your knowledge of HTML and CSS is ready for our in-class session! Here is all the code from the example above:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+        height: 400px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+      .photo-1 {
+        background-image: url('photo-1.jpg');
+        background-position: 50% 0%;
+      }
+      .photo-2 {
+        background-image: url('photo-2.jpg');
+      }
+      .photo-3 {
+        background-image: url('photo-3.jpg');
+      }
+      .photo-4 {
+        background-image: url('photo-4.jpg');
+      }
+      .photo-5 {
+        background-image: url('photo-5.jpg');
+      }
+      .photo-6 {
+        background-image: url('photo-6.jpg');
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="photo photo-1"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-2"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-3"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-4"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-5"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-6"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="bonus-mission">Bonus Mission</h2>
+<p>If you’d like to spice up your friend-o-gram a bit, consider adding some of the following:</p>
+<ul>
+  <li>Background color to the webpage</li>
+  <li>A fun logo at the top of the page</li>
+</ul>
+
+<p>Keep in mind that while there are no grades for this program, your projects will speak to the work you can do should you choose to use them as a part of your resume.</p>
+
+:ET

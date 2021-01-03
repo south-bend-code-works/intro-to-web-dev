@@ -1,0 +1,35 @@
+I"*<h1 id="project-part-1-virtual-pet">Project Part 1: Virtual Pet</h1>
+
+<h2 id="goal">Goal</h2>
+
+<p>The goal for this project is to begin building a Virtual Pet. At the end of both parts of this project, you will have a Virtual Pet that is needs food, water, and exercise and responds to how well balanced these needs are being handled. At the end, you will have built a webpage that looks something like this:</p>
+
+<p><img src="link-to-image.jpg" alt="" /></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>There are 2 parts to this project. The first part, which you will be doing now, is to build the structure and layout of the page, decorate with the colors and themes of your choosing, and assemble the assets (which just means images or photos) which will be used for this project.</p>
+
+<h2 id="steps">Steps</h2>
+
+<h3 id="files">Files</h3>
+
+<p>In order to start your page, you will need a new folder and a new file. Go to your desktop and create a new folder called <code class="language-plaintext highlighter-rouge">virtual-pet</code>. Then, open up VS Code and create a new file called index.html and save it inside of your <code class="language-plaintext highlighter-rouge">virtual-pet</code> folder.</p>
+
+<p>As always, you need to start will the bare bones of a website which is this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    Hello world!
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>After copying and pasting that into the file, go to the folder <code class="language-plaintext highlighter-rouge">virtual-pet</code> on you desktop, open it, right-click on <code class="language-plaintext highlighter-rouge">index.html</code>, and choose to open in your browser. Confirm that you can see <code class="language-plaintext highlighter-rouge">Hello world!</code>. If so, you are ready to get started.</p>
+
+<h3 id="structure">Structure</h3>
+
+<p>Before starting a webpage, we should always be thinking about what we will need to</p>
+:ET

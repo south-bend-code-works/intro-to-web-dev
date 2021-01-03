@@ -1,0 +1,36 @@
+I"'<h1 id="communication">Communication</h1>
+
+<h2 id="slack">Slack</h2>
+<p>By taking this course, you will be added to a Slack team where students and instructors can communicate. If you have not been added to the Slack team, please email alex@southbendcodeschool.com to receive help.</p>
+
+<h2 id="how-to-ask-questions">How to ask questions</h2>
+
+<p>It probably seems like a real jerk move to put this section in here, but isn’t intended to be rude.</p>
+
+<p>Here is the thing about coding/programming/computer science in general. A lot of things can go wrong. We’ve all heard of bugs, technical glitches, or other errors that downed entire systems, enabled bad people to steal everyone’s data, and worse. These types of bugs and issues happen to the most experienced programmers.</p>
+
+<p>It’s probably time to let you “under the tent” so so here are some “secrets” about programming and computer science in general…</p>
+
+<ol>
+  <li><strong>Programming isn’t all about being good at math or knowing how the internet works.</strong> The best programmers are tenacious at solving problems. They know how to learn what they don’t know.</li>
+  <li><strong>We will use a lot of analogies that compare what we are doing to building a house or some other process comparable to construction. The truth is this stuff is biology.</strong> Even in building a website, there are a number of complex systems that we will be working with and getting to communicate with one another.</li>
+  <li><strong>Every programmer gets frustrated with technology at some point no matter how smart they are or how much experience they have.</strong> There is no real-life version of Tony Stark who builds technologies with flawless precision. Programming is oftentimes much uglier than it seems in movies and on Netflix. It can be quite trying on your patience to learn and build with tech.</li>
+  <li><strong>Memorization is out, Google is in.</strong> We are going to be learning a lot at a really fast pace. Because of this, we won’t be expecting you to memorize much. Use Google to look things up, go back through your old code as you progress through the course, and reference this site for answers to things you know but can’t remember. The goal is to understand the process and then leverage the knowledge of existing resources to develop your solutions.</li>
+</ol>
+
+<p>It is for this reason that generating some structure around how we will solve the problems we face in tech is really important. Hence the need to create some structure around asking informed questions and learning how to help yourself as best you can.</p>
+
+<p><strong>If you run into a problem, post it in Slack first.</strong> The odds are that your classmates have already run into a similar issue and might be able to help you out. Instructors will also be watching Slack to answer questions periodically throughout the week.</p>
+
+<p><strong>Here is the structure we will use for asking questions:</strong></p>
+<ul>
+  <li>Tell us what you are trying to do.</li>
+  <li>Tell us what error you have received or what isn’t happening if an error isn’t showing.</li>
+  <li>Tell us what you Google’d or looked up on Stack Overflow to solve the problem.</li>
+  <li>Tell us what you tried based on what you found on Google or Stack Overflow.</li>
+  <li>Tell us what error messages or change in results you got after you tried what you found on Google or Stack Overflow.</li>
+</ul>
+
+<p><img src="https://www.mememaker.net/api/bucket?path=static/img/memes/full/2017/Mar/2/1/when-you-tried-to-be-iron-man-but-you-failed.jpg" alt="Feedback2 MEME" /></p>
+
+:ET

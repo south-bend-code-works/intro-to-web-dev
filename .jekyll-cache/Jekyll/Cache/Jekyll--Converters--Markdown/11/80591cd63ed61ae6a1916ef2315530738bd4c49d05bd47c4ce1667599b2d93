@@ -1,0 +1,524 @@
+I"d<h1 id="project-part-2-virtual-pet">Project Part 2: Virtual Pet</h1>
+
+<h2 id="goal">Goal</h2>
+
+<p>At the end of this portion of the project, you will have completed the Virtual Pet project started in part 1. It will include 3 buttons that will increase (and decrease) your pet’s stats. Your pet will “react” to it’s state by changing it’s image.</p>
+<h2 id="overview">Overview</h2>
+
+<p>Now that all of the “physical” components of your pet are in place, we now need to make the your page functional. As is, there are 3 buttons that do nothing, stats that don’t change, and a static picture. We are going to use JavaScript to make this whole thing come to life. Prepare yourself. You’re about to become the parent of a Virtual Pet.</p>
+<h2 id="steps">Steps</h2>
+
+<h3 id="setup">Setup</h3>
+
+<p>Let’s make sure we can see our project in the browser. Go to your desktop and find <code class="language-plaintext highlighter-rouge">virtual-pet</code>. Open that folder, right-click on <code class="language-plaintext highlighter-rouge">index.html</code>, and open in Chrome. If you see what we made in part 1, you’re set.</p>
+
+<p>Next, since we are going to add JavaScript to this page, we need a place to put it. The JS will go between <code class="language-plaintext highlighter-rouge">script</code> tags that will live just beneath your <code class="language-plaintext highlighter-rouge">body</code> tags.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+  &lt;script&gt;
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Once these are included, we are ready to start coding some JavaScript!</p>
+
+<h3 id="buttons">Buttons</h3>
+
+<p>Last time, we made a button for each of the activities: eating, drinking, and exercising. Right now, if we click on any of the buttons, nothing happens. Let’s change that.</p>
+
+<p>Right now, the only reason we consider the <code class="language-plaintext highlighter-rouge">div</code>s with the class <code class="language-plaintext highlighter-rouge">activity-button</code> to be buttons is just because we have styled them to look like buttons. These <code class="language-plaintext highlighter-rouge">div</code>s are no different than any other <code class="language-plaintext highlighter-rouge">div</code>s for right now.</p>
+
+<p>So, what makes a button different than any element on the screen? Seems like a goofy question but the reality is that a button is simply an element that, when clicked on, we expect something to happen. That’s it. So, how do we make something happen when we click on our “buttons”?</p>
+
+<p>Before we get into that, let’s review <strong>attributes</strong>. <strong>Attributes</strong> are what we give to HTML elements to differentiate and control them. For example, when we give an element a <strong>class</strong>, we are giving it an <strong>attribute</strong>. All <strong>attributes</strong> go in the opening tag of an element.</p>
+
+<p>So, why are we doing a refresher on <strong>attributes</strong>? The reason for this is because we are going to include an <strong>attribute</strong> in these <code class="language-plaintext highlighter-rouge">activity-button</code>s that will allow us to trigger an action when these elements are clicked. This <strong>attribute</strong> is <code class="language-plaintext highlighter-rouge">onclick</code>.</p>
+
+<p>Let’s look again at the <strong>attribute</strong> <code class="language-plaintext highlighter-rouge">class</code>. The way <code class="language-plaintext highlighter-rouge">class</code> works is that we include the word <code class="language-plaintext highlighter-rouge">class</code> in the opening tag and then set it equal to the classes we want it to have. Here’s an example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="some-class another-class"&gt;
+
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>Similary, <code class="language-plaintext highlighter-rouge">onclick</code> will be in the opening tag and be set equal to something. However, instead of being set equal to a class name, it will instead of set equal to a function. An example is below.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div onclick="someFunction()"&gt;
+
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>So let’s add a simple function to all of our buttons. Let’s add <code class="language-plaintext highlighter-rouge">onclick="console.log('Hello!')"</code> as an attribute to all of our functions.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+    &lt;div class="main"&gt;
+      ...
+      &lt;div class="interactive-area"&gt;
+
+        &lt;div class="activity-row"&gt;
+          &lt;img class="activity-icon" src="food.png" /&gt;
+          &lt;div class="activity-stat"&gt;100&lt;/div&gt;
+          &lt;div class="activity-button" onclick="console.log('Hello!')"&gt;Eat fish&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="activity-row"&gt;
+          &lt;img class="activity-icon" src="water.png" /&gt;
+          &lt;div class="activity-stat"&gt;50&lt;/div&gt;
+          &lt;div class="activity-button" onclick="console.log('Hello!')"&gt;Drink water&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="activity-row"&gt;
+          &lt;img class="activity-icon" src="exercise.png" /&gt;
+          &lt;div class="activity-stat"&gt;5&lt;/div&gt;
+          &lt;div class="activity-button" onclick="console.log('Hello!')"&gt;Exercise&lt;/div&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;script&gt;
+    ...
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>If you refresh your page and click a button, you might not notice anything. That’s because the function <code class="language-plaintext highlighter-rouge">console.log</code> prints whatever text we give it to the console. The way to view your console is to go to your browser, right-click on the screen, and click <strong>Inspect</strong>. This will bring a sidebar to the screen which will include the console which is indicated in the image below:</p>
+
+<p><img src="/assets/img/module1/vp-console.png" alt="" /></p>
+
+<p>Now, if we click one of the <code class="language-plaintext highlighter-rouge">interactive-button</code>s, it will print to the console. <code class="language-plaintext highlighter-rouge">console.log</code> is a <strong>very</strong> helpful tool to test and debug our code.</p>
+
+<p>Our <code class="language-plaintext highlighter-rouge">interactive-button</code>s do something now! They are officially buttons. At this point, however, they aren’t doing any too helpful. Let’s change that.</p>
+
+<p>Currently, the function inside of our <code class="language-plaintext highlighter-rouge">onclick</code> attribute is <code class="language-plaintext highlighter-rouge">console.log</code>. We can instead change that to a function we put between our <code class="language-plaintext highlighter-rouge">script</code> tags. Let’s make a function called <code class="language-plaintext highlighter-rouge">giveFood</code> and make that function print <code class="language-plaintext highlighter-rouge">Feeding pet!</code> to the console. Then, in our food button, let’s call <code class="language-plaintext highlighter-rouge">giveFood()</code> and see if it works.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+    &lt;div class="main"&gt;
+      ...
+      &lt;div class="interactive-area"&gt;
+
+        &lt;div class="activity-row"&gt;
+          &lt;img class="activity-icon" src="food.png" /&gt;
+          &lt;div class="activity-stat"&gt;100&lt;/div&gt;
+          &lt;div class="activity-button" onclick="giveFood()"&gt;Eat fish&lt;/div&gt;
+        &lt;/div&gt;
+        ...
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;script&gt;
+    
+    var giveFood = () =&gt; {
+      console.log('Feeding pet!')
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+<p>Woohoo! We’ve made a function in JavaScript that is responding to our button! We are rolling.</p>
+
+<p>So, instead of just printing <code class="language-plaintext highlighter-rouge">Feeding pet!</code> to the console, let’s make our food button actually increase the food stat. In order to track our food, water, and exercise stats, we are going to need <strong>variables</strong> to track the numbers that represent these stats. Let’s add variables <code class="language-plaintext highlighter-rouge">food</code>, <code class="language-plaintext highlighter-rouge">water</code>, and <code class="language-plaintext highlighter-rouge">exercise</code> to the top of our JavaScript and start them all out with <code class="language-plaintext highlighter-rouge">50</code>.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+  &lt;script&gt;
+    
+    var food = 50
+    var water = 50
+    var exercise = 50
+    
+    
+    var giveFood = () =&gt; {
+      console.log('Feeding pet!')
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Now that we have <strong>variables</strong> in place to track our stats, let’s increase the food stat by <code class="language-plaintext highlighter-rouge">15</code> every time we click the food button.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+  &lt;script&gt;
+    
+    var food = 50
+    var water = 50
+    var exercise = 50
+    
+    
+    var giveFood = () =&gt; {
+      food = food + 15
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Cool! If you want to prove that is working, in the same function after you add 15 to the food stat, print <code class="language-plaintext highlighter-rouge">food</code> to the console and see it increase!</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+  &lt;script&gt;
+    
+    var food = 50
+    var water = 50
+    var exercise = 50
+    
+    
+    var giveFood = () =&gt; {
+      food = food + 15
+      console.log(food)
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Seems to be working as expected!</p>
+
+<p>So, since we are trying to make our virtual pet a little realistic, let’s make something else happen when we feed our pet. Whenever a pet eats, it’s need for water and exercise increase which means those stats should decrease. In the same function that increases the <code class="language-plaintext highlighter-rouge">food</code> stat, let’s also decrease <code class="language-plaintext highlighter-rouge">water</code> and <code class="language-plaintext highlighter-rouge">exercise</code> by <code class="language-plaintext highlighter-rouge">5</code>.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+  &lt;script&gt;
+    
+    var food = 50
+    var water = 50
+    var exercise = 50
+    
+    var giveFood = () =&gt; {
+      food = food + 15
+      water = water - 5
+      exercise = exercise - 5
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Nice! Now our pet is a little more realistic.</p>
+
+<p>Next, we have to create functions for our other 2 buttons, water and exercise. Let’s create 2 functions, <code class="language-plaintext highlighter-rouge">giveWater</code> and <code class="language-plaintext highlighter-rouge">giveExercise</code>. In <code class="language-plaintext highlighter-rouge">giveWater</code>, let’s increase <code class="language-plaintext highlighter-rouge">water</code> by <code class="language-plaintext highlighter-rouge">15</code>, decrease <code class="language-plaintext highlighter-rouge">food</code> by <code class="language-plaintext highlighter-rouge">5</code>, and decrease <code class="language-plaintext highlighter-rouge">exercise</code> by <code class="language-plaintext highlighter-rouge">2</code>. In <code class="language-plaintext highlighter-rouge">giveExercise</code>, let’s increase <code class="language-plaintext highlighter-rouge">exercise</code> by 30, decrease <code class="language-plaintext highlighter-rouge">water</code> by <code class="language-plaintext highlighter-rouge">15</code>, and decrease <code class="language-plaintext highlighter-rouge">food</code> by <code class="language-plaintext highlighter-rouge">10</code>.</p>
+
+<p>Make sure to set <code class="language-plaintext highlighter-rouge">giveWater()</code> as the function to the water button and <code class="language-plaintext highlighter-rouge">giveExercise</code> to exercise button.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+    &lt;div class="main"&gt;
+      ...
+      &lt;div class="interactive-area"&gt;
+
+        &lt;div class="activity-row"&gt;
+          ...
+          &lt;div class="activity-button" onclick="giveFood()"&gt;Eat fish&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="activity-row"&gt;
+          ...
+          &lt;div class="activity-button" onclick="giveWater()"&gt;Drink water&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="activity-row"&gt;
+          ...
+          &lt;div class="activity-button" onclick="giveExercise()"&gt;Exercise&lt;/div&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;script&gt;
+
+    var food = 50
+    var water = 50
+    var exercise = 50
+    
+    var giveFood = () =&gt; {
+      food = food + 15
+      water = water - 5
+      exercise = exercise - 5
+    }
+
+    var giveWater = () =&gt; {
+      water = water + 15
+      food = food - 5
+      exercise = exercise - 2
+    }
+
+    var giveExercise = () =&gt; {
+      exercise = exercise + 30
+      water = water - 15
+      food = food - 10
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Sweet! All of our functions are in place and buttons are working. However, just because our stats are changing on the JavaScript side, we now need to reflect these changes onto our HTML.</p>
+
+<h3 id="updating-html">Updating HTML</h3>
+
+<p>Now that our buttons work, let’s make a function that does 2 things:</p>
+
+<ol>
+  <li>Updates the stats in the HTML to represent the stats we have in JavaScript.</li>
+  <li>Updates the image to show the state of our pet.</li>
+</ol>
+
+<p>Let’s start with updating the stats in the HTML First, we need to create and name our function. Let’s name it <code class="language-plaintext highlighter-rouge">updateHTML</code>. In this function, we need to get the elements that show the stats on the screen and update their <code class="language-plaintext highlighter-rouge">innerHTML</code>. In its current state, it will be hard to get specific <code class="language-plaintext highlighter-rouge">activity-stat</code> elements. If we add <code class="language-plaintext highlighter-rouge">id</code>s to each of the <code class="language-plaintext highlighter-rouge">activity-stat</code> <code class="language-plaintext highlighter-rouge">div</code>s, we will be able to easily reference them in our JS and change their <code class="language-plaintext highlighter-rouge">innerHTML</code>. Let’s add the <code class="language-plaintext highlighter-rouge">id</code>s <code class="language-plaintext highlighter-rouge">food-stat</code>, <code class="language-plaintext highlighter-rouge">water-stat</code>, and <code class="language-plaintext highlighter-rouge">exercise-stat</code> to the respective <code class="language-plaintext highlighter-rouge">activity-stat</code> <code class="language-plaintext highlighter-rouge">div</code>s.</p>
+
+<p>While we are in this part of the HTML anyways, let’s change the starting values of stats in the HTML to all be 50, just like in the JavaScript.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+    &lt;div class="main"&gt;
+      ...
+      &lt;div class="interactive-area"&gt;
+
+        &lt;div class="activity-row"&gt;
+          ...
+          &lt;div id="food-stat" class="activity-stat"&gt;50&lt;/div&gt;
+          ...
+        &lt;/div&gt;
+        &lt;div class="activity-row"&gt;
+          ...
+          &lt;div id="water-stat" class="activity-stat"&gt;50&lt;/div&gt;
+          ...
+        &lt;/div&gt;
+        &lt;div class="activity-row"&gt;
+          ...
+          &lt;div id="exercise-stat" class="activity-stat"&gt;50&lt;/div&gt;
+          ...
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;script&gt;
+    ...
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Nice. Now that our <code class="language-plaintext highlighter-rouge">activity-stat</code>s have <code class="language-plaintext highlighter-rouge">id</code>s, let’s start adding code to our <code class="language-plaintext highlighter-rouge">updateHTML</code> function. From an earlier lesson, we learned that <code class="language-plaintext highlighter-rouge">document.getElementById</code> allows us to reference an element in HTML so that we can make changes to that element. So, if we want to reference our food stat, we would use <code class="language-plaintext highlighter-rouge">document.getElementById("food-stat")</code>. Now that we have referenced it, we need to change its <code class="language-plaintext highlighter-rouge">innerHTML</code>. We do this by appending <code class="language-plaintext highlighter-rouge">.innerHTML</code> to our reference and then setting that equal to whatever we want. In this instance, we want to set the <code class="language-plaintext highlighter-rouge">innerHTML</code> of our food stat element to the variable <strong>food</strong>. Similarly, we are going to want to reference the water and exercise stat elements and set their <code class="language-plaintext highlighter-rouge">innerHTML</code> to their cooresponding variables.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+  &lt;script&gt;
+
+    var food = 50
+    var water = 50
+    var exercise = 50
+    
+    var giveFood = () =&gt; {
+      food = food + 15
+      water = water - 5
+      exercise = exercise - 5
+    }
+
+    var giveWater = () =&gt; {
+      water = water + 15
+      food = food - 5
+      exercise = exercise - 2
+    }
+
+    var giveExercise = () =&gt; {
+      exercise = exercise + 30
+      water = water - 15
+      food = food - 10
+    }
+
+    var updateHTML = () =&gt; {
+      document.getElementById("food-stat").innerHTML = food
+      document.getElementById("water-stat").innerHTML = water
+      document.getElementById("exercise-stat").innerHTML = exercise
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>If we refresh our page and click the buttons, nothing is happening. This is because we are never calling the function <code class="language-plaintext highlighter-rouge">updateHTML</code>. Just making the function is not enough. We need to call this function every time we update our stats in our JS. Call the function <code class="language-plaintext highlighter-rouge">updateHTML</code> at the end of every function that updates our stats.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+  &lt;script&gt;
+
+    var food = 50
+    var water = 50
+    var exercise = 50
+    
+    var giveFood = () =&gt; {
+      food = food + 15
+      water = water - 5
+      exercise = exercise - 5
+
+      updateHTML()
+    }
+
+    var giveWater = () =&gt; {
+      water = water + 15
+      food = food - 5
+      exercise = exercise - 2
+
+      updateHTML()
+    }
+
+    var giveExercise = () =&gt; {
+      exercise = exercise + 30
+      water = water - 15
+      food = food - 10
+      
+      updateHTML()
+    }
+
+    var updateHTML = () =&gt; {
+      document.getElementById("food-stat").innerHTML = food
+      document.getElementById("water-stat").innerHTML = water
+      document.getElementById("exercise-stat").innerHTML = exercise
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Whoa! Now when I click on the buttons, the stats are changing on screen! This is great news.</p>
+
+<p>Now that the stats on the screen are updating, let’s also update the picture to reflect our stats.</p>
+
+<p>In real life, an individuals overall state can generalized to their weakest “stat”. A person might be quite hydrated and in great shape, but if they are extremely hungry, their overall state will likely reflect their need for food. So, in our <code class="language-plaintext highlighter-rouge">updateHTML</code> function, before we update our image, we need to first figure out our lowest stat.</p>
+
+<p>There are several ways to figure out which of the stats is the lowest. JavaScript gives us an easy way to figure out which of a group of numbers is the lowest with the built-in function <code class="language-plaintext highlighter-rouge">Math.min</code>. This function takes as many numbers as we want to give it and then returns the number with the lowest value. Here is an example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var lowestNum = Math.min(1, 6, 3, -99, .34)
+
+// value of lowestNum is -99
+</code></pre></div></div>
+
+<p>So, let’s include a <strong>variable</strong> <code class="language-plaintext highlighter-rouge">lowestStat</code> in our <code class="language-plaintext highlighter-rouge">updateHTML</code> function that uses <code class="language-plaintext highlighter-rouge">Math.min</code> to figure out the lowest value between <code class="language-plaintext highlighter-rouge">food</code>, <code class="language-plaintext highlighter-rouge">water</code>, and <code class="language-plaintext highlighter-rouge">exercise</code>.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+  &lt;script&gt;
+  
+    ...
+
+    var updateHTML = () =&gt; {
+      document.getElementById("food-stat").innerHTML = food
+      document.getElementById("water-stat").innerHTML = water
+      document.getElementById("exercise-stat").innerHTML = exercise
+
+      var lowestStat = Math.min(food, water, exercise)
+    }
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Now that we have the <code class="language-plaintext highlighter-rouge">lowestStat</code>, let’s write code that makes decisions based on that value to change the image.</p>
+
+<p>Before we get into the logic portion of using <code class="language-plaintext highlighter-rouge">lowestStat</code>, let’s add another variable to <code class="language-plaintext highlighter-rouge">updateHTML</code> called <code class="language-plaintext highlighter-rouge">imageSrc</code>. We will use this variable in our logic to keep track of which of the images we should use based on the value of <code class="language-plaintext highlighter-rouge">lowestStat</code>.</p>
+
+<p>Next, we are going to create a <strong>conditional block</strong> that does the following:</p>
+<ol>
+  <li>First, we are going to check to see if <code class="language-plaintext highlighter-rouge">lowestStat</code> is less than or equal to 0. If so, we are going to set the source to our <code class="language-plaintext highlighter-rouge">passed-out</code> image to the variable <code class="language-plaintext highlighter-rouge">imageSrc</code>.
+    <ul>
+      <li>For me, this looks like <code class="language-plaintext highlighter-rouge">imageSrc = ""</code></li>
+    </ul>
+  </li>
+</ol>
+:ET

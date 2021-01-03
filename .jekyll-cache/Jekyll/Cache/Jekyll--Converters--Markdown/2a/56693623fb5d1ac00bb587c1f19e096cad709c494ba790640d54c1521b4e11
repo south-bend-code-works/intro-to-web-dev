@@ -1,0 +1,21 @@
+I"¸<h1 id="friend-o-gram">Friend-o-gram</h1>
+
+<h2 id="goal">Goal</h2>
+
+<p>At the end of this activity, you will have built something similar to this:</p>
+
+<p><img src="" alt="Friend-o-gram" /></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>This activity will allow you to combine all the skills you have learned, HTML, CSS, and Visual Studio Code (aka VS Code).</p>
+
+<h2 id="instruction">Instruction</h2>
+
+<h3 id="1-create-a-file">1. Create a file</h3>
+
+<ul>
+  <li>First, open VS Code. In the toolbar at the top, under File, click New File. Save the file as <code class="language-plaintext highlighter-rouge">index.html</code> on your Desktop.</li>
+  <li>Copy and paste the following into your</li>
+</ul>
+:ET

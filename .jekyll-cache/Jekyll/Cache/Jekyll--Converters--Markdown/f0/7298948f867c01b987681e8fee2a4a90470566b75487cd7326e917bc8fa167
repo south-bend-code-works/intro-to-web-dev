@@ -1,0 +1,55 @@
+I",<h1 id="project-part-2-virtual-pet">Project Part 2: Virtual Pet</h1>
+
+<h2 id="goal">Goal</h2>
+
+<p>At the end of this portion of the project, you will have completed the Virtual Pet project started in part 1. It will include 3 buttons that will increase (and decrease) your pet’s stats. Your pet will “react” to it’s state by changing it’s image.</p>
+<h2 id="overview">Overview</h2>
+
+<p>Now that all of the “physical” components of your pet are in place, we now need to make the your page functional. As is, there are 3 buttons that do nothing, stats that don’t change, and a static picture. We are going to use JavaScript to make this whole thing come to life. Prepare yourself. You’re about to become the parent of a Virtual Pet.</p>
+<h2 id="steps">Steps</h2>
+
+<h3 id="setup">Setup</h3>
+
+<p>Let’s make sure we can see our project in the browser. Go to your desktop and find <code class="language-plaintext highlighter-rouge">virtual-pet</code>. Open that folder, right-click on <code class="language-plaintext highlighter-rouge">index.html</code>, and open in Chrome. If you see what we made in part 1, you’re set.</p>
+
+<p>Next, since we are going to add JavaScript to this page, we need a place to put it. The JS will go between <code class="language-plaintext highlighter-rouge">script</code> tags that will live just beneath your <code class="language-plaintext highlighter-rouge">body</code> tags.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+  &lt;script&gt;
+
+  &lt;/script&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Once these are included, we are ready to start coding some JavaScript!</p>
+
+<h3 id="buttons">Buttons</h3>
+
+<p>Last time, we made a button for each of the activities: eating, drinking, and exercising. Right now, if we click on any of the buttons, nothing happens. Let’s change that.</p>
+
+<p>Right now, the only reason we consider the <code class="language-plaintext highlighter-rouge">div</code>s with the class <code class="language-plaintext highlighter-rouge">activity-button</code> to be buttons is just because we have styled them to look like buttons. These <code class="language-plaintext highlighter-rouge">div</code>s are no different than any other <code class="language-plaintext highlighter-rouge">div</code>s for right now.</p>
+
+<p>So, what makes a button different than any element on the screen? Seems like a goofy question but the reality is that a button is simply an element that, when clicked on, we expect something to happen. That’s it. So, how do we make something happen when we click on our “buttons”?</p>
+
+<p>Before we get into that, let’s review <strong>attributes</strong>. <strong>Attributes</strong> are what we give to HTML elements to differentiate and control them. For example, when we give an element a <strong>class</strong>, that is an <strong>attribute</strong>. All <strong>attributes</strong> go in the opening tag of an element.</p>
+
+<p>So, why are we doing a refresher on <strong>attributes</strong>? The reason for this is because we are going to include an <strong>attribute</strong> in these <code class="language-plaintext highlighter-rouge">activity-button</code>s that will allow us to trigger an action when these elements are clicked. This <strong>attribute</strong> is <code class="language-plaintext highlighter-rouge">onclick</code>.</p>
+
+<p>Let’s look again at the <strong>attribute</strong> <code class="language-plaintext highlighter-rouge">class</code>. The way <code class="language-plaintext highlighter-rouge">class</code> works is that we include the word <code class="language-plaintext highlighter-rouge">class</code> in the opening tag and then set it equal to the classes we want it to have. Here’s an example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="some-class another-class"&gt;
+
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>Similary, <code class="language-plaintext highlighter-rouge">onclick</code> will be in the opening tag and be set equal to something. However, instead of being set equal to a class name, it will instead of set equal to a function</p>
+:ET

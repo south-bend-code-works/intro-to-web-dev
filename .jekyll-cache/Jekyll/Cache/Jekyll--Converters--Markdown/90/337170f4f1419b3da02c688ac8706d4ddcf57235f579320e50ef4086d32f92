@@ -1,0 +1,9 @@
+I"q<h1 id="introduction-to-javascript-js">Introduction to JavaScript (JS)</h1>
+
+<h2 id="goal">Goal</h2>
+<p>By the end of this lesson, you should have an understanding of how to use JavaScript alongside HTML and CSS to create webpages.</p>
+
+<h2 id="overview">Overview</h2>
+<p>Earlier, we used an analogy of a house to describe the purposes of HTML and CSS. HTML is structure (walls, roof, foundation) and CSS is design (layout, decoration). But, if we are building a house, how do we get the functionality (electricity, plumbing, etc.)? The answer is JavaScript (JS). JS allows us to store data in databases, get data from other sites, change what’s in the HTML and CSS, and much more. While just HTML and CSS may be fine for a website that simply exists to show information such as contact information or hours of business, anything more interesting than this will require JS.</p>
+
+:ET

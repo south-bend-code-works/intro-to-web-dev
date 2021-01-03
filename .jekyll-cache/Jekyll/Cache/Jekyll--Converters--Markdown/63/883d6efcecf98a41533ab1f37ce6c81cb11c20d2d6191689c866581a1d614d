@@ -1,0 +1,355 @@
+I"�]<h1 id="project-part-1-virtual-pet">Project Part 1: Virtual Pet</h1>
+
+<h2 id="goal">Goal</h2>
+
+<p>The goal for this project is to begin building a Virtual Pet. At the end of both parts of this project, you will have a Virtual Pet that is needs food, water, and exercise and responds to how well balanced these needs are being handled. At the end, you will have built a webpage that looks something like this:</p>
+
+<p><img src="link-to-image.jpg" alt="" /></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>There are 2 parts to this project. The first part, which you will be doing now, is to build the structure and layout of the page, decorate with the colors and themes of your choosing, and assemble the assets (which just means images or photos) which will be used for this project.</p>
+
+<h2 id="steps">Steps</h2>
+
+<h3 id="files">Files</h3>
+
+<p>In order to start your page, you will need a new folder and a new file. Go to your desktop and create a new folder called <code class="language-plaintext highlighter-rouge">virtual-pet</code>. Then, open up VS Code and create a new file called index.html and save it inside of your <code class="language-plaintext highlighter-rouge">virtual-pet</code> folder.</p>
+
+<p>As always, you need to start will the bare bones of a website which is this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    Hello world!
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>After copying and pasting that into the file, go to the folder <code class="language-plaintext highlighter-rouge">virtual-pet</code> on you desktop, open it, right-click on <code class="language-plaintext highlighter-rouge">index.html</code>, and choose to open in your browser. Confirm that you can see <code class="language-plaintext highlighter-rouge">Hello world!</code>. If so, you are ready to get started.</p>
+
+<h3 id="structure">Structure</h3>
+
+<p>Before starting a webpage, we should always be thinking about what we will need to include in that page. This allows us to formulate how we would like to set up our page and, therefore, our HTML.</p>
+
+<p>Our Virtual Pet page will need 3 things:</p>
+<ol>
+  <li>A header where we can name our virtual pet and maybe have a description.</li>
+  <li>A stats and interaction area where we will be able to see how healthy and balanced our Virtual Pet is.</li>
+  <li>An area where we will display different pictures based on how healthy (or not ) our Virtual Pet is.</li>
+</ol>
+
+<p>A good practice is to draw a general and simple design (aka mockup) of what we are trying to make. Here is mine:</p>
+
+<p><img src="/assets/img/module1/virtual_pet_mockup.png" alt="Virtual Pet Mockup" /></p>
+
+<p>We can see from the mockup that the whole page is divided into 2 rows, <strong>Header Area</strong> and <strong>Main Area</strong>. Furthermore, <strong>Main Area</strong> is divided into 2 columns, <strong>Image Area</strong> and <strong>Stats and Buttons Area</strong>. Now that we have the general structure in mind, we can write HTML that matches it:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="header"&gt;&lt;/div&gt;
+    &lt;div class="main"&gt;
+      &lt;div class="image-area"&gt;&lt;/div&gt;
+      &lt;div class="interactive-area"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>You can see above that I added 4 <code class="language-plaintext highlighter-rouge">div</code>s to represent the 4 areas I mentioned above.</p>
+
+<p>In order differentiate between the areas, I added <strong>classes</strong> to the <code class="language-plaintext highlighter-rouge">div</code>s with the short names <code class="language-plaintext highlighter-rouge">header</code>, <code class="language-plaintext highlighter-rouge">main</code>, <code class="language-plaintext highlighter-rouge">image-area</code>, and <code class="language-plaintext highlighter-rouge">interactive-area</code> (the area for button and stats). Naming the <code class="language-plaintext highlighter-rouge">div</code>s like this allows us to do 2 things:</p>
+<ol>
+  <li>The names remind us what the <code class="language-plaintext highlighter-rouge">div</code>’s purpose is.</li>
+  <li>We can use the <code class="language-plaintext highlighter-rouge">div</code>s’ classes as selectors in our CSS.</li>
+</ol>
+
+<p>You may also notice that the <code class="language-plaintext highlighter-rouge">header</code> <code class="language-plaintext highlighter-rouge">div</code> is empty while the <code class="language-plaintext highlighter-rouge">main</code> <code class="language-plaintext highlighter-rouge">div</code> has 2 other <code class="language-plaintext highlighter-rouge">div</code>s inside of it. The reason for this is because, looking at the mockup above, we are planning on splitting <code class="language-plaintext highlighter-rouge">main</code> into 2 columns while leaving <code class="language-plaintext highlighter-rouge">header</code> as just one column.</p>
+
+<h3 id="the-animal">The Animal</h3>
+
+<p>Next, we have to make a decision about what we want our Virtual Pet to be. It can be real, imaginary, a Pokemon, whatever you want. The only requirement is that you find images or gifs online of this creature for each of the following moods:</p>
+<ol>
+  <li>Neutral: not too happy but not too sad. Just a neutral image or gif for when the pet is just fine.</li>
+  <li>Tired: this image will show when the animal is struggling and about to pass out.</li>
+  <li>Passed out: an image for when one of the pet’s stats has reached zero.</li>
+  <li>Upbeat: the pet is doing well! A fun little trot or walk to how happiness and healthiness.</li>
+  <li>Exuberant: for when the animal is just crushing life. Should be the happiest, most excited version of your pet.</li>
+</ol>
+
+<p>Once you find all of your photos online, download them and put them into your <code class="language-plaintext highlighter-rouge">virtual-pet</code> folder. You should rename them to match their state. <strong>Note: when renaming them, keep the file extension they were downloaded with. So, if you downloaded a gif, the last part of the name should be <code class="language-plaintext highlighter-rouge">.gif</code>. Don’t change that part, just the part in front of it.</strong></p>
+
+<p>I will choose the Loch Ness Monster as my pet. Here is an example of my <code class="language-plaintext highlighter-rouge">neutral.gif</code>:</p>
+
+<p><img src="/assets/img/module1/neutral.gif" alt="" style="max-width:300px" /></p>
+
+<p>I have also gone ahead and downloaded images or gifs for the other 4 states (<code class="language-plaintext highlighter-rouge">tired</code>, <code class="language-plaintext highlighter-rouge">passed-out</code>, <code class="language-plaintext highlighter-rouge">upbeat</code>, and <code class="language-plaintext highlighter-rouge">exuberant</code>) into my <code class="language-plaintext highlighter-rouge">virtual-pet</code> folder.</p>
+
+<h3 id="the-header">The header</h3>
+
+<p>Now that we have decided on a creature and have our structure, we can start putting real content onto the page. Let’s start with the <code class="language-plaintext highlighter-rouge">header</code>.</p>
+
+<p>In our <code class="language-plaintext highlighter-rouge">header</code>, we want 2 things: a <code class="language-plaintext highlighter-rouge">pet-name</code> and a <code class="language-plaintext highlighter-rouge">description</code>. Let’s go ahead and add appropriately classed <code class="language-plaintext highlighter-rouge">div</code>s into our HTML.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="header"&gt;
+      &lt;div class="pet-name"&gt;&lt;/div&gt;
+      &lt;div class="description"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="main"&gt;
+      &lt;div class="image-area"&gt;&lt;/div&gt;
+      &lt;div class="interactive-area"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Now that we have the <code class="language-plaintext highlighter-rouge">div</code>s in place. Let’s come up with a name and a description for our pet. I’ll name mine <code class="language-plaintext highlighter-rouge">Big L</code> and use the description <code class="language-plaintext highlighter-rouge">He is big and not good at things.</code> Whatever you decide for a name and description, put that content in between the appropriate tags.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="header"&gt;
+      &lt;div class="pet-name"&gt;Big L&lt;/div&gt;
+      &lt;div class="description"&gt;He is big and not good at things.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="main"&gt;
+      &lt;div class="image-area"&gt;&lt;/div&gt;
+      &lt;div class="interactive-area"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>If you refresh your page that you opened earlier, it should look something like this:</p>
+
+<p><img src="/assets/img/module1/vp-header-1.png" alt="" /></p>
+
+<p>Well, it’s there but it is not pretty. Let’s add some CSS to spruce things up a bit. Let’s start with adding <code class="language-plaintext highlighter-rouge">style</code> tag into the currently empty <code class="language-plaintext highlighter-rouge">head</code> tag:</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="header"&gt;
+      &lt;div class="pet-name"&gt;Big L&lt;/div&gt;
+      &lt;div class="description"&gt;He is big and not good at things.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="main"&gt;
+      &lt;div class="image-area"&gt;&lt;/div&gt;
+      &lt;div class="interactive-area"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>First things first, that font has to go. Let’s add a new font to the whole page by using the <code class="language-plaintext highlighter-rouge">body</code> selector (to select everything between the <code class="language-plaintext highlighter-rouge">body</code> tags) and using the property <code class="language-plaintext highlighter-rouge">font-family</code> to change the font to something new. <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp">Here</a> is a list of fonts to use and examples on how to use them. I’m going to choose <code class="language-plaintext highlighter-rouge">'Courier New', Courier, monospace</code> as the font for my whole page.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        font-family: 'Courier New', Courier, monospace;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>After refreshing the page, I can see my font has changed. The font looks a little thin and hard to see, so I’ll add <code class="language-plaintext highlighter-rouge">font-weight: bold</code> to my <code class="language-plaintext highlighter-rouge">body</code>’s CSS.</p>
+
+<p>While that looks better, I wish my <code class="language-plaintext highlighter-rouge">pet-name</code> was larger than the description. So, I’ll add <code class="language-plaintext highlighter-rouge">font-size: 32px</code> to a <code class="language-plaintext highlighter-rouge">.pet-name</code> selector in my CSS.</p>
+
+<p>I’m liking the way this is starting to look, but I wish the words weren’t so close to the edge of the screen. So, I’ll add <code class="language-plaintext highlighter-rouge">padding: 32px</code> to the <code class="language-plaintext highlighter-rouge">header</code> and call it good enough for the header. (<code class="language-plaintext highlighter-rouge">padding</code> is used in CSS to basically put a cushion of space around it’s contents. In my example, I put <code class="language-plaintext highlighter-rouge">32px</code>, or 32 pixels, of cusion around my <code class="language-plaintext highlighter-rouge">pet-name</code> and <code class="language-plaintext highlighter-rouge">description</code>.)</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+      }
+      .header {
+        padding: 32px;
+      }
+      .pet-name {
+        font-size: 32px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p><img src="/assets/img/module1/vp-header-2.png" alt="" /></p>
+
+<h3 id="the-main">The main</h3>
+
+<p>Alright, so we have our header in place. Looking at the mockup, it looks like we go ahead and start developing our <strong>Main Area</strong>. In the code, our <strong>Main Area</strong> is the <code class="language-plaintext highlighter-rouge">div</code> classed as <code class="language-plaintext highlighter-rouge">main</code> and has 2 <code class="language-plaintext highlighter-rouge">div</code>s inside of it, <code class="language-plaintext highlighter-rouge">image-area</code> and <code class="language-plaintext highlighter-rouge">interactive-area</code>. From the mockup, we know we want to have <strong>Main Area</strong> split into 2 equal halves that are side-by-side. However, if I type a few words into the <code class="language-plaintext highlighter-rouge">divs</code>s <code class="language-plaintext highlighter-rouge">image-area</code> and <code class="language-plaintext highlighter-rouge">interactive-area</code>, this is what I get:</p>
+
+<p><img src="/assets/img/module1/vp-main-1.png" alt="" /></p>
+
+<p>From the image, you can see the 2 <code class="language-plaintext highlighter-rouge">div</code>s are stacked on top of each other. This is the default for how <code class="language-plaintext highlighter-rouge">div</code>s interact and we need to change that with CSS. What we need to do is to tell <code class="language-plaintext highlighter-rouge">main</code> to make itself a grid where there are 2 columns that are side by side, just like in the mockup. I’ll do that by adding CSS to the <code class="language-plaintext highlighter-rouge">main</code> <code class="language-plaintext highlighter-rouge">div</code>.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+      }
+      .header {
+        padding: 32px;
+      }
+      .pet-name {
+        font-size: 32px;
+      }
+      .main {
+        display: grid; /* this tells `main` to be a grid*/
+        /* this next line tells `main` that, since it is a grid now, to separate into 2 equal columns*/
+        grid-template-columns: 1fr 1fr; 
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>We can see below that it appears <code class="language-plaintext highlighter-rouge">main</code> has indeed been separated into 2 columns with <code class="language-plaintext highlighter-rouge">image-area</code> on the left and <code class="language-plaintext highlighter-rouge">interactive-area</code> on the right. I added color to the background so you could see the areas more clearly.</p>
+
+<p><img src="/assets/img/module1/vp-main-2.png" alt="" /></p>
+
+<h3 id="image-area">Image area</h3>
+
+<p>Now that we have divided the <code class="language-plaintext highlighter-rouge">main</code> area into 2 columns (like in the mockup) we are able to start fleshing out each of the parts inside, the <code class="language-plaintext highlighter-rouge">image-area</code> and the <code class="language-plaintext highlighter-rouge">interactive-area</code>. Let’s start with the <code class="language-plaintext highlighter-rouge">image-area</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">image-area</code>’s only job is to display a photo that matches the state of our Virtual Pet. The way we are going to do this is to add an <code class="language-plaintext highlighter-rouge">img</code> element into <code class="language-plaintext highlighter-rouge">image-area</code> with class <code class="language-plaintext highlighter-rouge">pet-image</code> and <code class="language-plaintext highlighter-rouge">src</code> set to our <code class="language-plaintext highlighter-rouge">neutral</code> image.</p>
+
+<p>So, let’s add that <code class="language-plaintext highlighter-rouge">img</code> element.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  ...
+  &lt;body&gt;
+    &lt;div class="header"&gt;
+      &lt;div class="pet-name"&gt;Big L&lt;/div&gt;
+      &lt;div class="description"&gt;He is big and not good at things.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="main"&gt;
+      &lt;div class="image-area"&gt;
+        &lt;img class="pet-image" src='neutral.gif' /&gt;
+      &lt;/div&gt;
+      &lt;div class="interactive-area"&gt;I'm the interactive area&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>The result of adding that line is the following:</p>
+
+<p><img src="/assets/img/module1/vp-image-1.png" alt="" /></p>
+
+<p>So, your image may look very large or small compared to what you see above. However, as long as you see an image, you’ve done it right!</p>
+
+<p>So, there is a good chance all of your photos that you have chosen for your pet are different sizes. We want to establish some consistency between the pictures. Using CSS, let’s add sizing to our image. Let’s make all of our images have the same height of <code class="language-plaintext highlighter-rouge">500px</code>.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      ...
+      .pet-image {
+        height: 500px;
+      }
+      ...
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Now, no matter what the dimensions of the photos actually are, the height will be <code class="language-plaintext highlighter-rouge">500px</code>. This may result in some of your photos being blurry and that’s okay.</p>
+
+<p>One issue you may run into is that if you have a very wide photo (a photo where the width is much larger than the height), by setting the <code class="language-plaintext highlighter-rouge">height</code> to <code class="language-plaintext highlighter-rouge">500px</code> may cause a picture to be wider than the half of the screen it’s supposed to stay on. In order to prevent a photo from bleeding over into the other half of the screen, add <code class="language-plaintext highlighter-rouge">max-width: 100%;</code> to <code class="language-plaintext highlighter-rouge">pet-image</code>. This tells the <code class="language-plaintext highlighter-rouge">img</code> that its maximum width is as it’s container (which is <code class="language-plaintext highlighter-rouge">image-area</code> which is half the screen). By adding this line to the CSS, if you do have a very wide image, that image will be distorted. That is fine. It is better that the image is distorted rather to have that image covering the <code class="language-plaintext highlighter-rouge">interactive-area</code> or not be seen at all.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      ...
+      .pet-image {
+        height: 500px;
+        max-width: 100%;
+      }
+      ...
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>This previous changes results in the following:</p>
+
+<p><img src="/assets/img/module1/vp-image-2.png" alt="" /></p>
+
+<p>Okay, so now we know that all of our images will be <code class="language-plaintext highlighter-rouge">500px</code> in height and won’t overflow into the other half of the screen, let’s make our <code class="language-plaintext highlighter-rouge">image-area</code> look a little nicer. I’m going to do 2 things: add space around the image to give it some breathing room and make sure that the image is centered inside of <code class="language-plaintext highlighter-rouge">image-area</code>.</p>
+
+<p>In order to add space around the image, I will add <code class="language-plaintext highlighter-rouge">32px</code> worth of <code class="language-plaintext highlighter-rouge">padding</code> to <code class="language-plaintext highlighter-rouge">pet-image</code>.</p>
+
+<p>While adding extra space was pretty simple, centering things in CSS tends to not be as easy as we wish.</p>
+
+<p>There are 2 ways of thinking about centering something in CSS: tell that element to center itself or to ask the element it is inside of (a.k.a. the parent element) to center all of its elements. Telling the parent element to center all of the items inside of it tends to be easier than telling the element to center itself, so I will take the easier route.</p>
+
+<p>So, since <code class="language-plaintext highlighter-rouge">image-area</code> is the parent to <code class="language-plaintext highlighter-rouge">pet-image</code>, we need to add CSS to <code class="language-plaintext highlighter-rouge">image-area</code> so that it centers <code class="language-plaintext highlighter-rouge">pet-image</code>. We have seen <code class="language-plaintext highlighter-rouge">grid</code> used in our CSS several times already. <code class="language-plaintext highlighter-rouge">grid</code> has tons of cool features besides making columns, it can also center items! So, first we make <code class="language-plaintext highlighter-rouge">image-area</code> a <code class="language-plaintext highlighter-rouge">grid</code> by adding <code class="language-plaintext highlighter-rouge">display: grid</code>. Then, we tell it to center the items inside of it by also adding <code class="language-plaintext highlighter-rouge">justify-items: center</code>. This will horizontally align all items inside of this element which, in this case, is just <code class="language-plaintext highlighter-rouge">pet-image</code>.</p>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      ...
+      .pet-image {
+        height: 500px;
+        max-width: 100%;
+      }
+      ...
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+:ET

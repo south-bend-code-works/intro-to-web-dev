@@ -1,0 +1,233 @@
+I"F#<h1 id="friend-o-gram">Friend-o-gram</h1>
+
+<h2 id="goal">Goal</h2>
+
+<p>At the end of this activity, you will have built something similar to this:</p>
+
+<p><img src="" alt="Friend-o-gram" /></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>This activity will allow you to combine all the skills you have learned, HTML, CSS, and Visual Studio Code (aka VS Code).</p>
+
+<h2 id="instruction">Instruction</h2>
+
+<h3 id="1-create-a-file">1. Create a file</h3>
+
+<ul>
+  <li>First, on your desktop, right-click and select New Folder. Name it <code class="language-plaintext highlighter-rouge">friend-o-gram</code>.</li>
+  <li>Open VS Code. In the toolbar at the top, under File, click New File. Save the file as <code class="language-plaintext highlighter-rouge">index.html</code> in your folder <code class="language-plaintext highlighter-rouge">friend-o-gram</code>.</li>
+  <li>Copy and paste the following into your file in VS Code:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    Hello world!
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+<ul>
+  <li>Save the file and go to your desktop where you can see the folder <code class="language-plaintext highlighter-rouge">friend-o-gram</code>. Click into it and right-click on the <code class="language-plaintext highlighter-rouge">index.html</code> and open with Chrome (or whatever browser you have).</li>
+  <li>You should see <code class="language-plaintext highlighter-rouge">Hello world!</code> on an otherwise blank screen.</li>
+</ul>
+
+<h3 id="2-choose-6-photos">2. Choose 6 photos</h3>
+
+<ul>
+  <li>Find and download 6 photos of you and/or friends and put all the files in the folder <code class="language-plaintext highlighter-rouge">friend-o-gram</code>.
+    <ul>
+      <li>Use Facebook or other online source to find the photos.</li>
+    </ul>
+  </li>
+  <li>Once the photos are in your folder, rename all the photos as <code class="language-plaintext highlighter-rouge">photo-1.jpg</code>, <code class="language-plaintext highlighter-rouge">photo-2.jpg</code>, etc.</li>
+</ul>
+
+<h3 id="3-build-html-structure">3. Build HTML structure</h3>
+
+<ul>
+  <li>Our site is going to have 6 sections for the 6 photos. We are going to have 6 <code class="language-plaintext highlighter-rouge">div</code> elements that will have the photos as backgrounds.</li>
+  <li>Put 6 <code class="language-plaintext highlighter-rouge">div</code> elements into your code.</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Label each div with 2 classes.
+    <ul>
+      <li>The first class should be <code class="language-plaintext highlighter-rouge">photo</code> so that we can add the same CSS to all photos if we want.</li>
+      <li>The second class should be the same as the image name. So, photo-1 should have the class <code class="language-plaintext highlighter-rouge">photo-1</code> as so on. This allows us to add CSS to individual <code class="language-plaintext highlighter-rouge">div</code>s without affecting the other <code class="language-plaintext highlighter-rouge">div</code>s.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="photo photo-1"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-2"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-3"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-4"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-5"&gt;&lt;/div&gt;
+    &lt;div class="photo photo-6"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h3 id="4-add-css">4. Add CSS</h3>
+
+<ul>
+  <li>In the <code class="language-plaintext highlighter-rouge">head</code> section of your file, include <code class="language-plaintext highlighter-rouge">style</code> tags</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+
+      /* This is how you make a comment in CSS. */
+      /* Anything inside the slash and asterisk will be ignored and is helpful for notes. */
+
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Make the body have 3 columns by using <code class="language-plaintext highlighter-rouge">grid</code></li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid; /* This make the body a grid */
+        grid-template-columns: auto auto auto; /* This tells the body element to split into 3 equal columns */
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>If you refresh and look at your site, you should still see nothing. However, the <code class="language-plaintext highlighter-rouge">body</code> has been divided into 3 equal columns. Since there are 6 <code class="language-plaintext highlighter-rouge">div</code> tags inside of <code class="language-plaintext highlighter-rouge">body</code>, this makes <code class="language-plaintext highlighter-rouge">body</code> a 3 by 2 grid of <code class="language-plaintext highlighter-rouge">div</code>s.</li>
+</ul>
+
+<h3 id="5-add-photos">5. Add photos</h3>
+
+<ul>
+  <li>Currently, there are 6 <code class="language-plaintext highlighter-rouge">div</code>s in our <code class="language-plaintext highlighter-rouge">body</code> that have no height and no background images.</li>
+  <li>The first step is to add height to our <code class="language-plaintext highlighter-rouge">div</code>s so that they aren’t flat.</li>
+  <li>In the CSS, grab all the <code class="language-plaintext highlighter-rouge">div</code>s using the selector <code class="language-plaintext highlighter-rouge">.photo</code> since all of the <code class="language-plaintext highlighter-rouge">div</code>s have that class.</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Then, make all the <code class="language-plaintext highlighter-rouge">div</code>s have a height of <code class="language-plaintext highlighter-rouge">250px</code>.</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .photo {
+        height: 250px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Now that the <code class="language-plaintext highlighter-rouge">div</code>s have height, add the photos as background images.</li>
+  <li>Using the CSS property <code class="language-plaintext highlighter-rouge">background-image</code>, link to the photos you saved earlier.</li>
+</ul>
+
+<div class="hint">Hover for hint</div>
+
+<div class="language-plaintext hint-content highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        display: grid; /* This make the body a grid */
+        grid-template-columns: auto auto auto; /* This tells the body element to split into 3 equal columns */
+      }
+      .photo {
+        height: 250px;
+      }
+      .photo-1 {
+        background-image: url('photo-1.jpg');
+      }
+      .photo-2 {
+        background-image: url('photo-2.jpg');
+      }
+      .photo-3 {
+        background-image: url('photo-3.jpg');
+      }
+      .photo-4 {
+        background-image: url('photo-4.jpg');
+      }
+      .photo-5 {
+        background-image: url('photo-5.jpg');
+      }
+      .photo-6 {
+        background-image: url('photo-6.jpg');
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre></div></div>
+
+:ET
