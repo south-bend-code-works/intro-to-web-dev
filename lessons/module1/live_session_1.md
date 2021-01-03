@@ -17,7 +17,7 @@ layout: default
 4. Hosting your website on github
 5. Review Final Project Part 1 (last 5 minutes)
 
-## Zoom Link
+## Zoom Links
 
 ### Section 1 (10am to 12pm)
 <https://notredame.zoom.us/j/96545079849?pwd=K3psL1J4Q3FUNmxCbmpSa0pTbm9ndz09>
