@@ -40,3 +40,67 @@ layout: default
 **Meeting ID: 922 4168 6868**
 
 **Passcode: 122449**
+
+## Solution from Live Session
+
+
+```
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <style>
+      .photo {
+        height: 400px;
+        background-size: cover;
+      }
+
+      .photo-holder {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      #photo-1 {
+        background-image: url('photo-1.jpg')
+      }
+
+      #photo-2 {
+        background-image: url('photo-2.jpg')
+      }
+
+      #photo-3 {
+        background-image: url('photo-3.jpg');
+        background-position: 50% 50%;
+      }
+
+      #photo-4 {
+        background-image: url('photo-4.jpg')
+      }
+
+      #photo-5 {
+        background-image: url('photo-5.jpg')
+      }
+
+      #photo-6 {
+        background-image: url('photo-6.jpg')
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Friend-o-gram</h1>
+
+    <div class="photo-holder">
+      <div class="photo" id="photo-1"></div>
+      <div class="photo" id="photo-2"></div>
+      <div class="photo" id="photo-3"></div>
+      <div class="photo" id="photo-4"></div>
+      <div class="photo" id="photo-5"></div>
+      <div class="photo" id="photo-6"></div>
+    </div>
+
+  </body>
+
+</html>
+```
