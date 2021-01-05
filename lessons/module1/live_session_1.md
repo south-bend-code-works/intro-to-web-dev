@@ -43,6 +43,7 @@ layout: default
 
 ## Solution from Live Session
 
+*Note: This was the solution we created to friend-o-gram in the live sessions for Sections 1 & 2.*
 
 ```
 <!DOCTYPE html>
