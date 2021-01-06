@@ -47,7 +47,7 @@ Goals:
     <body>
         <button onclick="sayHello()">Hello, World!</button>
         <script>
-            function sayHello() {
+            var sayHello = () => {
                 alert("I can say hello!")
             }
         </script>
@@ -62,7 +62,7 @@ Goals:
         <script>
             var btn = document.getElementById("btn")
 
-            function sayHello() {
+            var sayHello = () => {
                 alert("I say hello when you click on the btn")
             }
 
@@ -79,7 +79,7 @@ Goals:
         <script>
             var btn = document.getElementById("btn")
 
-            function sayHello() {
+            var sayHello = () => {
                 btn.innerText = "Changing the DOM."
             }
 
@@ -87,6 +87,8 @@ Goals:
         </script>
     </body>
 </html>
+
+<!-- DISCUSS function vs () => {} -->
 
 <!--
  _____  _   _  _  ___    ___    _  _____  ___    _   _       _      __   
