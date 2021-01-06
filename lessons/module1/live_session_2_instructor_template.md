@@ -41,6 +41,22 @@ Goals:
     </body>
 </html>
 
+<!-- Step 1: An Alert -->
+<!DOCTYPE html>
+<html>
+    <body>
+    </body>
+    <script>
+
+      var hello = () => {
+        alert("Hello!")
+      }
+
+      hello()
+      
+    </script>
+</html>
+
 <!-- Step 2: An Alert via a button click -->
 <!DOCTYPE html>
 <html>
