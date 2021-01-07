@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Project Part 1: Virtual Pet
+# Project 2: Snake Game!
 
 ## Goal
 
@@ -28,7 +28,7 @@ document.addEventListener("keydown", (event) => {
 })
 ```
 
-Feel free to copy and paste that in the console of your browswer. Then, after clicking back into the page, any time you hit a key, in the console log, you will see `You pressed a key!`. But what is happening in that code above?
+Feel free to copy and paste that in the console of your browser. Then, after clicking back into the page, any time you hit a key, in the console log, you will see `You pressed a key!`. But what is happening in that code above?
 
 First we have `document.addEventListener`. This is saying to the whole `document` (which is our whole page) that we are adding an event listener onto it. We could be move specific and reference a specific to add the event listener to, but we want to add it to the whole page so we just use `document`.
 
@@ -138,7 +138,7 @@ document.querySelectorAll(".segment").forEach((element) => {
 })
 ```
 
-Let's break down what we are seeing agove. First, we have `document.querySelectorAll`. This bit means we are going to search the whole document for all of the elements that match the string we give to it as an argument. The string we gave `document.querySelectorAll` was `".segment"`. Like CSS, we use `.` to indicate a class which in this case is `segment`. So, the line `document.querySelectorAll(".segment")` is saying *get every element with the class `segment` and put it in an array*.
+Let's break down what we are seeing above. First, we have `document.querySelectorAll`. This bit means we are going to search the whole document for all of the elements that match the string we give to it as an argument. The string we gave `document.querySelectorAll` was `".segment"`. Like CSS, we use `.` to indicate a class which in this case is `segment`. So, the line `document.querySelectorAll(".segment")` is saying *get every element with the class `segment` and put it in an array*.
 
 So, now that we have the element we are looking for in an **array**, we can use `.forEach` to iterate over each element! In the example above, we are simply printing those elements to the console one at a time. We want to actually remove these elements from the HTML. Let's look at an example that does this:
 
@@ -148,7 +148,7 @@ document.querySelectorAll(".segment").forEach((element) => {
 })
 ```
 
-The example above is the same as the one before except instead of pring the `element` to the console, we have a different line of code, `document.getElementById("holder").removeChild(element)`. We know what `document.getElementById("holder")` does as it simply reference the `div` with the id `holder`. This is followed by `.removeChild(element)`. The function `removeChild` looks into the element it was called on (in this case, `#holder`) for an element that matches the `element` we pass to it and then removes it.
+The example above is the same as the one before except instead of printing the `element` to the console, we have a different line of code, `document.getElementById("holder").removeChild(element)`. We know what `document.getElementById("holder")` does as it simply reference the `div` with the id `holder`. This is followed by `.removeChild(element)`. The function `removeChild` looks into the element it was called on (in this case, `#holder`) for an element that matches the `element` we pass to it and then removes it.
 
 To summarize in English what the code above is doing, it would read: *Find all elements with class `segment`. Once you have a list of those elements, for each element, look inside of `#holder` and remove that element.*
 
@@ -258,7 +258,7 @@ If you can see your `.segment` and it looks good, you can go ahead and remove it
 
 ### JS
 
-Now onto the JS. We need a way to track the segments of the snake. Let's use an **array** to record to coordinates. Each of the coordinates should be an **object** with 2 keys: `x` and `y`. Both `x` and `y` will have values that are numbers representing the segment's location on the grid. Create a variable `segments` that is an array with 3 coordinates that could exist in your grid in the array as placedholders.
+Now onto the JS. We need a way to track the segments of the snake. Let's use an **array** to record to coordinates. Each of the coordinates should be an **object** with 2 keys: `x` and `y`. Both `x` and `y` will have values that are numbers representing the segment's location on the grid. Create a variable `segments` that is an array with 3 coordinates that could exist in your grid in the array as placeholders.
 
 <div class="hint">Hover for hint</div>
 
@@ -302,7 +302,7 @@ Now, this function `removeSegments` should be called first in the function `onEv
 
 ## Conclusion
 
-Good work! You have built the beginning of snake along with learning neat new tricks! This stuff is in no way easy so if you don't get it immediately, that is very understandle. Continue to try to make it work and use the solution as a guide to help you figure out your own solution.
+Good work! You have built the beginning of snake along with learning neat new tricks! This stuff is in no way easy so if you don't get it immediately, that is very understand. Continue to try to make it work and use the solution as a guide to help you figure out your own solution.
 
 ![](https://media.tenor.com/images/a0dc4ec3bbf820d70d6ff5f6a2f45db9/tenor.gif)
 

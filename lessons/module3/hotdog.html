@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hot dogs == sandwiches?</title>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    </head>
+    <body>
+        <h1 id="hotDogOutput">Hot dog status:</h1>
+        <input type="textfield" id="latestHotDogStatus"/>
+        <button id="saveButton">Save</button>
+
+        <!--Unlike the video tutorial, we are keeping all our javascript inline in our html file.-->
+        <script>
+
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyCzd22PWoCipek5E-7qDx-WfFmBO0hjb6g",
+                authDomain: "intro-to-webdev-chat-app.firebaseapp.com",
+                projectId: "intro-to-webdev-chat-app",
+                storageBucket: "intro-to-webdev-chat-app.appspot.com",
+                messagingSenderId: "556658533694",
+                appId: "1:556658533694:web:d26d93919b6280d7efb86f"
+            };
+
+            // Initialize our application
+            firebase.initializeApp(firebaseConfig);
+            var firestore = firebase.firestore();
+
+            const docRef = firestore.doc("sample/sandwichdata";)
+            const outputHandler = document.getElementById("hotDogOutput")
+            const inputTextField = document.getElementById("latestHotDogStatus")
+            const saveButton = document.getElementById("saveButton")
+
+            saveButton.addEventListener("click", function() {
+                const textToSave = inputTextField.value;
+
+                docRef.set({
+                    hotDogStatus: textToSave
+                }).then(function() {}).catch(function(error){console.log("Got and error:", error)});
+                
+            })
+            
+        </script>
+    </body>
+</html>
