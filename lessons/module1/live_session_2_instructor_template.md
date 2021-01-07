@@ -66,7 +66,7 @@ Goals:
             var sayHello = () => {
                 alert("I can say hello!")
             }
-        </script>
+        </script>s
     </body>
 </html>
 
