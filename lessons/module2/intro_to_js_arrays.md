@@ -8,7 +8,7 @@ layout: default
 By the end of this lesson, you should have an understanding of JavaScript Arrays, why we use them, and how to code them.
 
 ## Overview
-An array is a data structure consisting of a collection, or list, of elements.  Arrays are ordered.  Also, arrays in javascript can consist of any types of elements (e.g. strings, numbers, objects, etc).
+An array is a data structure consisting of a collection, or list, of elements.  Arrays are ordered.  Also, arrays in JS can consist of any types of elements (e.g. strings, numbers, objects, etc).
 
 ### Concept: Making arrays
 Earlier, we saw that variables could be both numbers and strings like so:
@@ -150,8 +150,8 @@ var arr = [1,3,5,7,9]
 var indexOf5 = arr.indexOf(5)
 var indexOf8 = arr.indexOf(8)
 
-// value of is5Included is 2
-// value of is8Included is -1
+// value of indexOf5 is 2
+// value of indexOf8 is -1
 ```
 
 ### Challenge
@@ -160,8 +160,6 @@ Try out these concepts at this [CodePen](https://codepen.io/jorymullet/pen/XWjgr
 
 ## Conclusion
 
-TODO
+Wow! Arrays are neat! It may not seem like it yet, but learning arrays is a big step in using code to do incredible things. If I were you, I'd be pretty pumped like this guy:
 
-Wow! You just learned a ton! Excellent work. Now that you know **arrays**, **objects**, and **loops**, your ability to create interesting webpages is dramatically greater! My only question now is, *who **can** stop you?* Answer:
-
-![](https://media4.giphy.com/media/X7PCkbUm1LYO5VqbKf/giphy.gif)
+![](https://i.imgur.com/9mFhuTv.gif)

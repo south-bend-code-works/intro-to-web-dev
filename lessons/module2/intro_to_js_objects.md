@@ -8,7 +8,7 @@ layout: default
 By the end of this lesson, you should have an understanding of JavaScript Objects, why we use them, and how to code them.
 
 ## Overview
-An `object` is type of variable that contains an unordered set of related properties.  Each a property is an association between a name (or key) and a value.  The name (or key) is always a string, and the value can be any type of object (e.g. a number, a string, another object, or even a function!)
+An `object` is type of variable that contains an unordered set of related properties.  Each property is an association between a name (or key) and a value.  The name (or key) is simply a word and the value can be any type of object (e.g. a number, a string, another object, or even a function!)
 
 #### Concept: Making objects
 
@@ -164,4 +164,13 @@ Go to this [CodePen](https://codepen.io/jorymullet/pen/LYRLeBo){: target='_blank
 
 ## Conclusion
 
-TODO
+Whoot whoot! Now, we can create any concept in concept in code that we want! In fact, if I wanted to create an object for how I'm feeling about what we learned it would look like:
+
+```
+var myFeelings = {
+  mood: 'giddy',
+  intensity: 1000,
+}
+```
+
+![](https://cdn125.picsart.com/212345420005202.gif?to=min&r=640)
