@@ -47,7 +47,7 @@
         firebase.initializeApp(firebaseConfig);
 
         // Store a reference to firestore as simply db (for convienence)
-        var db = firebase.firestore();
+        var firestore = firebase.firestore();
 
         // ---------------------------------------
         // Save Messages to our Firestore Database
@@ -59,7 +59,7 @@
             messageText = document.getElementById("message").value
             
             // Add a new message entry to the database.
-            db.collection('messages').add({
+            firestore.collection('messages').add({
                 username: username,
                 txt: messageText,
                 timestamp: Date.now()
@@ -71,7 +71,7 @@
         // ---------------------------------------
         
         // Define a messagesQuery which returns all documents in our 'messages' collection, ordered from oldest to newest.
-        messagesQuery = db.collection('messages').orderBy('timestamp', 'asc')
+        messagesQuery = firestore.collection('messages').orderBy('timestamp', 'asc')
 
         // Run the query and listen for changes (adds/deletes/modifications) to it's data (https://firebase.google.com/docs/firestore/query-data/listen)
         // The first time we call onSnapshot, all of the data for our query will be returned with a change type of "add".
