@@ -11,7 +11,7 @@
 http://patorjk.com/software/taag/#p=display&f=Puffy&t='Fin
 
 Agenda:
--1. Introduce yourself 
+-1. Introduce yourself
 
 0. House Keeping: Review how the class is structured.
 
@@ -61,7 +61,7 @@ Agenda:
         - For Example, at the end of the first week you will have 3 projects published (Friend-o-Gram, Quidditch, Virtual Pet)
     - The projects are important, but it's also important to show your code (recruiters, potential employers)
 
-3. Participation / Communication (How we will use Zoom)
+4. Participation / Communication (How we will use Zoom)
     - I want you to talk in the live session.
     - At any time, you can unmute your microphone and ask a question.
     - I am also monitoring the chat, and I will answer any questions you post their as well.
@@ -81,6 +81,7 @@ Agenda:
     - Get them to explain to you servers and clients (backend - front end)
         - Servers host HTML files
         - Browsers request and render HTML files
+        
 2. How Chrome Works
  _____ _
 /  __ \ |                             

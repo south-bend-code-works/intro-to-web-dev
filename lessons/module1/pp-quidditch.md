@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Practice Problem: Quidditch Cup Instructions
+# Practice Problem: Quidditch Cup 1.0
 
 ## Goal
 
@@ -10,399 +10,464 @@ Our goal for this project is to build an interactive, web-based version of Quidd
 
 At the end of this activity, you will have built something similar to this:
 
-![quidditch example]({{ site.baseurl }}/assets/img/module1/quidditch-animated.gif)
+![quidditch example]({{ site.baseurl }}/assets/img/module1/quidditch1.0-animated.gif)
 
 ## Overview
 
-This activity will allow you to combine all the skills you have learned so far:
-* Visual Studio Code (VS Code).
-* HTML, CSS, and JavaScript
+In prior the lessons, all of the HTML and CSS on our page was static, meaning that it stayed the same.  In this activity we will use JavaScript to manipulate our HTML and CSS to dynamically update our webpage and game.  Developers call this process of dynamically updating the HTML and CSS **manipulating the DOM** (Document Object Model).  
 
-## Instruction
+For example, when a player clicks on the Quaffle we need to increase the score of the game by 10 points.  We can accomplish this by changing the HTML that displays the score using JavaScript.
+
+We will practice the following concepts in this lesson:
+* Visual Studio Code (VS Code)
+* HTML, CSS
+* JavaScript
+
+## Instructions
 
 ### 1. Create a new project
 
-* First, on your desktop, right-click and select New Folder. Name it `quidditch-cup`.
-* Open VS Code. In the toolbar at the top, under File, click New File. Save the file as `index.html` in your folder `quidditch-cup`.
-* Copy and paste the following into your file in VS Code:
-
+* First, on your desktop, right-click and create a New Folder. Name it `quidditch-cup`.
+* Open your new folder in VS Code. 
+* In the toolbar at the top, under File, click New File. Save the file as `index.html`.
+* Copy and paste the following starter code into your index.html file in VS Code:
+  
 ```
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Quidditch-Cup
-    
-    <!--All of our CSS will go here-->
-    <sytle>
+    <title>Quidditch Cup</title>
+    <style>
+      .brown {
+        background-color: brown;
+        color: white;
+        padding: 3px;
+        border-radius: 5px;
+      }
+
+      li {
+        padding: 6px;
+      }
+
+      button {
+        margin: 5px;
+      }
+
+      #gameboard {
+        background-color: lightskyblue;
+        height: 500px;
+        width: 500px;
+      }
+
+      #quaffle {
+        position: absolute;
+        background-image: url("imgs/quaffle64x64.png");
+        width: 64px;
+        height: 64px;
+        visibility: hidden;
+        transition: 0.5s transform;
+      }
     </style>
-
   </head>
-
-  <!--All of our HTML will go here-->
   <body>
-    <H1>Quidditch Cup</H1>
-  </body>
+    <h1>Quidditch Cup</h1>
+    <h2>Version 1.0</h2>
+    <p>The object of the game of Quidditch is to score more the most points!</p>
+    <h2>Rules</h2>
+    <ol>
+      <li>Clicking on the <span class="brown">Quaffle</span> earns <b>10 points</b>.</li>
+      <li>Refresh your browser to restart the game</li>
+    </ol>
+    <h3>Score: <span id="scoreboard">No Score Yet</span></h3>
 
-  <!--All of our JavaScript will go here-->
-  <script>
-  </script>
+    <button>New Game</button>
+
+    <div id="gameboard">
+      <div id="quaffle"></div>
+    </div>
+
+    <script>
+      // All of our JavaScript will be written inside this script tag.
+
+    </script>
+  </body>
 </html>
 ```
+
+#### Try it out
 * Save the file and go to your desktop where you can see the folder `quidditch-cup`. Click into it and right-click on the `index.html` and open with Chrome (or whatever browser you have).
-* You should see `Quidditch Cup` on an otherwise blank screen.
+* You should see our `Quidditch Cup` application.
+* Clicking on the _new game_ button shouldn't do anything yet.
 
 ### 2. Download and add the supporting files we will need to your project folder
-Let's create some sub-folders to organize our project.  Keeping your code and assets organized ensures that 
-* Download the following photos and place them in a new sub-folder, `imgs`, in your `quidditch-cup` project directory.
-  * Image Asset Links Here
-* Download the following audio file and place it in the new sub-folder, `sounds`, in your `quidditch-cup` project directory. 
-  * Audio Links Here
+Download the images we will use in our game:
+* Right-Click and download the following images 
+* Save them in a new sub-folder, `imgs`, in your `quidditch-cup` project directory.
 
-### 2. Build HTML structure
+Quaffle            |  Golden Snitch
+:-------------------------:|:-------------------------:
+![]({{ site.baseurl }}/assets/img/module1/quidditch-assets/quaffle64x64.png)  |  ![]({{ site.baseurl }}/assets/img/module1/quidditch-assets/snitch64x64.png)
 
-* Our game is going to have 6 sections for the 6 photos. We are going to have 6 `div` elements that will have the photos as backgrounds.
-* Put 6 `div` elements into your code.
 
-<div class="hint">Hover for hint</div>
+### 3. Make the `New Game` Button Work
 
-{: .hint-content}
-```
-<!DOCTYPE html>
-<html>
-  <head></head>
-  <body>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </body>
-</html>
-```
+Now we will add some JavaScript to start our game when the user clicks the `new game` button.
 
-* Label each div with 2 classes. 
-  * The first class should be `photo` so that we can add the same CSS to all photos if we want.
-  * The second class should be the same as the image name. So, photo-1 should have the class `photo-1` as so on. This allows us to add CSS to individual `div`s without affecting the other `div`s.
+For each step below, write your code between the `<script></script>` tags in our index.html file.
+* Define a variable, called _score_, and initialize it to 0.
+  * We will use this to track the score for our player.
 
 <div class="hint">Hover for hint</div>
 
 {: .hint-content}
 ```
-<!DOCTYPE html>
-<html>
-  <head></head>
-  <body>
-    <div class="photo photo-1"></div>
-    <div class="photo photo-2"></div>
-    <div class="photo photo-3"></div>
-    <div class="photo photo-4"></div>
-    <div class="photo photo-5"></div>
-    <div class="photo photo-6"></div>
-  </body>
-</html>
+<script>
+  var score = 0;
+</script>
 ```
 
-### 4. Add CSS
-
-* In the `head` section of your file, include `style` tags
+* Define a variable, _scoreboard_, and set it equal to the result of: `document.getElementById("scoreboard");`
+  * This represents the HTML element with the ID of "scoreboard".
+  * We will use this to update the the following html: `<span id="scoreboard">No Score Yet</span>`.
+  * For example, if we wanted the score to be 1000 you could run the following JavaScript: `scoreboard.innerHTML = "1000"`
 
 <div class="hint">Hover for hint</div>
 
 {: .hint-content}
 ```
+<script>
+  var score = 0;
+  var quaffle = document.getElementById("quaffle");
+</script>
+```
+
+* Define a variable, _quaffle_, and set it equal to the result of: `document.getElementById("quaffle");`
+  * This variable references the HTML element with the ID of "quaffle": `<div id="quaffle"></div>`
+  * We will use this variable to modify the position of our quaffle div on the screen.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<script>
+  var score = 0;
+  var scoreboard = document.getElementById("scoreboard");
+  var quaffle = document.getElementById("quaffle");
+</script>
+```
+
+* Declare a new function, _startGame()_, it should:
+  * Ensure the score is set to zero by:
+    * setting our _score_ variable to 0
+    * setting the innerHTML of our _scoreboard_ to _score_
+  * Unhide the quaffle
+    * set the css visibility attribute of our _quaffle_ div to visible in the DOM by:
+      * quaffle.style.visibility = "visible";
+      * notice that this was originally set to "hidden".
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<script>
+  var score = 0;
+  var scoreboard = document.getElementById("scoreboard");
+  var quaffle = document.getElementById("quaffle");
+
+  // Function that starts a new game of Quidditch!
+  function startGame() {
+    // Set the score to zero
+    score = 0;
+    scoreboard.innerHTML = score;
+
+    // Make our quaffle objects visibile. Note that we initially set them to be invisible in our CSS above.
+    quaffle.style.visibility = "visible";
+  }
+</script>
+```
+
+* In our HTML, update our button so that it knows what to do when it's clicked.  
+    * This is done by adding a onclick attribute to our button's html which calls our startGame() JavaScript function:
+      * ```<button onclick="startGame()">New Game</button>```
+
+#### Try it out
+
+Once you've made your changes, refresh your browser and click on _new game_.  This should set the score to 0 and our quaffle image should display on the page, though nothing will move yet. 
+
+Hints:
+  * You can see what code your browser is running by using the Developer Tools in Chrome to inspect the code.
+  * You can also debug any errors you might be seeing.  For example, chrome might warn you if it cannot find the quaffle.png, which means you may have not downloaded it or placed it in the appropriate location.
+
+After clicking "New Game" your screen should look like this:
+
+![new game]({{ site.baseurl }}/assets/img/module1/quidditch1.0-newgame.png)
+
+### 4. Make the Quaffle Move
+
+Now comes the fun part, let's update our JavaScript code to make our quaffle fly about on the screen.
+
+To accomplish this we will introduce a handy JavaScript function: `setTimeout()`.  This is a function that takes two arguments.  The first argument is the name of another function we want to call.  The second argument is the amount of time in milliseconds we should wait before calling that function.  Note that 1000 milliseconds equals 1 second.
+
+Now that we have learned about setTimeout, let's use it.  To do this we need to add the function called `moveQuaffle()` to our script.  The code for this function is included below for your convenience.
+
+```
+function moveQuaffle() {
+  // Generate a random x,y position for our Quaffle
+  let randY = Math.floor(Math.random() * 436 + 1); // 500 (the width of the game board) - 64 (the width of the quaffle) = 436 px
+  let randX = Math.floor(Math.random() * 436 + 1);
+
+  // Use CSS to animate the transition from our current position to the new position.
+  quaffle.style.transform = `translate(${randX}px, ${randY}px)`; // Use a 'template literal' (backtick) to generate the string we need for our css animation.
+
+  // If we had a move that hasn't completed, let's clear it so we can make a new one.
+  clearTimeout(quaffleTimeoutID)
+  
+  // Move the Quaffle after so many seconds.
+  quaffleTimeoutID = setTimeout(moveQuaffle, quaffleSpeed); // Note: we keep track of this timer by storing it in the quaffleTimeoutID variable in case we need to cancel the movement later.
+}
+```
+
+Next, we need to add some variables that this function uses to the top of our script:
+* A new variable, `quaffleSpeed`, that is set to 1500 milliseconds (1.5 seconds)
+* A new variable, `quaffleTimeoutID`, with the following code: `var quaffleTimeoutID = null`.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<script>
+  var score = 0;
+  var scoreboard = document.getElementById("scoreboard");
+  var quaffle = document.getElementById("quaffle");
+
+  // Variables to help animate our quaffle.
+  var quaffleSpeed = 1500; // speed in Milliseconds.
+  var quaffleTimeoutID = null;
+
+  // Function that starts a new game of Quidditch!
+  function startGame() {
+    // Set the score to zero
+    score = 0;
+    scoreboard.innerHTML = score;
+
+    // Make our quaffle objects visibile. Note that we initially set them to be invisible in our CSS above.
+    quaffle.style.visibility = "visible";
+  }
+
+  function moveQuaffle() {
+    // Generate a random x,y position for our Quaffle
+    let randY = Math.floor(Math.random() * 436 + 1); // 500 (the width of the game board) - 64 (the width of the quaffle) = 436 px
+    let randX = Math.floor(Math.random() * 436 + 1);
+
+    // Use CSS to animate the transition from our current position to the new position.
+    quaffle.style.transform = `translate(${randX}px, ${randY}px)`; // Use a 'template literal' (backtick) to generate the string we need for our css animation.
+
+    // If we had a move that hasn't completed, let's clear it so we can make a new one.
+    clearTimeout(quaffleTimeoutID)
+    
+    // Move the Quaffle after so many seconds.
+    quaffleTimeoutID = setTimeout(moveQuaffle, quaffleSpeed); // Note: we keep track of this timer by storing it in the quaffleTimeoutID variable in case we need to cancel the movement later.
+  }
+</script>
+```
+
+* Finally, we need to add one line of code in our startGame() function to call moveQuaffle().
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+  // Function that starts a new game of Quidditch!
+  function startGame() {
+    // Set the score to zero
+    score = 0;
+    scoreboard.innerHTML = score;
+
+    // Make our quaffle objects visibile. Note that we initially set them to be invisible in our CSS above.
+    quaffle.style.visibility = "visible";
+
+    //ADD THIS LINE OF CODE TO START MOVING THE QUAFFLE.
+    moveQuaffle(); 
+  }
+```
+
+#### Try it out
+Try it out in your browser.  You should see your quaffle flying about the screen.  
+
+### 5. Pause and Review
+At this point, you should pause and review the code carefully.  Try and answer the following questions:
+* Why does the quaffle keep moving about the screen as opposed to moving once and stoping?  See if you can identify the line of code that makes this animation repeat itself indefinitely.
+* How would you increase or decrease the speed of the quaffle?
+* Why does the animation stop once we refresh the browser?
+
+### 6. Update our Score each time we click on the Quaffle
+
+It wouldn't be a game if we didn't keep track of the score.  Previously, we added an `onclick` attribute to our `new game` button which is logical as you can click a button.  However, HTML actually allows us to add an `onclick` attribute to any HTML object.  In this case, we want to add an `onclick` attribute to our quaffle, which is a div.
+
+Modify our HTML Code:
+* Add an onclick handler to the quaffle div.  It should call a new function, scoreQuaffle(), that we will create below.
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<div id="gameboard">
+  <div id="quaffle" onclick="scoreQuaffle()"></div>
+</div>
+```
+
+Create a new function, scoreQuaffle().  It should:
+  * Increment our _score_ variable by 10 points
+  * Update the html of our _scoreboard_ to display the new _score_ on the website
+  * Call moveQuaffle() to immediately update the location of our quaffle
+
+<div class="hint">Hover for hint</div>
+
+{: .hint-content}
+```
+<script>
+  // Logic to score when the quaffle is clicked.
+  function scoreQuaffle() {
+    // 10 points for scoring the quaffle!
+    score = score + 10;
+
+    // Update the scoreboard
+    scoreboard.innerHTML = score;
+
+    // Move the Quaffle Immediately!
+    clearTimeout(quaffleTimeoutID); // Cancel the previously planned movement of the Quaffle.
+    moveQuaffle(); // Move the Quaffle Immediatly
+  }
+<script>
+```
+
+
+
+#### Try it out
+Try it out in your browser.  You should now be able to see the score increase and have a mostly complete game!  You can refresh your browser to reset the game and play again.
+
+## Complete Solution
+
+Congrats!  At this point you've built a fully functional game using Javascript to manipulate the DOM (aka our html and css).  In our in-class live session we will take a deeper dive into this solution and extend the game with new features.  
+
+Here is the complete solution, all together, for version 1.0 of our Quidditch Cup game:
+
+<div class="hint">Complete Solution</div>
+
+{: .hint-content}
+```
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <title>Quidditch Cup</title>
     <style>
-
-      /* This is how you make a comment in CSS. */
-      /* Anything inside the slash and asterisk will be ignored and is helpful for notes. */
-
-    </style>
-  </head>
-  ...
-</html>
-```
-
-* Make the body have 3 columns by using `grid`.
-
-<div class="hint">Hover for hint</div>
-
-{: .hint-content}
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body {
-        display: grid; /* This make the body a grid */
-        grid-template-columns: auto auto auto; /* This tells the body element to split into 3 equal columns */
+      .brown {
+        background-color: brown;
+        color: white;
+        padding: 3px;
+        border-radius: 5px;
       }
-    </style>
-  </head>
-  ...
-</html>
-```
 
-* If you refresh and look at your site, you should still see nothing. However, the `body` has been divided into 3 equal columns. Since there are 6 `div` tags inside of `body`, this makes `body` a 3 by 2 grid of `div`s.
-
-### 5. Add photos
-
-* Currently, there are 6 `div`s in our `body` that have no height and no background images.
-* The first step is to add height to our `div`s so that they aren't flat.
-* In the CSS, grab all the `div`s using the selector `.photo` since all of the `div`s have that class.
-
-<div class="hint">Hover for hint</div>
-
-{: .hint-content}
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body {
-        display: grid;
-        grid-template-columns: auto auto auto;
+      li {
+        padding: 6px;
       }
-      .photo {
 
+      button {
+        margin: 5px;
       }
-    </style>
-  </head>
-  ...
-</html>
-```
 
-* Then, make all the `div`s have a height of `250px`.
-
-<div class="hint">Hover for hint</div>
-
-{: .hint-content}
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body {
-        display: grid;
-        grid-template-columns: auto auto auto;
+      #gameboard {
+        background-color: lightskyblue;
+        height: 500px;
+        width: 500px;
       }
-      .photo {
-        height: 250px;
-      }
-    </style>
-  </head>
-  ...
-</html>
-```
 
-* Now that the `div`s have height, add the photos as background images.
-* Using the CSS property `background-image`, link to the photos you saved earlier.
-
-
-<div class="hint">Hover for hint</div>
-
-{: .hint-content}
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body {
-        display: grid;
-        grid-template-columns: auto auto auto;
-      }
-      .photo {
-        height: 250px;
-      }
-      .photo-1 {
-        background-image: url('photo-1.jpg');
-      }
-      .photo-2 {
-        background-image: url('photo-2.jpg');
-      }
-      .photo-3 {
-        background-image: url('photo-3.jpg');
-      }
-      .photo-4 {
-        background-image: url('photo-4.jpg');
-      }
-      .photo-5 {
-        background-image: url('photo-5.jpg');
-      }
-      .photo-6 {
-        background-image: url('photo-6.jpg');
-      }
-    </style>
-  </head>
-  ...
-</html>
-```
-
-### 6. Resize photos
-
-* If you refresh the page you have been working on, you should see 6 different images. However, they may not look like you expected. They may seem really 'zoomed in'.
-* To fix this, we go back into the `.photo` selector in the CSS in order to change how the background looks.
-* Add the `background-size` property to the `.photo` selector with the value `cover`
-
-
-<div class="hint">Hover for hint</div>
-
-{: .hint-content}
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body {
-        display: grid;
-        grid-template-columns: auto auto auto;
-      }
-      .photo {
-        height: 250px;
-        background-size: cover;
-      }
-      ...
-    </style>
-  </head>
-  ...
-</html>
-```
-
-* That likely makes it look some better but the photos are still likely not centered.
-* Center the images by adding the property `background-position` with value `50% 50%`
-  * This tells the background images to be centered both vertically and horizontally.
-
-
-<div class="hint">Hover for hint</div>
-
-{: .hint-content}
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body {
-        display: grid;
-        grid-template-columns: auto auto auto;
-      }
-      .photo {
-        height: 250px;
-        background-size: cover;
-        background-position: 50% 50%;
-      }
-      ...
-    </style>
-  </head>
-  ...
-</html>
-```
-
-### 7. Cleaning up
-
-* Some of the photos might not look their best being centered vertically and horizontally with a height of 200px.
-
-![bad example]({{ site.baseurl }}/assets/img/module1/fog_bad_example.png)
-
-* A lot of the photos don't seeem tall enough to fit the parts of the picture that I want so I will increase the height to 400px.
-
-![better example]({{ site.baseurl }}/assets/img/module1/fog_better_example.png)
-
-* Better. However, I want photo 1 to be shifted lower. 
-* So, instead of `background-position` being `50% 50%` for that photo, I'll use the same selector I used to set the background-image (`.photo-1`) to change just that photo's `background-position`.
-
-<div class="hint">Hover for hint</div>
-
-{: .hint-content}
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body {
-        display: grid; /* This make the body a grid */
-        grid-template-columns: auto auto auto; /* This tells the body element to split into 3 equal columns */
-      }
-      .photo {
-        height: 400px;
-        background-size: cover;
-        background-position: 50% 50%;
-      }
-      .photo-1 {
-        background-image: url('photo-1.jpg');
-        background-position: 50% 0%;
-      }
-      ...
-    </style>
-  </head>
-  ...
-</html>
-```
-
-* This results in:
-
-![best example]({{ site.baseurl }}/assets/img/module1/fog_best_example.png)
-
-* Cool! All the photos are where I want them to be.
-* For your project, you will have to adjust individual photos to make things look good.
-* Play around with different CSS properties (`background-size`, `background-position`, etc.) to gain an understanding of what they mean and how to use them.
-
-## Conclusion
-
-If you were able to see all photos and they look like you want them to, your knowledge of HTML and CSS is ready for our in-class session! Here is all the code from the example above:
-
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body {
-        display: grid;
-        grid-template-columns: auto auto auto;
-      }
-      .photo {
-        height: 400px;
-        background-size: cover;
-        background-position: 50% 50%;
-      }
-      .photo-1 {
-        background-image: url('photo-1.jpg');
-        background-position: 50% 0%;
-      }
-      .photo-2 {
-        background-image: url('photo-2.jpg');
-      }
-      .photo-3 {
-        background-image: url('photo-3.jpg');
-      }
-      .photo-4 {
-        background-image: url('photo-4.jpg');
-      }
-      .photo-5 {
-        background-image: url('photo-5.jpg');
-      }
-      .photo-6 {
-        background-image: url('photo-6.jpg');
+      #quaffle {
+        position: absolute;
+        background-image: url("imgs/quaffle64x64.png");
+        width: 64px;
+        height: 64px;
+        visibility: hidden;
+        transition: 0.5s transform;
       }
     </style>
   </head>
   <body>
-    <div class="photo photo-1"></div>
-    <div class="photo photo-2"></div>
-    <div class="photo photo-3"></div>
-    <div class="photo photo-4"></div>
-    <div class="photo photo-5"></div>
-    <div class="photo photo-6"></div>
+    <h1>Quidditch Cup</h1>
+    <h2>Version 1.0</h2>
+    <p>The object of the game of Quidditch is to score more the most points!</p>
+    <h2>Rules</h2>
+    <ol>
+      <li>Clicking on the <span class="brown">Quaffle</span> earns <b>10 points</b>.</li>
+      <li>Refresh your browser to restart the game</li>
+    </ol>
+    <h3>Score: <span id="scoreboard">0</span></h3>
+
+    <button onclick="startGame()">New Game</button>
+
+    <div id="gameboard">
+      <div id="quaffle" onclick="scoreQuaffle()"></div>
+    </div>
+
+    <script>
+      // Variables accessible anywhere inside this <script> tag.
+      var score = 0;
+      var scoreboard = document.getElementById("scoreboard");
+      var quaffle = document.getElementById("quaffle");
+
+      // Variables to help animate our quaffle.
+      var quaffleSpeed = 1500; // speed in Milliseconds.
+      var quaffleTimeoutID = null;
+
+      // Function that starts a new game of Quidditch!
+      function startGame() {
+        // Reset the score board
+        score = 0;
+        scoreboard.innerHTML = score;
+
+        // Our quaffle is, by default, invisible.  We need to unhide it as we start our game.
+        quaffle.style.visibility = "visible";
+        
+        // Move the ball
+        moveQuaffle();
+      }
+
+      // Logic to move the Quaffle
+      function moveQuaffle() {
+        // Generate a random x,y position for our Quaffle
+        let randY = Math.floor(Math.random() * 436 + 1); // 500 (the width of the game board) - 64 (the width of the quaffle) = 436 px
+        let randX = Math.floor(Math.random() * 436 + 1);
+
+        // Use CSS to animate the transition from our current position to the new position.
+        quaffle.style.transform = `translate(${randX}px, ${randY}px)`; // Use a 'template literal' (backtick) to generate the string we need for our css animation.
+
+        // Plan to move the Quaffle again in a second or so if the player fails to clicks on it.
+        quaffleTimeoutID = setTimeout(moveQuaffle, quaffleSpeed);
+      }
+
+      // Logic to score when the quaffle is clicked.
+      function scoreQuaffle() {
+        // 10 points for scoring the quaffle!
+        score = score + 10;
+
+        // Update the scoreboard
+        scoreboard.innerHTML = score;
+
+        // Move the Quaffle Immediately!
+        clearTimeout(quaffleTimeoutID); // Cancel the previously planned movement of the Quaffle.
+        moveQuaffle(); // Move the Quaffle Immediatly
+      }
+    </script
   </body>
 </html>
 ```
 
 ## Bonus Mission 
-If you'd like to spice up your friend-o-gram a bit, consider adding some of the following: 
-* Background color to the webpage
-* A fun logo at the top of the page 
+Feel free to try and enhance our game in the following ways:
+* Add the a timer so that the game ends after 15 seconds
+* Add a Golden Snitch, that when captured gives you 150 points and ends the game
+* Add the ability to track your highest score
 
-Keep in mind that while there are no grades for this program, your projects will speak to the work you can do should you choose to use them as a part of your resume. 
+Keep in mind that while there are no grades for this program, your projects will speak to the work you can do should you choose to use them as a part of your resume.
 
 
