@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Simple Chat</title>
+	<meta charset="utf-8"  />
+</head>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+    <h1>Simple Chat</h1>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Rick">
+    
+    <label for="message">Message:</label>
+    <input type="text" id="message" placeholder="Hi Morty.">
+    
+    <button id="send" onclick='saveMessage()'>Send</button>
+    
+    <h3>Chat Messages:</h3>
+
+    <div id="msgContainer">
+        <!-- We will display any messages here that we send/retrieve from Firestore -->
+    </div>
+
+     <script>
+
+        // ---------------------------------------
+        // Initialize Firebase and Firestore
+        // ---------------------------------------
+
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCzd22PWoCipek5E-7qDx-WfFmBO0hjb6g",
+          authDomain: "intro-to-webdev-chat-app.firebaseapp.com",
+          projectId: "intro-to-webdev-chat-app",
+          storageBucket: "intro-to-webdev-chat-app.appspot.com",
+          messagingSenderId: "556658533694",
+          appId: "1:556658533694:web:d26d93919b6280d7efb86f"
+        };
+
+        // Initialize our application
+        firebase.initializeApp(firebaseConfig);
+
+        // Store a reference to firestore as simply db (for convienence)
+        var db = firebase.firestore();
+
+        // ---------------------------------------
+        // Save Messages to our Firestore Database
+        // ---------------------------------------
+        // This function writes our message to firestore
+        function saveMessage(messageText) {
+            // Get the username & message
+            username = document.getElementById("username").value
+            messageText = document.getElementById("message").value
+            
+            // Add a new message entry to the database.
+            db.collection('messages').add({
+                username: username,
+                txt: messageText,
+                timestamp: Date.now()
+            })
+        }
+
+        // ---------------------------------------
+        // Read Messages from our Firestore Database
+        // ---------------------------------------
+        
+        // Define a messagesQuery which returns all documents in our 'messages' collection, ordered from oldest to newest.
+        messagesQuery = db.collection('messages').orderBy('timestamp', 'asc')
+
+        // Run the query and listen for changes (adds/deletes/modifications) to it's data (https://firebase.google.com/docs/firestore/query-data/listen)
+        // The first time we call onSnapshot, all of the data for our query will be returned with a change type of "add".
+        messagesQuery.onSnapshot(   
+            function(snapshot) {
+                // Process each document change (add/delete/modify)
+                snapshot.docChanges().forEach(processDocumentSnapshot);
+            }
+        );
+        
+        // A function that we defined to process each document in our 'messages' collection
+        var processDocumentSnapshot = (docSnapshotChange) => {
+            // Log the message we recieved in the browsers console to help with troubleshooting.
+            var message = docSnapshotChange.doc.data()
+
+            // docSnapshotChange.type tells us the type of change: 'added', 'modified', 'removed'
+            console.log(docSnapshotChange.type, message)
+            
+            // We can get added, removed, and modified change types.  For now, we will only handle adding new messages.
+            if (docSnapshotChange.type == 'added') {
+            
+                // Create a new div with this username and message as the content.
+                var div = document.createElement("DIV");   // Create a new <div> element
+                div.innerHTML = message.username + ": " + message.txt; // Insert text for our username and message
+                div.id = docSnapshotChange.doc.id // Set the id of our DIV to the ID of our document in firestore.  This would come in handy if we got a removed message.
+
+                // Append our div as a child element in our messageContainer div.
+                document.getElementById("msgContainer").appendChild(div); 
+            }
+        }
+      </script>
+</body>
+</html>
