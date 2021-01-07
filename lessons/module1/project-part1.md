@@ -371,7 +371,7 @@ So, since `image-area` is the parent to `pet-image`, we need to add CSS to `imag
       .pet-image {
         height: 500px;
         max-width: 100%;
-        padding: 3rem;
+        padding: 32px;
       }
       ...
     </style>
@@ -766,7 +766,7 @@ Here is the entirety of my code:
       .pet-image {
         height: 500px;
         max-width: 100%;
-        padding: 3rem;
+        padding: 32px;
       }
       .interactive-area {
         background-color: #00BEBD;

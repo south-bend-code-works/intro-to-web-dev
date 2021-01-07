@@ -35,6 +35,30 @@ During this week's lab, you will work on completing the Virtual Pet project in s
 
 **Passcode: 122449**
 
+<!-- 
 
+- Explain How Lab will go
+
+Encouragement 
+- This is hard stuff. You're doing great!
+
+- Set expectations for time in breakout rooms.
+  - you will share screens and code and talk about where you're at and what you're struggling with. 
+  - ex: my virtual pet is the lochness monster and here are my images here is what doesn't work. Here is what I'm struggling with. 
+  - if they don't have anything to share they should work independently and work together to solve problems. Don't leave if you aren't sure what to do.
+  - if you are done, let me know and so we can review your code
+  - if someone is done, go ahead and let them know they should stay on and help
+
+Virtual Pet
+- The solution is on the course site.
+- https://south-bend-code-school.github.io/intro-to-web-dev/lessons/module1/project-part2.html
+
+- Explain setInterval
+
+- Leave feedback: https://south-bend-code-school.github.io/intro-to-web-dev/lessons/module1/feedback.html
+
+- 20 minutes at the end we are coming together and no matter where your code is at, we are going to push it to GH.
+
+ -->
 
 
