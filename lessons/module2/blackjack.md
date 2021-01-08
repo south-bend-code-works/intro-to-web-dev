@@ -5,7 +5,7 @@ layout: default
 # Project: Blackjack
 
 ## Goal
-At the end of this project, you should have created a fully functioning game of black jack using our deck of cards.
+At the end of this project, you should have built a very simplified version of blackjack.
 
 ## Overview
 The game of blackjack is a gambling card game where players compete against a dealer to try to get closest to 21 without going over. While blackjack includes gambling and the exchange of chips, we won't focus on that today. We simply want to do the following:
@@ -45,9 +45,11 @@ After copying and pasting that into the file, go to the folder `blackjack` on yo
 
 ### Creating a deck
 
+You have already creaetd a deck before if you have completed the second practice problem for module 2. However, we will go through the steps here as a recap.
+
 Let's start by creating a deck of cards in JavaScript. A deck has 52 cards which are made up of 4 suits with 13 values within each suit. There are several ways we could represent this deck of cards in JS. For our purposes, I believe the easiest way for us to represent the deck is to use both an **arrays** and **objects**. 
 
-Each individual card will be an **object** with 2 **key**/**value** pairs, the **suit** (`"hearts", "diamonds"`, etc.) and the **value** (`1`, `2`,). We are going to create a **object** for each card and then put all 52 cards into an **array**. This will allow us to do things like shuffle and deal cards without much work.
+Each individual card will be an **object** with 2 **key**/**value** pairs, the **suit** (`"hearts", "diamonds"`, etc.) and the **value** (`1`, `2`, etc.). We are going to create an **object** for each card and then put all 52 cards into an **array**. This will allow us to do things like shuffle and deal cards without much work.
 
 So, when it comes to making the individual card objects, we can do 1 of 2 things:
 1. We manually type out each card. (Nope)
@@ -104,7 +106,7 @@ Okay, so we have **arrays** for both our values and suits. Now, how do we use lo
 ```
 var card = {
   suit: 'heart',
-  value: 4
+  value: 4,
 }
 ```
 
@@ -277,7 +279,7 @@ var card = {
 }
 ```
 
-Here the **values** are either a string or a number. However, in the code with the double loops, the card object instead looks like this:
+In the code immediately above, the **values** are either a string or a number. However, in the code with the double loops, the card object instead looks like this:
 
 ```
 var card = {
@@ -358,7 +360,7 @@ Finally, we have `arr.sort` called with the **function** we just talked about. S
 
 `sortFunc` is a **compare function**. **Compare functions** take in 2 elements (let's call them `a` and `b`) from the array (`arr` in this case), compares them, and then return either a positive or negative number. If the number returned from the **compare function** is negative, we want to sort `a` to a lower index than `b`. If the number returned from the **compare function** is positive, we want to sort `a` to a higher index than `b`.
 
-For example, all I did was change the `>` to a `<` in the following example and the result is the exact opposite:
+For example, all I did was change the `>` to a `<` in the first conditional of the following example and the result is the exact opposite:
 
 ```
 var arr = [2,1,3,5]
@@ -570,7 +572,7 @@ While the actual game of blackjack includes rounds and decisions about whether o
 </html>
 ```
 
-Since both the player and the dealer will need 2 cards from the deck each, let's create a function that takes the top 2 cards from the deck and returns them.
+Since both the player and the dealer will each need 2 cards from the deck, let's create a function that takes the top 2 cards from the deck and returns them.
 
 When getting these cards, we might think we want to use `deck[0]` and `deck[1]` to get the top 2 values from the deck. However, while this would get those values, it doesn't remove those elements from the array. It simply reads those values. We want to actually remove those values from the deck and use them elsewhere. The way to do this is to use `.shift`. Below is an example:
 
