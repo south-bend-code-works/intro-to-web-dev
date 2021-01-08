@@ -192,4 +192,18 @@ Go to this [CodePen](https://codepen.io/jorymullet/pen/NWRgYXQ){: target='_blank
 
 ## Conclusion
 
-TODO
+```
+counter = 0
+while (counter < 3) {
+  console.log("Congratulations, you have successfully completed loops!")
+  counter = counter + 1
+}
+```
+
+Congratulations, you have successfully completed loops!
+
+Congratulations, you have successfully completed loops!
+
+Congratulations, you have successfully completed loops!
+
+<iframe src="https://giphy.com/embed/zDrQxFFgiiGoU" width="480" height="288" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/loop-infinite-surprised-patrick-zDrQxFFgiiGoU">via GIPHY</a></p>
