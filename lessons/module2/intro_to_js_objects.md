@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# # Introduction to JavaScript (JS): Objects
+# Introduction to JavaScript (JS): Objects
 
 ## Goal
 By the end of this lesson, you should have an understanding of JavaScript Objects, why we use them, and how to code them.
