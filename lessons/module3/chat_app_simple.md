@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Project 2: Chat App
+# Project Part 1: Simple Chat App
 
 ## Goal
 
