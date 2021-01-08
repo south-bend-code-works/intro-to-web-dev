@@ -2,10 +2,10 @@
 layout: default
 ---
 
-# Practice Problem: Blackjack
+# Project: Blackjack
 
 ## Goal
-At the end of this practice problem, you should have created the card playing elements of the game of blackjack.
+At the end of this project, you should have created a fully functioning game of black jack using our deck of cards.
 
 ## Overview
 The game of blackjack is a gambling card game where players compete against a dealer to try to get closest to 21 without going over. While blackjack includes gambling and the exchange of chips, we won't focus on that today. We simply want to do the following:
