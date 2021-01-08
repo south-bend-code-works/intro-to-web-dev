@@ -4,6 +4,6 @@ description: Learn what makes a website.
 show_downloads: false
 see_module_1: true
 see_module_2: true
-see_module_3: true
+see_module_3: false
 theme: jekyll-theme-minimal
 baseurl: /intro-to-web-dev

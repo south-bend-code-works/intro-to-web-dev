@@ -2,13 +2,14 @@
 layout: default
 ---
 
-# Overview 
+# Overview
+During this week's lab, you will work on completing and enhancing your blackjack project in small groups. 
 
-## Agenda
-1. Review Arrays
-2. Review Objects
-3. Review and Enhance our random card selector
-4. Upload our site to github
+## By the end of this lab you should have...
+1. Completed Blackjack. 
+2. Share your solution with the other students.
+3. Uploaded your Blackjack game to GitHub.
+4. Created a GitHub page to host your Blackjack game.
 
 ## Zoom Links
 
@@ -33,4 +34,6 @@ layout: default
 **Meeting ID: 922 4168 6868**
 
 **Passcode: 122449**
+
+
 

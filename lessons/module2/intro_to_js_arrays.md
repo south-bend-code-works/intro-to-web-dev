@@ -2,19 +2,15 @@
 layout: default
 ---
 
-# Introduction to JavaScript (JS): Objects and Loops
+# Introduction to JavaScript (JS): Arrays
 
 ## Goal
-By the end of this lesson, you should have an understanding of JavaScript loops, object, arrays, and how them in code.
+By the end of this lesson, you should have an understanding of JavaScript Arrays, why we use them, and how to code them.
 
 ## Overview
-This lesson will build on our current knowledge of JavaScript variables and conditionals in order to do repetitive tasks quickly and use JS objects to manage data.
+An array is a data structure consisting of a collection, or list, of elements.  Arrays are ordered.  Also, arrays in JS can consist of any types of elements (e.g. strings, numbers, objects, etc).
 
-## Topics
-
-### Arrays
-
-#### Concept: Making Arrays
+### Concept: Making arrays
 Earlier, we saw that variables could be both numbers and strings like so:
 
 ```
@@ -38,11 +34,11 @@ var anotherArray = ['cat', 5, [13, 'dude']]
 
 We can see in the **array** above, we first have the string `'cat'`, the number `5`, and finally another **array** with 2 elements in it, `13` and `'dude'`.
 
-#### Challenge
+### Challenge
 
 Go to this [CodePen](https://codepen.io/jorymullet/pen/qBaaBVE){: target='_blank'} and follow the instructions.
 
-#### Concept: Adding to arrays
+### Concept: Adding to arrays
 So, we know what **arrays** look like and how to make them. But once an **array** is made, how do we add to it? And how do we get one of it elements?
 
 Let's start with the first question, how to add to an array? Let's look at an example:
@@ -71,11 +67,11 @@ arr.push(20)
 
 The above example shows us first setting `arr` equal to an empty **array**. Then we **push** 3 elements into the **array**, first the `5`, then the `10`, and lastly the `20`. Each element is being added to the back of the **array**.
 
-#### Challenge
+### Challenge
 
 Go to this [CodePen](https://codepen.io/jorymullet/pen/GRjjQMb){: target='_blank'} and follow the instructions.
 
-#### Concept: Getting values from an array
+### Concept: Getting values from an array
 
 Okay, so we know how to make and add to an array, but how do we access individual elements inside an **array**? Chech out the code below:
 
@@ -95,15 +91,15 @@ Above, the first thing did was make an array, `[1,2,3,4]`. Then, in the next lin
 
 So, in the code above, if we wanted to get the first value in `arr`, we would have to use `arr[0]`. Again, this may not make sense now but is actually a really nice feature of coding.
 
-#### Challenge
+### Challenge
 
 Go to this [CodePen](https://codepen.io/jorymullet/pen/YzGGevM){: target='_blank'} and follow the instructions.
 
-#### Concept: Additional array functionality
+### Concept: Additional array functionality
 
 Now that you have the basics down, here are some other helpful things you can do with arrays
 
-##### Length
+#### Length
 
 Often, when working with arrays, knowing the length of an array will be helpful. Luckily, it's easy: 
 
@@ -114,7 +110,7 @@ var len = arr.length
 // value of len is 3
 ```
 
-##### Concatenation
+#### Concatenation
 
 Sometimes, we will want to combine 2 arrays into 1. The fancy, coding name for this process is called **concatenation**. JS makes this easy:
 
@@ -130,22 +126,40 @@ var longArr2 = arr2.concat(arr1)
 
 // value of longArr2 is [3,4,5,1,2,3]
 ```
-##### Includes
+#### Includes
 
 Occasionally, we are going to wonder if an array has a certain element in it. By using **includes**, we can find out if an element exists in an array:
 
 ```
-var arr1 = [1,2,3]
-var arr2 = [3,4,5]
+var arr = [1,3,5,7,9]
 
-var longArr1 = arr1.concat(arr2)
+var is5Included = arr.includes(5)
+var is8Included = arr.includes(8)
 
-// value of longArr1 is [1,2,3,3,4,5]
-
-var longArr2 = arr2.concat(arr1)
-
-// value of longArr2 is [3,4,5,1,2,3]
+// value of is5Included is `true`
+// value of is8Included is `false`
 ```
 
-### Objects
+#### indexOf
 
+When we want to know the index of en element in an array, we we `indexOf` to find its index. If we ask for the index of an element that isn't in an array, `indexOf` returns `-1`
+
+```
+var arr = [1,3,5,7,9]
+
+var indexOf5 = arr.indexOf(5)
+var indexOf8 = arr.indexOf(8)
+
+// value of indexOf5 is 2
+// value of indexOf8 is -1
+```
+
+### Challenge
+
+Try out these concepts at this [CodePen](https://codepen.io/jorymullet/pen/XWjgrVW){: target='_blank'}.
+
+## Conclusion
+
+Wow! Arrays are neat! It may not seem like it yet, but learning arrays is a big step in using code to do incredible things. If I were you, I'd be pretty pumped like this guy:
+
+![](https://i.imgur.com/9mFhuTv.gif)

@@ -66,4 +66,4 @@ git clone http://south-bend-code-school/intro-to-web-dev.git
 ```
 
 #### Feedback (No grades!)
-Throughout the week instructors will provided you with feedback on your progress, *FILL IN*....
+Throughout the week instructors will provided you with feedback on your practice problems durning the live sessions.  Additionally, at the end of each week you will receive individualized feedback about that weeks project.
