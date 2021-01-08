@@ -417,6 +417,76 @@ Like we have often done already, we are going to need to reference the element `
 
 If you did this successfully, you should see the details of the card that was randomly selected on the screen. How neat is that!
 
+## Solution
+
+```
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+
+    <h1>And our random card is:</h1>
+    <h2 id="display">No card picked yet</h2>
+    <button onclick="selectRandomCard()">Pick a random card</button>
+
+    <div id="cards-holder">
+
+    </div>
+
+  </body>
+
+  <script>
+    var deck = []
+    var cardsHolder = document.getElementById("cards-holder")
+
+    var twoOfSpades = {
+      value: 2,
+      suit: "spades",
+    }
+
+    var fourOfClubs = {
+      value: 4,
+      suit: "clubs",
+    }
+
+    var sevenOfDiamonds = {
+      value: 7,
+      suit: "diamonds",
+    }
+
+    var nineOfHearts = {
+      value: 9,
+      suit: "hearts",
+    }
+
+    deck.push(twoOfSpades)
+    deck.push(fourOfClubs)
+    deck.push(sevenOfDiamonds)
+    deck.push(nineOfHearts)
+
+    var selectRandomCard = () => {
+      var rand = Math.random()
+      var larger = rand * 3
+      var randomIndex = Math.round(larger)
+
+      var randomCard = deck[randomIndex]
+
+      var displayString = randomCard.value + " of " + randomCard.suit
+
+      document.getElementById("display").innerHTML = displayString
+    }
+
+  </script>
+
+</html>
+```
+
 ## Conclusion
 
 Look at you! You just created a random card selector using **arrays**, **objects**, and random numbers. You may begin feel the possibilities of what you can make starting to expand greatly, and you should! Soon, you will learn how create an entire deck of cards without having to type the details of each card. Before you know it, you'll have earned the right to have this kind of confidence:
