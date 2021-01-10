@@ -95,7 +95,7 @@ Before we get started coding, we need to create a folder named `random-card-sele
 
 ### HTML
 
-Okay, now that we have established the basics of our random card selector, let's add a tiny bit of HTML so that we have a place to display the random card we will eventually pick. Let's add an `h1` element with the words **And our random card is:**. Under that, let's add a `h2` element that has the `id` `display` and the words **No card picked yet** between of the tags. Lastly, let's include a `button` element with the words **Pick a random card**. It should look something like this:
+Okay, now that we have established the basics of our random card selector, let's add a tiny bit of HTML so that we have a place to display the random card we will eventually pick. Let's add an `h1` element with the words **And our random card is:**. Under that, let's add an `h2` element that has the `id` `display` and the words **No card picked yet** between of the tags. Lastly, let's include a `button` element with the words **Pick a random card**. It should look something like this:
 
 ![]({{ site.baseurl }}/assets/img/module2/random-1.png)
 
