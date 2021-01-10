@@ -7,6 +7,9 @@
 - Recap on the previous week
   - Great job!
   - Recap the previously learned concepts
+    - HTML - structure and content
+    - CSS - styling and design
+    - JS - allows us to program things like games and functionality
   - Here is how the new things build onto those
 
 - Discuss agenda for the live session

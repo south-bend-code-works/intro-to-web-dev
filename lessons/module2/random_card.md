@@ -435,10 +435,6 @@ If you did this successfully, you should see the details of the card that was ra
     <h2 id="display">No card picked yet</h2>
     <button onclick="selectRandomCard()">Pick a random card</button>
 
-    <div id="cards-holder">
-
-    </div>
-
   </body>
 
   <script>
