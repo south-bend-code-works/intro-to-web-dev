@@ -22,6 +22,20 @@
   - Pushing to an array
   - Getting from an array
   - Other array functionalities
+    - length
+    - concatenation
+      var arr1 = [1,2,3]
+      var arr2 = [3,4,5]
+
+      var longArr1 = arr1.concat(arr2)
+
+      // value of longArr1 is [1,2,3,3,4,5]
+
+      var longArr2 = arr2.concat(arr1)
+
+      // value of longArr2 is [3,4,5,1,2,3]
+    - includes
+    - indexOf
 
 2. Objects
 
@@ -36,6 +50,7 @@
   - Editing an existing property in an object
 
 3. Build from scratch the random card selector, going very slowly
+  - Talk about random and round
 
 4. Provide time for the students to try out the super bonus mission on their own in groups
   - Bring students back in with 30 minutes to go over super bonus mission solution
