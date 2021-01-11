@@ -2,8 +2,6 @@
 
 0. Overview
 
-- General questions / concerns for the course
-
 - Recap on the previous week
   - Great job!
   - Recap the previously learned concepts
@@ -13,6 +11,8 @@
   - Here is how the new things build onto those
 
 - Discuss agenda for the live session
+
+- General questions / concerns for the course
 
 1. Arrays
 
@@ -92,20 +92,20 @@
 
     </div>
 
-    <h2>The chosen card is <span id="chosen-card"></span></h2>
+    <h2>The selected card is <span id="selected-card"></span></h2>
 
     <h1>And our random card is:</h1>
-    <h2 id="display">No card picked yet</h2>
+    <h2 id="display"></h2>
     <button onclick="selectRandomCard()">Pick a random card</button>
 
   </body>
 
   <script>
     var deck = []
-    var selectedCard = false
+    var selectedCard = null
 
     var cardsHolderEle = document.getElementById("cards-holder")
-    var selectedCardEle = document.getElementById("chosen-card")
+    var selectedCardEle = document.getElementById("selected-card")
     var displayEle = document.getElementById("display")
 
     var twoOfSpades = {
@@ -136,7 +136,7 @@
     }
 
     var selectRandomCard = () => {
-      if (!selectedCard) {
+      if (selectedCard === null) {
         alert("Select card first!")
       } 
       else {
@@ -197,15 +197,17 @@
     }
 
     var startRound = () => {
-      buildDeck()
       displayCards()
+
       selectedCardEle.innerHTML = ""
       displayEle.innerHTML = ""
-      selectedCard = false
+      selectedCard = null
     }
 
+    buildDeck()
     startRound()
 
   </script>
 
 </html>
+ 
