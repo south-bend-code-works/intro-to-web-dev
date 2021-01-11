@@ -50,6 +50,8 @@
   - Editing an existing property in an object
 
 3. Build from scratch the random card selector, going very slowly
+  - benefit of repeating coding in front of students
+    - hearing terminology and connecting it to code
   - Talk about random and round
 
 4. Provide time for the students to try out the super bonus mission on their own in groups
@@ -182,6 +184,7 @@
 
     var displayCards = () => {
       cardsHolderEle.innerHTML = ""
+
       displayCard(twoOfSpades)
       displayCard(fourOfClubs)
       displayCard(sevenOfDiamonds)
