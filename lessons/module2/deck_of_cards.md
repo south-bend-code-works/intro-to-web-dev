@@ -318,3 +318,13 @@ Cool! Now that we have created a **loop** within a **loop**, used those loops to
   </script>
 </html>
 ```
+
+## Conclusion
+
+Wow. Loops within loops! What a wild time to be alive but what a delightful thing to know! Now, we can avoid the hastle of typing out an outrageous amount of cards which is very very nice.
+
+![](https://media3.giphy.com/media/l0ErFafpUCQTQFMSk/giphy.gif)
+
+## Bonus Missions
+
+1. **Super Bonus**: Create the game of [war](https://bicyclecards.com/how-to-play/war/).
