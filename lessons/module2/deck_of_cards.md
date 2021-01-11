@@ -6,13 +6,10 @@ layout: default
 
 
 ## Goal
-At the end of this practice problem, you should have created a deck of cards in javascript and displayed the cards on the screen.
+At the end of this practice problem, you should have created a deck of cards in javascript and displayed the cards in your console.
 
 ## Overview
-A deck has 52 cards.
-
-
-- Create a deck of 52 cards
+A deck has 52 cards. Before, we've seen how tedious it can be to create objects that represent cards. Creating only 4 cards before was annoyingly time consuming and the likelihood of a typo is high when writing them by hand. We will figure out a way to instead write 52 into an array quickly and accurately.
 
 ### Getting started
 In order to start your page, you will need a new folder and a new file. Go to your desktop and create a new folder called `deck_of_cards`. Then, open up VS Code and create a new file called `index.html` and save it inside of your `deck_of_cards` folder.
@@ -40,15 +37,15 @@ After copying and pasting that into the file, go to the folder `deck_of_cards` o
 
 ### Creating a deck
 
-Let's start by creating a deck of cards in JavaScript. A deck has 52 cards which are made up of 4 suits with 13 values within each suit. There are several ways we could represent this deck of cards in JS. For our purposes, I believe the easiest way for us to represent the deck is to use both an **arrays** and **objects**. 
+ A deck has 52 cards which are made up of 4 suits with 13 values within each suit. There are several ways we could represent this deck of cards in JS. For our purposes, I believe the easiest way for us to represent the deck is to use both an **arrays** and **objects**. 
 
-Each individual card will be an **object** with 2 **key**/**value** pairs, the **suit** (`"hearts", "diamonds"`, etc.) and the **value** (`1`, `2`,). We are going to create a **object** for each card and then put all 52 cards into an **array**. This will allow us to do things like shuffle and deal cards without much work.
+Each individual card will be an **object** with 2 **key**/**value** pairs, the **suit** (`"hearts", "diamonds"`, etc.) and the **value** (`1`, `2`,). We are going to create an **object** for each card and then put all 52 cards into an **array**. This will allow us to do things like shuffle and deal cards without much work.
 
 So, when it comes to making the individual card objects, we can do 1 of 2 things:
 1. We manually type out each card. (Nope)
 2. We use 2 **for** loops to create the 52 cards quickly and easily. (Yep)
 
-Alright, so let's create a **function** that will build us a new deck. Let's call it `buildDeck`. `buildDeck` will need to return an **array** of 52 card objects. Let's include some of the parts of the **function** we know will be in there. Create a **variable** deck in `buildDeck` called `newDeck` that is an empty **array** and let's have our **function** return `newDeck`.
+Alright, so let's create a **function** that will build us a new deck. Let's call it `buildDeck`. `buildDeck` will need to return an **array** of 52 card objects. Let's include some of the parts of the **function** we know will be in there. Create a **variable** name `newDeck` that is an empty **array** in our function `buildDeck` and let's have our **function** return `newDeck`.
 
 <div class="hint">Hover for hint</div>
 
@@ -272,7 +269,7 @@ var card = {
 }
 ```
 
-Here the **values** are either a string or a number. However, in the code with the double loops, the card object instead looks like this:
+Directly above, the **values** are either a string or a number. However, in the code with the double loops, the card object instead looks like this:
 
 ```
 var card = {
@@ -283,7 +280,7 @@ var card = {
 
 It may looks strange since the words `suit` and `value` are being repeated but the same thing is going on in both of the previous examples. The only difference is that, in the second one, the second instances of `suit` and `value` are parameters that represent whatever element the loops are on. Take some time on this until it makes sense.
 
-Cool! Now that we have created a **loop** within a **loop**, used those loops to create card **objects**, and then `push`ed those card **objects** onto an **array**, we have a function that returns a full deck! This is a great start. Copy and paste the following code to see the deck printed in the console:
+Cool! Now that we have created a **loop** within a **loop**, used those loops to create card **objects**, and then `push`ed those card **objects** onto an **array**, we have a function that returns a full deck! This is a great start to creating any card game. Copy and paste the following code to see the deck printed in the console:
 
 ```
 <!DOCTYPE html>
