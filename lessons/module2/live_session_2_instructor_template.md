@@ -2,17 +2,29 @@
 Agenda:
 0. House Keeping: Cover any issues / concerns for the course.
 
-1. Teach the concept of what an event listener is and why we care.
-    * Use a simple example: Rainbow Button: https://south-bend-code-school.github.io/Student-Site/javascript/rainbowbutton.html
+0.5 While loops
+  - Just touch on a few while loop examples
+  - explain that these are much less common than for loops
 
-2. Live Coding with instructor
-    * Slowly re-build tic-tac-toe step by step with instructor commentary.
+1. For Loops
+  - examples of normal loops
+    - console.log to demonstrate
+    - adding things together
+    - add a number to each
+    - split a string and add "a" to every other letter
+    - example where you use anonymous and named functions
+  - example of loops within loops
+    - start with console.log examples
+    - create one long string from 2 arrays of strings
+      - using both anonymous and named functions
 
-3. Enhance Tic Tac Toe
-    * Mission: Add a drop down to change the board size from 3x3 to 4x4
-    * Bonus: Keep track of the number of wins for player 1 and player 2
+2. New deck
+  - build buildDeck function
 
-4. Instructor walks students through adding tic-tac-toe to github
+3. WAR
+  - If time allows it, allow students to try and build WAR
+  - Walk thru how to build war
 
-
+TODO: Joshua - Build WAR solution below
 -->
+
