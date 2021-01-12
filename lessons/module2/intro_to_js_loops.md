@@ -103,7 +103,7 @@ This time, the line with `.forEach` in it doesn't look quite as scary. We know t
 Let's look at one last example:
 
 ```
-var arrOfPeople = [{age: 18, name: "Jack"}, {age: 29, name: "Jill"}, {age: 13, "Tim"}]
+var arrOfPeople = [{age: 18, name: "Jack"}, {age: 29, name: "Jill"}, {age: 13, name: "Tim"}]
 
 var sumOfAges = 0
 
