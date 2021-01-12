@@ -22,6 +22,8 @@ layout: default
 
 **Passcode: 835805**
 
+#### Section 1 Recording
+<iframe src="https://notredame.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f6aac3ce-ad25-486f-8fe9-aca90124958c&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ### Section 2 (1pm to 3pm) 
 <https://notredame.zoom.us/j/99670056329?pwd=OXRmSFNERU45Vi9ndkpJNUpGTFU1QT09>
@@ -30,12 +32,18 @@ layout: default
 
 **Passcode: 781595**
 
+#### Section 2 Recording
+<iframe src="https://notredame.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=4b42b702-4962-4433-9801-aca90151ed4f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ### Section 3 (4pm to 6pm) 
 <https://notredame.zoom.us/j/92241686868?pwd=aHBiTmdOM25Eak52UEtOQU5XeDJvZz09>
 
 **Meeting ID: 922 4168 6868**
 
 **Passcode: 122449**
+
+#### Section 3 Recording
+<iframe src="https://notredame.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3d77b608-2751-4cc5-ab59-aca9017daeeb&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Quidditch 2.0 Instructions
 In the second half of this live session you will break into small groups and individually enhance Quidditch 1.0 in the following ways:
