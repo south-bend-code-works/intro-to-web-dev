@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-# Is a hotdog a sandwich?
+# Practice Problem: Is a hotdog a sandwich?
 
 ## Goal
 
