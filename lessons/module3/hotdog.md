@@ -64,17 +64,21 @@ First things first, you need to create a new folder called 'hotdog' and place an
 </html>
 ```
 
-#### Video Tutorial
-Following along, step by step, with this Video Tutorial.  Heads up, there is one point in the video where he talks about security rules, you can consider this part optional as we disabled security when we created our database earlier.  Obviously, in a more serious application we would want to spend time securing our database.
+#### Solution Walkthrough Video
+Follow along, step by step, with the Video Tutorial.  
+
+Hints:
+1. At one point in the video where Firebase security rules are addressed, you can consider this part optional because we disabled security when we created our database earlier.  Obviously, in a more serious application we would want to spend time securing our database.
+2. There is some new JavaScript syntax buried in this solution.  Firebase uses something called a Javascript __promises__.  This [tutorial](https://medium.com/@kevinyckim33/what-are-promises-in-javascript-f1a5fc5b34bf) does a good job of explaining what a promise is and most applicably, how to use them. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2Vf1D-rUMwE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+<br>
 ### Conclusion
 
 After following the video tutorial you should have the completed application.  See below for the complete solution.
 
-<div class="hint">Hover for Final Solution</div>
+<div class="hint">Hover for Completed Solution</div>
 
 {: .hint-content}
 
