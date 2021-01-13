@@ -49,6 +49,12 @@
         // Store a reference to firestore as simply db (for convienence)
         var firestore = firebase.firestore();
 
+        firestore.collection("favorite_books")
+        .get()
+        .then(function(querySnapshot) {
+            console.log(querySnapshot.docs.map(doc => Object.assign(doc.data(), {id: doc.id})))
+        });
+
         // ---------------------------------------
         // Save Messages to our Firestore Database
         // ---------------------------------------

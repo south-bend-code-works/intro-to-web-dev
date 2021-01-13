@@ -3,6 +3,7 @@ layout: default
 ---
 
 # Setup Firestore
+At this point you must be thinking, it would be awesome if I had my very own database! You are right, having a database does make you cool. Lucky for us, Google has built Firestore; a flexible, scaleable, and cloud based database that you can start using for free.
 
 ## Goal
 By the end of this lesson, you will have:
@@ -10,7 +11,6 @@ By the end of this lesson, you will have:
 1. Created a Firebase Project
 2. Created a Firestore Database
 3. Created a web application for your firestore database
-4. Determined if a hotdog is a sandwich
 
 
 ### Setup Firestore
@@ -55,4 +55,6 @@ You have to register your web application with your Firestore database.  Doing t
 ![firebase project example]({{ site.baseurl }}/assets/img/module2/firebase-3.png)
 
 ### Conclusion
-Congratulations, you've completed all of the steps to setup your first database in the cloud.  Next, we will use our database to build a simple application.
+BOOM, you've completed all of the steps to setup your first Firestore database in the cloud.  Next, you will watch a couple of short video tutorials to help bring you up to speed on Firestore.
+
+<iframe src="https://giphy.com/embed/xT9Iggof3MKS2LonOo" width="480" height="258" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/chozynboy-walking-explosion-xT9Iggof3MKS2LonOo">via GIPHY</a></p>
