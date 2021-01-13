@@ -1,15 +1,50 @@
 <!--
 Agenda:
 0. House Keeping: Cover any issues / concerns for the course.
+  - while and for loops
+  - build deck
+  - sort / shuffle
+  - WAR
 
 0.25 Start with analogies
   - Real world while loop
     - While I still have homework, I will continue to do homework
+    - Restaurant closing
+    - Swearing in front of kids
   - Real world for loop
     - For every tomato, cut the tomato
 
 0.5 While loops
   - Just touch on a few while loop examples
+
+----
+  var counter = 0
+
+    var num1 = 0
+    var num2 = 1
+
+    while (counter <= 5) {
+      var previousNum2 = num2
+      num2 += num1
+      num1 = previousNum2
+
+      counter += 1
+    }
+
+    console.log(num2)
+----
+----
+    var num1 = 0
+    var num2 = 1
+
+    while (num2 <= 1000) {
+      var currentNum2 = num2
+      num2 = num1+num2
+      num1 = currentNum2
+    }
+
+    console.log(num1)
+----
   - explain that these are much less common than for loops
 
 1. For Loops
@@ -27,6 +62,59 @@ Agenda:
 2. New deck
   - build buildDeck function
   - both with anonymous functions and named functions
+
+----
+    var suits = ["hearts", "spades", "diamonds", "clubs"]
+    var values = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+
+    var deck = []
+
+    suits.forEach((suitVal) => {
+      values.forEach((valueVal) => {
+
+        var card = {
+          value: valueVal,
+          suit: suitVal,
+        }
+
+        deck.push(card)
+
+      })
+    })
+----
+
+3. Shuffle
+  var twoOfSpades = {
+      suit: "spades",
+      value: 2,
+    }
+
+    var fiveOfDiamonds = {
+      suit: "diamonds",
+      value: 5,
+    }
+
+    var threeOfHearts = {
+      suit: "hearts",
+      value: 3,
+    }
+
+    var arr = [twoOfSpades, fiveOfDiamonds, threeOfHearts]
+
+
+    var sortFunction = (card1, card2) => {
+      var rand = Math.random()
+      if (rand > .5) {
+        return 1
+      } else {
+        return -1
+      }
+    }
+
+
+    arr.sort(sortFunction)
+
+    console.log(arr)
 
 3. WAR
   - If time allows it, allow students to try and build WAR
