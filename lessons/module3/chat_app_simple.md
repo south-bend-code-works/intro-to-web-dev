@@ -10,15 +10,16 @@ Our goal for this project is to build a simple, web-based chat app.  Our Chat ap
 - Allow anyone on our website to post a new message.
 - Listen for messages posted by others and display them on them on our screen.
 
-At the end of this activity, we will have built something similar to this example or Rick chatting with Morty.
+At the end of this activity, we will have built something similar to this example of Rick chatting with Morty.
 
 ![chat example]({{ site.baseurl }}/assets/img/module2/simple-chat-1.0-animated.gif)
 
 
+### Starter Code
 
-### Setup Firebase
-
-Create a a file called simple-chat.html and copy and paste your projects `firebaseConfig` values into the starter script below.  You'll also need to make sure that the version numbers (e.g. 8.2.1) for your Firebase JS SDK match what you see in your project settings.
+1. Create a a folder called chat-app and save the following code in your index.html file.
+2. Paste your projects `firebaseConfig` values into the starter script to replace the `...`.  
+     - Note: You'll also need to make sure that the version numbers (e.g. 8.2.1) for your Firebase JS SDK match what you see in your project settings.
  
 ```
 <!DOCTYPE html>
@@ -77,10 +78,33 @@ Create a a file called simple-chat.html and copy and paste your projects `fireba
 ```
 
 #### Try it out
-* Save the html and go to your desktop as `chat-app.html` and open it with Chrome (or whatever browser you have).
-* You should the paragraph tag that says "Your HTML content here".
+* Open your page in Chrome.
+* You'll see the text input boxes and the button for our app, but nothing will work yet!
 
-### 4. Save A message
+### Send a message
+
+<p>Let's pause here and think about what needs to happen.  How will we get messages from one computer to another? If you said, let's use the Database, then you are correct!</p>
+
+Often, it helps to write out each step we need to take.
+1. The user will type in the username and message
+2. Capture the username and message from the DOM using JavaScript
+3. Save the username and message as a new document in a collection.  Let's call the collection 'messages'
+4. 
+<p>First, one of the users needs to send a message to the database.    The message needs the following information:
+
+```
+{
+         "username":"chris"
+         "msg":42,
+         "timestamp":"M",
+         "books":[
+            "Game of Thrones",
+            "Ready Player One"
+         ]
+      },
+```
+
+
 To store the chat messages that are written by users, we'll use our Firestore Database.
 
 To add the functionality for users to write messages to our database, we will create a new function called `saveMessage()`
@@ -149,6 +173,136 @@ For each step below, write your code between the `<script></script>` tags in our
 </script>
 ```
 
+
+### Final Solution
+
+<div class="hint">Hover for solution</div>
+
+{: .hint-content}
+
+```
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Simple Chat</title>
+	<meta charset="utf-8"  />
+</head>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+    <h1>Simple Chat</h1>
+
+    <div>Username:</div>
+    <input type="text" id="username" placeholder="Rick">
+    
+    <div>Message:</div>
+    <input type="text" id="message" placeholder="Hi Morty">
+    
+    <button id="send">Send</button>
+    
+    <h3>Chat Messages:</h3>
+
+    <div id="messagesContainer">
+        <!-- We will display any messages here that we send/retrieve from Firestore -->
+    </div>
+
+     <script>
+
+        // ---------------------------------------
+        // Initialize Firebase and Firestore
+        // ---------------------------------------
+
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCzd22PWoCipek5E-7qDx-WfFmBO0hjb6g",
+          authDomain: "intro-to-webdev-chat-app.firebaseapp.com",
+          projectId: "intro-to-webdev-chat-app",
+          storageBucket: "intro-to-webdev-chat-app.appspot.com",
+          messagingSenderId: "556658533694",
+          appId: "1:556658533694:web:d26d93919b6280d7efb86f"
+        };
+
+        // Initialize our application
+        firebase.initializeApp(firebaseConfig);
+        var firestore = firebase.firestore();
+
+        const collectionRef = firestore.collection('messages')
+
+        // Inputs
+        const inputUsername = document.getElementById("username")
+        const inputMessage = document.getElementById("message")
+        const sendButton = document.getElementById("send")
+
+        // Output DIV
+        const messagesContainer = document.getElementById("messagesContainer")
+
+
+        // Add an event listener to add a new message to firestore at our docRef ('chat/general')
+        sendButton.addEventListener("click", function() {
+                const username = inputUsername.value;
+                const textToSave = inputMessage.value;
+
+                collectionRef.add({
+                    username: username,
+                    txt: textToSave,
+                    timestamp: Date.now()
+                }).then(function() {
+                    console.log("Message Saved!");
+                }).catch(function(error){
+                    console.log("Got and error:", error);
+                });
+            })
+
+        // Define a function to listen for real-time updates
+        getRealTimeUpdates = function() {
+            
+            // All documents in our collection, messages, ordered from oldest to newest
+            collectionQuery = firestore.collection('messages').orderBy('timestamp', 'asc')
+
+            collectionQuery.onSnapshot(function (snapshot) {
+                console.log(snapshot)
+                
+                // Each snapshot contains one or more DocumentChange objects
+                // Loop through each document change
+                snapshot.docChanges().forEach( function(docChange) {
+
+                    // Log the document change we detected
+                    console.log(docChange)
+
+                    // get the data for this document
+                    var data = docChange.doc.data()
+
+                    // Optional:
+                    //   docSnapshotChange.type tells us the type of change: 'added', 'modified', 'removed'
+                    // console.log(docSnapshotChange.type, message)
+                    
+                    // Create a new div with this username and message as the content.
+                    var div = document.createElement("DIV");   // Create a new <div> element
+                    div.innerHTML = data.username + ": " + data.txt; // Insert text for our username and message
+                    
+                    // Optional: 
+                    //   Set the id of our DIV equal to the unique ID of the docuument in our collection.  
+                    //   This would come in handy if we needed to remove this DIV from the DOM because the chat message was deleted.
+                    // div.id = docChange.doc.id 
+
+                    // Append our div as a child element in our messageContainer div.
+                    messagesContainer.appendChild(div); 
+                    
+                });
+            });
+        }
+
+        // Call our function to start listening for real-time updates
+        getRealTimeUpdates();
+
+      </script>
+</body>
+</html>
+```
 
 
 
