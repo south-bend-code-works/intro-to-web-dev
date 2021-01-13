@@ -2,8 +2,12 @@
 
 Agenda:
 0. House Keeping: Cover any issues / concerns for the course.
-1. Understanding the "back end" and Serverless Architecture
-2. Adding Firebase Functions to projects
+1. Review API concepts 
+    demonstrate other APIs
+        - API 1
+        - API 2
+2. Walk through adding Giphy random gif to Advanced Chat
+3. 
 3. Node Modules
 5. (last 5 minutes)
     - Review Weekly Project & what students can do to prep now.

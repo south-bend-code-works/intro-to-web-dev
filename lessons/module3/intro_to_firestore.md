@@ -12,18 +12,20 @@ At the end of this lesson you will have watched 2 videos to help acclimate you t
 1. Introducing Google Firestore
 2. What is a document store database
 
-### Introducing Google Firestore
+### Introducing Google Firestore (~2 mins)
 This video does a great job introducing you to Firestore. It's will provide you with a solid foundation to build upon.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QcsAb2RR52c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
-### What is a document store database?
+
+### What is a document store database? (~15 min)
 
 This video explains how firebase stores your data.  Designing how to structure and store the data to support your web application's requirements is a big part of building and using a database.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/v_hR4K4auoQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
+
 ### Conclusion
 
 At this point, you should have a basic understanding of Google's Firestore database. Next, we will use our database to build a simple application to help us determine if a hotdog is, in fact, a sandwich.

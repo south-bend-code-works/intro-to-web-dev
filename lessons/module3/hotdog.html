@@ -9,6 +9,7 @@
         <h1 id="hotDogOutput">Hot dog status:</h1>
         <input type="textfield" id="latestHotDogStatus"/>
         <button id="saveButton">Save</button>
+        <button id="loadButton">Load</button>
 
         <!--Unlike the video tutorial, we are keeping all our javascript inline in our html file.-->
         <script>
@@ -27,19 +28,45 @@
             firebase.initializeApp(firebaseConfig);
             var firestore = firebase.firestore();
 
-            const docRef = firestore.doc("sample/sandwichdata";)
+            const docRef = firestore.doc("sample/sandwichdata")
             const outputHandler = document.getElementById("hotDogOutput")
             const inputTextField = document.getElementById("latestHotDogStatus")
             const saveButton = document.getElementById("saveButton")
+            const loadButton = document.getElementById("loadButton")
 
             saveButton.addEventListener("click", function() {
                 const textToSave = inputTextField.value;
 
                 docRef.set({
                     hotDogStatus: textToSave
-                }).then(function() {}).catch(function(error){console.log("Got and error:", error)});
-                
+                }).then(function() {
+                    console.log("Status Saved!");
+                }).catch(function(error){
+                    console.log("Got and error:", error);
+                });
             })
+
+            loadButton.addEventListener("click", function() {
+                docRef.get().then(function (doc) {
+                    if(doc && doc.data) {
+                        const myData = doc.data();
+                        outputHandler.innerText = "Hot Dog status: " + myData.hotDogStatus;
+                    }
+                }).catch(function (error) {
+                    console.log("Got an error:", error)
+                });
+            });
+
+            getRealTimeUpdates = function() {
+                docRef.onSnapshot(function (doc) {
+                    if(doc && doc.data) {
+                        const myData = doc.data();
+                        outputHandler.innerText = "Hot Dog status: " + myData.hotDogStatus;
+                    }
+                });
+            }
+
+            getRealTimeUpdates();
             
         </script>
     </body>
