@@ -50,10 +50,12 @@ Agenda:
 1. For Loops
   - examples of normal loops
     - console.log to demonstrate
+    - example where you use anonymous and named functions
     - adding things together
     - add a number to each
     - split a string and add "a" to every other letter
-    - example where you use anonymous and named functions
+    - CHALLENGE: reverseString
+    
   - example of loops within loops
     - start with console.log examples
     - create one long string from 2 arrays of strings
