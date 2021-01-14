@@ -20,7 +20,7 @@ By the end of this lesson, you will have:
 
 <p>Therefore, in order to save "state", developers needed to devise other ways to store data.  For example, you may have heard of <b>cookies</b>, which are tiny text files saved by your web browser that are used to store the "state of things".  When a website loads, it can check if a cookie exists, and if so, read any data that was stored in it.  Thus, we could save a list of all the items in our shopping cart into a cookie for later.  Unfortunately, cookies have a major drawback in that they are not very useful if you are using more than one device or browser.  Additionally, they can be blocked or cleared by the user so they are not a reliable way to store and retrieve information.</p>
 
-<p>In order to reliable store and retrieve data, developers turned to <b>databases</b>, which run on separate servers.  Websites can they query, or request data from, those databases.  For example, we can store the users shopping cart to our centralized database and no mater which device or browser we use, we can easily query our database to find all of the items in our cart.  Neato!</p>
+<p>In order to reliable store and retrieve data, developers turned to <b>databases</b>, which run on separate servers.  Websites can query, or request data from, those databases.  For example, we can store the users shopping cart to our centralized database and no mater which device or browser we use, we can easily query our database to find all of the items in our cart.  Neato!</p>
 
 ## Types of Databases
 <p>The objective for any database is simple; store data about objects.</p>
