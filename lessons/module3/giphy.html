@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Giphy API</title>
+        <meta charset="utf-8"/>
+        <style>
+            img {display:block;
+                margin:15px}
+            pre { font-family: monospace; 
+                background-color: black;
+                color: whitesmoke;
+                padding: 10px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Find a random gif for this topic</h1>
+        <label>Topic</label>
+        <input id="topic"/>
+        <button id="submit">Submit</button>
+        <img id="gif" src="https://media.giphy.com/media/nJ6yoH4nBNCBa/giphy.gif"/>
+        <div>"Powered By GIPHY"</div>
+
+        <H2>API Result</H2>
+
+        <!---The pre tag preserves all formatting such as spaces and tabs-->
+        <pre id="responseJson">The data the API returns will display here</pre>
+
+        <script>
+            const submitButton = document.getElementById("submit")
+            const image = document.getElementById("gif")
+            const topicTextField = document.getElementById("topic")
+            const pre = document.getElementById("responseJson")
+
+            const apiKey = 'HXKNHt1i1gYbHKVb3bJfeYVBVLRlSqhI'
+            var base_url = 'https://api.giphy.com/v1/gifs/random?api_key=HXKNHt1i1gYbHKVb3bJfeYVBVLRlSqhI&rating=g&lang=en&tag=' + topicTextField
+            
+            submitButton.addEventListener("click", function() {
+                url = base_url + encodeURI(topicTextField.value)
+                
+                // User the JavaScript fetch API
+                fetch(url)
+                .then(response => response.json())
+                .then(myJson => {
+                  image.src = myJson.data.image_url
+                  pre.innerHTML = JSON.stringify(myJson, null, 2); // Pretty Print the 
+                })
+            })
+        </script>
+    </body>
+</html>
