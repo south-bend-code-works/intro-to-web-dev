@@ -1,15 +1,19 @@
 ---
 layout: default
 ---
-# Overview 
 
-## Agenda
-0. House Keeping: Cover any issues / concerns for the course.
-1. What is a Database?
-2. How to naviage firebase console
-3. Review the HotDog app
-4. Code a simple example that uses promises to illustrate how they work.
-5. Work on the simple chat app together
+# Overview
+During this week's lab, you will:
+
+1. Completing your advanced chat project in small groups. 
+2. Share your solution with the other students.
+3. Uploaded your chat project game to GitHub.
+4. Created a GitHub page to host your chat game.
+
+Additionally, you should use any remaining lab-time to ensure your portfolio of work is looking great on github.io!  Make any final changes you need to your three capstone projects.
+1. Virtual Pet
+2. Black Jack
+3. Advanced Chat
 
 ## Zoom Links
 
@@ -34,3 +38,6 @@ layout: default
 **Meeting ID: 922 4168 6868**
 
 **Passcode: 122449**
+
+
+

@@ -414,6 +414,3 @@ Once you have put everything together, you now should have an application that c
 </body>
 </html>
 ```
-
-
-
