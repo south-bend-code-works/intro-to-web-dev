@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Simple Chat</title>
+	<meta charset="utf-8"  />
+</head>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+    <h1>Simple Chat</h1>
+
+    <label>Username:</label>
+    <input type="text" id="username" placeholder="Rick">
+    
+    <label>Message:</label>
+    <input type="text" id="message" placeholder="Hi Morty">
+    
+    <button id="send">Send</button>
+    
+    <h3>Chat Messages:</h3>
+
+    <div id="messagesContainer">
+        <!-- We will display any messages here that we send/retrieve from Firestore -->
+    </div>
+
+     <script>
+
+        // ---------------------------------------
+        // Initialize Firebase and Firestore
+        // ---------------------------------------
+
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCzd22PWoCipek5E-7qDx-WfFmBO0hjb6g",
+          authDomain: "intro-to-webdev-chat-app.firebaseapp.com",
+          projectId: "intro-to-webdev-chat-app",
+          storageBucket: "intro-to-webdev-chat-app.appspot.com",
+          messagingSenderId: "556658533694",
+          appId: "1:556658533694:web:d26d93919b6280d7efb86f"
+        };
+
+        // Initialize our application
+        firebase.initializeApp(firebaseConfig);
+        var firestore = firebase.firestore();
+
+        const collectionRef = firestore.collection('messages')
+
+        // Inputs
+        const inputUsername = document.getElementById("username")
+        const inputMessage = document.getElementById("message")
+        const sendButton = document.getElementById("send")
+
+        // Output DIV
+        const messagesContainer = document.getElementById("messagesContainer")
+
+
+        // Add an event listener to add a new message to firestore at our docRef ('chat/general')
+        sendButton.addEventListener("click", function() {
+                const username = inputUsername.value;
+                const textToSave = inputMessage.value;
+
+                collectionRef.add({
+                    username: username,
+                    txt: textToSave,
+                    timestamp: Date.now()
+                }).then(function() {
+                    console.log("Message Saved!");
+                }).catch(function(error){
+                    console.log("Got and error:", error);
+                });
+            })
+
+        // Define a function to listen for real-time updates
+        getRealTimeUpdates = function() {
+            
+            // All documents in our collection, messages, ordered from oldest to newest
+            collectionQuery = firestore.collection('messages').orderBy('timestamp', 'asc')
+
+            collectionQuery.onSnapshot(function (snapshot) {
+                console.log(snapshot)
+                
+                // Each snapshot contains one or more DocumentChange objects
+                // Loop through each document change
+                snapshot.docChanges().forEach( function(docChange) {
+
+                    // Log the document change we detected
+                    console.log(docChange)
+
+                    // get the data for this document
+                    var data = docChange.doc.data()
+
+                    // Optional:
+                    //   docSnapshotChange.type tells us the type of change: 'added', 'modified', 'removed'
+                    // console.log(docSnapshotChange.type, message)
+                    
+                    // Create a new div with this username and message as the content.
+                    var div = document.createElement("DIV");   // Create a new <div> element
+                    div.innerHTML = data.username + ": " + data.txt; // Insert text for our username and message
+                    
+                    // Optional: 
+                    //   Set the id of our DIV equal to the unique ID of the docuument in our collection.  
+                    //   This would come in handy if we needed to remove this DIV from the DOM because the chat message was deleted.
+                    // div.id = docChange.doc.id 
+
+                    // Append our div as a child element in our messageContainer div.
+                    messagesContainer.appendChild(div); 
+                    
+                });
+            });
+        }
+
+        // Call our function to start listening for real-time updates
+        getRealTimeUpdates();
+
+      </script>
+</body>
+</html>
