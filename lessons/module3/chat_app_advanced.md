@@ -7,19 +7,35 @@ layout: default
 
 ## Goal
 
-There are two goals for this phase of our chat app project:
-
-1. Allow users to send a gif using the giphy API.
-2.  Style your chat application
-
-# Part 1: Add support for gifs
-
 A picture is worth a thousand words, so let's update our chat application so that you can send an appropriate gif instead of a text message.
 
-To do this we will use the /giphy API
-If the user types "/giphy cats" in the chat, then the chat app will select a random cat gif and send it in the chat.
+Goals:
+1. Allow users to send a gif using the giphy API.
+2. Style your chat application
 
-### GIPHY API
+## Getting Started
+
+### Create your Advanced Chat Project Folder
+First, duplicate your project folder for simple chat and name it advanced chat.  It's a good idea to make a copy.
+
+### 
+To do this we will use the Random GIF API endpoint from our practice problem.  The code to call that API was:
+
+```
+const apiKey = 'YOUR-API-KEY-HERE'
+var base_url = 'https://api.giphy.com/v1/gifs/random?api_key=' + apiKey + '&rating=g&lang=en&tag='
+url = base_url + 'INSERT TAG KEYWORD'
+
+// User the JavaScript fetch API
+fetch(url)
+.then(response => response.json())
+.then(myJson => {
+  console.log(myJson)
+})       
+```
+
+
+## GIPHY API
 
 1. Go to https://developers.giphy.com/
 2. Create an account and login.
