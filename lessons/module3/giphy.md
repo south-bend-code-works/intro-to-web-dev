@@ -182,8 +182,8 @@ At this point you should have a program that finds a random gif!  Super neat.
             const topicTextField = document.getElementById("topic")
             const pre = document.getElementById("responseJson")
 
-            const apiKey = 'HXKNHt1i1gYbHKVb3bJfeYVBVLRlSqhI'
-            var base_url = 'https://api.giphy.com/v1/gifs/random?api_key=HXKNHt1i1gYbHKVb3bJfeYVBVLRlSqhI&rating=g&lang=en&tag=' + topicTextField
+            const apiKey = 'YOUR-API-KEY-HERE'
+            var base_url = 'https://api.giphy.com/v1/gifs/random?api_key=' + apiKey + '&rating=g&lang=en&tag='
             
             submitButton.addEventListener("click", function() {
                 url = base_url + encodeURI(topicTextField.value)
