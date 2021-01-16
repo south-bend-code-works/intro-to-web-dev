@@ -39,7 +39,7 @@
         <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
         {% endif %} -->
 
-        <ul>
+        <ul id="huhwut?">
           <li class="module">
             <h3>About this course</h3>
             <ul>
@@ -242,7 +242,26 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       ga('create', '{{ site.google_analytics }}', 'auto');
       ga('send', 'pageview');
+
     </script>
     {% endif %}
+
+    <script>
+      const nav = document.getElementById("huhwut?")
+
+      window.onload = () => {
+        const cookie = document.cookie
+        if (!cookie) return
+
+        const scroll = Number(cookie.split("=")[1])
+        nav.scrollTop = scroll
+      }
+
+      nav.addEventListener("scroll", (e) => {
+        const scroll = e.target.scrollTop
+        
+        document.cookie = `navScroll=${scroll}`
+      })
+    </script>
   </body>
 </html>
