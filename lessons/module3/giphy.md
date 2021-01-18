@@ -119,8 +119,8 @@ To make an API request in JavaScript we will use the fetch() function. Recall th
 ```
 // Use the JavaScript fetch API
 fetch(url)
-.then(response => response.json())
-.then(myJson => {
+.then((response) => response.json())
+.then((myJson) => {
     console.log(myJson)
 })
 ```
