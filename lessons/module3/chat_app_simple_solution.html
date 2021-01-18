@@ -47,21 +47,21 @@
         firebase.initializeApp(firebaseConfig);
         var firestore = firebase.firestore();
 
-        const collectionRef = firestore.collection('messages')
+        var collectionRef = firestore.collection('messages')
 
         // Inputs
-        const inputUsername = document.getElementById("username")
-        const inputMessage = document.getElementById("message")
-        const sendButton = document.getElementById("send")
+        var inputUsername = document.getElementById("username")
+        var inputMessage = document.getElementById("message")
+        var sendButton = document.getElementById("send")
 
         // Output DIV
-        const messagesContainer = document.getElementById("messagesContainer")
+        var messagesContainer = document.getElementById("messagesContainer")
 
 
         // Add an event listener to add a new message to firestore at our docRef ('chat/general')
         sendButton.addEventListener("click", function() {
-                const username = inputUsername.value;
-                const textToSave = inputMessage.value;
+                var username = inputUsername.value;
+                var textToSave = inputMessage.value;
 
                 collectionRef.add({
                     username: username,

@@ -22,7 +22,7 @@ First, duplicate your project folder for simple chat and name it advanced chat. 
 To do this we will use the Random GIF API endpoint from our practice problem.  The code to call that API was:
 
 ```
-const apiKey = 'YOUR-API-KEY-HERE'
+var apiKey = 'YOUR-API-KEY-HERE'
 var base_url = 'https://api.giphy.com/v1/gifs/random?api_key=' + apiKey + '&rating=g&lang=en&tag='
 url = base_url + 'INSERT TAG KEYWORD'
 

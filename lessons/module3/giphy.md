@@ -70,10 +70,10 @@ Note: Their is a `<pre>` html element in the starter code.  It's like a `<div>` 
         <pre id="responseJson">The data the API returns will display here</pre>
 
         <script>
-            const submitButton = document.getElementById("submit")
-            const image = document.getElementById("gif")
-            const topicTextField = document.getElementById("topic")
-            const pre = document.getElementById("responseJson")
+            var submitButton = document.getElementById("submit")
+            var image = document.getElementById("gif")
+            var topicTextField = document.getElementById("topic")
+            var pre = document.getElementById("responseJson")
         </script>
     </body>
 </html>
@@ -177,12 +177,12 @@ At this point you should have a program that finds a random gif!  Super neat.
         <pre id="responseJson">The data the API returns will display here</pre>
 
         <script>
-            const submitButton = document.getElementById("submit")
-            const image = document.getElementById("gif")
-            const topicTextField = document.getElementById("topic")
-            const pre = document.getElementById("responseJson")
+            var submitButton = document.getElementById("submit")
+            var image = document.getElementById("gif")
+            var topicTextField = document.getElementById("topic")
+            var pre = document.getElementById("responseJson")
 
-            const apiKey = 'YOUR-API-KEY-HERE'
+            var apiKey = 'YOUR-API-KEY-HERE'
             var base_url = 'https://api.giphy.com/v1/gifs/random?api_key=' + apiKey + '&rating=g&lang=en&tag='
             
             submitButton.addEventListener("click", function() {

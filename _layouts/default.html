@@ -247,18 +247,18 @@
     {% endif %}
 
     <script>
-      const nav = document.getElementById("huhwut?")
+      var nav = document.getElementById("huhwut?")
 
       window.onload = () => {
-        const cookie = document.cookie
+        var cookie = document.cookie
         if (!cookie) return
 
-        const scroll = Number(cookie.split("=")[1])
+        var scroll = Number(cookie.split("=")[1])
         nav.scrollTop = scroll
       }
 
       nav.addEventListener("scroll", (e) => {
-        const scroll = e.target.scrollTop
+        var scroll = e.target.scrollTop
         
         document.cookie = `navScroll=${scroll}`
       })

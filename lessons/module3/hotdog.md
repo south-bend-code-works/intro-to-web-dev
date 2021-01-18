@@ -55,10 +55,10 @@ First things first, you need to create a new folder called 'hotdog' and place an
             firebase.initializeApp(firebaseConfig);
             var firestore = firebase.firestore();
 
-            const docRef = firestore.doc("sample/sandwichdata")
-            const outputHandler = document.getElementById("hotDogOutput")
-            const inputTextField = document.getElementById("latestHotDogStatus")
-            const saveButton = document.getElementById("saveButton")
+            var docRef = firestore.doc("sample/sandwichdata")
+            var outputHandler = document.getElementById("hotDogOutput")
+            var inputTextField = document.getElementById("latestHotDogStatus")
+            var saveButton = document.getElementById("saveButton")
         </script>
     </body>
 </html>
@@ -113,14 +113,14 @@ After following the video tutorial you should have the completed application.  S
             firebase.initializeApp(firebaseConfig);
             var firestore = firebase.firestore();
 
-            const docRef = firestore.doc("sample/sandwichdata")
-            const outputHandler = document.getElementById("hotDogOutput")
-            const inputTextField = document.getElementById("latestHotDogStatus")
-            const saveButton = document.getElementById("saveButton")
-            const loadButton = document.getElementById("loadButton")
+            var docRef = firestore.doc("sample/sandwichdata")
+            var outputHandler = document.getElementById("hotDogOutput")
+            var inputTextField = document.getElementById("latestHotDogStatus")
+            var saveButton = document.getElementById("saveButton")
+            var loadButton = document.getElementById("loadButton")
 
             saveButton.addEventListener("click", function() {
-                const textToSave = inputTextField.value;
+                var textToSave = inputTextField.value;
 
                 docRef.set({
                     hotDogStatus: textToSave
@@ -134,7 +134,7 @@ After following the video tutorial you should have the completed application.  S
             loadButton.addEventListener("click", function() {
                 docRef.get().then(function (doc) {
                     if(doc && doc.data) {
-                        const myData = doc.data();
+                        var myData = doc.data();
                         outputHandler.innerText = "Hot Dog status: " + myData.hotDogStatus;
                     }
                 }).catch(function (error) {
@@ -145,7 +145,7 @@ After following the video tutorial you should have the completed application.  S
             getRealTimeUpdates = function() {
                 docRef.onSnapshot(function (doc) {
                     if(doc && doc.data) {
-                        const myData = doc.data();
+                        var myData = doc.data();
                         outputHandler.innerText = "Hot Dog status: " + myData.hotDogStatus;
                     }
                 });

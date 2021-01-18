@@ -109,9 +109,9 @@ Each document should, at a minimum, contain the following 3 fields:
 ```
 
         // Inputs
-        const inputUsername = document.getElementById("username")
-        const inputMessage = document.getElementById("message")
-        const sendButton = document.getElementById("send")
+        var inputUsername = document.getElementById("username")
+        var inputMessage = document.getElementById("message")
+        var sendButton = document.getElementById("send")
 
         // 
         sendButton.addEventListener("click", function() {
@@ -128,7 +128,7 @@ Now that our button works, we are ready to save our chat message to the database
 Recall that in Firestore is a document database and we need one collection of documents, call ed `messages`.  In order to use this collection, we first  need to ask Firestore for a reference to this collection.  Add the following code to your JavaScript to get our collection reference.  Put this code just after the code that initializes our application.
 
 ```
-const collectionRef = firestore.collection('messages')
+var collectionRef = firestore.collection('messages')
 ```
 
 Awesome, now let's add documents to our collection.  This is done by calling the `collectionRef.add()`.  This function takes one argument, which is the javascript object want save.  A sample message is provided below.  Of course, in your code you will not want to hard-code the username and txt.  You'll need to get that by getting the value of the `inputUsername` and `inputMessage`
@@ -181,21 +181,21 @@ Finally, you have what you need to update your sendButton's eventListener.  Repl
         firebase.initializeApp(firebaseConfig);
         var firestore = firebase.firestore();
 
-        const collectionRef = firestore.collection('messages')
+        var collectionRef = firestore.collection('messages')
 
         // Inputs
-        const inputUsername = document.getElementById("username")
-        const inputMessage = document.getElementById("message")
-        const sendButton = document.getElementById("send")
+        var inputUsername = document.getElementById("username")
+        var inputMessage = document.getElementById("message")
+        var sendButton = document.getElementById("send")
 
         // Output DIV
-        const messagesContainer = document.getElementById("messagesContainer")
+        var messagesContainer = document.getElementById("messagesContainer")
 
 
         // Add an event listener to our button that adds a new message to our firestore collection
         sendButton.addEventListener("click", function() {
-                const username = inputUsername.value;
-                const textToSave = inputMessage.value;
+                var username = inputUsername.value;
+                var textToSave = inputMessage.value;
 
                 collectionRef.add({
                     username: username,
@@ -341,21 +341,21 @@ Once you have put everything together, you now should have an application that c
         firebase.initializeApp(firebaseConfig);
         var firestore = firebase.firestore();
 
-        const collectionRef = firestore.collection('messages')
+        var collectionRef = firestore.collection('messages')
 
         // Inputs
-        const inputUsername = document.getElementById("username")
-        const inputMessage = document.getElementById("message")
-        const sendButton = document.getElementById("send")
+        var inputUsername = document.getElementById("username")
+        var inputMessage = document.getElementById("message")
+        var sendButton = document.getElementById("send")
 
         // Output DIV
-        const messagesContainer = document.getElementById("messagesContainer")
+        var messagesContainer = document.getElementById("messagesContainer")
 
 
         // Add an event listener to our button that adds a new message to our firestore collection
         sendButton.addEventListener("click", function() {
-                const username = inputUsername.value;
-                const textToSave = inputMessage.value;
+                var username = inputUsername.value;
+                var textToSave = inputMessage.value;
 
                 collectionRef.add({
                     username: username,
