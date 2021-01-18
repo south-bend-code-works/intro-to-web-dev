@@ -2,6 +2,8 @@
 
 Agenda:
 0. House Keeping: Cover any issues / concerns for the course.
+0.5. Please ask questions
+  - I know it is review but please ask questions
 1. Databases in general
   - store data
   - not unfamiliar with them even if we haven't used one ourselves
