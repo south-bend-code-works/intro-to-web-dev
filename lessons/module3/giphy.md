@@ -24,7 +24,7 @@ You will:
 ### Create your GIPHY Developer Account and API Key
 Follow these steps to get your API Key.
 
-1. Go to https://developers.giphy.com/
+1. Go to [https://developers.giphy.com/](https://developers.giphy.com/)
 2. Create an account and login.
 3. Press "GET STARTED" and then "CREATE AN APP"
 4. Click the "Create App" button to get assigned an API Key.  
@@ -153,13 +153,16 @@ At this point you should have a program that finds a random gif!  Super neat.
         <title>Giphy API</title>
         <meta charset="utf-8"/>
         <style>
-            img {display:block;
-                margin:15px}
-            pre { font-family: monospace; 
-                background-color: black;
-                color: whitesmoke;
-                padding: 10px;
-                margin: 10px;
+            img {
+              display:block;
+              margin:15px
+            }
+            pre {
+              font-family: monospace; 
+              background-color: black;
+              color: whitesmoke;
+              padding: 10px;
+              margin: 10px;
             }
         </style>
     </head>
