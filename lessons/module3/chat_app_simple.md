@@ -114,7 +114,7 @@ Each document should, at a minimum, contain the following 3 fields:
         var sendButton = document.getElementById("send")
 
         // 
-        sendButton.addEventListener("click", function() {
+        sendButton.addEventListener("click", () => {
                 console.log("the button was clicked");
             })
 ```
@@ -146,11 +146,11 @@ collectionRef.add(msgObj)
 A quick aside about collectionRef.add and `promises`.  When we call collectionRef.add() we are asking a remote server to save some data to the database.  This might take a few seconds, which is why collectionRef.add() is an asynchronous function call that returns a javascript `promise`.  Simply put, we are  asking the database to promise to let us know when it's done doing it's thing.  Therefore, once the promise is fulfilled, we can use .then() to take an action, such as log that the message was saved succesfully.  Similarly, if the database goes off and tries to add the data for a few seconds and fails, we can use the .catch() method to handle that error.  See the code below for some example syntax.
 
 ```
-collectionRef.add(msgObj).then(function() {
-                    console.log("Message Saved!");
-                }).catch(function(error){
-                    console.log("Got and error:", error);
-                })
+collectionRef.add(msgObj).then(() => {
+    console.log("Message Saved!")
+}).catch((error) => {
+    console.log("Got and error:", error)
+})
 ```
 
 Finally, you have what you need to update your sendButton's eventListener.  Replace our console.log call from wireing up our send button with the code you wrote to save our message to Firestore.
@@ -192,7 +192,7 @@ Finally, you have what you need to update your sendButton's eventListener.  Repl
 
 
         // Add an event listener to our button that adds a new message to our firestore collection
-        sendButton.addEventListener("click", function() {
+        sendButton.addEventListener("click", () => {
                 var username = inputUsername.value;
                 var textToSave = inputMessage.value;
 
@@ -200,9 +200,9 @@ Finally, you have what you need to update your sendButton's eventListener.  Repl
                     username: username,
                     txt: textToSave,
                     timestamp: Date.now()
-                }).then(function() {
+                }).then(() => {
                     console.log("Message Saved!");
-                }).catch(function(error){
+                }).catch((error) => {
                     console.log("Got and error:", error);
                 });
             })
@@ -227,7 +227,7 @@ First, we need to define a function to call to start listening to real-time upda
 
 ```
 // Define a function to listen for real-time updates
-var getRealTimeUpdates = function() {
+var getRealTimeUpdates = () => {
   // Our code here
 }
 ```
@@ -241,7 +241,7 @@ var collectionQuery = firestore.collection('messages').orderBy('timestamp', 'asc
 Once we have the reference to our collection, we will use onSnapshot() to listen to real-time changes.
 
 ```
-collectionQuery.onSnapshot(function (snapshot) {
+collectionQuery.onSnapshot((snapshot) => {
   // Do something with our snapshot
   console.log(snapshot)
 }
@@ -253,7 +253,7 @@ You may have noticed that each snapshot contains one or more DocumentChange obje
 
 ```
   // Loop through each document change
-  snapshot.docChanges().forEach( function(docChange) {
+  snapshot.docChanges().forEach((docChange) => {
     // Do something with this document Change
     console.log(docChange)
   }
@@ -352,7 +352,7 @@ Once you have put everything together, you now should have an application that c
 
 
         // Add an event listener to our button that adds a new message to our firestore collection
-        sendButton.addEventListener("click", function() {
+        sendButton.addEventListener("click", () => {
                 var username = inputUsername.value;
                 var textToSave = inputMessage.value;
 
@@ -360,25 +360,25 @@ Once you have put everything together, you now should have an application that c
                     username: username,
                     txt: textToSave,
                     timestamp: Date.now()
-                }).then(function() {
+                }).then(() => {
                     console.log("Message Saved!");
-                }).catch(function(error){
+                }).catch((error) => {
                     console.log("Got and error:", error);
                 });
             })
 
         // Define a function to listen for real-time updates
-        var getRealTimeUpdates = function() {
+        var getRealTimeUpdates = () => {
             
             // All documents in our collection, messages, ordered from oldest to newest
             var collectionQuery = firestore.collection('messages').orderBy('timestamp', 'asc')
 
-            collectionQuery.onSnapshot(function (snapshot) {
+            collectionQuery.onSnapshot((snapshot) => {
                 console.log(snapshot)
                 
                 // Each snapshot contains one or more DocumentChange objects
                 // Loop through each document change
-                snapshot.docChanges().forEach( function(docChange) {
+                snapshot.docChanges().forEach((docChange) => {
 
                     // Log the document change we detected
                     console.log(docChange)
