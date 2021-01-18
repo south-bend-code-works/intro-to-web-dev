@@ -134,7 +134,7 @@ var collectionRef = firestore.collection('messages')
 Awesome, now let's add documents to our collection.  This is done by calling the `collectionRef.add()`.  This function takes one argument, which is the javascript object want save.  A sample message is provided below.  Of course, in your code you will not want to hard-code the username and txt.  You'll need to get that by getting the value of the `inputUsername` and `inputMessage`
 
 ```
-msgObj = {
+var msgObj = {
     username: "Rick",
     txt: "Hi Morty",
     timestamp: Date.now()
