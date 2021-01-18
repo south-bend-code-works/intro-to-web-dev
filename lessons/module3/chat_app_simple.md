@@ -125,7 +125,7 @@ Good job, now test your button and make sure you see the text in your web browse
 
 Now that our button works, we are ready to save our chat message to the database.  Recall the chat message should have a username, txt, and datetime.
 
-Recall that in Firestore is a document database and we need one collection of documents, call ed `messages`.  In order to use this collection, we first  need to ask Firestore for a reference to this collection.  Add the following code to your JavaScript to get our collection reference.  Put this code just after the code that initializes our application.
+Recall that in Firestore is a document database and we need one collection of documents, called `messages`.  In order to use this collection, we first  need to ask Firestore for a reference to this collection.  Add the following code to your JavaScript to get our collection reference.  Put this code just after the code that initializes our application.
 
 ```
 var collectionRef = firestore.collection('messages')
@@ -153,7 +153,7 @@ collectionRef.add(msgObj).then(function() {
                 })
 ```
 
-Finally, you have what you need to update your sendButton's eventListener.  Replace our console.logg call from wireing up our send button with the code you wrote to save our message to Firestore.
+Finally, you have what you need to update your sendButton's eventListener.  Replace our console.log call from wireing up our send button with the code you wrote to save our message to Firestore.
 
 <div class="hint">Hover for hint</div>
 
