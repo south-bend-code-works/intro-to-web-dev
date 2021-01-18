@@ -47,7 +47,7 @@ First things first, you need to create a new folder called 'hotdog' and place an
                 authDomain: "...",
                 projectId: "...",
                 storageBucket: "...",
-                messagingSenderId: "..."",
+                messagingSenderId: "...",
                 appId: "..."
             };
 
@@ -105,7 +105,7 @@ After following the video tutorial you should have the completed application.  S
                 authDomain: "...",
                 projectId: "...",
                 storageBucket: "...",
-                messagingSenderId: "..."",
+                messagingSenderId: "...",
                 appId: "..."
             };
 
