@@ -32,7 +32,11 @@ Agenda:
         favoriteBook: 'A Cactus: Who they are and where they are going',
       }
     - New Firestore
-2.5 Review a Promise
+
+3. Create a new project in Firebase
+  - go slowly and allow for questions
+4. Copy and Paste Hot Dog app and go over it
+4.5 Review a Promise
 
       var roomIsClean = true
 
@@ -56,26 +60,60 @@ Agenda:
           console.log(val)
         })
 
-3. Create a new project in Firebase
-  - go slowly and allow for questions
-4. Copy and Paste Hot Dog app and go over it
-
 
 -->
+<!DOCTYPE html>
+<html>
 
+    <head>
+    </head>
+
+    <body>
+    </body>
+
+    <script>
+
+      var roomIsClean = true
+
+      // some function that reaches out to another server and then returns data
+
+      var promiseToCleanRoom = () => {
+        return new Promise((resolve, reject) => {
+
+          if (roomIsClean) {
+            resolve("Good work!")
+          } else {
+            reject("Room isn't clean yet...")
+          }
+
+        })
+      }
+
+      
+      promiseToCleanRoom()
+        .then((data) => {
+          console.log("Good:", data)
+        })
+        .catch((err) => {
+          console.log("Bad:", err)
+        })
+        
+
+    </script>
+</html>
 
 <!DOCTYPE html>
 <html>
 
     <head>
-        <title>Hot dogs == sandwich?</title>
+        <title>Hot dogs == witches?</title>
         <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
     </head>
 
     <body>
         <h1 id="output">Hot dog status:</h1>
-        <input type="textfield" id="latestHotDogStatus"/>
+        <input id="input"/>
         <button onclick="saveData()">Save</button>
         <button onclick="loadData()">Load</button>
 
@@ -84,49 +122,56 @@ Agenda:
 
             // Replace with your web app's Firebase configuration
             var firebaseConfig = {
-              apiKey: "AIzaSyCbWywXfRnEPk68ggckBtZU6JjsviOFss0",
-              authDomain: "mister-test-boi.firebaseapp.com",
-              projectId: "mister-test-boi",
-              storageBucket: "mister-test-boi.appspot.com",
-              messagingSenderId: "152243657922",
-              appId: "1:152243657922:web:d4a264d522912764f42f5b"
-            };
+              apiKey: "AIzaSyBAjYoc_aZF5Dl_cyftLw87-Cr7qTvzyR0",
+              authDomain: "nd-bc-session-2.firebaseapp.com",
+              projectId: "nd-bc-session-2",
+              storageBucket: "nd-bc-session-2.appspot.com",
+              messagingSenderId: "528200283037",
+              appId: "1:528200283037:web:607db3bc977fe5f05db574"
+            }
 
             // Initialize our application
-            firebase.initializeApp(firebaseConfig);
-            var firestore = firebase.firestore();
+            firebase.initializeApp(firebaseConfig)
+            var firestore = firebase.firestore()
 
             var docRef = firestore.doc("sample/sandwichdata")
 
             var outputEle = document.getElementById("output")
-            var inputEle = document.getElementById("latestHotDogStatus")
+            var inputEle = document.getElementById("input")
 
 
             var saveData = () => {
               var textToSave = inputEle.value
+
               var dataToSave = {
                 hotDogStatus: textToSave,
               }
+
               docRef.set(dataToSave)
             }
 
 
             var loadData = () => {
-              docRef.get().then((doc) => {
-                var myData = doc.data()
-                if (myData !== undefined) {
-                  outputEle.innerHTML = "Hot dog status: " + myData.hotDogStatus
-                }
-              })
+
+              docRef.get()
+                .then((doc) => {
+                  var myData = doc.data()
+                  if (myData !== undefined) {
+                    outputEle.innerHTML = "Hot dog status: " + myData.hotDogStatus
+                  }
+                })
+
             }
 
             var getRealTimeUpdates = () => {
+
               docRef.onSnapshot((doc) => {
                 var myData = doc.data()
                 if (myData !== undefined) {
                   outputEle.innerHTML = "Hot dog status: " + myData.hotDogStatus
                 }
               })
+
             }
 
             getRealTimeUpdates()
