@@ -395,7 +395,7 @@ Once you have put everything together, you now should have an application that c
                     div.innerHTML = data.username + ": " + data.txt; // Insert text for our username and message
                     
                     // Optional: 
-                    //   Set the id of our DIV equal to the unique ID of the docuument in our collection.  
+                    //   Set the id of our DIV equal to the unique ID of the document in our collection.  
                     //   This would come in handy if we needed to remove this DIV from the DOM because the chat message was deleted.
                     // div.id = docChange.doc.id 
 

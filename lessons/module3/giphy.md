@@ -24,7 +24,7 @@ You will:
 ### Create your GIPHY Developer Account and API Key
 Follow these steps to get your API Key.
 
-1. Go to https://developers.giphy.com/
+1. Go to [https://developers.giphy.com/](https://developers.giphy.com/)
 2. Create an account and login.
 3. Press "GET STARTED" and then "CREATE AN APP"
 4. Click the "Create App" button to get assigned an API Key.  
@@ -46,13 +46,16 @@ Note: Their is a `<pre>` html element in the starter code.  It's like a `<div>` 
         <title>Giphy API</title>
         <meta charset="utf-8"/>
         <style>
-            img {display:block;
-                margin:15px}
-            pre { font-family: monospace; 
-                background-color: black;
-                color: whitesmoke;
-                padding: 10px;
-                margin: 10px;
+            img {
+              display:block;
+              margin:15px;
+            }
+            pre { 
+              font-family: monospace; 
+              background-color: black;
+              color: whitesmoke;
+              padding: 10px;
+              margin: 10px;
             }
         </style>
     </head>
@@ -106,7 +109,7 @@ There is one big gotcha when building URLs; URLS cannot contain spaces and other
 
 ```
 var invalid_search_tag = 'cat lover' // This would create an invalid URL because of the space.
-var valid_search_tag = encodeURI('cat lover) // This would create the valid URIencoded string: "cat%20lover"
+var valid_search_tag = encodeURI('cat lover') // This would create the valid URIencoded string: "cat%20lover"
 ```
 
 Once we have the URL for our API, we simply need to make an HTTP request and the API will return some data as JSON for us to process.
@@ -116,8 +119,8 @@ To make an API request in JavaScript we will use the fetch() function. Recall th
 ```
 // Use the JavaScript fetch API
 fetch(url)
-.then(response => response.json())
-.then(myJson => {
+.then((response) => response.json())
+.then((myJson) => {
     console.log(myJson)
 })
 ```
@@ -153,13 +156,16 @@ At this point you should have a program that finds a random gif!  Super neat.
         <title>Giphy API</title>
         <meta charset="utf-8"/>
         <style>
-            img {display:block;
-                margin:15px}
-            pre { font-family: monospace; 
-                background-color: black;
-                color: whitesmoke;
-                padding: 10px;
-                margin: 10px;
+            img {
+              display:block;
+              margin:15px
+            }
+            pre {
+              font-family: monospace; 
+              background-color: black;
+              color: whitesmoke;
+              padding: 10px;
+              margin: 10px;
             }
         </style>
     </head>
