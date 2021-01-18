@@ -227,7 +227,7 @@ First, we need to define a function to call to start listening to real-time upda
 
 ```
 // Define a function to listen for real-time updates
-getRealTimeUpdates = function() {
+var getRealTimeUpdates = function() {
   // Our code here
 }
 ```
@@ -368,7 +368,7 @@ Once you have put everything together, you now should have an application that c
             })
 
         // Define a function to listen for real-time updates
-        getRealTimeUpdates = function() {
+        var getRealTimeUpdates = function() {
             
             // All documents in our collection, messages, ordered from oldest to newest
             collectionQuery = firestore.collection('messages').orderBy('timestamp', 'asc')
