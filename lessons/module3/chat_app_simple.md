@@ -235,7 +235,7 @@ var getRealTimeUpdates = function() {
 The getRealTimeUpdates function needs a reference to the entire collection so that we can listen for updates.  Interestingly, because we Firestore does not guarantee the order of the documents in the collection, we also need to `order` our documents from the newest document to the oldest so our chat messages don't get jumbled up.
 
 ```
-collectionQuery = firestore.collection('messages').orderBy('timestamp', 'asc')
+var collectionQuery = firestore.collection('messages').orderBy('timestamp', 'asc')
 ```
 
 Once we have the reference to our collection, we will use onSnapshot() to listen to real-time changes.
@@ -371,7 +371,7 @@ Once you have put everything together, you now should have an application that c
         var getRealTimeUpdates = function() {
             
             // All documents in our collection, messages, ordered from oldest to newest
-            collectionQuery = firestore.collection('messages').orderBy('timestamp', 'asc')
+            var collectionQuery = firestore.collection('messages').orderBy('timestamp', 'asc')
 
             collectionQuery.onSnapshot(function (snapshot) {
                 console.log(snapshot)
