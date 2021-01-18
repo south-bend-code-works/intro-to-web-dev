@@ -6,10 +6,9 @@ layout: default
 ## Agenda
 0. House Keeping: Cover any issues / concerns for the course.
 1. What is a Database?
-2. How to naviage firebase console
+2. How to navigate firebase console
 3. Review the HotDog app
-4. Code a simple example that uses promises to illustrate how they work.
-5. Work on the simple chat app together
+5. Questions about simple chat
 
 ## Zoom Links
 
