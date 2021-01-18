@@ -151,7 +151,6 @@ collectionRef.add(msgObj).then(function() {
                 }).catch(function(error){
                     console.log("Got and error:", error);
                 })
-{: .hint-content}
 ```
 
 Finally, you have what you need to update your sendButton's eventListener.  Replace our console.logg call from wireing up our send button with the code you wrote to save our message to Firestore.
