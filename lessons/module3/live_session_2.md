@@ -8,9 +8,11 @@ layout: default
 0. House Keeping: Cover any issues / concerns for the course.
 1. What is an API?
 2. Practice using different APIS.
-3. Work on adding Giphy to Advanced Chat
+3. Go over simple chat
+4. Go over Giphy random GIF generator
+5. Work on adding Giphy to Advanced Chat
     - Note: Make sure you come to class with your Giphy API key.
-4. Prep for last lab.
+6. Prep for last lab.
 
 
 ## Zoom Links
