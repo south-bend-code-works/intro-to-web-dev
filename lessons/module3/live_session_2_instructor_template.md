@@ -17,7 +17,7 @@ Agenda:
             var hitApi = (url) => {
               fetch(url)
                 .then(res => res.json())
-                .then(data => {
+                .then((data) => {
                   catFactEle.innerHTML = data.text
                 })
             }
@@ -39,8 +39,8 @@ Agenda:
 
             var hitApi = (url) => {
               fetch(url)
-                .then(res => res.json())
-                .then(data => {
+                .then((res) => res.json())
+                .then((data) => {
                   var imageSrc = data.image
                   foxEle.src = imageSrc
                 })
